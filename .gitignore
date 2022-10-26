@@ -1,7 +1,1 @@
-.github
 .idea
-.DS_Store
-__pycache__
-migration.txt
-crawler_id.txt
-src/crawler.log
