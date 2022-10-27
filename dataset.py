@@ -18,13 +18,12 @@ class KnowledgeGraphDataset(Dataset):
         self.data_ids = {"train": self.read_file(os.path.join(self.path, "train.txt")),
                         "valid": self.read_file(os.path.join(self.path, "valid.txt")),
                         "test": self.read_file(os.path.join(self.path, "test.txt"))}
-        self.data = self.to_tensor(self.data_ids)
 
     def __len__(self):
-        return len(self.data["train"])
+        return len(self.data_ids["train"])
 
     def __getitem__(self, index) -> T_co:
-        return self.data["train"][index]
+        return self.data_ids["train"][index]
 
     def read_file(self, filename):
         with open(filename, "r", encoding="utf8") as f:
@@ -50,21 +49,3 @@ class KnowledgeGraphDataset(Dataset):
 
     def to_timestamp(self, element):
         return date.fromisoformat(element)
-
-    def to_tensor(self, data_ids):
-        limits = {"train": []}
-        for column in range(0, 4):
-            col = self.get_column(data_ids, column)
-            limits["train"].append({"min": int(min(col)), "max": int(max(col))})
-
-        no_of_vecs = 0
-        for limit in limits["train"]:
-            no_of_vecs += (limit["max"] - limit["min"])
-
-        shape = (no_of_vecs, embedding_vec_sizes)
-        tensor = torch.rand(shape)
-
-        return {"train": tensor}
-
-    def get_column(self, data, column):
-        return [d[column] for d in data["train"]]

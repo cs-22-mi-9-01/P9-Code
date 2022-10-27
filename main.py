@@ -14,7 +14,7 @@ def main():
     parser = argparse.ArgumentParser(description=desc)
 
     parser.add_argument('-dataset', help='Dataset', type=str, default='icews14', choices=['icews14', 'icews05-15', 'gdelt'])
-    parser.add_argument('-model', help='Model', type=str, default='DE_DistMult', choices=['DE_DistMult', 'DE_TransE', 'DE_SimplE'])
+    parser.add_argument('-model', help='Model', type=str, default='DE_TransE', choices=['DE_DistMult', 'DE_TransE', 'DE_SimplE'])
     parser.add_argument('-bsize', help='Batch size', type=int, default=64, choices = [64])
     parser.add_argument('-task', help='Task', type=str, default='learn', choices=['learn', 'answer'])
     parser.add_argument('-embedding', help='Embedding', type=str, default='DE-TransE', choices=['DE-TransE', 'DE-SimplE'])
@@ -34,6 +34,10 @@ def main():
     # Use model
     model = DETransE(params).to(device)
     params.model = model
+
+    #print(f"Model structure: {model}\n\n")
+    for name, param in model.named_parameters():
+        print(f"Layer: {name} | Size: {param.size()} | Values : {param[:2]} \n")
 
     match args.task:
         case 'learn':
