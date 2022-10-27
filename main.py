@@ -23,7 +23,7 @@ def main():
     args = parser.parse_args()
 
     # Create data loaders.
-    dataloader = DataLoader(training_data, batch_size=batch_size)
+    dataloader = DataLoader(dataset, batch_size=batch_size)
 
     match args.task:
         case 'learn':
