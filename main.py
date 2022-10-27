@@ -2,13 +2,12 @@
 import argparse
 import torch
 
+from dataset import KnowledgeGraphDataset
 from torch.utils.data import DataLoader
-
+from parameters import Parameters
+from embeddings.de_transe import DETransE
 from trainer import Trainer
 
-def learn(args):
-    trainer = Trainer(args)
-    trainer.train()
 
 def main():
     desc = 'Temporal KG Completion methods'
@@ -21,13 +20,25 @@ def main():
     parser.add_argument('-embedding', help='Embedding', type=str, default='DE-TransE', choices=['DE-TransE', 'DE-SimplE'])
 
     args = parser.parse_args()
+    params = Parameters(args)
 
-    # Create data loaders.
-    dataloader = DataLoader(dataset, batch_size=batch_size)
+    # Create data loaders
+    dataset = KnowledgeGraphDataset(params)
+    dataloader = DataLoader(dataset, batch_size=params.batch_size)
+    params.dataloader = dataloader
+
+    # Assign device
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    params.device = device
+
+    # Use model
+    model = DETransE(params).to(device)
+    params.model = model
 
     match args.task:
         case 'learn':
-            learn(args)
+            trainer = Trainer(params)
+            trainer.train()
         case 'answer':
             print("test 2")
 

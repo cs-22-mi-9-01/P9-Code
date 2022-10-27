@@ -1,9 +1,13 @@
-import torch
 import torch.nn as nn
 
-from embedding import Embedding
 
+class DETransE(nn.Module):
+    def __init__(self, params):
+        self.embedding = params.dataset
 
-class DETransE(Embedding):
-    def __init__(self, args):
-        pass
+    def
+
+    def forward(self, x):
+        x = self.flatten(x)
+        logits = self.linear_relu_stack(x)
+        return logits
