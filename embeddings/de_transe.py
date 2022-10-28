@@ -7,9 +7,11 @@ class DETransE(nn.Module):
         super(DETransE, self).__init__()
         self.params = params
         self.dataset = params.dataset
+
         self.learning_rate = 0.001
         self.entity_emb_dim = 3
         self.time_emb_dim = 3
+        self.dropout_probability = 0.4
 
         self.time_nl = torch.sin
         self.sigm = torch.nn.Sigmoid()
@@ -75,8 +77,11 @@ class DETransE(nn.Module):
         h_embeddings, r_embeddings, t_embeddings = self.get_embeddings(heads, rels, tails, years, months, days)
 
         scores = h_embeddings + r_embeddings - t_embeddings
-        scores = nn.functional.dropout(scores, p=self.params.dropout, training=self.training)
+        scores = nn.functional.dropout(scores, p=self.dropout_probability, training=self.training)
         scores = -torch.norm(scores, dim=1)
 
         return scores
+
+    def loss_function(self, score, target):
+        return (torch.sum(score) - torch.sum(target)).abs() / score.shape[0]
 

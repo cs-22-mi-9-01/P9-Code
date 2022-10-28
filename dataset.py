@@ -1,16 +1,15 @@
 
 import os
+import torch
 
-import numpy as np
 from torch.utils.data import Dataset
 from datetime import date
 from torch.utils.data.dataset import T_co
 
-embedding_vec_sizes = 3
-
 class KnowledgeGraphDataset(Dataset):
     def __init__(self, params):
         super(KnowledgeGraphDataset, self).__init__()
+        self.params = params
         self.name = params.dataset
         self.path = os.path.join(params.base_directory, "data", self.name.lower())
         self.next_id = {"entity": 0, "relation": 0, "time": 0}
@@ -22,7 +21,7 @@ class KnowledgeGraphDataset(Dataset):
                         "test": self.read_file(os.path.join(self.path, "test.txt"))}
 
         for split in ["train", "valid", "test"]:
-            self.data[split] = np.array(self.data[split])
+            self.data[split] = torch.tensor(self.data[split]).long().to(self.params.device)
 
     def __len__(self):
         return len(self.data["train"])
@@ -73,9 +72,11 @@ class KnowledgeGraphDataset(Dataset):
         return self.ids[type][element]
 
     def get_all_data(self):
-        return ([c[0] for c in self.data["train"]],
-                [c[1] for c in self.data["train"]],
-                [c[2] for c in self.data["train"]],
-                [c[3] for c in self.data["train"]],
-                [c[4] for c in self.data["train"]],
-                [c[5] for c in self.data["train"]])
+        heads = self.data["train"][:, 0]
+        rels = self.data["train"][:, 1]
+        tails = self.data["train"][:, 2]
+        years = self.data["train"][:, 3]
+        months = self.data["train"][:, 4]
+        days = self.data["train"][:, 5]
+
+        return heads, rels, tails, years, months, days
