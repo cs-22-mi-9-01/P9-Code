@@ -13,22 +13,24 @@ class KnowledgeGraphDataset(Dataset):
         self.params = params
         self.name = params.dataset
         self.path = os.path.join(params.base_directory, "data", self.name.lower())
+
         self.next_id = {"entity": 0, "relation": 0}
         self.ids = {"entity": {}, "relation": {}}
         self.entity_set = set()
         self.relation_set = set()
         self.data = {"train": self.read_file(os.path.join(self.path, "train.txt")),
-                        "valid": self.read_file(os.path.join(self.path, "valid.txt")),
-                        "test": self.read_file(os.path.join(self.path, "test.txt"))}
+                     "valid": self.read_file(os.path.join(self.path, "valid.txt")),
+                     "test": self.read_file(os.path.join(self.path, "test.txt"))}
+        self.target_dataset = "train"
 
         for split in ["train", "valid", "test"]:
             self.data[split] = torch.tensor(self.data[split]).long().to(self.params.device)
 
     def __len__(self):
-        return len(self.data["train"])
+        return len(self.data[self.target_dataset])
 
     def __getitem__(self, index) -> T_co:
-        return self.data["train"][index]
+        return self.data[self.target_dataset][index]
 
     def read_file(self, filename):
         with open(filename, "r", encoding="utf8") as f:
@@ -63,12 +65,5 @@ class KnowledgeGraphDataset(Dataset):
     def num_of_relations(self):
         return len(self.ids["relation"])
 
-    def get_all_columns_train(self):
-        heads = self.data["train"][:, 0]
-        rels = self.data["train"][:, 1]
-        tails = self.data["train"][:, 2]
-        years = self.data["train"][:, 3]
-        months = self.data["train"][:, 4]
-        days = self.data["train"][:, 5]
-
-        return heads, rels, tails, years, months, days
+    def get_all_facts(self):
+        return self.data[self.target_dataset]

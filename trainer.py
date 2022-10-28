@@ -2,6 +2,7 @@ import os
 import torch
 
 from embeddings.de_transe import DETransE
+from scripts import split_facts
 
 
 class Trainer:
@@ -27,7 +28,7 @@ class Trainer:
 
             # TODO: Implement batch loading from dataset, see https://github.com/BorealisAI/de-simple/blob/master/trainer.py
 
-            heads, rels, tails, years, months, days = self.params.dataset.get_all_columns_train()
+            heads, rels, tails, years, months, days = split_facts(self.params.dataset.get_all_facts())
             scores = self.params.model(heads, rels, tails, years, months, days)
 
             target = torch.zeros(heads.shape[0]).to(self.params.device)

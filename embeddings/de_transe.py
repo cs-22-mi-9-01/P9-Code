@@ -86,7 +86,7 @@ class DETransE(nn.Module):
         scores = torch.add(head_emb, relation_emb)
         scores = torch.sub(scores, tail_emb)
         scores = torch.linalg.norm(scores, dim=1)
-        #scores = torch.div(scores, torch.sqrt(torch.tensor(self.entity_emb_dim + self.time_emb_dim)))
+
         return scores
 
     def loss_function(self, score, target):

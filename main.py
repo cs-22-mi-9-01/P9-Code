@@ -25,7 +25,7 @@ def main():
     params = Parameters(args)
 
     # TEST BLOCK
-    params.task = "learn"
+    params.task = "test"
     params.model_path = r"C://Users//Jeppe//Documents//Unistuff//Master//P9-Code//models//DE_TransE//icews14//DE_TransE_500.model"
     # TEST BLOCK END
 
@@ -50,6 +50,7 @@ def main():
         case 'test':
             # Test the model with a test dataset
             tester = Tester(params)
+            tester.test()
         case 'answer':
             print("test 2")
 
