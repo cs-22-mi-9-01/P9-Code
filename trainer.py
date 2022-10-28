@@ -1,3 +1,5 @@
+import os
+
 import torch
 import torch.nn as nn
 
@@ -6,25 +8,38 @@ class Trainer:
         self.params = params
 
     def train(self):
-        size = len(self.params.dataloader.dataset)
+        self.params.model.train()
+
         loss_fn = nn.CrossEntropyLoss()
         optimizer = torch.optim.Adam(self.params.model.parameters(), self.params.model.learning_rate)
 
-        self.params.model.train()
-        for batch, (h, r, t, time) in enumerate(self.params.dataloader):
-            (h, r, t, time) = h.to(self.params.device), r.to(self.params.device), t.to(self.params.device), time.to(self.params.device)
+        for epoch in range(1, 3):
+            print(" --------- Epoch: " + str(epoch) + " --------- ")
 
-            # Compute prediction error
-            pred = self.params.model(heads, rels, tails, times)
-            loss = loss_fn(pred, )
+            total_loss = 0.0
 
-            # Backpropagation
-            optimizer.zero_grad()
-            #loss.backward()
+            # TODO: Implement batch loading from dataset, see https://github.com/BorealisAI/de-simple/blob/master/trainer.py
+
+            heads, rels, tails, years, months, days = self.params.dataset.get_all_data()
+
+            scores = self.params.model(heads, rels, tails, years, months, days)
+            loss = loss_fn(scores)
+            loss.backward()
             optimizer.step()
+            total_loss += loss.item()
 
-            if batch % 100 == 0:
-                loss, current = loss.item(), batch * size
-                print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
+            print("Loss in epoch " + str(epoch) + ": " + str(total_loss))
+
+            self.save_model(epoch)
+
+    def save_model(self, checkpoint):
+        print("Saving the model")
+
+        directory = os.path.join(self.params.base_directory, "models", self.params.model_name, self.params.dataset)
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+        file_path = os.path.join(directory, self.params.model_name + "_" + str(checkpoint) + ".checkpoint")
+
+        torch.save(self.params.model, file_path)
 
 

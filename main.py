@@ -3,7 +3,6 @@ import argparse
 import torch
 
 from dataset import KnowledgeGraphDataset
-from torch.utils.data import DataLoader
 from parameters import Parameters
 from embeddings.de_transe import DETransE
 from trainer import Trainer
@@ -22,10 +21,10 @@ def main():
     args = parser.parse_args()
     params = Parameters(args)
 
-    # Create data loaders
+    # Create dataset
     dataset = KnowledgeGraphDataset(params)
-    dataloader = DataLoader(dataset, batch_size=params.batch_size)
-    params.dataloader = dataloader
+    params.dataset_name = params.dataset
+    params.dataset = dataset
 
     # Assign device
     device = "cuda" if torch.cuda.is_available() else "cpu"

@@ -1,25 +1,82 @@
 import torch
 import torch.nn as nn
-from torch.nn.modules.loss import _WeightedLoss
-from torch import Tensor
 
 
 class DETransE(nn.Module):
     def __init__(self, params):
         super(DETransE, self).__init__()
         self.params = params
+        self.dataset = params.dataset
         self.learning_rate = 0.001
-        self.embedding_dimensions = 3
+        self.entity_emb_dim = 3
+        self.time_emb_dim = 3
 
-        self.entity_embedding = nn.Embedding(len(self.params.dataloader.dataset.ids["entity"]), self.embedding_dimensions)
-        self.relation_embedding = nn.Embedding(len(self.params.dataloader.dataset.ids["relation"]), self.embedding_dimensions)
-        self.time_embedding = nn.Embedding(len(self.params.dataloader.dataset.ids["time"]), self.embedding_dimensions)
+        self.time_nl = torch.sin
+        self.sigm = torch.nn.Sigmoid()
+        self.tanh = nn.Tanh()
 
-    def forward(self, heads, rels, tails, times):
-        h_embs, r_embs, t_embs = self.getEmbeddings(heads, rels, tails, years, months, days)
+        # Entity and relation embeddings
 
-        scores = h_embs + r_embs - t_embs
-        scores = F.dropout(scores, p=self.params.dropout, training=self.training)
+        self.entity_embeddings = nn.Embedding(self.dataset.num_of_entities(), self.entity_emb_dim).to(self.params.device)
+        self.relation_embeddings = nn.Embedding(self.dataset.num_of_relations(), self.entity_emb_dim + self.time_emb_dim).to(self.params.device)
+
+        nn.init.uniform_(self.entity_embeddings.weight)
+        nn.init.uniform_(self.relation_embeddings.weight)
+
+        # Time embeddings
+
+        self.year_freq = nn.Embedding(self.dataset.num_of_entities(), self.time_emb_dim).to(self.params.device)
+        self.month_freq = nn.Embedding(self.dataset.num_of_entities(), self.time_emb_dim).to(self.params.device)
+        self.day_freq = nn.Embedding(self.dataset.num_of_entities(), self.time_emb_dim).to(self.params.device)
+
+        nn.init.uniform_(self.year_freq.weight)
+        nn.init.uniform_(self.month_freq.weight)
+        nn.init.uniform_(self.day_freq.weight)
+
+        self.year_phi = nn.Embedding(self.dataset.num_of_entities(), self.time_emb_dim).to(self.params.device)
+        self.month_phi = nn.Embedding(self.dataset.num_of_entities(), self.time_emb_dim).to(self.params.device)
+        self.day_phi = nn.Embedding(self.dataset.num_of_entities(), self.time_emb_dim).to(self.params.device)
+
+        nn.init.uniform_(self.year_phi.weight)
+        nn.init.uniform_(self.month_phi.weight)
+        nn.init.uniform_(self.day_phi.weight)
+
+        self.year_amp = nn.Embedding(self.dataset.num_of_entities(), self.time_emb_dim).to(self.params.device)
+        self.month_amp = nn.Embedding(self.dataset.num_of_entities(), self.time_emb_dim).to(self.params.device)
+        self.day_amp = nn.Embedding(self.dataset.num_of_entities(), self.time_emb_dim).to(self.params.device)
+
+        nn.init.uniform_(self.year_amp.weight)
+        nn.init.uniform_(self.month_amp.weight)
+        nn.init.uniform_(self.day_amp.weight)
+
+    def get_time_embeddings(self, entities, year, month, day):
+
+        y = self.year_amp(entities)*self.time_nl(self.year_freq(entities)*year + self.year_phi(entities))
+        m = self.month_amp(entities)*self.time_nl(self.month_freq(entities)*month + self.month_phi(entities))
+        d = self.day_amp(entities)*self.time_nl(self.day_freq(entities)*day + self.day_phi(entities))
+
+        return y+m+d
+
+    def get_embeddings(self, heads, rels, tails, years, months, days):
+        years = years.view(-1, 1)
+        months = months.view(-1, 1)
+        days = days.view(-1, 1)
+
+        h, r, t = self.entity_embeddings(heads), self.relation_embeddings(rels), self.entity_embeddings(tails)
+
+        h_t = self.get_time_embeddings(heads, years, months, days)
+        t_t = self.get_time_embeddings(tails, years, months, days)
+
+        h = torch.cat((h, h_t), 1)
+        t = torch.cat((t, t_t), 1)
+        return h, r, t
+
+    def forward(self, heads, rels, tails, years, months, days):
+        h_embeddings, r_embeddings, t_embeddings = self.get_embeddings(heads, rels, tails, years, months, days)
+
+        scores = h_embeddings + r_embeddings - t_embeddings
+        scores = nn.functional.dropout(scores, p=self.params.dropout, training=self.training)
         scores = -torch.norm(scores, dim=1)
+
         return scores
 
