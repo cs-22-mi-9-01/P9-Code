@@ -6,14 +6,15 @@ from torch.utils.data import Dataset
 from datetime import date
 from torch.utils.data.dataset import T_co
 
+
 class KnowledgeGraphDataset(Dataset):
     def __init__(self, params):
         super(KnowledgeGraphDataset, self).__init__()
         self.params = params
         self.name = params.dataset
         self.path = os.path.join(params.base_directory, "data", self.name.lower())
-        self.next_id = {"entity": 0, "relation": 0, "time": 0}
-        self.ids = {"entity": {}, "relation": {}, "time": {}}
+        self.next_id = {"entity": 0, "relation": 0}
+        self.ids = {"entity": {}, "relation": {}}
         self.entity_set = set()
         self.relation_set = set()
         self.data = {"train": self.read_file(os.path.join(self.path, "train.txt")),
@@ -42,28 +43,8 @@ class KnowledgeGraphDataset(Dataset):
             tail = self.to_id("entity", elements[2])
             year, month, day = self.split_timestamp(elements[3])
 
-            self.register_entity(head)
-            self.register_relation(rel)
-            self.register_entity(tail)
             facts.append([head, rel, tail, year, month, day])
         return facts
-
-    def split_timestamp(self, element):
-        dt = date.fromisoformat(element)
-
-        return dt.year, dt.month, dt.day
-
-    def register_entity(self, entity):
-        self.entity_set.add(entity)
-
-    def register_relation(self, relation):
-        self.relation_set.add(relation)
-
-    def num_of_entities(self):
-        return len(self.entity_set)
-
-    def num_of_relations(self):
-        return len(self.relation_set)
 
     def to_id(self, type, element):
         if element not in self.ids[type].keys():
@@ -71,7 +52,18 @@ class KnowledgeGraphDataset(Dataset):
             self.next_id[type] = self.next_id[type] + 1
         return self.ids[type][element]
 
-    def get_all_data(self):
+    def split_timestamp(self, element):
+        dt = date.fromisoformat(element)
+
+        return dt.year, dt.month, dt.day
+
+    def num_of_entities(self):
+        return len(self.ids["entity"])
+
+    def num_of_relations(self):
+        return len(self.ids["relation"])
+
+    def get_all_columns_train(self):
         heads = self.data["train"][:, 0]
         rels = self.data["train"][:, 1]
         tails = self.data["train"][:, 2]

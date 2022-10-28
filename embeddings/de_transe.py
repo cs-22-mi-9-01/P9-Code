@@ -6,6 +6,7 @@ class DETransE(nn.Module):
     def __init__(self, params):
         super(DETransE, self).__init__()
         self.params = params
+        self.name = "DE_TransE"
         self.dataset = params.dataset
 
         self.learning_rate = 0.001
@@ -74,12 +75,18 @@ class DETransE(nn.Module):
         return h, r, t
 
     def forward(self, heads, rels, tails, years, months, days):
-        h_embeddings, r_embeddings, t_embeddings = self.get_embeddings(heads, rels, tails, years, months, days)
+        head_emb, relation_emb, tail_emb = self.get_embeddings(heads, rels, tails, years, months, days)
 
-        scores = h_embeddings + r_embeddings - t_embeddings
-        scores = nn.functional.dropout(scores, p=self.dropout_probability, training=self.training)
-        scores = -torch.norm(scores, dim=1)
+        scores = self.scoring_function(head_emb, relation_emb, tail_emb)
+        # TODO: Consider using dropout to avoid overfitting, see https://github.com/BorealisAI/de-simple/blob/master/de_transe.py#L85
 
+        return scores
+
+    def scoring_function(self, head_emb, relation_emb, tail_emb):
+        scores = torch.add(head_emb, relation_emb)
+        scores = torch.sub(scores, tail_emb)
+        scores = torch.linalg.norm(scores, dim=1)
+        #scores = torch.div(scores, torch.sqrt(torch.tensor(self.entity_emb_dim + self.time_emb_dim)))
         return scores
 
     def loss_function(self, score, target):
