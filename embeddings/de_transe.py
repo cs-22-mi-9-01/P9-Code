@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as Functional
 
 
 class DETransE(nn.Module):
@@ -10,8 +11,8 @@ class DETransE(nn.Module):
         self.dataset = params.dataset
 
         self.learning_rate = 0.001
-        self.entity_emb_dim = 3
-        self.time_emb_dim = 3
+        self.entity_emb_dim = 90
+        self.time_emb_dim = 10
         self.dropout_probability = 0.4
 
         self.time_nl = torch.sin
@@ -78,7 +79,7 @@ class DETransE(nn.Module):
         head_emb, relation_emb, tail_emb = self.get_embeddings(heads, rels, tails, years, months, days)
 
         scores = self.scoring_function(head_emb, relation_emb, tail_emb)
-        # TODO: Consider using dropout to avoid overfitting, see https://github.com/BorealisAI/de-simple/blob/master/de_transe.py#L85
+        scores = Functional.dropout(scores, p=self.params.dropout, training=self.training)
 
         return scores
 

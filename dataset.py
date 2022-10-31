@@ -65,5 +65,8 @@ class KnowledgeGraphDataset(Dataset):
     def num_of_relations(self):
         return len(self.ids["relation"])
 
+    def num_of_facts(self):
+        return len(self.data[self.target_dataset])
+
     def get_all_facts(self):
         return self.data[self.target_dataset]
