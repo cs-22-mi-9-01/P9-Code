@@ -22,9 +22,9 @@ def ques_type(filename):
 
 def json_to_triple(filename):
     question = np.array([])
+    que_pron = np.array([])
     entity = np.array([])
     # time = np.array([])
-    que_pron = np.array([])
 
     # Create file for interrogative word
     what_file = open('prepared_data/what.txt')
@@ -39,10 +39,9 @@ def json_to_triple(filename):
     who_file.close()
 
     with open(filename) as f:
-        # find the question and entity in json respectively
+    # find the question and entity in json respectively
         # question.shape = (175,), entity.shape = (330,)
         for line in f.readlines():
-            # que_type = re.findall('"CATEGORY": "Simple"')
             jsquesion = re.findall('"TEXT": ".*?"', line)
             jsentity = re.findall('"SURFACEFORM": ".*?"', line)
             # jstime = re.findall('".*? in .*?"', line)
@@ -54,8 +53,8 @@ def json_to_triple(filename):
             #     time = np.append(time, line)
                 # print(time)
 
+    # Put all questions into a file
         for i in range(len(question)):
-            # extract question and entity as a nparray respectively
             question[i] = question[i].split('"')[3]
             # count the nubmer of IPron
             que_pron = np.append(que_pron, [question[i].split( ).pop(0)])
@@ -63,7 +62,8 @@ def json_to_triple(filename):
             for i in range(len(question)):
                 f2.write(question[i] + '\n')
         f2.close()
-        # print(question)
+
+    # Classify all questions into different file by interrogative words, such as 'which'.
         que_pron = np.array(que_pron)
         for i in range(len(que_pron)):
             print(que_pron)
@@ -84,16 +84,17 @@ def json_to_triple(filename):
                     which_file.write(question[i] + '\n')
         unique, unique_counts = np.unique(que_pron, return_counts=True)
         print(f'Interrogative Pronouns: ',unique, unique_counts)
-    f.close()
-        # for i in range(len(entity)):
-        #     entity[i] = entity[i].split('"')[3]
-        #     if i%2 == 0:
-        #         entity_sub = np.append(entity_h, entity[i])
-        #     else:
-        #         entity_obj = np.append(entity_h, entity[i])
-            # print(entity[i])
         
-        # for i in range(len(time)):
+    # Build the quadruple
+        h_entity = np.array([])
+        t_entity = np.array([])
+        for i in range(len(entity)):
+            if i%2 == 0:
+                h_entity = np.append(h_entity, entity[i])
+            else:
+                t_entity = np.append(t_entity, entity[i])
+
+    f.close()
 
 
 if __name__ == '__main__':
