@@ -10,10 +10,10 @@ class DETransE(nn.Module):
         self.name = "DE_TransE"
         self.dataset = params.dataset
 
-        self.learning_rate = 0.001
-        self.entity_emb_dim = 90
-        self.time_emb_dim = 10
-        self.dropout_probability = 0.4
+        self.learning_rate = self.params.learning_rate
+        self.entity_emb_dim = int(self.params.emb_dim * self.params.se_prop)
+        self.time_emb_dim = int(self.params.emb_dim * (1.0-self.params.se_prop))
+        self.worst_score = None
 
         self.time_nl = torch.sin
         self.sigm = torch.nn.Sigmoid()
@@ -79,7 +79,7 @@ class DETransE(nn.Module):
         head_emb, relation_emb, tail_emb = self.get_embeddings(heads, rels, tails, years, months, days)
 
         scores = self.scoring_function(head_emb, relation_emb, tail_emb)
-        scores = Functional.dropout(scores, p=self.dropout_probability, training=self.training)
+        scores = Functional.dropout(scores, p=self.params.dropout_probability, training=self.training)
 
         return scores
 
@@ -90,7 +90,11 @@ class DETransE(nn.Module):
 
         return scores
 
-    def loss_function(self, scores, scores_neg, target):
-        return (torch.sum(scores) - torch.sum(target)).abs() / scores.shape[0] + \
-               ((-torch.sum(scores_neg)) - torch.sum(target)).abs() / scores_neg.shape[0]
+    def loss_function(self, scores, scores_neg):
+        if self.worst_score is None:
+            self.worst_score = max(torch.max(scores), torch.max(scores_neg)).item()
+        target = torch.zeros(scores.shape[0]).to(self.params.device)
+        negative_target = torch.tensor(self.worst_score).repeat(scores_neg.shape[0]).to(self.params.device)
 
+        return (torch.dist(scores, target) / scores.shape[0]) + \
+               (torch.dist(scores_neg, negative_target) / (scores_neg.shape[0] + self.params.neg_ratio))

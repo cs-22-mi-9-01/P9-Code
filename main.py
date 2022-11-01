@@ -26,7 +26,7 @@ def main():
 
     # TEST BLOCK
     params.task = "learn"
-    params.model_path = r"C://Users//Jeppe//Documents//Unistuff//Master//P9-Code//models//DE_TransE//icews14//DE_TransE_500.model"
+    params.model_path = r"C://Users//Jeppe//Documents//Unistuff//Master//P9-Code//models//DE_TransE//icews14//DE_TransE_10_pos_fact_focus_500_neg.model"
     # TEST BLOCK END
 
     # Create dataset
@@ -37,10 +37,6 @@ def main():
     # Assign device
     device = "cuda" if torch.cuda.is_available() else "cpu"
     params.device = device
-
-    #print(f"Model structure: {model}\n\n")
-    #for name, param in model.named_parameters():
-    #    print(f"Layer: {name} | Size: {param.size()} | Values : {param[:2]} \n")
 
     match params.task:
         case 'learn':

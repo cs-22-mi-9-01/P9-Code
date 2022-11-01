@@ -14,9 +14,6 @@ class KnowledgeGraphDataset(Dataset):
         self.name = params.dataset
         self.path = os.path.join(params.base_directory, "data", self.name.lower())
 
-        self.neg_ratio = 500
-        self.batch_size = 512
-
         self.next_id = {"entity": 0, "relation": 0}
         self.ids = {"entity": {}, "relation": {}}
         self.entity_set = set()
@@ -73,7 +70,7 @@ class KnowledgeGraphDataset(Dataset):
         return len(self.data[self.target_dataset])
 
     def get_negative_samples(self, facts):
-        neg_group_size = int(self.neg_ratio/2)
+        neg_group_size = int(self.params.neg_ratio/2)
 
         neg_facts_head = torch.repeat_interleave(facts, neg_group_size, dim=0)
         neg_facts_tail = torch.repeat_interleave(facts, neg_group_size, dim=0)
@@ -88,14 +85,14 @@ class KnowledgeGraphDataset(Dataset):
         return self.data[self.target_dataset]
 
     def get_next_batch(self):
-        fact_batch = self.data[self.target_dataset][self.batch_progress: self.batch_progress + self.batch_size]
-        self.batch_progress += self.batch_size
+        fact_batch = self.data[self.target_dataset][self.batch_progress: self.batch_progress + self.params.batch_size]
+        self.batch_progress += self.params.batch_size
         neg_fact_batch = self.get_negative_samples(fact_batch)
 
         return fact_batch, neg_fact_batch
 
     def get_batch_no(self):
-        return math.ceil(self.batch_progress / self.batch_size), math.ceil(self.num_of_facts() / self.batch_size)
+        return math.ceil(self.batch_progress / self.params.batch_size), math.ceil(self.num_of_facts() / self.params.batch_size)
 
     def reset_batches(self):
         self.batch_progress = 0

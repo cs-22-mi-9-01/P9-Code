@@ -11,9 +11,9 @@ class Trainer:
         self.model = DETransE(params).to(self.params.device)
         self.params.model = self.model
 
-        self.epochs = 500
+        self.epochs = 100
         self.save = True
-        self.save_every = 50
+        self.save_every = 500
 
     def train(self):
         self.params.model.train()
@@ -30,7 +30,8 @@ class Trainer:
             while not last_batch:
                 facts, neg_samples = self.params.dataset.get_next_batch()
                 batch_no, last_batch_no = self.params.dataset.get_batch_no()
-                print("Batch number " + str(batch_no) + "/" + str(last_batch_no))
+                if batch_no == 1 or batch_no % 50 == 0:
+                    print("Batch number " + str(batch_no) + "/" + str(last_batch_no))
                 if batch_no == last_batch_no:
                     last_batch = True
 
@@ -39,8 +40,7 @@ class Trainer:
                 heads, rels, tails, years, months, days = split_facts(neg_samples)
                 scores_neg = self.params.model(heads, rels, tails, years, months, days)
 
-                target = torch.zeros(heads.shape[0]).to(self.params.device)
-                loss = loss_fn(scores, scores_neg, target)
+                loss = loss_fn(scores, scores_neg)
                 loss.backward()
                 total_loss += loss.item()
                 optimizer.step()
