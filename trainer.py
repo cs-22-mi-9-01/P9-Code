@@ -23,19 +23,27 @@ class Trainer:
 
         for epoch in range(1, self.epochs + 1):
             print("--------- Epoch: " + str(epoch) + " ---------")
-
+            last_batch = False
             total_loss = 0.0
 
-            # TODO: Implement batch loading from dataset, see https://github.com/BorealisAI/de-simple/blob/master/trainer.py
+            self.params.dataset.reset_batches()
+            while not last_batch:
+                facts, neg_samples = self.params.dataset.get_next_batch()
+                batch_no, last_batch_no = self.params.dataset.get_batch_no()
+                print("Batch number " + str(batch_no) + "/" + str(last_batch_no))
+                if batch_no == last_batch_no:
+                    last_batch = True
 
-            heads, rels, tails, years, months, days = split_facts(self.params.dataset.get_all_facts())
-            scores = self.params.model(heads, rels, tails, years, months, days)
+                heads, rels, tails, years, months, days = split_facts(facts)
+                scores = self.params.model(heads, rels, tails, years, months, days)
+                heads, rels, tails, years, months, days = split_facts(neg_samples)
+                scores_neg = self.params.model(heads, rels, tails, years, months, days)
 
-            target = torch.zeros(heads.shape[0]).to(self.params.device)
-            loss = loss_fn(scores, target)
-            loss.backward()
-            total_loss += loss.item()
-            optimizer.step()
+                target = torch.zeros(heads.shape[0]).to(self.params.device)
+                loss = loss_fn(scores, scores_neg, target)
+                loss.backward()
+                total_loss += loss.item()
+                optimizer.step()
 
             print("Loss in epoch " + str(epoch) + ": " + str(total_loss))
 

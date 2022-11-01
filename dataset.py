@@ -1,4 +1,4 @@
-
+import math
 import os
 import torch
 
@@ -14,6 +14,9 @@ class KnowledgeGraphDataset(Dataset):
         self.name = params.dataset
         self.path = os.path.join(params.base_directory, "data", self.name.lower())
 
+        self.neg_ratio = 500
+        self.batch_size = 512
+
         self.next_id = {"entity": 0, "relation": 0}
         self.ids = {"entity": {}, "relation": {}}
         self.entity_set = set()
@@ -22,6 +25,7 @@ class KnowledgeGraphDataset(Dataset):
                      "valid": self.read_file(os.path.join(self.path, "valid.txt")),
                      "test": self.read_file(os.path.join(self.path, "test.txt"))}
         self.target_dataset = "train"
+        self.batch_progress = 0
 
         for split in ["train", "valid", "test"]:
             self.data[split] = torch.tensor(self.data[split]).long().to(self.params.device)
@@ -68,5 +72,30 @@ class KnowledgeGraphDataset(Dataset):
     def num_of_facts(self):
         return len(self.data[self.target_dataset])
 
+    def get_negative_samples(self, facts):
+        neg_group_size = int(self.neg_ratio/2)
+
+        neg_facts_head = torch.repeat_interleave(facts, neg_group_size, dim=0)
+        neg_facts_tail = torch.repeat_interleave(facts, neg_group_size, dim=0)
+        rand_nums_head = torch.randint(low=1, high=self.num_of_entities(), size=(neg_facts_head.shape[0],))
+        rand_nums_tail = torch.randint(low=1, high=self.num_of_entities(), size=(neg_facts_tail.shape[0],))
+        neg_facts_head[:, 0] = (neg_facts_head[:, 0] + rand_nums_head) % self.num_of_entities()
+        neg_facts_tail[:, 0] = (neg_facts_tail[:, 0] + rand_nums_tail) % self.num_of_entities()
+
+        return torch.cat((neg_facts_head, neg_facts_tail), dim=0)
+
     def get_all_facts(self):
         return self.data[self.target_dataset]
+
+    def get_next_batch(self):
+        fact_batch = self.data[self.target_dataset][self.batch_progress: self.batch_progress + self.batch_size]
+        self.batch_progress += self.batch_size
+        neg_fact_batch = self.get_negative_samples(fact_batch)
+
+        return fact_batch, neg_fact_batch
+
+    def get_batch_no(self):
+        return math.ceil(self.batch_progress / self.batch_size), math.ceil(self.num_of_facts() / self.batch_size)
+
+    def reset_batches(self):
+        self.batch_progress = 0

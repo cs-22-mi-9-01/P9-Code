@@ -79,7 +79,7 @@ class DETransE(nn.Module):
         head_emb, relation_emb, tail_emb = self.get_embeddings(heads, rels, tails, years, months, days)
 
         scores = self.scoring_function(head_emb, relation_emb, tail_emb)
-        scores = Functional.dropout(scores, p=self.params.dropout, training=self.training)
+        scores = Functional.dropout(scores, p=self.dropout_probability, training=self.training)
 
         return scores
 
@@ -90,6 +90,7 @@ class DETransE(nn.Module):
 
         return scores
 
-    def loss_function(self, score, target):
-        return (torch.sum(score) - torch.sum(target)).abs() / score.shape[0]
+    def loss_function(self, scores, scores_neg, target):
+        return (torch.sum(scores) - torch.sum(target)).abs() / scores.shape[0] + \
+               ((-torch.sum(scores_neg)) - torch.sum(target)).abs() / scores_neg.shape[0]
 

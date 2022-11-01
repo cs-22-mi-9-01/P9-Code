@@ -25,8 +25,8 @@ def main():
     params = Parameters(args)
 
     # TEST BLOCK
-    params.task = "test"
-    params.model_path = r"C://Users//Jeppe//Documents//Unistuff//Master//P9-Code//models//DE_TransE//icews14//DE_TransE_100.model"
+    params.task = "learn"
+    params.model_path = r"C://Users//Jeppe//Documents//Unistuff//Master//P9-Code//models//DE_TransE//icews14//DE_TransE_500.model"
     # TEST BLOCK END
 
     # Create dataset
