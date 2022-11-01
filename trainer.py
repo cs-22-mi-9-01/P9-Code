@@ -11,9 +11,9 @@ class Trainer:
         self.model = DETransE(params).to(self.params.device)
         self.params.model = self.model
 
-        self.epochs = 100
+        self.epochs = 50
         self.save = True
-        self.save_every = 500
+        self.save_every = 10
 
     def train(self):
         self.params.model.train()
