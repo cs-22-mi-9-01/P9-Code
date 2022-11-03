@@ -14,11 +14,7 @@ Foreign Affairs (France),Make statement,France,0,2013-04-23
 Mahmoud Abbas,0,Envoy (United States),2011-09-08,Consult
 Mahmoud Abbas,Consult,0,2011-09-08,Envoy (United States)
 Mahmoud Abbas,Consult,Envoy (United States),0,2011-09-08
-0,Consult,Attorney General (Egypt),2015-09-19
-,Head of Government (Egypt)
-Head of Government (Egypt),0,Attorney General (Egypt),2015-09-19
-,Consult
-Head of Government (Egypt),Consult,0,2015-09-19
-,Attorney General (Egypt)
+0,Consult,Attorney General (Egypt),2015-09-19,Head of Government (Egypt)
+Head of Government (Egypt),0,Attorney General (Egypt),2015-09-19,Consult
+Head of Government (Egypt),Consult,0,2015-09-19,Attorney General (Egypt)
 Head of Government (Egypt),Consult,Attorney General (Egypt),0,2015-09-19
-

@@ -18,14 +18,12 @@ def generate_corrupted_quadruple(filename):
     with open(filename) as f:
         with open('corrupted_quad.csv', 'a') as f2:
             for line in f:
-                list = line.split(',')
-                if list[-1] == '\n':
+                list = line.strip('\n').split(',')
+                if list[-1] == '':
                     list = list[0:-1]
                 else:
                     pass
-                print(list)
                 a = np.array(list)
-                print(len(a))
                 for i in range(4):
                     if i == 0:
                         co_qu = np.array([0, a[1], a[2], a[3], a[0]])
@@ -39,8 +37,7 @@ def generate_corrupted_quadruple(filename):
                     elif i == 3:
                         co_qu = np.array([a[0], a[1], a[2], 0, a[3]])
                         f2.write(','.join(co_qu) + '\n')
-                    else:
-                        i = 4
+                        
 
 # convert csv into json
 def csv_to_json(filename):
@@ -54,5 +51,5 @@ def csv_to_json(filename):
 
 if __name__ == '__main__':
     # txt_to_csv('temp.txt')
-    generate_corrupted_quadruple('temp.csv')
-    # csv_to_json('corrupted_quad.csv')
+    # generate_corrupted_quadruple('temp.csv')
+    csv_to_json('corrupted_quad.csv')
