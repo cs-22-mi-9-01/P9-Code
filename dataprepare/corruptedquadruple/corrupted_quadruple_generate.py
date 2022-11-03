@@ -6,12 +6,15 @@ import json
 
 # convert txt into csv
 def txt_to_csv(filename):
-    with open(f"{filename.split('/')[-1].split('.')[0]}.csv", 'w') as f1:
+    csv_file = filename.split('/')[-1].split('.')[0] + '.csv'
+    with open(csv_file, 'w') as f1:
         writer = csv.writer(f1)
         with open(filename) as f2:
             for line in f2:
                 line = re.split("['\t','\n']", line)
                 writer.writerow(line)
+    print(f"'{filename}' has been converted to '{csv_file}'.")
+
 
 # generate corrupted quadruple and save it as csv file
 def generate_corrupted_quadruple(filename):
@@ -38,9 +41,11 @@ def generate_corrupted_quadruple(filename):
                     elif i == 3:
                         co_qu = np.array([a[0], a[1], a[2], 0, a[3]])
                         f2.write(','.join(co_qu) + '\n')
+    print("Corrupted quadruples are generated, and saved as 'corrupted_quad.csv'.")
 
 
-def add_title(filename):
+# add ID for each fact
+def add_fact_id(filename):
     data = pd.read_csv(filename)
     fact_column = []
     num1 = 0
@@ -55,12 +60,14 @@ def add_title(filename):
         num2 += 1
     data['FACT_ID'] = fact_column
     data = data[['FACT_ID', 'HEAD', 'RELATION', 'TAIL', 'TIME', 'ANSWER']]
-    data.to_csv('cc.csv', index=False)
+    data.to_csv(filename, index=False)
+    print("FACT_ID has been added.")
 
 
 # convert csv into json: [obj, obj,obj...]
 def csv_to_json(filename):
-    with open('corrupted_quad.json', 'w') as f:
+    json_file = filename.split('/')[-1].split('.')[0] + '.json'
+    with open(json_file, 'w') as f:
         all_data = pd.read_csv(filename)
         # TODO: write too much rows at once
         a = np.array([])
@@ -69,32 +76,25 @@ def csv_to_json(filename):
             row = "{%s}" % row
             a = np.append(a, row).tolist()
         json.dump(a, f, indent=4)
+    print(f"'{filename}' has been converted to '{json_file}'.")
 
 
  # convert csv into json: [{key: value}, {key: value}...]
 def csv_to_json_2(filename):
-    with open('corrupted_quad.json', 'w') as f:
+    json_file = filename.split('/')[-1].split('.')[0] + '.json'
+    with open(json_file, 'w') as f:
         with open(filename) as f2:
             records = csv.DictReader(f2)
             a = np.array([])
             for row in records:
                 a = np.append(a, row).tolist()
             json.dump(a, f, indent=4)
-    # data = pd.read_csv(filename, header=0)
-    # # print(data)
-    # for line in data.values:
-    #     dic = {}
-    #     list = line.tolist()
-    #     print(list[0])
-    #     print(','.join(list[1:]))
-    #     # for item, data in zip(list[0], list[1:]):
-    #     #     dic[item] = data
-    #     #     print(dic)
+    print(f"'{filename}' has been converted to '{json_file}'.")
 
 
 if __name__ == '__main__':
     # txt_to_csv('temp.txt')
     # generate_corrupted_quadruple('temp.csv')
-    # add_title('corrupted_quad.csv')
+    # add_fact_id('corrupted_quad.csv')
     # csv_to_json('corrupted_quad.csv')
-    csv_to_json_2('cc.csv')
+    csv_to_json_2('corrupted_quad.csv')
