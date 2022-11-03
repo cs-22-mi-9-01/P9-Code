@@ -8,8 +8,6 @@ import json
 def txt_to_csv(filename):
     with open(f"{filename.split('/')[-1].split('.')[0]}.csv", 'w') as f1:
         writer = csv.writer(f1)
-        csv_row = []
-        writer.writerow(csv_row)
         with open(filename) as f2:
             for line in f2:
                 line = re.split("['\t','\n']", line)
@@ -20,9 +18,14 @@ def generate_corrupted_quadruple(filename):
     with open(filename) as f:
         with open('corrupted_quad.csv', 'a') as f2:
             for line in f:
-                list = line.split(',')[0:-1]
+                list = line.split(',')
+                if list[-1] == '\n':
+                    list = list[0:-1]
+                else:
+                    pass
+                print(list)
                 a = np.array(list)
-                co_qu = np.array([])
+                print(len(a))
                 for i in range(4):
                     if i == 0:
                         co_qu = np.array([0, a[1], a[2], a[3], a[0]])
@@ -36,6 +39,8 @@ def generate_corrupted_quadruple(filename):
                     elif i == 3:
                         co_qu = np.array([a[0], a[1], a[2], 0, a[3]])
                         f2.write(','.join(co_qu) + '\n')
+                    else:
+                        i = 4
 
 # convert csv into json
 def csv_to_json(filename):
@@ -48,6 +53,6 @@ def csv_to_json(filename):
     
 
 if __name__ == '__main__':
-    # txt_to_csv('icews05-15/test.txt')
-    # generate_corrupted_quadruple('test.csv')
-    csv_to_json('corrupted_quad.csv')
+    # txt_to_csv('temp.txt')
+    generate_corrupted_quadruple('temp.csv')
+    # csv_to_json('corrupted_quad.csv')
