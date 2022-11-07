@@ -88,9 +88,12 @@ def csv_to_json_2(filename):
         with open(filename) as f2:
             records = csv.DictReader(f2)
             print(type(records))
+            first = True
             for row in records:
+                if not first:
+                    js_f.write(',')
+                first=False
                 json.dump(row, js_f, indent=4)
-                js_f.write(',')
         js_f.write(']')
     print(f"'{filename}' has been converted to '{json_file}'.")
 
@@ -100,5 +103,4 @@ if __name__ == '__main__':
     # generate_corrupted_quadruple('temp.csv')
     # add_fact_id('corrupted_quad.csv')
     # csv_to_json('corrupted_quad.csv')
-    # TODO: delete the last comma in the file, need to do it manually now.
     csv_to_json_2('corrupted_quad.csv')
