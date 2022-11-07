@@ -3,6 +3,7 @@ import pandas as pd
 import csv
 import re
 import json
+import os
 
 # convert txt into csv
 def txt_to_csv(filename):
@@ -82,13 +83,15 @@ def csv_to_json(filename):
  # convert csv into json: [{key: value}, {key: value}...]
 def csv_to_json_2(filename):
     json_file = filename.split('/')[-1].split('.')[0] + '.json'
-    with open(json_file, 'w') as f:
+    with open(json_file, 'w') as js_f:
+        js_f.write('[')
         with open(filename) as f2:
             records = csv.DictReader(f2)
-            a = np.array([])
+            print(type(records))
             for row in records:
-                a = np.append(a, row).tolist()
-            json.dump(a, f, indent=4)
+                json.dump(row, js_f, indent=4)
+                js_f.write(',')
+        js_f.write(']')
     print(f"'{filename}' has been converted to '{json_file}'.")
 
 
@@ -97,4 +100,5 @@ if __name__ == '__main__':
     # generate_corrupted_quadruple('temp.csv')
     # add_fact_id('corrupted_quad.csv')
     # csv_to_json('corrupted_quad.csv')
+    # TODO: delete the last comma in the file, need to do it manually now.
     csv_to_json_2('corrupted_quad.csv')

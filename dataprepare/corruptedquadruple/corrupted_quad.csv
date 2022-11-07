@@ -1,20 +1,84 @@
-0,Investigate,Guerrilla (Colombia),2008-07-25,Colombia
-Colombia,0,Guerrilla (Colombia),2008-07-25,Investigate
-Colombia,Investigate,0,2008-07-25,Guerrilla (Colombia)
-Colombia,Investigate,Guerrilla (Colombia),0,2008-07-25
-0,Consult,City Mayor (Australia),2005-10-11,Police (Australia)
-Police (Australia),0,City Mayor (Australia),2005-10-11,Consult
-Police (Australia),Consult,0,2005-10-11,City Mayor (Australia)
-Police (Australia),Consult,City Mayor (Australia),0,2005-10-11
-0,Make statement,France,2013-04-23,Foreign Affairs (France)
-Foreign Affairs (France),0,France,2013-04-23,Make statement
-Foreign Affairs (France),Make statement,0,2013-04-23,France
-Foreign Affairs (France),Make statement,France,0,2013-04-23
-0,Consult,Envoy (United States),2011-09-08,Mahmoud Abbas
-Mahmoud Abbas,0,Envoy (United States),2011-09-08,Consult
-Mahmoud Abbas,Consult,0,2011-09-08,Envoy (United States)
-Mahmoud Abbas,Consult,Envoy (United States),0,2011-09-08
-0,Consult,Attorney General (Egypt),2015-09-19,Head of Government (Egypt)
-Head of Government (Egypt),0,Attorney General (Egypt),2015-09-19,Consult
-Head of Government (Egypt),Consult,0,2015-09-19,Attorney General (Egypt)
-Head of Government (Egypt),Consult,Attorney General (Egypt),0,2015-09-19
+FACT_ID,HEAD,RELATION,TAIL,TIME,ANSWER
+FACT_1_0,0,Investigate,Guerrilla (Colombia),2008-07-25,Colombia
+FACT_1_1,Colombia,0,Guerrilla (Colombia),2008-07-25,Investigate
+FACT_1_2,Colombia,Investigate,0,2008-07-25,Guerrilla (Colombia)
+FACT_1_3,Colombia,Investigate,Guerrilla (Colombia),0,2008-07-25
+FACT_2_0,0,Consult,City Mayor (Australia),2005-10-11,Police (Australia)
+FACT_2_1,Police (Australia),0,City Mayor (Australia),2005-10-11,Consult
+FACT_2_2,Police (Australia),Consult,0,2005-10-11,City Mayor (Australia)
+FACT_2_3,Police (Australia),Consult,City Mayor (Australia),0,2005-10-11
+FACT_3_0,0,Make statement,France,2013-04-23,Foreign Affairs (France)
+FACT_3_1,Foreign Affairs (France),0,France,2013-04-23,Make statement
+FACT_3_2,Foreign Affairs (France),Make statement,0,2013-04-23,France
+FACT_3_3,Foreign Affairs (France),Make statement,France,0,2013-04-23
+FACT_4_0,0,Consult,Envoy (United States),2011-09-08,Mahmoud Abbas
+FACT_4_1,Mahmoud Abbas,0,Envoy (United States),2011-09-08,Consult
+FACT_4_2,Mahmoud Abbas,Consult,0,2011-09-08,Envoy (United States)
+FACT_4_3,Mahmoud Abbas,Consult,Envoy (United States),0,2011-09-08
+FACT_5_0,0,Consult,Attorney General (Egypt),2015-09-19,Head of Government (Egypt)
+FACT_5_1,Head of Government (Egypt),0,Attorney General (Egypt),2015-09-19,Consult
+FACT_5_2,Head of Government (Egypt),Consult,0,2015-09-19,Attorney General (Egypt)
+FACT_5_3,Head of Government (Egypt),Consult,Attorney General (Egypt),0,2015-09-19
+FACT_6_0,RELATION,TAIL,TIME,ANSWER,
+FACT_6_1,Investigate,Guerrilla (Colombia),2008-07-25,Colombia,
+FACT_6_2,0,Guerrilla (Colombia),2008-07-25,Investigate,
+FACT_6_3,Investigate,0,2008-07-25,Guerrilla (Colombia),
+FACT_7_0,Investigate,Guerrilla (Colombia),0,2008-07-25,
+FACT_7_1,Consult,City Mayor (Australia),2005-10-11,Police (Australia),
+FACT_7_2,0,City Mayor (Australia),2005-10-11,Consult,
+FACT_7_3,Consult,0,2005-10-11,City Mayor (Australia),
+FACT_8_0,Consult,City Mayor (Australia),0,2005-10-11,
+FACT_8_1,Make statement,France,2013-04-23,Foreign Affairs (France),
+FACT_8_2,0,France,2013-04-23,Make statement,
+FACT_8_3,Make statement,0,2013-04-23,France,
+FACT_9_0,Make statement,France,0,2013-04-23,
+FACT_9_1,Consult,Envoy (United States),2011-09-08,Mahmoud Abbas,
+FACT_9_2,0,Envoy (United States),2011-09-08,Consult,
+FACT_9_3,Consult,0,2011-09-08,Envoy (United States),
+FACT_10_0,Consult,Envoy (United States),0,2011-09-08,
+FACT_10_1,Consult,Attorney General (Egypt),2015-09-19,Head of Government (Egypt),
+FACT_10_2,0,Attorney General (Egypt),2015-09-19,Consult,
+FACT_10_3,Consult,0,2015-09-19,Attorney General (Egypt),
+FACT_11_0,Consult,Attorney General (Egypt),0,2015-09-19,
+FACT_11_1,RELATION,TAIL,TIME,ANSWER,
+FACT_11_2,Investigate,Guerrilla (Colombia),2008-07-25,Colombia,
+FACT_11_3,0,Guerrilla (Colombia),2008-07-25,Investigate,
+FACT_12_0,Investigate,0,2008-07-25,Guerrilla (Colombia),
+FACT_12_1,Investigate,Guerrilla (Colombia),0,2008-07-25,
+FACT_12_2,Consult,City Mayor (Australia),2005-10-11,Police (Australia),
+FACT_12_3,0,City Mayor (Australia),2005-10-11,Consult,
+FACT_13_0,Consult,0,2005-10-11,City Mayor (Australia),
+FACT_13_1,Consult,City Mayor (Australia),0,2005-10-11,
+FACT_13_2,Make statement,France,2013-04-23,Foreign Affairs (France),
+FACT_13_3,0,France,2013-04-23,Make statement,
+FACT_14_0,Make statement,0,2013-04-23,France,
+FACT_14_1,Make statement,France,0,2013-04-23,
+FACT_14_2,Consult,Envoy (United States),2011-09-08,Mahmoud Abbas,
+FACT_14_3,0,Envoy (United States),2011-09-08,Consult,
+FACT_15_0,Consult,0,2011-09-08,Envoy (United States),
+FACT_15_1,Consult,Envoy (United States),0,2011-09-08,
+FACT_15_2,Consult,Attorney General (Egypt),2015-09-19,Head of Government (Egypt),
+FACT_15_3,0,Attorney General (Egypt),2015-09-19,Consult,
+FACT_16_0,Consult,0,2015-09-19,Attorney General (Egypt),
+FACT_16_1,Consult,Attorney General (Egypt),0,2015-09-19,
+FACT_16_2,RELATION,TAIL,TIME,ANSWER,
+FACT_16_3,Investigate,Guerrilla (Colombia),2008-07-25,Colombia,
+FACT_17_0,0,Guerrilla (Colombia),2008-07-25,Investigate,
+FACT_17_1,Investigate,0,2008-07-25,Guerrilla (Colombia),
+FACT_17_2,Investigate,Guerrilla (Colombia),0,2008-07-25,
+FACT_17_3,Consult,City Mayor (Australia),2005-10-11,Police (Australia),
+FACT_18_0,0,City Mayor (Australia),2005-10-11,Consult,
+FACT_18_1,Consult,0,2005-10-11,City Mayor (Australia),
+FACT_18_2,Consult,City Mayor (Australia),0,2005-10-11,
+FACT_18_3,Make statement,France,2013-04-23,Foreign Affairs (France),
+FACT_19_0,0,France,2013-04-23,Make statement,
+FACT_19_1,Make statement,0,2013-04-23,France,
+FACT_19_2,Make statement,France,0,2013-04-23,
+FACT_19_3,Consult,Envoy (United States),2011-09-08,Mahmoud Abbas,
+FACT_20_0,0,Envoy (United States),2011-09-08,Consult,
+FACT_20_1,Consult,0,2011-09-08,Envoy (United States),
+FACT_20_2,Consult,Envoy (United States),0,2011-09-08,
+FACT_20_3,Consult,Attorney General (Egypt),2015-09-19,Head of Government (Egypt),
+FACT_21_0,0,Attorney General (Egypt),2015-09-19,Consult,
+FACT_21_1,Consult,0,2015-09-19,Attorney General (Egypt),
+FACT_21_2,Consult,Attorney General (Egypt),0,2015-09-19,

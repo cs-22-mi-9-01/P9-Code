@@ -1,115 +1,582 @@
-[
-    "Colombia",
-    "0",
-    "Guerrilla (Colombia)",
-    "2008-07-25",
-    "Investigate"
-][
-    "Colombia",
-    "Investigate",
-    "0",
-    "2008-07-25",
-    "Guerrilla (Colombia)"
-][
-    "Colombia",
-    "Investigate",
-    "Guerrilla (Colombia)",
-    "0",
-    "2008-07-25"
-][
-    "0",
-    "Consult",
-    "City Mayor (Australia)",
-    "2005-10-11",
-    "Police (Australia)"
-][
-    "Police (Australia)",
-    "0",
-    "City Mayor (Australia)",
-    "2005-10-11",
-    "Consult"
-][
-    "Police (Australia)",
-    "Consult",
-    "0",
-    "2005-10-11",
-    "City Mayor (Australia)"
-][
-    "Police (Australia)",
-    "Consult",
-    "City Mayor (Australia)",
-    "0",
-    "2005-10-11"
-][
-    "0",
-    "Make statement",
-    "France",
-    "2013-04-23",
-    "Foreign Affairs (France)"
-][
-    "Foreign Affairs (France)",
-    "0",
-    "France",
-    "2013-04-23",
-    "Make statement"
-][
-    "Foreign Affairs (France)",
-    "Make statement",
-    "0",
-    "2013-04-23",
-    "France"
-][
-    "Foreign Affairs (France)",
-    "Make statement",
-    "France",
-    "0",
-    "2013-04-23"
-][
-    "0",
-    "Consult",
-    "Envoy (United States)",
-    "2011-09-08",
-    "Mahmoud Abbas"
-][
-    "Mahmoud Abbas",
-    "0",
-    "Envoy (United States)",
-    "2011-09-08",
-    "Consult"
-][
-    "Mahmoud Abbas",
-    "Consult",
-    "0",
-    "2011-09-08",
-    "Envoy (United States)"
-][
-    "Mahmoud Abbas",
-    "Consult",
-    "Envoy (United States)",
-    "0",
-    "2011-09-08"
-][
-    "0",
-    "Consult",
-    "Attorney General (Egypt)",
-    "2015-09-19",
-    "Head of Government (Egypt)"
-][
-    "Head of Government (Egypt)",
-    "0",
-    "Attorney General (Egypt)",
-    "2015-09-19",
-    "Consult"
-][
-    "Head of Government (Egypt)",
-    "Consult",
-    "0",
-    "2015-09-19",
-    "Attorney General (Egypt)"
-][
-    "Head of Government (Egypt)",
-    "Consult",
-    "Attorney General (Egypt)",
-    "0",
-    "2015-09-19"
-]
+[{
+    "FACT_ID": "FACT_1_0",
+    "HEAD": "0",
+    "RELATION": "Investigate",
+    "TAIL": "Guerrilla (Colombia)",
+    "TIME": "2008-07-25",
+    "ANSWER": "Colombia"
+},{
+    "FACT_ID": "FACT_1_1",
+    "HEAD": "Colombia",
+    "RELATION": "0",
+    "TAIL": "Guerrilla (Colombia)",
+    "TIME": "2008-07-25",
+    "ANSWER": "Investigate"
+},{
+    "FACT_ID": "FACT_1_2",
+    "HEAD": "Colombia",
+    "RELATION": "Investigate",
+    "TAIL": "0",
+    "TIME": "2008-07-25",
+    "ANSWER": "Guerrilla (Colombia)"
+},{
+    "FACT_ID": "FACT_1_3",
+    "HEAD": "Colombia",
+    "RELATION": "Investigate",
+    "TAIL": "Guerrilla (Colombia)",
+    "TIME": "0",
+    "ANSWER": "2008-07-25"
+},{
+    "FACT_ID": "FACT_2_0",
+    "HEAD": "0",
+    "RELATION": "Consult",
+    "TAIL": "City Mayor (Australia)",
+    "TIME": "2005-10-11",
+    "ANSWER": "Police (Australia)"
+},{
+    "FACT_ID": "FACT_2_1",
+    "HEAD": "Police (Australia)",
+    "RELATION": "0",
+    "TAIL": "City Mayor (Australia)",
+    "TIME": "2005-10-11",
+    "ANSWER": "Consult"
+},{
+    "FACT_ID": "FACT_2_2",
+    "HEAD": "Police (Australia)",
+    "RELATION": "Consult",
+    "TAIL": "0",
+    "TIME": "2005-10-11",
+    "ANSWER": "City Mayor (Australia)"
+},{
+    "FACT_ID": "FACT_2_3",
+    "HEAD": "Police (Australia)",
+    "RELATION": "Consult",
+    "TAIL": "City Mayor (Australia)",
+    "TIME": "0",
+    "ANSWER": "2005-10-11"
+},{
+    "FACT_ID": "FACT_3_0",
+    "HEAD": "0",
+    "RELATION": "Make statement",
+    "TAIL": "France",
+    "TIME": "2013-04-23",
+    "ANSWER": "Foreign Affairs (France)"
+},{
+    "FACT_ID": "FACT_3_1",
+    "HEAD": "Foreign Affairs (France)",
+    "RELATION": "0",
+    "TAIL": "France",
+    "TIME": "2013-04-23",
+    "ANSWER": "Make statement"
+},{
+    "FACT_ID": "FACT_3_2",
+    "HEAD": "Foreign Affairs (France)",
+    "RELATION": "Make statement",
+    "TAIL": "0",
+    "TIME": "2013-04-23",
+    "ANSWER": "France"
+},{
+    "FACT_ID": "FACT_3_3",
+    "HEAD": "Foreign Affairs (France)",
+    "RELATION": "Make statement",
+    "TAIL": "France",
+    "TIME": "0",
+    "ANSWER": "2013-04-23"
+},{
+    "FACT_ID": "FACT_4_0",
+    "HEAD": "0",
+    "RELATION": "Consult",
+    "TAIL": "Envoy (United States)",
+    "TIME": "2011-09-08",
+    "ANSWER": "Mahmoud Abbas"
+},{
+    "FACT_ID": "FACT_4_1",
+    "HEAD": "Mahmoud Abbas",
+    "RELATION": "0",
+    "TAIL": "Envoy (United States)",
+    "TIME": "2011-09-08",
+    "ANSWER": "Consult"
+},{
+    "FACT_ID": "FACT_4_2",
+    "HEAD": "Mahmoud Abbas",
+    "RELATION": "Consult",
+    "TAIL": "0",
+    "TIME": "2011-09-08",
+    "ANSWER": "Envoy (United States)"
+},{
+    "FACT_ID": "FACT_4_3",
+    "HEAD": "Mahmoud Abbas",
+    "RELATION": "Consult",
+    "TAIL": "Envoy (United States)",
+    "TIME": "0",
+    "ANSWER": "2011-09-08"
+},{
+    "FACT_ID": "FACT_5_0",
+    "HEAD": "0",
+    "RELATION": "Consult",
+    "TAIL": "Attorney General (Egypt)",
+    "TIME": "2015-09-19",
+    "ANSWER": "Head of Government (Egypt)"
+},{
+    "FACT_ID": "FACT_5_1",
+    "HEAD": "Head of Government (Egypt)",
+    "RELATION": "0",
+    "TAIL": "Attorney General (Egypt)",
+    "TIME": "2015-09-19",
+    "ANSWER": "Consult"
+},{
+    "FACT_ID": "FACT_5_2",
+    "HEAD": "Head of Government (Egypt)",
+    "RELATION": "Consult",
+    "TAIL": "0",
+    "TIME": "2015-09-19",
+    "ANSWER": "Attorney General (Egypt)"
+},{
+    "FACT_ID": "FACT_5_3",
+    "HEAD": "Head of Government (Egypt)",
+    "RELATION": "Consult",
+    "TAIL": "Attorney General (Egypt)",
+    "TIME": "0",
+    "ANSWER": "2015-09-19"
+},{
+    "FACT_ID": "FACT_6_0",
+    "HEAD": "RELATION",
+    "RELATION": "TAIL",
+    "TAIL": "TIME",
+    "TIME": "ANSWER",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_6_1",
+    "HEAD": "Investigate",
+    "RELATION": "Guerrilla (Colombia)",
+    "TAIL": "2008-07-25",
+    "TIME": "Colombia",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_6_2",
+    "HEAD": "0",
+    "RELATION": "Guerrilla (Colombia)",
+    "TAIL": "2008-07-25",
+    "TIME": "Investigate",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_6_3",
+    "HEAD": "Investigate",
+    "RELATION": "0",
+    "TAIL": "2008-07-25",
+    "TIME": "Guerrilla (Colombia)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_7_0",
+    "HEAD": "Investigate",
+    "RELATION": "Guerrilla (Colombia)",
+    "TAIL": "0",
+    "TIME": "2008-07-25",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_7_1",
+    "HEAD": "Consult",
+    "RELATION": "City Mayor (Australia)",
+    "TAIL": "2005-10-11",
+    "TIME": "Police (Australia)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_7_2",
+    "HEAD": "0",
+    "RELATION": "City Mayor (Australia)",
+    "TAIL": "2005-10-11",
+    "TIME": "Consult",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_7_3",
+    "HEAD": "Consult",
+    "RELATION": "0",
+    "TAIL": "2005-10-11",
+    "TIME": "City Mayor (Australia)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_8_0",
+    "HEAD": "Consult",
+    "RELATION": "City Mayor (Australia)",
+    "TAIL": "0",
+    "TIME": "2005-10-11",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_8_1",
+    "HEAD": "Make statement",
+    "RELATION": "France",
+    "TAIL": "2013-04-23",
+    "TIME": "Foreign Affairs (France)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_8_2",
+    "HEAD": "0",
+    "RELATION": "France",
+    "TAIL": "2013-04-23",
+    "TIME": "Make statement",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_8_3",
+    "HEAD": "Make statement",
+    "RELATION": "0",
+    "TAIL": "2013-04-23",
+    "TIME": "France",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_9_0",
+    "HEAD": "Make statement",
+    "RELATION": "France",
+    "TAIL": "0",
+    "TIME": "2013-04-23",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_9_1",
+    "HEAD": "Consult",
+    "RELATION": "Envoy (United States)",
+    "TAIL": "2011-09-08",
+    "TIME": "Mahmoud Abbas",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_9_2",
+    "HEAD": "0",
+    "RELATION": "Envoy (United States)",
+    "TAIL": "2011-09-08",
+    "TIME": "Consult",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_9_3",
+    "HEAD": "Consult",
+    "RELATION": "0",
+    "TAIL": "2011-09-08",
+    "TIME": "Envoy (United States)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_10_0",
+    "HEAD": "Consult",
+    "RELATION": "Envoy (United States)",
+    "TAIL": "0",
+    "TIME": "2011-09-08",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_10_1",
+    "HEAD": "Consult",
+    "RELATION": "Attorney General (Egypt)",
+    "TAIL": "2015-09-19",
+    "TIME": "Head of Government (Egypt)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_10_2",
+    "HEAD": "0",
+    "RELATION": "Attorney General (Egypt)",
+    "TAIL": "2015-09-19",
+    "TIME": "Consult",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_10_3",
+    "HEAD": "Consult",
+    "RELATION": "0",
+    "TAIL": "2015-09-19",
+    "TIME": "Attorney General (Egypt)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_11_0",
+    "HEAD": "Consult",
+    "RELATION": "Attorney General (Egypt)",
+    "TAIL": "0",
+    "TIME": "2015-09-19",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_11_1",
+    "HEAD": "RELATION",
+    "RELATION": "TAIL",
+    "TAIL": "TIME",
+    "TIME": "ANSWER",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_11_2",
+    "HEAD": "Investigate",
+    "RELATION": "Guerrilla (Colombia)",
+    "TAIL": "2008-07-25",
+    "TIME": "Colombia",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_11_3",
+    "HEAD": "0",
+    "RELATION": "Guerrilla (Colombia)",
+    "TAIL": "2008-07-25",
+    "TIME": "Investigate",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_12_0",
+    "HEAD": "Investigate",
+    "RELATION": "0",
+    "TAIL": "2008-07-25",
+    "TIME": "Guerrilla (Colombia)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_12_1",
+    "HEAD": "Investigate",
+    "RELATION": "Guerrilla (Colombia)",
+    "TAIL": "0",
+    "TIME": "2008-07-25",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_12_2",
+    "HEAD": "Consult",
+    "RELATION": "City Mayor (Australia)",
+    "TAIL": "2005-10-11",
+    "TIME": "Police (Australia)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_12_3",
+    "HEAD": "0",
+    "RELATION": "City Mayor (Australia)",
+    "TAIL": "2005-10-11",
+    "TIME": "Consult",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_13_0",
+    "HEAD": "Consult",
+    "RELATION": "0",
+    "TAIL": "2005-10-11",
+    "TIME": "City Mayor (Australia)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_13_1",
+    "HEAD": "Consult",
+    "RELATION": "City Mayor (Australia)",
+    "TAIL": "0",
+    "TIME": "2005-10-11",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_13_2",
+    "HEAD": "Make statement",
+    "RELATION": "France",
+    "TAIL": "2013-04-23",
+    "TIME": "Foreign Affairs (France)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_13_3",
+    "HEAD": "0",
+    "RELATION": "France",
+    "TAIL": "2013-04-23",
+    "TIME": "Make statement",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_14_0",
+    "HEAD": "Make statement",
+    "RELATION": "0",
+    "TAIL": "2013-04-23",
+    "TIME": "France",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_14_1",
+    "HEAD": "Make statement",
+    "RELATION": "France",
+    "TAIL": "0",
+    "TIME": "2013-04-23",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_14_2",
+    "HEAD": "Consult",
+    "RELATION": "Envoy (United States)",
+    "TAIL": "2011-09-08",
+    "TIME": "Mahmoud Abbas",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_14_3",
+    "HEAD": "0",
+    "RELATION": "Envoy (United States)",
+    "TAIL": "2011-09-08",
+    "TIME": "Consult",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_15_0",
+    "HEAD": "Consult",
+    "RELATION": "0",
+    "TAIL": "2011-09-08",
+    "TIME": "Envoy (United States)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_15_1",
+    "HEAD": "Consult",
+    "RELATION": "Envoy (United States)",
+    "TAIL": "0",
+    "TIME": "2011-09-08",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_15_2",
+    "HEAD": "Consult",
+    "RELATION": "Attorney General (Egypt)",
+    "TAIL": "2015-09-19",
+    "TIME": "Head of Government (Egypt)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_15_3",
+    "HEAD": "0",
+    "RELATION": "Attorney General (Egypt)",
+    "TAIL": "2015-09-19",
+    "TIME": "Consult",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_16_0",
+    "HEAD": "Consult",
+    "RELATION": "0",
+    "TAIL": "2015-09-19",
+    "TIME": "Attorney General (Egypt)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_16_1",
+    "HEAD": "Consult",
+    "RELATION": "Attorney General (Egypt)",
+    "TAIL": "0",
+    "TIME": "2015-09-19",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_16_2",
+    "HEAD": "RELATION",
+    "RELATION": "TAIL",
+    "TAIL": "TIME",
+    "TIME": "ANSWER",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_16_3",
+    "HEAD": "Investigate",
+    "RELATION": "Guerrilla (Colombia)",
+    "TAIL": "2008-07-25",
+    "TIME": "Colombia",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_17_0",
+    "HEAD": "0",
+    "RELATION": "Guerrilla (Colombia)",
+    "TAIL": "2008-07-25",
+    "TIME": "Investigate",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_17_1",
+    "HEAD": "Investigate",
+    "RELATION": "0",
+    "TAIL": "2008-07-25",
+    "TIME": "Guerrilla (Colombia)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_17_2",
+    "HEAD": "Investigate",
+    "RELATION": "Guerrilla (Colombia)",
+    "TAIL": "0",
+    "TIME": "2008-07-25",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_17_3",
+    "HEAD": "Consult",
+    "RELATION": "City Mayor (Australia)",
+    "TAIL": "2005-10-11",
+    "TIME": "Police (Australia)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_18_0",
+    "HEAD": "0",
+    "RELATION": "City Mayor (Australia)",
+    "TAIL": "2005-10-11",
+    "TIME": "Consult",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_18_1",
+    "HEAD": "Consult",
+    "RELATION": "0",
+    "TAIL": "2005-10-11",
+    "TIME": "City Mayor (Australia)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_18_2",
+    "HEAD": "Consult",
+    "RELATION": "City Mayor (Australia)",
+    "TAIL": "0",
+    "TIME": "2005-10-11",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_18_3",
+    "HEAD": "Make statement",
+    "RELATION": "France",
+    "TAIL": "2013-04-23",
+    "TIME": "Foreign Affairs (France)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_19_0",
+    "HEAD": "0",
+    "RELATION": "France",
+    "TAIL": "2013-04-23",
+    "TIME": "Make statement",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_19_1",
+    "HEAD": "Make statement",
+    "RELATION": "0",
+    "TAIL": "2013-04-23",
+    "TIME": "France",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_19_2",
+    "HEAD": "Make statement",
+    "RELATION": "France",
+    "TAIL": "0",
+    "TIME": "2013-04-23",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_19_3",
+    "HEAD": "Consult",
+    "RELATION": "Envoy (United States)",
+    "TAIL": "2011-09-08",
+    "TIME": "Mahmoud Abbas",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_20_0",
+    "HEAD": "0",
+    "RELATION": "Envoy (United States)",
+    "TAIL": "2011-09-08",
+    "TIME": "Consult",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_20_1",
+    "HEAD": "Consult",
+    "RELATION": "0",
+    "TAIL": "2011-09-08",
+    "TIME": "Envoy (United States)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_20_2",
+    "HEAD": "Consult",
+    "RELATION": "Envoy (United States)",
+    "TAIL": "0",
+    "TIME": "2011-09-08",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_20_3",
+    "HEAD": "Consult",
+    "RELATION": "Attorney General (Egypt)",
+    "TAIL": "2015-09-19",
+    "TIME": "Head of Government (Egypt)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_21_0",
+    "HEAD": "0",
+    "RELATION": "Attorney General (Egypt)",
+    "TAIL": "2015-09-19",
+    "TIME": "Consult",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_21_1",
+    "HEAD": "Consult",
+    "RELATION": "0",
+    "TAIL": "2015-09-19",
+    "TIME": "Attorney General (Egypt)",
+    "ANSWER": ""
+},{
+    "FACT_ID": "FACT_21_2",
+    "HEAD": "Consult",
+    "RELATION": "Attorney General (Egypt)",
+    "TAIL": "0",
+    "TIME": "2015-09-19",
+    "ANSWER": ""
+}]
