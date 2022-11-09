@@ -87,7 +87,6 @@ def csv_to_json_2(filename):
         js_f.write('[')
         with open(filename) as f2:
             records = csv.DictReader(f2)
-            print(type(records))
             first = True
             for row in records:
                 if not first:
@@ -99,8 +98,7 @@ def csv_to_json_2(filename):
 
 
 if __name__ == '__main__':
-    # txt_to_csv('temp.txt')
-    # generate_corrupted_quadruple('temp.csv')
-    # add_fact_id('corrupted_quad.csv')
-    # csv_to_json('corrupted_quad.csv')
+    txt_to_csv('temp.txt')
+    generate_corrupted_quadruple('temp.csv')
+    add_fact_id('corrupted_quad.csv')
     csv_to_json_2('corrupted_quad.csv')
