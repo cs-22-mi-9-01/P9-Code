@@ -31,7 +31,7 @@ srun --pty singularity shell --fakeroot --writable <image name>
 ```bash
 python3 <script name>
 ```
-5. Download files from CLAAUDIA
+5. Download files from CLAAUDIA (if it is a directory, add `-r` after scp)
 ```bash
 scp <aau email>@ai-fe02.srv.aau.dk:~/some-folder/some-subfolder/some-file .
 ```
