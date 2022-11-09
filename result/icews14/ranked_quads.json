@@ -1,0 +1,90 @@
+[
+    {
+        "FACT_ID": "FACT_1_0",
+        "HEAD": "0",
+        "RELATION": "Investigate",
+        "TAIL": "Guerrilla (Colombia)",
+        "TIME": "2008-07-25",
+        "ANSWER": "Colombia",
+        "RANK": {
+            "DE_TransE": "2"
+        }
+    },
+    {
+        "FACT_ID": "FACT_1_1",
+        "HEAD": "Colombia",
+        "RELATION": "0",
+        "TAIL": "Guerrilla (Colombia)",
+        "TIME": "2008-07-25",
+        "ANSWER": "Investigate",
+        "RANK": {
+            "DE_TransE": "30"
+        }
+    },
+    {
+        "FACT_ID": "FACT_1_2",
+        "HEAD": "Colombia",
+        "RELATION": "Investigate",
+        "TAIL": "0",
+        "TIME": "2008-07-25",
+        "ANSWER": "Guerrilla (Colombia)",
+        "RANK": {
+            "DE_TransE": "2"
+        }
+    },
+    {
+        "FACT_ID": "FACT_1_3",
+        "HEAD": "Colombia",
+        "RELATION": "Investigate",
+        "TAIL": "Guerrilla (Colombia)",
+        "TIME": "0",
+        "ANSWER": "2008-07-25",
+        "RANK": {
+            "DE_TransE": "166"
+        }
+    },
+    {
+        "FACT_ID": "FACT_2_0",
+        "HEAD": "0",
+        "RELATION": "Consult",
+        "TAIL": "Combatant (Al Qaeda)",
+        "TIME": "2005-10-11",
+        "ANSWER": "Police (Australia)",
+        "RANK": {
+            "DE_TransE": "575"
+        }
+    },
+    {
+        "FACT_ID": "FACT_2_1",
+        "HEAD": "Police (Australia)",
+        "RELATION": "0",
+        "TAIL": "Combatant (Al Qaeda)",
+        "TIME": "2005-10-11",
+        "ANSWER": "Consult",
+        "RANK": {
+            "DE_TransE": "176"
+        }
+    },
+    {
+        "FACT_ID": "FACT_2_2",
+        "HEAD": "Police (Australia)",
+        "RELATION": "Consult",
+        "TAIL": "0",
+        "TIME": "2005-10-11",
+        "ANSWER": "Combatant (Al Qaeda)",
+        "RANK": {
+            "DE_TransE": "711"
+        }
+    },
+    {
+        "FACT_ID": "FACT_2_3",
+        "HEAD": "Police (Australia)",
+        "RELATION": "Consult",
+        "TAIL": "Combatant (Al Qaeda)",
+        "TIME": "0",
+        "ANSWER": "2005-10-11",
+        "RANK": {
+            "DE_TransE": "362"
+        }
+    }
+]
