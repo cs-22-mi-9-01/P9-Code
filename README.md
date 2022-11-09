@@ -31,20 +31,24 @@ srun --pty singularity shell --fakeroot --writable <image name>
 ```bash
 python3 <script name>
 ```
+5. Download files from CLAAUDIA
+```bash
+scp <aau email>@ai-fe02.srv.aau.dk:~/some-folder/some-subfolder/some-file .
+```
 
 ## Dataset Source
 
 ### ATISE
-ICEWS14
-$YAGO11K_{D}$
+- ICEWS14
+- $YAGO11K_{D}$
 
 ### TERO
-ICEWS14
-ICEWS05-15
-YAGO11K
-Wikidata12k
+- ICEWS14
+- ICEWS05-15
+- YAGO11K
+- Wikidata12k
 
 ### Diachronic Embedding
-ICEWS14
-ICEWS05-15
-GDELT
+- ICEWS14
+- ICEWS05-15
+- GDELT
