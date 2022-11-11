@@ -21,7 +21,7 @@ def main():
 
     quads_path = os.path.join(params.base_directory, "data", params.dataset, "corrupted_quads.json")
 
-    in_file = open(quads_path, "r")
+    in_file = open(quads_path, "r", encoding="utf8")
     ranked_quads = json.load(in_file)
     in_file.close()
 
@@ -41,7 +41,7 @@ def main():
     results_path = os.path.join(params.base_directory, "result", params.dataset, "ranked_quads.json")
 
     Path(results_path).touch(exist_ok=True)
-    out_file = open(results_path, "w")
+    out_file = open(results_path, "w", encoding="utf8")
     json.dump(ranked_quads, out_file, indent=4)
     out_file.close()
 
