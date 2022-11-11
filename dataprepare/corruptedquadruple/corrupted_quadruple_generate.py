@@ -12,7 +12,7 @@ def txt_to_csv(filename):
         writer = csv.writer(f1, delimiter='\t')
         with open(filename) as f2:
             for line in f2:
-                line = re.split("['\t''\n']", line)
+                line = re.split("[\t\n]", line)
                 writer.writerow(line)
     print(f"'{filename}' has been converted to '{csv_file}'.")
 
