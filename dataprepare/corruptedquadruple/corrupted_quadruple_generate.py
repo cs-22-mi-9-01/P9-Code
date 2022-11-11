@@ -6,11 +6,12 @@ import json
 import os
 
 # convert txt into csv
+# test.txt
 def txt_to_csv(filename):
     csv_file = filename.split('/')[-1].split('.')[0] + '.csv'
     with open(csv_file, 'w', encoding='utf-8') as f1:
         writer = csv.writer(f1, delimiter='\t')
-        with open(filename) as f2:
+        with open(filename, encoding='utf-8') as f2:
             for line in f2:
                 line = re.split("[\t\n]", line)
                 writer.writerow(line)
@@ -18,10 +19,11 @@ def txt_to_csv(filename):
 
 
 # generate corrupted quadruple and save it as csv file
+# filename = test.csv
 def generate_corrupted_quadruple(filename):
-    with open(filename) as f:
+    with open(filename, encoding='utf-8') as f:
         cor_csv_file = 'corrupted_quadruple_' + filename.split('/')[-1]
-        with open(cor_csv_file, 'a') as f2:
+        with open(cor_csv_file, 'a', encoding='utf-8') as f2:
             f2.write("HEAD\tRELATION\tTAIL\tTIME\tANSWER" + '\n')
             for line in f:
                 list = line.strip('\n').split('\t')
@@ -69,7 +71,7 @@ def add_fact_id(filename):
 # convert csv into json: [obj, obj,obj...]
 def csv_to_json(filename):
     json_file = filename.split('/')[-1].split('.')[0] + '.json'
-    with open(json_file, 'w') as f:
+    with open(json_file, 'w', encoding='utf-8') as f:
         all_data = pd.read_csv(filename)
         # TODO: write too much rows at once
         a = np.array([])
@@ -77,7 +79,7 @@ def csv_to_json(filename):
             row = ','.join(all_data.loc[i,:])
             row = "{%s}" % row
             a = np.append(a, row).tolist()
-        json.dump(a, f, indent=4)
+        json.dump(a, f, indent=4, ensure_ascii=False)
     print(f"'{filename}' has been converted to '{json_file}'.")
 
 
@@ -86,7 +88,7 @@ def csv_to_json_2(filename):
     json_file = filename.split('/')[-1].split('.')[0] + '.json'
     with open(json_file, 'w', encoding='utf-8') as js_f:
         js_f.write('[')
-        with open(filename) as f2:
+        with open(filename, encoding='utf-8') as f2:
             records = csv.DictReader(f2)
             first = True
             for row in records:
