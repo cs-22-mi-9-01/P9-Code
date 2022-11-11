@@ -8,7 +8,7 @@ import os
 # convert txt into csv
 def txt_to_csv(filename):
     csv_file = filename.split('/')[-1].split('.')[0] + '.csv'
-    with open(csv_file, 'w') as f1:
+    with open(csv_file, 'w', encoding='utf-8') as f1:
         writer = csv.writer(f1, delimiter='\t')
         with open(filename) as f2:
             for line in f2:
@@ -48,7 +48,7 @@ def generate_corrupted_quadruple(filename):
 
 # add ID for each fact
 def add_fact_id(filename):
-    data = pd.read_csv(filename, sep='\t')
+    data = pd.read_csv(filename, sep='\t', encoding='utf-8')
     fact_column = []
     num1 = 0
     num2 = 0
@@ -84,7 +84,7 @@ def csv_to_json(filename):
  # convert csv into json: [{key: value}, {key: value}...]
 def csv_to_json_2(filename):
     json_file = filename.split('/')[-1].split('.')[0] + '.json'
-    with open(json_file, 'w') as js_f:
+    with open(json_file, 'w', encoding='utf-8') as js_f:
         js_f.write('[')
         with open(filename) as f2:
             records = csv.DictReader(f2)
@@ -93,7 +93,7 @@ def csv_to_json_2(filename):
                 if not first:
                     js_f.write(',')
                 first=False
-                json.dump(row, js_f, indent=4)
+                json.dump(row, js_f, indent=4, ensure_ascii=False)
         js_f.write(']')
     print(f"'{filename}' has been converted to '{json_file}'.")
 
