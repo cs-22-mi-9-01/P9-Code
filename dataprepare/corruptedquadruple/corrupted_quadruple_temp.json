@@ -1,0 +1,1464 @@
+[{
+    "FACT_ID": "FACT_1_0",
+    "HEAD": "0",
+    "RELATION": "Express accord",
+    "TAIL": "UN Security Council",
+    "TIME": "2014-02-02",
+    "ANSWER": "Iran"
+},{
+    "FACT_ID": "FACT_1_1",
+    "HEAD": "Iran",
+    "RELATION": "0",
+    "TAIL": "UN Security Council",
+    "TIME": "2014-02-02",
+    "ANSWER": "Express accord"
+},{
+    "FACT_ID": "FACT_1_2",
+    "HEAD": "Iran",
+    "RELATION": "Express accord",
+    "TAIL": "0",
+    "TIME": "2014-02-02",
+    "ANSWER": "UN Security Council"
+},{
+    "FACT_ID": "FACT_1_3",
+    "HEAD": "Iran",
+    "RELATION": "Express accord",
+    "TAIL": "UN Security Council",
+    "TIME": "0",
+    "ANSWER": "2014-02-02"
+},{
+    "FACT_ID": "FACT_2_0",
+    "HEAD": "0",
+    "RELATION": "Accuse",
+    "TAIL": "Citizen (Saudi Arabia)",
+    "TIME": "2014-06-13",
+    "ANSWER": "Iran"
+},{
+    "FACT_ID": "FACT_2_1",
+    "HEAD": "Iran",
+    "RELATION": "0",
+    "TAIL": "Citizen (Saudi Arabia)",
+    "TIME": "2014-06-13",
+    "ANSWER": "Accuse"
+},{
+    "FACT_ID": "FACT_2_2",
+    "HEAD": "Iran",
+    "RELATION": "Accuse",
+    "TAIL": "0",
+    "TIME": "2014-06-13",
+    "ANSWER": "Citizen (Saudi Arabia)"
+},{
+    "FACT_ID": "FACT_2_3",
+    "HEAD": "Iran",
+    "RELATION": "Accuse",
+    "TAIL": "Citizen (Saudi Arabia)",
+    "TIME": "0",
+    "ANSWER": "2014-06-13"
+},{
+    "FACT_ID": "FACT_3_0",
+    "HEAD": "0",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Afghanistan",
+    "TIME": "2014-01-20",
+    "ANSWER": "Romania"
+},{
+    "FACT_ID": "FACT_3_1",
+    "HEAD": "Romania",
+    "RELATION": "0",
+    "TAIL": "Afghanistan",
+    "TIME": "2014-01-20",
+    "ANSWER": "Praise or endorse"
+},{
+    "FACT_ID": "FACT_3_2",
+    "HEAD": "Romania",
+    "RELATION": "Praise or endorse",
+    "TAIL": "0",
+    "TIME": "2014-01-20",
+    "ANSWER": "Afghanistan"
+},{
+    "FACT_ID": "FACT_3_3",
+    "HEAD": "Romania",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Afghanistan",
+    "TIME": "0",
+    "ANSWER": "2014-01-20"
+},{
+    "FACT_ID": "FACT_4_0",
+    "HEAD": "0",
+    "RELATION": "Consult",
+    "TAIL": "Evangelos Venizelos",
+    "TIME": "2014-10-06",
+    "ANSWER": "Nicos Anastasiades"
+},{
+    "FACT_ID": "FACT_4_1",
+    "HEAD": "Nicos Anastasiades",
+    "RELATION": "0",
+    "TAIL": "Evangelos Venizelos",
+    "TIME": "2014-10-06",
+    "ANSWER": "Consult"
+},{
+    "FACT_ID": "FACT_4_2",
+    "HEAD": "Nicos Anastasiades",
+    "RELATION": "Consult",
+    "TAIL": "0",
+    "TIME": "2014-10-06",
+    "ANSWER": "Evangelos Venizelos"
+},{
+    "FACT_ID": "FACT_4_3",
+    "HEAD": "Nicos Anastasiades",
+    "RELATION": "Consult",
+    "TAIL": "Evangelos Venizelos",
+    "TIME": "0",
+    "ANSWER": "2014-10-06"
+},{
+    "FACT_ID": "FACT_5_0",
+    "HEAD": "0",
+    "RELATION": "Make statement",
+    "TAIL": "Armed Gang (Lebanon)",
+    "TIME": "2014-08-05",
+    "ANSWER": "Military (Lebanon)"
+},{
+    "FACT_ID": "FACT_5_1",
+    "HEAD": "Military (Lebanon)",
+    "RELATION": "0",
+    "TAIL": "Armed Gang (Lebanon)",
+    "TIME": "2014-08-05",
+    "ANSWER": "Make statement"
+},{
+    "FACT_ID": "FACT_5_2",
+    "HEAD": "Military (Lebanon)",
+    "RELATION": "Make statement",
+    "TAIL": "0",
+    "TIME": "2014-08-05",
+    "ANSWER": "Armed Gang (Lebanon)"
+},{
+    "FACT_ID": "FACT_5_3",
+    "HEAD": "Military (Lebanon)",
+    "RELATION": "Make statement",
+    "TAIL": "Armed Gang (Lebanon)",
+    "TIME": "0",
+    "ANSWER": "2014-08-05"
+},{
+    "FACT_ID": "FACT_6_0",
+    "HEAD": "0",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Valdis Dombrovskis",
+    "TIME": "2014-02-13",
+    "ANSWER": "Homeland Union \u2013 Lithuanian Christian Democrats"
+},{
+    "FACT_ID": "FACT_6_1",
+    "HEAD": "Homeland Union \u2013 Lithuanian Christian Democrats",
+    "RELATION": "0",
+    "TAIL": "Valdis Dombrovskis",
+    "TIME": "2014-02-13",
+    "ANSWER": "Praise or endorse"
+},{
+    "FACT_ID": "FACT_6_2",
+    "HEAD": "Homeland Union \u2013 Lithuanian Christian Democrats",
+    "RELATION": "Praise or endorse",
+    "TAIL": "0",
+    "TIME": "2014-02-13",
+    "ANSWER": "Valdis Dombrovskis"
+},{
+    "FACT_ID": "FACT_6_3",
+    "HEAD": "Homeland Union \u2013 Lithuanian Christian Democrats",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Valdis Dombrovskis",
+    "TIME": "0",
+    "ANSWER": "2014-02-13"
+},{
+    "FACT_ID": "FACT_7_0",
+    "HEAD": "0",
+    "RELATION": "Make statement",
+    "TAIL": "Member of Parliament (Iran)",
+    "TIME": "2014-11-29",
+    "ANSWER": "Iran"
+},{
+    "FACT_ID": "FACT_7_1",
+    "HEAD": "Iran",
+    "RELATION": "0",
+    "TAIL": "Member of Parliament (Iran)",
+    "TIME": "2014-11-29",
+    "ANSWER": "Make statement"
+},{
+    "FACT_ID": "FACT_7_2",
+    "HEAD": "Iran",
+    "RELATION": "Make statement",
+    "TAIL": "0",
+    "TIME": "2014-11-29",
+    "ANSWER": "Member of Parliament (Iran)"
+},{
+    "FACT_ID": "FACT_7_3",
+    "HEAD": "Iran",
+    "RELATION": "Make statement",
+    "TAIL": "Member of Parliament (Iran)",
+    "TIME": "0",
+    "ANSWER": "2014-11-29"
+},{
+    "FACT_ID": "FACT_8_0",
+    "HEAD": "0",
+    "RELATION": "Express intent to ease economic sanctions, boycott, or embargo",
+    "TAIL": "North Korea",
+    "TIME": "2014-07-03",
+    "ANSWER": "Japan"
+},{
+    "FACT_ID": "FACT_8_1",
+    "HEAD": "Japan",
+    "RELATION": "0",
+    "TAIL": "North Korea",
+    "TIME": "2014-07-03",
+    "ANSWER": "Express intent to ease economic sanctions, boycott, or embargo"
+},{
+    "FACT_ID": "FACT_8_2",
+    "HEAD": "Japan",
+    "RELATION": "Express intent to ease economic sanctions, boycott, or embargo",
+    "TAIL": "0",
+    "TIME": "2014-07-03",
+    "ANSWER": "North Korea"
+},{
+    "FACT_ID": "FACT_8_3",
+    "HEAD": "Japan",
+    "RELATION": "Express intent to ease economic sanctions, boycott, or embargo",
+    "TAIL": "North Korea",
+    "TIME": "0",
+    "ANSWER": "2014-07-03"
+},{
+    "FACT_ID": "FACT_9_0",
+    "HEAD": "0",
+    "RELATION": "Arrest, detain, or charge with legal action",
+    "TAIL": "Criminal (Tanzania)",
+    "TIME": "2014-11-18",
+    "ANSWER": "Police (Tanzania)"
+},{
+    "FACT_ID": "FACT_9_1",
+    "HEAD": "Police (Tanzania)",
+    "RELATION": "0",
+    "TAIL": "Criminal (Tanzania)",
+    "TIME": "2014-11-18",
+    "ANSWER": "Arrest, detain, or charge with legal action"
+},{
+    "FACT_ID": "FACT_9_2",
+    "HEAD": "Police (Tanzania)",
+    "RELATION": "Arrest, detain, or charge with legal action",
+    "TAIL": "0",
+    "TIME": "2014-11-18",
+    "ANSWER": "Criminal (Tanzania)"
+},{
+    "FACT_ID": "FACT_9_3",
+    "HEAD": "Police (Tanzania)",
+    "RELATION": "Arrest, detain, or charge with legal action",
+    "TAIL": "Criminal (Tanzania)",
+    "TIME": "0",
+    "ANSWER": "2014-11-18"
+},{
+    "FACT_ID": "FACT_10_0",
+    "HEAD": "0",
+    "RELATION": "Make a visit",
+    "TAIL": "Sierra Leone",
+    "TIME": "2014-10-31",
+    "ANSWER": "Doctors Without Borders"
+},{
+    "FACT_ID": "FACT_10_1",
+    "HEAD": "Doctors Without Borders",
+    "RELATION": "0",
+    "TAIL": "Sierra Leone",
+    "TIME": "2014-10-31",
+    "ANSWER": "Make a visit"
+},{
+    "FACT_ID": "FACT_10_2",
+    "HEAD": "Doctors Without Borders",
+    "RELATION": "Make a visit",
+    "TAIL": "0",
+    "TIME": "2014-10-31",
+    "ANSWER": "Sierra Leone"
+},{
+    "FACT_ID": "FACT_10_3",
+    "HEAD": "Doctors Without Borders",
+    "RELATION": "Make a visit",
+    "TAIL": "Sierra Leone",
+    "TIME": "0",
+    "ANSWER": "2014-10-31"
+},{
+    "FACT_ID": "FACT_11_0",
+    "HEAD": "0",
+    "RELATION": "Make an appeal or request",
+    "TAIL": "Government (Kenya)",
+    "TIME": "2014-08-14",
+    "ANSWER": "Citizen (Kenya)"
+},{
+    "FACT_ID": "FACT_11_1",
+    "HEAD": "Citizen (Kenya)",
+    "RELATION": "0",
+    "TAIL": "Government (Kenya)",
+    "TIME": "2014-08-14",
+    "ANSWER": "Make an appeal or request"
+},{
+    "FACT_ID": "FACT_11_2",
+    "HEAD": "Citizen (Kenya)",
+    "RELATION": "Make an appeal or request",
+    "TAIL": "0",
+    "TIME": "2014-08-14",
+    "ANSWER": "Government (Kenya)"
+},{
+    "FACT_ID": "FACT_11_3",
+    "HEAD": "Citizen (Kenya)",
+    "RELATION": "Make an appeal or request",
+    "TAIL": "Government (Kenya)",
+    "TIME": "0",
+    "ANSWER": "2014-08-14"
+},{
+    "FACT_ID": "FACT_12_0",
+    "HEAD": "0",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "North Korea",
+    "TIME": "2014-08-25",
+    "ANSWER": "South Korea"
+},{
+    "FACT_ID": "FACT_12_1",
+    "HEAD": "South Korea",
+    "RELATION": "0",
+    "TAIL": "North Korea",
+    "TIME": "2014-08-25",
+    "ANSWER": "Express intent to meet or negotiate"
+},{
+    "FACT_ID": "FACT_12_2",
+    "HEAD": "South Korea",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "0",
+    "TIME": "2014-08-25",
+    "ANSWER": "North Korea"
+},{
+    "FACT_ID": "FACT_12_3",
+    "HEAD": "South Korea",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "North Korea",
+    "TIME": "0",
+    "ANSWER": "2014-08-25"
+},{
+    "FACT_ID": "FACT_13_0",
+    "HEAD": "0",
+    "RELATION": "Consult",
+    "TAIL": "South Korea",
+    "TIME": "2014-09-26",
+    "ANSWER": "Japan"
+},{
+    "FACT_ID": "FACT_13_1",
+    "HEAD": "Japan",
+    "RELATION": "0",
+    "TAIL": "South Korea",
+    "TIME": "2014-09-26",
+    "ANSWER": "Consult"
+},{
+    "FACT_ID": "FACT_13_2",
+    "HEAD": "Japan",
+    "RELATION": "Consult",
+    "TAIL": "0",
+    "TIME": "2014-09-26",
+    "ANSWER": "South Korea"
+},{
+    "FACT_ID": "FACT_13_3",
+    "HEAD": "Japan",
+    "RELATION": "Consult",
+    "TAIL": "South Korea",
+    "TIME": "0",
+    "ANSWER": "2014-09-26"
+},{
+    "FACT_ID": "FACT_14_0",
+    "HEAD": "0",
+    "RELATION": "Consult",
+    "TAIL": "Ministry (Turkey)",
+    "TIME": "2014-10-27",
+    "ANSWER": "Head of Government (Turkmenistan)"
+},{
+    "FACT_ID": "FACT_14_1",
+    "HEAD": "Head of Government (Turkmenistan)",
+    "RELATION": "0",
+    "TAIL": "Ministry (Turkey)",
+    "TIME": "2014-10-27",
+    "ANSWER": "Consult"
+},{
+    "FACT_ID": "FACT_14_2",
+    "HEAD": "Head of Government (Turkmenistan)",
+    "RELATION": "Consult",
+    "TAIL": "0",
+    "TIME": "2014-10-27",
+    "ANSWER": "Ministry (Turkey)"
+},{
+    "FACT_ID": "FACT_14_3",
+    "HEAD": "Head of Government (Turkmenistan)",
+    "RELATION": "Consult",
+    "TAIL": "Ministry (Turkey)",
+    "TIME": "0",
+    "ANSWER": "2014-10-27"
+},{
+    "FACT_ID": "FACT_15_0",
+    "HEAD": "0",
+    "RELATION": "Provide military aid",
+    "TAIL": "Military (Lebanon)",
+    "TIME": "2014-10-02",
+    "ANSWER": "Iran"
+},{
+    "FACT_ID": "FACT_15_1",
+    "HEAD": "Iran",
+    "RELATION": "0",
+    "TAIL": "Military (Lebanon)",
+    "TIME": "2014-10-02",
+    "ANSWER": "Provide military aid"
+},{
+    "FACT_ID": "FACT_15_2",
+    "HEAD": "Iran",
+    "RELATION": "Provide military aid",
+    "TAIL": "0",
+    "TIME": "2014-10-02",
+    "ANSWER": "Military (Lebanon)"
+},{
+    "FACT_ID": "FACT_15_3",
+    "HEAD": "Iran",
+    "RELATION": "Provide military aid",
+    "TAIL": "Military (Lebanon)",
+    "TIME": "0",
+    "ANSWER": "2014-10-02"
+},{
+    "FACT_ID": "FACT_16_0",
+    "HEAD": "0",
+    "RELATION": "Use unconventional violence",
+    "TAIL": "Lee Rigby",
+    "TIME": "2014-01-31",
+    "ANSWER": "Men (United Kingdom)"
+},{
+    "FACT_ID": "FACT_16_1",
+    "HEAD": "Men (United Kingdom)",
+    "RELATION": "0",
+    "TAIL": "Lee Rigby",
+    "TIME": "2014-01-31",
+    "ANSWER": "Use unconventional violence"
+},{
+    "FACT_ID": "FACT_16_2",
+    "HEAD": "Men (United Kingdom)",
+    "RELATION": "Use unconventional violence",
+    "TAIL": "0",
+    "TIME": "2014-01-31",
+    "ANSWER": "Lee Rigby"
+},{
+    "FACT_ID": "FACT_16_3",
+    "HEAD": "Men (United Kingdom)",
+    "RELATION": "Use unconventional violence",
+    "TAIL": "Lee Rigby",
+    "TIME": "0",
+    "ANSWER": "2014-01-31"
+},{
+    "FACT_ID": "FACT_17_0",
+    "HEAD": "0",
+    "RELATION": "Accuse",
+    "TAIL": "Pakistan Tehreek-e-Insaf",
+    "TIME": "2014-12-09",
+    "ANSWER": "Rana Sanaullah"
+},{
+    "FACT_ID": "FACT_17_1",
+    "HEAD": "Rana Sanaullah",
+    "RELATION": "0",
+    "TAIL": "Pakistan Tehreek-e-Insaf",
+    "TIME": "2014-12-09",
+    "ANSWER": "Accuse"
+},{
+    "FACT_ID": "FACT_17_2",
+    "HEAD": "Rana Sanaullah",
+    "RELATION": "Accuse",
+    "TAIL": "0",
+    "TIME": "2014-12-09",
+    "ANSWER": "Pakistan Tehreek-e-Insaf"
+},{
+    "FACT_ID": "FACT_17_3",
+    "HEAD": "Rana Sanaullah",
+    "RELATION": "Accuse",
+    "TAIL": "Pakistan Tehreek-e-Insaf",
+    "TIME": "0",
+    "ANSWER": "2014-12-09"
+},{
+    "FACT_ID": "FACT_18_0",
+    "HEAD": "0",
+    "RELATION": "Express intent to provide military aid",
+    "TAIL": "Iraq",
+    "TIME": "2014-06-20",
+    "ANSWER": "Barack Obama"
+},{
+    "FACT_ID": "FACT_18_1",
+    "HEAD": "Barack Obama",
+    "RELATION": "0",
+    "TAIL": "Iraq",
+    "TIME": "2014-06-20",
+    "ANSWER": "Express intent to provide military aid"
+},{
+    "FACT_ID": "FACT_18_2",
+    "HEAD": "Barack Obama",
+    "RELATION": "Express intent to provide military aid",
+    "TAIL": "0",
+    "TIME": "2014-06-20",
+    "ANSWER": "Iraq"
+},{
+    "FACT_ID": "FACT_18_3",
+    "HEAD": "Barack Obama",
+    "RELATION": "Express intent to provide military aid",
+    "TAIL": "Iraq",
+    "TIME": "0",
+    "ANSWER": "2014-06-20"
+},{
+    "FACT_ID": "FACT_19_0",
+    "HEAD": "0",
+    "RELATION": "Meet at a ",
+    "TAIL": "third",
+    "TIME": " location",
+    "ANSWER": "Julie Bishop"
+},{
+    "FACT_ID": "FACT_19_1",
+    "HEAD": "Julie Bishop",
+    "RELATION": "0",
+    "TAIL": "third",
+    "TIME": " location",
+    "ANSWER": "Meet at a "
+},{
+    "FACT_ID": "FACT_19_2",
+    "HEAD": "Julie Bishop",
+    "RELATION": "Meet at a ",
+    "TAIL": "0",
+    "TIME": " location",
+    "ANSWER": "third"
+},{
+    "FACT_ID": "FACT_19_3",
+    "HEAD": "Julie Bishop",
+    "RELATION": "Meet at a ",
+    "TAIL": "third",
+    "TIME": "0",
+    "ANSWER": " location"
+},{
+    "FACT_ID": "FACT_20_0",
+    "HEAD": "0",
+    "RELATION": "Engage in negotiation",
+    "TAIL": "Japan",
+    "TIME": "2014-03-05",
+    "ANSWER": "North Korea"
+},{
+    "FACT_ID": "FACT_20_1",
+    "HEAD": "North Korea",
+    "RELATION": "0",
+    "TAIL": "Japan",
+    "TIME": "2014-03-05",
+    "ANSWER": "Engage in negotiation"
+},{
+    "FACT_ID": "FACT_20_2",
+    "HEAD": "North Korea",
+    "RELATION": "Engage in negotiation",
+    "TAIL": "0",
+    "TIME": "2014-03-05",
+    "ANSWER": "Japan"
+},{
+    "FACT_ID": "FACT_20_3",
+    "HEAD": "North Korea",
+    "RELATION": "Engage in negotiation",
+    "TAIL": "Japan",
+    "TIME": "0",
+    "ANSWER": "2014-03-05"
+},{
+    "FACT_ID": "FACT_21_0",
+    "HEAD": "0",
+    "RELATION": "Express intent to provide humanitarian aid",
+    "TAIL": "Canada",
+    "TIME": "2014-03-03",
+    "ANSWER": "Health Ministry (Canada)"
+},{
+    "FACT_ID": "FACT_21_1",
+    "HEAD": "Health Ministry (Canada)",
+    "RELATION": "0",
+    "TAIL": "Canada",
+    "TIME": "2014-03-03",
+    "ANSWER": "Express intent to provide humanitarian aid"
+},{
+    "FACT_ID": "FACT_21_2",
+    "HEAD": "Health Ministry (Canada)",
+    "RELATION": "Express intent to provide humanitarian aid",
+    "TAIL": "0",
+    "TIME": "2014-03-03",
+    "ANSWER": "Canada"
+},{
+    "FACT_ID": "FACT_21_3",
+    "HEAD": "Health Ministry (Canada)",
+    "RELATION": "Express intent to provide humanitarian aid",
+    "TAIL": "Canada",
+    "TIME": "0",
+    "ANSWER": "2014-03-03"
+},{
+    "FACT_ID": "FACT_22_0",
+    "HEAD": "0",
+    "RELATION": "Ease administrative sanctions",
+    "TAIL": "Uhuru Muigai Kenyatta",
+    "TIME": "2014-12-08",
+    "ANSWER": "Lawyer/Attorney (Kenya)"
+},{
+    "FACT_ID": "FACT_22_1",
+    "HEAD": "Lawyer/Attorney (Kenya)",
+    "RELATION": "0",
+    "TAIL": "Uhuru Muigai Kenyatta",
+    "TIME": "2014-12-08",
+    "ANSWER": "Ease administrative sanctions"
+},{
+    "FACT_ID": "FACT_22_2",
+    "HEAD": "Lawyer/Attorney (Kenya)",
+    "RELATION": "Ease administrative sanctions",
+    "TAIL": "0",
+    "TIME": "2014-12-08",
+    "ANSWER": "Uhuru Muigai Kenyatta"
+},{
+    "FACT_ID": "FACT_22_3",
+    "HEAD": "Lawyer/Attorney (Kenya)",
+    "RELATION": "Ease administrative sanctions",
+    "TAIL": "Uhuru Muigai Kenyatta",
+    "TIME": "0",
+    "ANSWER": "2014-12-08"
+},{
+    "FACT_ID": "FACT_23_0",
+    "HEAD": "0",
+    "RELATION": "Reject",
+    "TAIL": "Citizen (India)",
+    "TIME": "2014-05-15",
+    "ANSWER": "Court Judge (India)"
+},{
+    "FACT_ID": "FACT_23_1",
+    "HEAD": "Court Judge (India)",
+    "RELATION": "0",
+    "TAIL": "Citizen (India)",
+    "TIME": "2014-05-15",
+    "ANSWER": "Reject"
+},{
+    "FACT_ID": "FACT_23_2",
+    "HEAD": "Court Judge (India)",
+    "RELATION": "Reject",
+    "TAIL": "0",
+    "TIME": "2014-05-15",
+    "ANSWER": "Citizen (India)"
+},{
+    "FACT_ID": "FACT_23_3",
+    "HEAD": "Court Judge (India)",
+    "RELATION": "Reject",
+    "TAIL": "Citizen (India)",
+    "TIME": "0",
+    "ANSWER": "2014-05-15"
+},{
+    "FACT_ID": "FACT_24_0",
+    "HEAD": "0",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "Citizen (Slovakia)",
+    "TIME": "2014-02-02",
+    "ANSWER": "Justice Department/Ministery (Slovakia)"
+},{
+    "FACT_ID": "FACT_24_1",
+    "HEAD": "Justice Department/Ministery (Slovakia)",
+    "RELATION": "0",
+    "TAIL": "Citizen (Slovakia)",
+    "TIME": "2014-02-02",
+    "ANSWER": "Express intent to meet or negotiate"
+},{
+    "FACT_ID": "FACT_24_2",
+    "HEAD": "Justice Department/Ministery (Slovakia)",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "0",
+    "TIME": "2014-02-02",
+    "ANSWER": "Citizen (Slovakia)"
+},{
+    "FACT_ID": "FACT_24_3",
+    "HEAD": "Justice Department/Ministery (Slovakia)",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "Citizen (Slovakia)",
+    "TIME": "0",
+    "ANSWER": "2014-02-02"
+},{
+    "FACT_ID": "FACT_25_0",
+    "HEAD": "0",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Combatant (Al Qaeda)",
+    "TIME": "2014-03-05",
+    "ANSWER": "Hamas"
+},{
+    "FACT_ID": "FACT_25_1",
+    "HEAD": "Hamas",
+    "RELATION": "0",
+    "TAIL": "Combatant (Al Qaeda)",
+    "TIME": "2014-03-05",
+    "ANSWER": "Praise or endorse"
+},{
+    "FACT_ID": "FACT_25_2",
+    "HEAD": "Hamas",
+    "RELATION": "Praise or endorse",
+    "TAIL": "0",
+    "TIME": "2014-03-05",
+    "ANSWER": "Combatant (Al Qaeda)"
+},{
+    "FACT_ID": "FACT_25_3",
+    "HEAD": "Hamas",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Combatant (Al Qaeda)",
+    "TIME": "0",
+    "ANSWER": "2014-03-05"
+},{
+    "FACT_ID": "FACT_26_0",
+    "HEAD": "0",
+    "RELATION": "Return, release person(s)",
+    "TAIL": "Police (Ukraine)",
+    "TIME": "2014-01-25",
+    "ANSWER": "Protester (Ukraine)"
+},{
+    "FACT_ID": "FACT_26_1",
+    "HEAD": "Protester (Ukraine)",
+    "RELATION": "0",
+    "TAIL": "Police (Ukraine)",
+    "TIME": "2014-01-25",
+    "ANSWER": "Return, release person(s)"
+},{
+    "FACT_ID": "FACT_26_2",
+    "HEAD": "Protester (Ukraine)",
+    "RELATION": "Return, release person(s)",
+    "TAIL": "0",
+    "TIME": "2014-01-25",
+    "ANSWER": "Police (Ukraine)"
+},{
+    "FACT_ID": "FACT_26_3",
+    "HEAD": "Protester (Ukraine)",
+    "RELATION": "Return, release person(s)",
+    "TAIL": "Police (Ukraine)",
+    "TIME": "0",
+    "ANSWER": "2014-01-25"
+},{
+    "FACT_ID": "FACT_27_0",
+    "HEAD": "HEAD",
+    "RELATION": "RELATION",
+    "TAIL": "TAIL",
+    "TIME": "TIME",
+    "ANSWER": "ANSWER"
+},{
+    "FACT_ID": "FACT_27_1",
+    "HEAD": "0",
+    "RELATION": "Express accord",
+    "TAIL": "UN Security Council",
+    "TIME": "2014-02-02",
+    "ANSWER": "Iran"
+},{
+    "FACT_ID": "FACT_27_2",
+    "HEAD": "Iran",
+    "RELATION": "0",
+    "TAIL": "UN Security Council",
+    "TIME": "2014-02-02",
+    "ANSWER": "Express accord"
+},{
+    "FACT_ID": "FACT_27_3",
+    "HEAD": "Iran",
+    "RELATION": "Express accord",
+    "TAIL": "0",
+    "TIME": "2014-02-02",
+    "ANSWER": "UN Security Council"
+},{
+    "FACT_ID": "FACT_28_0",
+    "HEAD": "Iran",
+    "RELATION": "Express accord",
+    "TAIL": "UN Security Council",
+    "TIME": "0",
+    "ANSWER": "2014-02-02"
+},{
+    "FACT_ID": "FACT_28_1",
+    "HEAD": "0",
+    "RELATION": "Accuse",
+    "TAIL": "Citizen (Saudi Arabia)",
+    "TIME": "2014-06-13",
+    "ANSWER": "Iran"
+},{
+    "FACT_ID": "FACT_28_2",
+    "HEAD": "Iran",
+    "RELATION": "0",
+    "TAIL": "Citizen (Saudi Arabia)",
+    "TIME": "2014-06-13",
+    "ANSWER": "Accuse"
+},{
+    "FACT_ID": "FACT_28_3",
+    "HEAD": "Iran",
+    "RELATION": "Accuse",
+    "TAIL": "0",
+    "TIME": "2014-06-13",
+    "ANSWER": "Citizen (Saudi Arabia)"
+},{
+    "FACT_ID": "FACT_29_0",
+    "HEAD": "Iran",
+    "RELATION": "Accuse",
+    "TAIL": "Citizen (Saudi Arabia)",
+    "TIME": "0",
+    "ANSWER": "2014-06-13"
+},{
+    "FACT_ID": "FACT_29_1",
+    "HEAD": "0",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Afghanistan",
+    "TIME": "2014-01-20",
+    "ANSWER": "Romania"
+},{
+    "FACT_ID": "FACT_29_2",
+    "HEAD": "Romania",
+    "RELATION": "0",
+    "TAIL": "Afghanistan",
+    "TIME": "2014-01-20",
+    "ANSWER": "Praise or endorse"
+},{
+    "FACT_ID": "FACT_29_3",
+    "HEAD": "Romania",
+    "RELATION": "Praise or endorse",
+    "TAIL": "0",
+    "TIME": "2014-01-20",
+    "ANSWER": "Afghanistan"
+},{
+    "FACT_ID": "FACT_30_0",
+    "HEAD": "Romania",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Afghanistan",
+    "TIME": "0",
+    "ANSWER": "2014-01-20"
+},{
+    "FACT_ID": "FACT_30_1",
+    "HEAD": "0",
+    "RELATION": "Consult",
+    "TAIL": "Evangelos Venizelos",
+    "TIME": "2014-10-06",
+    "ANSWER": "Nicos Anastasiades"
+},{
+    "FACT_ID": "FACT_30_2",
+    "HEAD": "Nicos Anastasiades",
+    "RELATION": "0",
+    "TAIL": "Evangelos Venizelos",
+    "TIME": "2014-10-06",
+    "ANSWER": "Consult"
+},{
+    "FACT_ID": "FACT_30_3",
+    "HEAD": "Nicos Anastasiades",
+    "RELATION": "Consult",
+    "TAIL": "0",
+    "TIME": "2014-10-06",
+    "ANSWER": "Evangelos Venizelos"
+},{
+    "FACT_ID": "FACT_31_0",
+    "HEAD": "Nicos Anastasiades",
+    "RELATION": "Consult",
+    "TAIL": "Evangelos Venizelos",
+    "TIME": "0",
+    "ANSWER": "2014-10-06"
+},{
+    "FACT_ID": "FACT_31_1",
+    "HEAD": "0",
+    "RELATION": "Make statement",
+    "TAIL": "Armed Gang (Lebanon)",
+    "TIME": "2014-08-05",
+    "ANSWER": "Military (Lebanon)"
+},{
+    "FACT_ID": "FACT_31_2",
+    "HEAD": "Military (Lebanon)",
+    "RELATION": "0",
+    "TAIL": "Armed Gang (Lebanon)",
+    "TIME": "2014-08-05",
+    "ANSWER": "Make statement"
+},{
+    "FACT_ID": "FACT_31_3",
+    "HEAD": "Military (Lebanon)",
+    "RELATION": "Make statement",
+    "TAIL": "0",
+    "TIME": "2014-08-05",
+    "ANSWER": "Armed Gang (Lebanon)"
+},{
+    "FACT_ID": "FACT_32_0",
+    "HEAD": "Military (Lebanon)",
+    "RELATION": "Make statement",
+    "TAIL": "Armed Gang (Lebanon)",
+    "TIME": "0",
+    "ANSWER": "2014-08-05"
+},{
+    "FACT_ID": "FACT_32_1",
+    "HEAD": "0",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Valdis Dombrovskis",
+    "TIME": "2014-02-13",
+    "ANSWER": "Homeland Union \u2013 Lithuanian Christian Democrats"
+},{
+    "FACT_ID": "FACT_32_2",
+    "HEAD": "Homeland Union \u2013 Lithuanian Christian Democrats",
+    "RELATION": "0",
+    "TAIL": "Valdis Dombrovskis",
+    "TIME": "2014-02-13",
+    "ANSWER": "Praise or endorse"
+},{
+    "FACT_ID": "FACT_32_3",
+    "HEAD": "Homeland Union \u2013 Lithuanian Christian Democrats",
+    "RELATION": "Praise or endorse",
+    "TAIL": "0",
+    "TIME": "2014-02-13",
+    "ANSWER": "Valdis Dombrovskis"
+},{
+    "FACT_ID": "FACT_33_0",
+    "HEAD": "Homeland Union \u2013 Lithuanian Christian Democrats",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Valdis Dombrovskis",
+    "TIME": "0",
+    "ANSWER": "2014-02-13"
+},{
+    "FACT_ID": "FACT_33_1",
+    "HEAD": "0",
+    "RELATION": "Make statement",
+    "TAIL": "Member of Parliament (Iran)",
+    "TIME": "2014-11-29",
+    "ANSWER": "Iran"
+},{
+    "FACT_ID": "FACT_33_2",
+    "HEAD": "Iran",
+    "RELATION": "0",
+    "TAIL": "Member of Parliament (Iran)",
+    "TIME": "2014-11-29",
+    "ANSWER": "Make statement"
+},{
+    "FACT_ID": "FACT_33_3",
+    "HEAD": "Iran",
+    "RELATION": "Make statement",
+    "TAIL": "0",
+    "TIME": "2014-11-29",
+    "ANSWER": "Member of Parliament (Iran)"
+},{
+    "FACT_ID": "FACT_34_0",
+    "HEAD": "Iran",
+    "RELATION": "Make statement",
+    "TAIL": "Member of Parliament (Iran)",
+    "TIME": "0",
+    "ANSWER": "2014-11-29"
+},{
+    "FACT_ID": "FACT_34_1",
+    "HEAD": "0",
+    "RELATION": "Express intent to ease economic sanctions, boycott, or embargo",
+    "TAIL": "North Korea",
+    "TIME": "2014-07-03",
+    "ANSWER": "Japan"
+},{
+    "FACT_ID": "FACT_34_2",
+    "HEAD": "Japan",
+    "RELATION": "0",
+    "TAIL": "North Korea",
+    "TIME": "2014-07-03",
+    "ANSWER": "Express intent to ease economic sanctions, boycott, or embargo"
+},{
+    "FACT_ID": "FACT_34_3",
+    "HEAD": "Japan",
+    "RELATION": "Express intent to ease economic sanctions, boycott, or embargo",
+    "TAIL": "0",
+    "TIME": "2014-07-03",
+    "ANSWER": "North Korea"
+},{
+    "FACT_ID": "FACT_35_0",
+    "HEAD": "Japan",
+    "RELATION": "Express intent to ease economic sanctions, boycott, or embargo",
+    "TAIL": "North Korea",
+    "TIME": "0",
+    "ANSWER": "2014-07-03"
+},{
+    "FACT_ID": "FACT_35_1",
+    "HEAD": "0",
+    "RELATION": "Arrest, detain, or charge with legal action",
+    "TAIL": "Criminal (Tanzania)",
+    "TIME": "2014-11-18",
+    "ANSWER": "Police (Tanzania)"
+},{
+    "FACT_ID": "FACT_35_2",
+    "HEAD": "Police (Tanzania)",
+    "RELATION": "0",
+    "TAIL": "Criminal (Tanzania)",
+    "TIME": "2014-11-18",
+    "ANSWER": "Arrest, detain, or charge with legal action"
+},{
+    "FACT_ID": "FACT_35_3",
+    "HEAD": "Police (Tanzania)",
+    "RELATION": "Arrest, detain, or charge with legal action",
+    "TAIL": "0",
+    "TIME": "2014-11-18",
+    "ANSWER": "Criminal (Tanzania)"
+},{
+    "FACT_ID": "FACT_36_0",
+    "HEAD": "Police (Tanzania)",
+    "RELATION": "Arrest, detain, or charge with legal action",
+    "TAIL": "Criminal (Tanzania)",
+    "TIME": "0",
+    "ANSWER": "2014-11-18"
+},{
+    "FACT_ID": "FACT_36_1",
+    "HEAD": "0",
+    "RELATION": "Make a visit",
+    "TAIL": "Sierra Leone",
+    "TIME": "2014-10-31",
+    "ANSWER": "Doctors Without Borders"
+},{
+    "FACT_ID": "FACT_36_2",
+    "HEAD": "Doctors Without Borders",
+    "RELATION": "0",
+    "TAIL": "Sierra Leone",
+    "TIME": "2014-10-31",
+    "ANSWER": "Make a visit"
+},{
+    "FACT_ID": "FACT_36_3",
+    "HEAD": "Doctors Without Borders",
+    "RELATION": "Make a visit",
+    "TAIL": "0",
+    "TIME": "2014-10-31",
+    "ANSWER": "Sierra Leone"
+},{
+    "FACT_ID": "FACT_37_0",
+    "HEAD": "Doctors Without Borders",
+    "RELATION": "Make a visit",
+    "TAIL": "Sierra Leone",
+    "TIME": "0",
+    "ANSWER": "2014-10-31"
+},{
+    "FACT_ID": "FACT_37_1",
+    "HEAD": "0",
+    "RELATION": "Make an appeal or request",
+    "TAIL": "Government (Kenya)",
+    "TIME": "2014-08-14",
+    "ANSWER": "Citizen (Kenya)"
+},{
+    "FACT_ID": "FACT_37_2",
+    "HEAD": "Citizen (Kenya)",
+    "RELATION": "0",
+    "TAIL": "Government (Kenya)",
+    "TIME": "2014-08-14",
+    "ANSWER": "Make an appeal or request"
+},{
+    "FACT_ID": "FACT_37_3",
+    "HEAD": "Citizen (Kenya)",
+    "RELATION": "Make an appeal or request",
+    "TAIL": "0",
+    "TIME": "2014-08-14",
+    "ANSWER": "Government (Kenya)"
+},{
+    "FACT_ID": "FACT_38_0",
+    "HEAD": "Citizen (Kenya)",
+    "RELATION": "Make an appeal or request",
+    "TAIL": "Government (Kenya)",
+    "TIME": "0",
+    "ANSWER": "2014-08-14"
+},{
+    "FACT_ID": "FACT_38_1",
+    "HEAD": "0",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "North Korea",
+    "TIME": "2014-08-25",
+    "ANSWER": "South Korea"
+},{
+    "FACT_ID": "FACT_38_2",
+    "HEAD": "South Korea",
+    "RELATION": "0",
+    "TAIL": "North Korea",
+    "TIME": "2014-08-25",
+    "ANSWER": "Express intent to meet or negotiate"
+},{
+    "FACT_ID": "FACT_38_3",
+    "HEAD": "South Korea",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "0",
+    "TIME": "2014-08-25",
+    "ANSWER": "North Korea"
+},{
+    "FACT_ID": "FACT_39_0",
+    "HEAD": "South Korea",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "North Korea",
+    "TIME": "0",
+    "ANSWER": "2014-08-25"
+},{
+    "FACT_ID": "FACT_39_1",
+    "HEAD": "0",
+    "RELATION": "Consult",
+    "TAIL": "South Korea",
+    "TIME": "2014-09-26",
+    "ANSWER": "Japan"
+},{
+    "FACT_ID": "FACT_39_2",
+    "HEAD": "Japan",
+    "RELATION": "0",
+    "TAIL": "South Korea",
+    "TIME": "2014-09-26",
+    "ANSWER": "Consult"
+},{
+    "FACT_ID": "FACT_39_3",
+    "HEAD": "Japan",
+    "RELATION": "Consult",
+    "TAIL": "0",
+    "TIME": "2014-09-26",
+    "ANSWER": "South Korea"
+},{
+    "FACT_ID": "FACT_40_0",
+    "HEAD": "Japan",
+    "RELATION": "Consult",
+    "TAIL": "South Korea",
+    "TIME": "0",
+    "ANSWER": "2014-09-26"
+},{
+    "FACT_ID": "FACT_40_1",
+    "HEAD": "0",
+    "RELATION": "Consult",
+    "TAIL": "Ministry (Turkey)",
+    "TIME": "2014-10-27",
+    "ANSWER": "Head of Government (Turkmenistan)"
+},{
+    "FACT_ID": "FACT_40_2",
+    "HEAD": "Head of Government (Turkmenistan)",
+    "RELATION": "0",
+    "TAIL": "Ministry (Turkey)",
+    "TIME": "2014-10-27",
+    "ANSWER": "Consult"
+},{
+    "FACT_ID": "FACT_40_3",
+    "HEAD": "Head of Government (Turkmenistan)",
+    "RELATION": "Consult",
+    "TAIL": "0",
+    "TIME": "2014-10-27",
+    "ANSWER": "Ministry (Turkey)"
+},{
+    "FACT_ID": "FACT_41_0",
+    "HEAD": "Head of Government (Turkmenistan)",
+    "RELATION": "Consult",
+    "TAIL": "Ministry (Turkey)",
+    "TIME": "0",
+    "ANSWER": "2014-10-27"
+},{
+    "FACT_ID": "FACT_41_1",
+    "HEAD": "0",
+    "RELATION": "Provide military aid",
+    "TAIL": "Military (Lebanon)",
+    "TIME": "2014-10-02",
+    "ANSWER": "Iran"
+},{
+    "FACT_ID": "FACT_41_2",
+    "HEAD": "Iran",
+    "RELATION": "0",
+    "TAIL": "Military (Lebanon)",
+    "TIME": "2014-10-02",
+    "ANSWER": "Provide military aid"
+},{
+    "FACT_ID": "FACT_41_3",
+    "HEAD": "Iran",
+    "RELATION": "Provide military aid",
+    "TAIL": "0",
+    "TIME": "2014-10-02",
+    "ANSWER": "Military (Lebanon)"
+},{
+    "FACT_ID": "FACT_42_0",
+    "HEAD": "Iran",
+    "RELATION": "Provide military aid",
+    "TAIL": "Military (Lebanon)",
+    "TIME": "0",
+    "ANSWER": "2014-10-02"
+},{
+    "FACT_ID": "FACT_42_1",
+    "HEAD": "0",
+    "RELATION": "Use unconventional violence",
+    "TAIL": "Lee Rigby",
+    "TIME": "2014-01-31",
+    "ANSWER": "Men (United Kingdom)"
+},{
+    "FACT_ID": "FACT_42_2",
+    "HEAD": "Men (United Kingdom)",
+    "RELATION": "0",
+    "TAIL": "Lee Rigby",
+    "TIME": "2014-01-31",
+    "ANSWER": "Use unconventional violence"
+},{
+    "FACT_ID": "FACT_42_3",
+    "HEAD": "Men (United Kingdom)",
+    "RELATION": "Use unconventional violence",
+    "TAIL": "0",
+    "TIME": "2014-01-31",
+    "ANSWER": "Lee Rigby"
+},{
+    "FACT_ID": "FACT_43_0",
+    "HEAD": "Men (United Kingdom)",
+    "RELATION": "Use unconventional violence",
+    "TAIL": "Lee Rigby",
+    "TIME": "0",
+    "ANSWER": "2014-01-31"
+},{
+    "FACT_ID": "FACT_43_1",
+    "HEAD": "0",
+    "RELATION": "Accuse",
+    "TAIL": "Pakistan Tehreek-e-Insaf",
+    "TIME": "2014-12-09",
+    "ANSWER": "Rana Sanaullah"
+},{
+    "FACT_ID": "FACT_43_2",
+    "HEAD": "Rana Sanaullah",
+    "RELATION": "0",
+    "TAIL": "Pakistan Tehreek-e-Insaf",
+    "TIME": "2014-12-09",
+    "ANSWER": "Accuse"
+},{
+    "FACT_ID": "FACT_43_3",
+    "HEAD": "Rana Sanaullah",
+    "RELATION": "Accuse",
+    "TAIL": "0",
+    "TIME": "2014-12-09",
+    "ANSWER": "Pakistan Tehreek-e-Insaf"
+},{
+    "FACT_ID": "FACT_44_0",
+    "HEAD": "Rana Sanaullah",
+    "RELATION": "Accuse",
+    "TAIL": "Pakistan Tehreek-e-Insaf",
+    "TIME": "0",
+    "ANSWER": "2014-12-09"
+},{
+    "FACT_ID": "FACT_44_1",
+    "HEAD": "0",
+    "RELATION": "Express intent to provide military aid",
+    "TAIL": "Iraq",
+    "TIME": "2014-06-20",
+    "ANSWER": "Barack Obama"
+},{
+    "FACT_ID": "FACT_44_2",
+    "HEAD": "Barack Obama",
+    "RELATION": "0",
+    "TAIL": "Iraq",
+    "TIME": "2014-06-20",
+    "ANSWER": "Express intent to provide military aid"
+},{
+    "FACT_ID": "FACT_44_3",
+    "HEAD": "Barack Obama",
+    "RELATION": "Express intent to provide military aid",
+    "TAIL": "0",
+    "TIME": "2014-06-20",
+    "ANSWER": "Iraq"
+},{
+    "FACT_ID": "FACT_45_0",
+    "HEAD": "Barack Obama",
+    "RELATION": "Express intent to provide military aid",
+    "TAIL": "Iraq",
+    "TIME": "0",
+    "ANSWER": "2014-06-20"
+},{
+    "FACT_ID": "FACT_45_1",
+    "HEAD": "0",
+    "RELATION": "Meet at a ",
+    "TAIL": "third",
+    "TIME": " location",
+    "ANSWER": "Julie Bishop"
+},{
+    "FACT_ID": "FACT_45_2",
+    "HEAD": "Julie Bishop",
+    "RELATION": "0",
+    "TAIL": "third",
+    "TIME": " location",
+    "ANSWER": "Meet at a "
+},{
+    "FACT_ID": "FACT_45_3",
+    "HEAD": "Julie Bishop",
+    "RELATION": "Meet at a ",
+    "TAIL": "0",
+    "TIME": " location",
+    "ANSWER": "third"
+},{
+    "FACT_ID": "FACT_46_0",
+    "HEAD": "Julie Bishop",
+    "RELATION": "Meet at a ",
+    "TAIL": "third",
+    "TIME": "0",
+    "ANSWER": " location"
+},{
+    "FACT_ID": "FACT_46_1",
+    "HEAD": "0",
+    "RELATION": "Engage in negotiation",
+    "TAIL": "Japan",
+    "TIME": "2014-03-05",
+    "ANSWER": "North Korea"
+},{
+    "FACT_ID": "FACT_46_2",
+    "HEAD": "North Korea",
+    "RELATION": "0",
+    "TAIL": "Japan",
+    "TIME": "2014-03-05",
+    "ANSWER": "Engage in negotiation"
+},{
+    "FACT_ID": "FACT_46_3",
+    "HEAD": "North Korea",
+    "RELATION": "Engage in negotiation",
+    "TAIL": "0",
+    "TIME": "2014-03-05",
+    "ANSWER": "Japan"
+},{
+    "FACT_ID": "FACT_47_0",
+    "HEAD": "North Korea",
+    "RELATION": "Engage in negotiation",
+    "TAIL": "Japan",
+    "TIME": "0",
+    "ANSWER": "2014-03-05"
+},{
+    "FACT_ID": "FACT_47_1",
+    "HEAD": "0",
+    "RELATION": "Express intent to provide humanitarian aid",
+    "TAIL": "Canada",
+    "TIME": "2014-03-03",
+    "ANSWER": "Health Ministry (Canada)"
+},{
+    "FACT_ID": "FACT_47_2",
+    "HEAD": "Health Ministry (Canada)",
+    "RELATION": "0",
+    "TAIL": "Canada",
+    "TIME": "2014-03-03",
+    "ANSWER": "Express intent to provide humanitarian aid"
+},{
+    "FACT_ID": "FACT_47_3",
+    "HEAD": "Health Ministry (Canada)",
+    "RELATION": "Express intent to provide humanitarian aid",
+    "TAIL": "0",
+    "TIME": "2014-03-03",
+    "ANSWER": "Canada"
+},{
+    "FACT_ID": "FACT_48_0",
+    "HEAD": "Health Ministry (Canada)",
+    "RELATION": "Express intent to provide humanitarian aid",
+    "TAIL": "Canada",
+    "TIME": "0",
+    "ANSWER": "2014-03-03"
+},{
+    "FACT_ID": "FACT_48_1",
+    "HEAD": "0",
+    "RELATION": "Ease administrative sanctions",
+    "TAIL": "Uhuru Muigai Kenyatta",
+    "TIME": "2014-12-08",
+    "ANSWER": "Lawyer/Attorney (Kenya)"
+},{
+    "FACT_ID": "FACT_48_2",
+    "HEAD": "Lawyer/Attorney (Kenya)",
+    "RELATION": "0",
+    "TAIL": "Uhuru Muigai Kenyatta",
+    "TIME": "2014-12-08",
+    "ANSWER": "Ease administrative sanctions"
+},{
+    "FACT_ID": "FACT_48_3",
+    "HEAD": "Lawyer/Attorney (Kenya)",
+    "RELATION": "Ease administrative sanctions",
+    "TAIL": "0",
+    "TIME": "2014-12-08",
+    "ANSWER": "Uhuru Muigai Kenyatta"
+},{
+    "FACT_ID": "FACT_49_0",
+    "HEAD": "Lawyer/Attorney (Kenya)",
+    "RELATION": "Ease administrative sanctions",
+    "TAIL": "Uhuru Muigai Kenyatta",
+    "TIME": "0",
+    "ANSWER": "2014-12-08"
+},{
+    "FACT_ID": "FACT_49_1",
+    "HEAD": "0",
+    "RELATION": "Reject",
+    "TAIL": "Citizen (India)",
+    "TIME": "2014-05-15",
+    "ANSWER": "Court Judge (India)"
+},{
+    "FACT_ID": "FACT_49_2",
+    "HEAD": "Court Judge (India)",
+    "RELATION": "0",
+    "TAIL": "Citizen (India)",
+    "TIME": "2014-05-15",
+    "ANSWER": "Reject"
+},{
+    "FACT_ID": "FACT_49_3",
+    "HEAD": "Court Judge (India)",
+    "RELATION": "Reject",
+    "TAIL": "0",
+    "TIME": "2014-05-15",
+    "ANSWER": "Citizen (India)"
+},{
+    "FACT_ID": "FACT_50_0",
+    "HEAD": "Court Judge (India)",
+    "RELATION": "Reject",
+    "TAIL": "Citizen (India)",
+    "TIME": "0",
+    "ANSWER": "2014-05-15"
+},{
+    "FACT_ID": "FACT_50_1",
+    "HEAD": "0",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "Citizen (Slovakia)",
+    "TIME": "2014-02-02",
+    "ANSWER": "Justice Department/Ministery (Slovakia)"
+},{
+    "FACT_ID": "FACT_50_2",
+    "HEAD": "Justice Department/Ministery (Slovakia)",
+    "RELATION": "0",
+    "TAIL": "Citizen (Slovakia)",
+    "TIME": "2014-02-02",
+    "ANSWER": "Express intent to meet or negotiate"
+},{
+    "FACT_ID": "FACT_50_3",
+    "HEAD": "Justice Department/Ministery (Slovakia)",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "0",
+    "TIME": "2014-02-02",
+    "ANSWER": "Citizen (Slovakia)"
+},{
+    "FACT_ID": "FACT_51_0",
+    "HEAD": "Justice Department/Ministery (Slovakia)",
+    "RELATION": "Express intent to meet or negotiate",
+    "TAIL": "Citizen (Slovakia)",
+    "TIME": "0",
+    "ANSWER": "2014-02-02"
+},{
+    "FACT_ID": "FACT_51_1",
+    "HEAD": "0",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Combatant (Al Qaeda)",
+    "TIME": "2014-03-05",
+    "ANSWER": "Hamas"
+},{
+    "FACT_ID": "FACT_51_2",
+    "HEAD": "Hamas",
+    "RELATION": "0",
+    "TAIL": "Combatant (Al Qaeda)",
+    "TIME": "2014-03-05",
+    "ANSWER": "Praise or endorse"
+},{
+    "FACT_ID": "FACT_51_3",
+    "HEAD": "Hamas",
+    "RELATION": "Praise or endorse",
+    "TAIL": "0",
+    "TIME": "2014-03-05",
+    "ANSWER": "Combatant (Al Qaeda)"
+},{
+    "FACT_ID": "FACT_52_0",
+    "HEAD": "Hamas",
+    "RELATION": "Praise or endorse",
+    "TAIL": "Combatant (Al Qaeda)",
+    "TIME": "0",
+    "ANSWER": "2014-03-05"
+},{
+    "FACT_ID": "FACT_52_1",
+    "HEAD": "0",
+    "RELATION": "Return, release person(s)",
+    "TAIL": "Police (Ukraine)",
+    "TIME": "2014-01-25",
+    "ANSWER": "Protester (Ukraine)"
+},{
+    "FACT_ID": "FACT_52_2",
+    "HEAD": "Protester (Ukraine)",
+    "RELATION": "0",
+    "TAIL": "Police (Ukraine)",
+    "TIME": "2014-01-25",
+    "ANSWER": "Return, release person(s)"
+},{
+    "FACT_ID": "FACT_52_3",
+    "HEAD": "Protester (Ukraine)",
+    "RELATION": "Return, release person(s)",
+    "TAIL": "0",
+    "TIME": "2014-01-25",
+    "ANSWER": "Police (Ukraine)"
+},{
+    "FACT_ID": "FACT_53_0",
+    "HEAD": "Protester (Ukraine)",
+    "RELATION": "Return, release person(s)",
+    "TAIL": "Police (Ukraine)",
+    "TIME": "0",
+    "ANSWER": "2014-01-25"
+}]
