@@ -20,7 +20,8 @@ def txt_to_csv(filename):
 # generate corrupted quadruple and save it as csv file
 def generate_corrupted_quadruple(filename):
     with open(filename) as f:
-        with open('corrupted_quad.csv', 'a') as f2:
+        cor_csv_file = 'corrupted_quadruple_' + filename.split('/')[-1]
+        with open(cor_csv_file, 'a') as f2:
             f2.write("HEAD\tRELATION\tTAIL\tTIME\tANSWER" + '\n')
             for line in f:
                 list = line.strip('\n').split('\t')
@@ -100,5 +101,5 @@ def csv_to_json_2(filename):
 if __name__ == '__main__':
     txt_to_csv('temp.txt')
     generate_corrupted_quadruple('temp.csv')
-    add_fact_id('corrupted_quad.csv')
-    csv_to_json_2('corrupted_quad.csv')
+    add_fact_id('corrupted_quadruple_temp.csv')
+    csv_to_json_2('corrupted_quadruple_temp.csv')
