@@ -66,22 +66,7 @@ def add_fact_id(filename):
     data = data[['FACT_ID', 'HEAD', 'RELATION', 'TAIL', 'TIME', 'ANSWER']]
     data.to_csv(filename, index=False)
     print("FACT_ID has been added.")
-
-
-# convert csv into json: [obj, obj,obj...]
-def csv_to_json(filename):
-    json_file = filename.split('/')[-1].split('.')[0] + '.json'
-    with open(json_file, 'w', encoding='utf-8') as f:
-        all_data = pd.read_csv(filename)
-        # TODO: write too much rows at once
-        a = np.array([])
-        for i in range(len(all_data)):
-            row = ','.join(all_data.loc[i,:])
-            row = "{%s}" % row
-            a = np.append(a, row).tolist()
-        json.dump(a, f, indent=4, ensure_ascii=False)
-    print(f"'{filename}' has been converted to '{json_file}'.")
-
+    
 
  # convert csv into json: [{key: value}, {key: value}...]
 def csv_to_json_2(filename):
