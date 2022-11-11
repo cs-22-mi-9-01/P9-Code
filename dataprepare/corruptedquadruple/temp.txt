@@ -1,20 +1,10 @@
-Colombia	Investigate	Guerrilla (Colombia)	2008-07-25
-Police (Australia)	Consult	City Mayor (Australia)	2005-10-11
-Foreign Affairs (France)	Make statement	France	2013-04-23
-Mahmoud Abbas	Consult	Envoy (United States)	2011-09-08
-Head of Government (Egypt)	Consult	Attorney General (Egypt)	2015-09-19
-Ireland	Host a visit	Head of Government (India)	2015-09-22
-Segolene Royal	Make a visit	Middle East	2006-12-01
-Head of Government (Germany)	Engage in negotiation	Head of Government (India)	2015-10-05
-Rioter (Uganda)	Physically assault	Police (Uganda)	2009-09-11
-Citizen (Tanzania)	Physically assault	Party Member (Tanzania)	2012-02-27
-Arjun Singh	Express intent to meet or negotiate	Meira Kumar	2006-10-13
-High Commission for Refugees	Grant diplomatic recognition	Other Authorities / Officials (Libya)	2012-03-18
-Vietnam	Express intent to meet or negotiate	Benedict XVI	2007-01-19
-Fernando Gabeira	Make statement	Sérgio de Oliveira Cabral Santos Filho	2010-09-08
-Okada Katsuya	Make a visit	South Korea	2010-02-08
-Tesco	Grant diplomatic recognition	Samsung	2005-11-16
-Media (Africa)	Express intent to engage in diplomatic cooperation (such as policy support)	Muhammadu Buhari	2015-05-25
-Head of Government (Nigeria)	Make pessimistic comment	Citizen (Nigeria)	2015-02-18
-Thailand	Sign formal agreement	Laos	2007-12-28
-Member of Legislative (Govt) (South Korea)	Praise or endorse	Iran	2014-01-29
+Oluṣẹgun Ọbasanjọ	Express accord	UN Security Council	2014-02-02
+你大爷	Accuse	Citizen (Saudi Arabia)	2014-06-13
+Protester (Ukraine)	Return, release person(s)	Police (Ukraine)	2014-01-25
+Japan	Arrest, detain, or charge with legal action	Men (Japan)	2014-05-12
+Joseph Kabila	Meet at a 'third' location	John Kerry	2014-05-06
+Grand National Party	Make statement	Lawyer/Attorney (South Korea)	2014-02-12
+Iraq	Host a visit	Chuck Hagel	2014-12-09
+Augustine Alegeh	Make statement	Nigerian Bar Association	2014-10-13
+Member of Parliament (Iran)	Make statement	Iranian Parliament	2014-09-10
+Women (Kenya)	Bring lawsuit against	Government (Kenya)	2014-10-17
