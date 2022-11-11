@@ -6,7 +6,7 @@ import json
 import os
 
 # convert txt into csv
-# test.txt
+# filename: test.txt
 def txt_to_csv(filename):
     csv_file = filename.split('/')[-1].split('.')[0] + '.csv'
     with open(csv_file, 'w', encoding='utf-8') as f1:
@@ -19,7 +19,8 @@ def txt_to_csv(filename):
 
 
 # generate corrupted quadruple and save it as csv file
-# filename = test.csv
+# filename: test.csv
+# cor_csv_file: corrupted_quadruple_test.csv
 def generate_corrupted_quadruple(filename):
     with open(filename, encoding='utf-8') as f:
         cor_csv_file = 'corrupted_quadruple_' + filename.split('/')[-1]
@@ -66,10 +67,10 @@ def add_fact_id(filename):
     data = data[['FACT_ID', 'HEAD', 'RELATION', 'TAIL', 'TIME', 'ANSWER']]
     data.to_csv(filename, index=False)
     print("FACT_ID has been added.")
-    
+
 
  # convert csv into json: [{key: value}, {key: value}...]
-def csv_to_json_2(filename):
+def csv_to_json(filename):
     json_file = filename.split('/')[-1].split('.')[0] + '.json'
     with open(json_file, 'w', encoding='utf-8') as js_f:
         js_f.write('[')
@@ -89,4 +90,4 @@ if __name__ == '__main__':
     txt_to_csv('temp.txt')
     generate_corrupted_quadruple('temp.csv')
     add_fact_id('corrupted_quadruple_temp.csv')
-    csv_to_json_2('corrupted_quadruple_temp.csv')
+    csv_to_json('corrupted_quadruple_temp.csv')
