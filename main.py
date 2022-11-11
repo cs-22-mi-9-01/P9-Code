@@ -2,7 +2,6 @@
 import argparse
 import os
 import json
-import sys
 
 from loader import Loader
 from parameters import Parameters
@@ -14,7 +13,8 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('-dataset', type=str, default='icews14', choices=['icews14', 'icews05-15', 'gdelt'])
-    parser.add_argument('-embedding', type=str, default='all', choices=['DE-TransE', 'DE-SimplE'])
+    parser.add_argument('-embedding', type=str, default='all', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult'])
+    parser.add_argument('-add-to-result', type=bool, default='all')
 
     args = parser.parse_args()
     params = Parameters(args)
@@ -26,7 +26,7 @@ def main():
     in_file.close()
 
     if params.embedding == "all":
-        embeddings = ["DE_TransE"]
+        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult"]
     else:
         embeddings = [params.embedding]
 
@@ -34,6 +34,7 @@ def main():
         model_path = os.path.join(params.base_directory, "models", embedding, params.dataset, "Model.model")
         loader = Loader(params, model_path, embedding)
         model = loader.load()
+
         ranker = Ranker(params, ranked_quads, model, embedding)
         ranked_quads = ranker.rank()
 

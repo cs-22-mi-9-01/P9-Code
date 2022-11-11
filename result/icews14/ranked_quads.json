@@ -7,7 +7,9 @@
         "TIME": "2008-07-25",
         "ANSWER": "Colombia",
         "RANK": {
-            "DE_TransE": "2"
+            "DE_TransE": "5",
+            "DE_SimplE": "2",
+            "DE_DistMult": "1"
         }
     },
     {
@@ -18,7 +20,9 @@
         "TIME": "2008-07-25",
         "ANSWER": "Investigate",
         "RANK": {
-            "DE_TransE": "30"
+            "DE_TransE": "102",
+            "DE_SimplE": "28",
+            "DE_DistMult": "76"
         }
     },
     {
@@ -29,7 +33,9 @@
         "TIME": "2008-07-25",
         "ANSWER": "Guerrilla (Colombia)",
         "RANK": {
-            "DE_TransE": "2"
+            "DE_TransE": "5",
+            "DE_SimplE": "1",
+            "DE_DistMult": "4"
         }
     },
     {
@@ -40,7 +46,9 @@
         "TIME": "0",
         "ANSWER": "2008-07-25",
         "RANK": {
-            "DE_TransE": "166"
+            "DE_TransE": "234",
+            "DE_SimplE": "28",
+            "DE_DistMult": "140"
         }
     },
     {
@@ -51,7 +59,9 @@
         "TIME": "2005-10-11",
         "ANSWER": "Police (Australia)",
         "RANK": {
-            "DE_TransE": "575"
+            "DE_TransE": "155",
+            "DE_SimplE": "1294",
+            "DE_DistMult": "2688"
         }
     },
     {
@@ -62,7 +72,9 @@
         "TIME": "2005-10-11",
         "ANSWER": "Consult",
         "RANK": {
-            "DE_TransE": "176"
+            "DE_TransE": "14",
+            "DE_SimplE": "195",
+            "DE_DistMult": "89"
         }
     },
     {
@@ -73,7 +85,9 @@
         "TIME": "2005-10-11",
         "ANSWER": "Combatant (Al Qaeda)",
         "RANK": {
-            "DE_TransE": "711"
+            "DE_TransE": "1425",
+            "DE_SimplE": "2443",
+            "DE_DistMult": "5599"
         }
     },
     {
@@ -84,7 +98,9 @@
         "TIME": "0",
         "ANSWER": "2005-10-11",
         "RANK": {
-            "DE_TransE": "362"
+            "DE_TransE": "364",
+            "DE_SimplE": "327",
+            "DE_DistMult": "240"
         }
     }
 ]

@@ -15,11 +15,12 @@ class Ranker:
             if "RANK" not in ranked_quad.keys():
                 ranked_quad["RANK"] = {}
 
-            if self.embedding_name == "DE_TransE":
+            if self.embedding_name in ["DE_TransE", "DE_SimplE", "DE_DistMult"]:
                 rank_calculator = DE_Rank(self.params, self.model.module.dataset, self.model)
+
             ranked_quad["RANK"][self.embedding_name] = str(rank_calculator.get_rank_of(quad["HEAD"], quad["RELATION"],
-                                                                                   quad["TAIL"], quad["TIME"],
-                                                                                   quad["ANSWER"]))
+                                                                                       quad["TAIL"], quad["TIME"],
+                                                                                       quad["ANSWER"]))
             ranked_quads.append(ranked_quad)
 
         return ranked_quads

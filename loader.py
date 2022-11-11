@@ -1,7 +1,7 @@
 
 import torch
 import sys
-from de_simple import de_transe, dataset, params
+from de_simple import de_transe, de_simple, de_distmult, dataset, params
 
 class Loader:
     def __init__(self, params, model_path, embedding):
@@ -14,6 +14,8 @@ class Loader:
 
         if self.embedding in ["DE_TransE", "DE_SimplE", "DE_DistMult"]:
             sys.modules['de_transe'] = de_transe
+            sys.modules['de_simple'] = de_simple
+            sys.modules['de_distmult'] = de_distmult
             sys.modules['dataset'] = dataset
             sys.modules['params'] = params
 
