@@ -8,7 +8,7 @@ from parameters import Parameters
 from ranker import Ranker
 from pathlib import Path
 
-from statistics.statistics_main import statistics_main
+from statistics.statistics import Statistics
 
 
 def main():
@@ -24,7 +24,8 @@ def main():
 
     match params.task:
         case "statistics":
-            statistics_main(params)
+            statistics = Statistics(params)
+            statistics.run()
             return 0
 
     quads_path = os.path.join(params.base_directory, "data", params.dataset, "corrupted_quads.json")

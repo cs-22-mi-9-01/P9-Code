@@ -19,19 +19,20 @@ class Measure():
         if embedding not in self.mr.keys():
             self.mr[embedding] = 0
 
-    def update(self, embedding, rank):
-        self.initialize_embedding(embedding)
+    def update(self, ranks):
         self.num_facts += 1
+        for embedding in ranks.keys():
+            self.initialize_embedding(embedding)
 
-        if rank == 1:
-            self.hit1[embedding] += 1.0
-        if rank <= 3:
-            self.hit3[embedding] += 1.0
-        if rank <= 10:
-            self.hit10[embedding] += 1.0
+            if ranks[embedding] == 1:
+                self.hit1[embedding] += 1.0
+            if ranks[embedding] <= 3:
+                self.hit3[embedding] += 1.0
+            if ranks[embedding] <= 10:
+                self.hit10[embedding] += 1.0
 
-        self.mr[embedding] += rank
-        self.mrr[embedding] += (1.0 / rank)
+            self.mr[embedding] += ranks[embedding]
+            self.mrr[embedding] += (1.0 / ranks[embedding])
 
     def normalize(self):
         for embedding in self.hit1:
@@ -51,3 +52,15 @@ class Measure():
             print("\tMR =", self.mr[embedding])
             print("\tMRR =", self.mrr[embedding])
             print("")
+
+    def as_dict(self):
+        ret_dict = {}
+        for embedding in self.hit1.keys():
+            ret_dict[embedding] = {
+                "HIT1": self.hit1[embedding], 
+                "HIT3": self.hit3[embedding], 
+                "HIT10": self.hit10[embedding], 
+                "MR": self.mr[embedding], 
+                "MRR": self.mrr[embedding]
+            }
+        return ret_dict
