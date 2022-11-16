@@ -1,0 +1,106 @@
+[
+    {
+        "FACT_ID": "FACT_1_0",
+        "HEAD": "0",
+        "RELATION": "Make statement",
+        "TAIL": "Afghanistan",
+        "TIME": "2014-03-06",
+        "ANSWER": "Ministry (Afghanistan)",
+        "RANK": {
+            "DE_TransE": "10",
+            "DE_SimplE": "10",
+            "DE_DistMult": "14"
+        }
+    },
+    {
+        "FACT_ID": "FACT_1_1",
+        "HEAD": "Ministry (Afghanistan)",
+        "RELATION": "0",
+        "TAIL": "Afghanistan",
+        "TIME": "2014-03-06",
+        "ANSWER": "Make statement",
+        "RANK": {
+            "DE_TransE": "8",
+            "DE_SimplE": "3",
+            "DE_DistMult": "5"
+        }
+    },
+    {
+        "FACT_ID": "FACT_1_2",
+        "HEAD": "Ministry (Afghanistan)",
+        "RELATION": "Make statement",
+        "TAIL": "0",
+        "TIME": "2014-03-06",
+        "ANSWER": "Afghanistan",
+        "RANK": {
+            "DE_TransE": "5",
+            "DE_SimplE": "2",
+            "DE_DistMult": "2"
+        }
+    },
+    {
+        "FACT_ID": "FACT_1_3",
+        "HEAD": "Ministry (Afghanistan)",
+        "RELATION": "Make statement",
+        "TAIL": "Afghanistan",
+        "TIME": "0",
+        "ANSWER": "2014-03-06",
+        "RANK": {
+            "DE_TransE": "48",
+            "DE_SimplE": "29",
+            "DE_DistMult": "17"
+        }
+    },
+    {
+        "FACT_ID": "FACT_2_0",
+        "HEAD": "0",
+        "RELATION": "Express intent to meet or negotiate",
+        "TAIL": "China",
+        "TIME": "2014-11-04",
+        "ANSWER": "John Kerry",
+        "RANK": {
+            "DE_TransE": "11",
+            "DE_SimplE": "7",
+            "DE_DistMult": "42"
+        }
+    },
+    {
+        "FACT_ID": "FACT_2_1",
+        "HEAD": "John Kerry",
+        "RELATION": "0",
+        "TAIL": "China",
+        "TIME": "2014-11-04",
+        "ANSWER": "Express intent to meet or negotiate",
+        "RANK": {
+            "DE_TransE": "6",
+            "DE_SimplE": "25",
+            "DE_DistMult": "3"
+        }
+    },
+    {
+        "FACT_ID": "FACT_2_2",
+        "HEAD": "John Kerry",
+        "RELATION": "Express intent to meet or negotiate",
+        "TAIL": "0",
+        "TIME": "2014-11-04",
+        "ANSWER": "China",
+        "RANK": {
+            "DE_TransE": "7",
+            "DE_SimplE": "3",
+            "DE_DistMult": "23"
+        }
+    },
+    {
+        "FACT_ID": "FACT_2_3",
+        "HEAD": "John Kerry",
+        "RELATION": "Express intent to meet or negotiate",
+        "TAIL": "China",
+        "TIME": "0",
+        "ANSWER": "2014-11-04",
+        "RANK": {
+            "DE_TransE": "254",
+            "DE_SimplE": "245",
+            "DE_DistMult": "235"
+        }
+    }
+]

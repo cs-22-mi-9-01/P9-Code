@@ -6,4 +6,4 @@ class Parameters:
         self.task = args.task
         self.dataset = args.dataset
         self.embedding = args.embedding
-        self.base_directory = os.getcwd()
+        self.base_directory = os.path.abspath(os.path.dirname(__file__))
