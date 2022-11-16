@@ -62,20 +62,14 @@ class Statistics():
                 measure_tuples.append((entity, entity_measures[entity], max_val-min_val))
             measure_tuples.sort(key=lambda tuple: tuple[2], reverse=True)
 
-            max_print = 2
             for (entity, measure, diff) in measure_tuples:
-                json_output.append({"ENTITY": entity, "DIFFERENCE": {"MRR": diff}, "MEASURE": measure.as_dict()})
-
                 if measure.num_facts < 10:
                     continue
 
-                if max_print == 0:
-                    break
+                json_output.append({"ENTITY": entity, "NUM_FACTS": measure.num_facts, "DIFFERENCE": {"MRR": diff}, "MEASURE": measure.as_dict()})
 
                 print("Entity: "+str(entity)+": (Difference: " + str(diff) + ")")
                 measure.print()
-
-                max_print -= 1
 
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2_"+str(element_type).lower()+".json")
 
