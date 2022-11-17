@@ -28,6 +28,13 @@ class Statistics():
             measure.normalize()
             measure.print()
 
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_1_"+str(element_type).lower()+".json")
+
+            Path(results_path).touch(exist_ok=True)
+            out_file = open(results_path, "w", encoding="utf8")
+            json.dump(measure.as_dict(), out_file, indent=4)
+            out_file.close()
+
     def hypothesis_2(self, ranked_quads, embeddings):
         for element_type in ["HEAD", "TAIL"]:
             json_output = []
@@ -60,11 +67,11 @@ class Statistics():
                         max_val = entity_measures[entity].mrr[embedding]
 
                 measure_tuples.append((entity, entity_measures[entity], max_val-min_val))
-            measure_tuples.sort(key=lambda tuple: tuple[2], reverse=True)
+            measure_tuples.sort(key=lambda tuple: tuple[1].num_facts, reverse=True)
 
             for (entity, measure, diff) in measure_tuples:
-                if measure.num_facts < 10:
-                    continue
+                #if measure.num_facts < 10:
+                #    continue
 
                 json_output.append({"ENTITY": entity, "NUM_FACTS": measure.num_facts, "DIFFERENCE": {"MRR": diff}, "MEASURE": measure.as_dict()})
 
@@ -77,6 +84,48 @@ class Statistics():
             out_file = open(results_path, "w", encoding="utf8")
             json.dump(json_output, out_file, indent=4)
             out_file.close()
+    
+    def hypothesis_3(self, ranked_quads, embeddings):
+        for element in ["ENTITY", "RELATION", "TIME"]:
+            print("Testing hypothesis 3 on " + str(element) + "s:")
+            element_measures = {}
+            json_output = []
+
+            if element is "ENTITY":
+                target_parts = ["HEAD", "TAIL"]
+            else:
+                target_parts = [element]
+
+            for target_part in target_parts:
+                for quad in ranked_quads:
+                    if quad[target_part] is "0":
+                        continue
+
+                    if quad[target_part] not in element_measures.keys():
+                        element_measures[quad[target_part]] = Measure()
+                    
+                    ranks = {}
+                    for embedding in embeddings:
+                        ranks[embedding] = int(quad["RANK"][embedding])
+                    element_measures[quad[target_part]].update(ranks)
+            
+            for element_key in element_measures.keys():
+                element_measures[element_key].normalize()
+
+                json_output.append({element: element_key, "NUM_FACTS": element_measures[element_key].num_facts, "MEASURE": element_measures[element_key].as_dict()})
+
+                print(str(element) + ": "+str(element_key) + ":")
+                element_measures[element_key].print()
+
+            json_output.sort(lambda val: val["NUM_FACTS"], reverse=True)
+
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3_"+str(element).lower()+".json")
+            Path(results_path).touch(exist_ok=True)
+            out_file = open(results_path, "w", encoding="utf8")
+            json.dump(json_output, out_file, indent=4)
+            out_file.close()
+            
+
 
     def run(self):
         ranks_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "ranked_quads.json")
@@ -87,8 +136,9 @@ class Statistics():
 
         embeddings = ranked_quads[0]["RANK"].keys()
 
-        #self.hypothesis_1(ranked_quads, embeddings)
+        self.hypothesis_1(ranked_quads, embeddings)
         self.hypothesis_2(ranked_quads, embeddings)
+        self.hypothesis_3(ranked_quads, embeddings)
         
             
 
