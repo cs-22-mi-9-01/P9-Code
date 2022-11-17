@@ -117,7 +117,7 @@ class Statistics():
                 print(str(element) + ": "+str(element_key) + ":")
                 element_measures[element_key].print()
 
-            json_output.sort(lambda val: val["NUM_FACTS"], reverse=True)
+            json_output.sort(key=lambda val: val["NUM_FACTS"], reverse=True)
 
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3_"+str(element).lower()+".json")
             Path(results_path).touch(exist_ok=True)
@@ -136,8 +136,8 @@ class Statistics():
 
         embeddings = ranked_quads[0]["RANK"].keys()
 
-        self.hypothesis_1(ranked_quads, embeddings)
-        self.hypothesis_2(ranked_quads, embeddings)
+        #self.hypothesis_1(ranked_quads, embeddings)
+        #self.hypothesis_2(ranked_quads, embeddings)
         self.hypothesis_3(ranked_quads, embeddings)
         
             
