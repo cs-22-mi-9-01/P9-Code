@@ -94,7 +94,6 @@ class Statistics():
                     ranks[embedding] = int(quad["RANK"][embedding])
                 entity_measures[quad[element_type]].update(ranks)
             
-            measure_tuples = []
             for entity in entity_measures.keys():
                 entity_measures[entity].normalize()
 
@@ -106,17 +105,11 @@ class Statistics():
                     if entity_measures[entity].mrr[embedding] > max_val:
                         max_val = entity_measures[entity].mrr[embedding]
 
-                measure_tuples.append((entity, entity_measures[entity], max_val-min_val))
-            measure_tuples.sort(key=lambda tuple: tuple[1].num_facts, reverse=True)
-
-            for (entity, measure, diff) in measure_tuples:
-                #if measure.num_facts < 10:
-                #    continue
-
-                json_output.append({"ENTITY": entity, "NUM_FACTS": measure.num_facts, "DIFFERENCE": {"MRR": diff}, "MEASURE": measure.as_dict()})
-
-                print("Entity: "+str(entity)+": (Difference: " + str(diff) + ")")
-                measure.print()
+                json_output.append({"ENTITY": entity, "NUM_FACTS": entity_measures[entity].num_facts, "DIFFERENCE": {"MRR": max_val-min_val}, "MEASURE": entity_measures[entity].as_dict()})
+                print("Entity: "+str(entity)+": (Difference: " + str(max_val-min_val) + ")")
+                entity_measures[entity].print()
+            
+            json_output.sort(key=lambda val: val["NUM_FACTS"], reverse=True)
 
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3_"+str(element_type).lower()+".json")
 
