@@ -13,7 +13,7 @@ class Ranker:
         ranked_quads = []
         for i, quad in zip(range(0, len(self.quads)), self.quads):
             if i % 100 == 0:
-                print("Ranking fact " + str(i) + "-" + str(i + 99) + " (total number: " + str(len(self.quads)) + ") in embedding " + self.embedding_name)
+                print("Ranking fact " + str(i) + "-" + str(i + 99) + " (total number: " + str(len(self.quads)) + ") with embedding " + self.embedding_name)
 
             ranked_quad = quad
             if "RANK" not in ranked_quad.keys():

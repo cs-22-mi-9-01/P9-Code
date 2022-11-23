@@ -42,6 +42,8 @@ class Loader:
             self.remove_unwanted_symbols(model.module.dataset.ent2id)
             self.remove_unwanted_symbols(model.module.dataset.rel2id)
         if self.embedding in ['TERO']:
+            self.remove_unwanted_symbols(model.kg.entity_dict)
+            self.remove_unwanted_symbols(model.kg.relation_dict)
             model.gpu = False
 
         return model
