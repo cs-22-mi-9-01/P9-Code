@@ -13,7 +13,7 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('-dataset', type=str, default='icews14', choices=['icews14', 'icews05-15', 'gdelt'])
-    parser.add_argument('-embedding', type=str, default='all', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult'])
+    parser.add_argument('-embedding', type=str, default='TERO', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO'])
     parser.add_argument('-add-to-result', type=bool, default='all')
 
     args = parser.parse_args()

@@ -2,6 +2,7 @@
 import torch
 import sys
 from de_simple import de_transe, de_simple, de_distmult, dataset, params
+from TERO import TERO_model, Dataset
 
 class Loader:
     def __init__(self, params, model_path, embedding):
@@ -9,7 +10,7 @@ class Loader:
         self.model_path = model_path
         self.embedding = embedding
 
-    def remove_unwanted_symbols(self, dict):
+    def remove_unwanted_symbols(self, dict): 
         while True:
             target_key = None
             for key in dict.keys():
@@ -30,10 +31,13 @@ class Loader:
             sys.modules['de_distmult'] = de_distmult
             sys.modules['dataset'] = dataset
             sys.modules['params'] = params
+        elif self.embedding in ["TERO"]:
+            sys.modules['model'] = TERO_model
+            sys.modules['Dataset']= Dataset
 
         model = torch.load(self.model_path, map_location="cpu")
         sys.modules = old_modules
-
-        self.remove_unwanted_symbols(model.module.dataset.ent2id)
-        self.remove_unwanted_symbols(model.module.dataset.rel2id)
+        if self.embedding in ["DE_TransE", "DE_SimplE", "DE_DistMult"]:
+            self.remove_unwanted_symbols(model.module.dataset.ent2id)
+            self.remove_unwanted_symbols(model.module.dataset.rel2id)
         return model
