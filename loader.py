@@ -33,11 +33,15 @@ class Loader:
             sys.modules['params'] = params
         elif self.embedding in ["TERO"]:
             sys.modules['model'] = TERO_model
-            sys.modules['Dataset']= Dataset
+            sys.modules['Dataset'] = Dataset
 
         model = torch.load(self.model_path, map_location="cpu")
         sys.modules = old_modules
+
         if self.embedding in ["DE_TransE", "DE_SimplE", "DE_DistMult"]:
             self.remove_unwanted_symbols(model.module.dataset.ent2id)
             self.remove_unwanted_symbols(model.module.dataset.rel2id)
+        if self.embedding in ['TERO']:
+            model.gpu = False
+
         return model

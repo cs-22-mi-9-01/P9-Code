@@ -1,110 +1,79 @@
-import numpy as np
 import torch
+import numpy as np
+import time
 import datetime
-from datetime import date
-import TERO_model as KGE
-from Dataset import KnowledgeGraph
-from Dataset_YG import KnowledgeGraphYG
-
-def mean_rank(rank):
-    m_r = 0
-    N = len(rank)
-    for i in rank:
-        m_r = m_r + i / N
-
-    return m_r
-
-
-def mrr(rank):
-    mrr = 0
-    N = len(rank)
-    for i in rank:
-        mrr = mrr + 1 / i / N
-
-    return mrr
-
-
-def hit_N(rank, N):
-    hit = 0
-    for i in rank:
-        if i <= N:
-            hit = hit + 1
-
-    hit = hit / len(rank)
-
-    return hit
 
 class RankCalculator:
-    # if ((epoch+1)//min_epoch>epoch//min_epoch and epoch < max_epoch) :
-    if task == 'LinkPrediction':
-        rank = model.rank_left(validation_pos,kg.validation_facts,kg,timedisc,rev_set=rev_set)
-        rank_right = model.rank_right(validation_pos,kg.validation_facts,kg,timedisc,rev_set=rev_set)
-        rank = rank + rank_right
-    #     else:
-    #         rank = model.timepred(validation_pos)
+    def __init__(self, params, model):
+        self.params = params
+        self.kg = model.kg
+        self.model = model
 
-    m_rank = mean_rank(rank)
-    mean_rr = mrr(rank)
-    hit_1 = hit_N(rank, 1)
-    hit_3 = hit_N(rank, 3)
-    hit_5 = hit_N(rank, 5)
-    hit_10 = hit_N(rank, 10)
-    print('validation results:')
-    print('Mean Rank: {:.0f}'.format(m_rank))
-    print('Mean RR: {:.4f}'.format(mean_rr))
-    print('Hit@1: {:.4f}'.format(hit_1))
-    print('Hit@3: {:.4f}'.format(hit_3))
-    print('Hit@5: {:.4f}'.format(hit_5))
-    print('Hit@10: {:.4f}'.format(hit_10))
-    f = open(os.path.join(path, 'result{:.0f}.txt'.format(epoch)), 'w')
-    f.write('Mean Rank: {:.0f}\n'.format(m_rank))
-    f.write('Mean RR: {:.4f}\n'.format(mean_rr))
-    f.write('Hit@1: {:.4f}\n'.format(hit_1))
-    f.write('Hit@3: {:.4f}\n'.format(hit_3))
-    f.write('Hit@5: {:.4f}\n'.format(hit_5))
-    f.write('Hit@10: {:.4f}\n'.format(hit_10))
-    for loss in losses:
-        f.write(str(loss))
-        f.write('\n')
-    f.close()
-    if mean_rr < mrr_std and patience<3:
-        patience+=1
-    elif (mean_rr < mrr_std and patience>=3) or epoch==max_epoch-1:
-        if epoch == max_epoch-1:
-            torch.save(model.state_dict(), os.path.join(path, 'params.pkl'))
-        model.load_state_dict(torch.load(os.path.join(path,'params.pkl')))
-        if task == 'LinkPrediction':
-            rank = model.rank_left(test_pos,kg.test_facts,kg,timedisc,rev_set=rev_set)
-            rank_right = model.rank_right(test_pos,kg.test_facts,kg,timedisc,rev_set=rev_set)
-            rank = rank + rank_right
-        else:
-            rank = model.timepred(test_pos)
+    def get_rank(self, scores):  # assuming the first fact is the correct fact
+        return torch.sum((scores < scores[0]).float()).item() + 1
 
+    def get_ent_id(self, entity):
+        return self.kg.entity_dict[entity]
 
-        m_rank = mean_rank(rank)
-        mean_rr = mrr(rank)
-        hit_1 = hit_N(rank, 1)
-        hit_3 = hit_N(rank, 3)
-        hit_5 = hit_N(rank, 5)
-        hit_10 = hit_N(rank, 10)
-        print('test result:')
-        print('Mean Rank: {:.0f}'.format(m_rank))
-        print('Mean RR: {:.4f}'.format(mean_rr))
-        print('Hit@1: {:.4f}'.format(hit_1))
-        print('Hit@3: {:.4f}'.format(hit_3))
-        print('Hit@5: {:.4f}'.format(hit_5))
-        print('Hit@10: {:.4f}'.format(hit_10))
-        if epoch == max_epoch-1:
-            f = open(os.path.join(path, 'test_result{:.0f}.txt'.format(epoch)), 'w')
-        else:
-            f = open(os.path.join(path, 'test_result{:.0f}.txt'.format(epoch)), 'w')
-        f.write('Mean Rank: {:.0f}\n'.format(m_rank))
-        f.write('Mean RR: {:.4f}\n'.format(mean_rr))
-        f.write('Hit@1: {:.4f}\n'.format(hit_1))
-        f.write('Hit@3: {:.4f}\n'.format(hit_3))
-        f.write('Hit@5: {:.4f}\n'.format(hit_5))
-        f.write('Hit@10: {:.4f}\n'.format(hit_10))
-        for loss in losses:
-            f.write(str(loss))
-            f.write('\n')
-        f.close()
+    def get_rel_id(self, relation):
+        return self.kg.relation_dict[relation]
+    
+    def get_day_from_timestamp(self, timestamp):
+        end_sec = time.mktime(time.strptime(timestamp, '%Y-%m-%d'))
+        return int((end_sec - self.kg.start_sec) / (self.kg.gran * 24 * 60 * 60))
+
+    def simulate_facts(self, head, relation, tail, timestamp, target, answer):
+        if head != "0":
+            head = self.get_ent_id(head)
+        if relation != "0":
+            relation = self.get_rel_id(relation)
+        if tail != "0":
+            tail = self.get_ent_id(tail)
+        if timestamp != "0":
+            day = self.get_day_from_timestamp(timestamp)
+
+        match target:
+            case "h":
+                sim_facts = [[i, tail, relation, day] for i in range(self.kg.n_entity)]
+                sim_facts = [[self.get_ent_id(answer), tail, relation, day]] + sim_facts
+            case "r":
+                sim_facts = [[head, tail, i, day] for i in range(self.kg.n_relation)]
+                sim_facts = [[head, tail, self.get_rel_id(answer), day]] + sim_facts
+            case "t":
+                sim_facts = [[head, i, relation, day] for i in range(self.kg.n_entity)]
+                sim_facts = [[head, self.get_ent_id(answer), relation, day]] + sim_facts
+            case "T":
+                sim_facts = []
+                sim_date = datetime.date(2014, 1, 1)
+                while sim_date != datetime.date(2015, 1, 1):
+                    year = sim_date.year
+                    month = sim_date.month
+                    day = sim_date.day
+
+                    sim_timestamp = str(year) + '-' + str(month) + '-' + str(day)
+                    sim_facts.append([head, tail, relation, self.get_day_from_timestamp(sim_timestamp)])
+
+                    sim_date = sim_date + datetime.timedelta(days=1)
+
+                sim_facts = [[head, tail, relation, self.get_day_from_timestamp(answer)]] + sim_facts
+            case _:
+                raise Exception("Unknown target")
+
+        return np.array(sim_facts, dtype='float64')
+
+    def get_rank_of(self, head, relation, tail, time, answer):
+        target = "?"
+        if head == "0":
+            target = "h"
+        elif relation == "0":
+            target = "r"
+        elif tail == "0":
+            target = "t"
+        elif time == "0":
+            target = "T"
+
+        facts = self.simulate_facts(head, relation, tail, time, target, answer)
+        scores = self.model.forward(facts)
+        rank = self.get_rank(scores)
+
+        return rank

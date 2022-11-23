@@ -14,19 +14,22 @@ def main():
 
     parser.add_argument('-dataset', type=str, default='icews14', choices=['icews14', 'icews05-15', 'gdelt'])
     parser.add_argument('-embedding', type=str, default='TERO', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO'])
-    parser.add_argument('-add-to-result', type=bool, default='all')
+    parser.add_argument('-add_to_result', type=bool, default=True)
 
     args = parser.parse_args()
     params = Parameters(args)
 
-    quads_path = os.path.join(params.base_directory, "data", params.dataset, "corrupted_quads.json")
+    if not params.add_to_result:
+        quads_path = os.path.join(params.base_directory, "data", params.dataset, "corrupted_quads.json")
+    else:
+        quads_path = os.path.join(params.base_directory, "result", params.dataset, "ranked_quads.json")
 
     in_file = open(quads_path, "r", encoding="utf8")
     ranked_quads = json.load(in_file)
     in_file.close()
 
     if params.embedding == "all":
-        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult"]
+        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO']
     else:
         embeddings = [params.embedding]
 
