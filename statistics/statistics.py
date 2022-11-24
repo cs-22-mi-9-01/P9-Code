@@ -34,7 +34,7 @@ class Statistics():
             out_file = open(results_path, "w", encoding="utf8")
             json.dump(measure.as_dict(), out_file, indent=4)
             out_file.close()
-    
+
     def hypothesis_2(self, ranked_quads, embeddings):
         for element in ["ENTITY", "RELATION", "TIME"]:
             print("Testing hypothesis 2 on " + str(element) + "s:")
@@ -117,8 +117,6 @@ class Statistics():
             out_file = open(results_path, "w", encoding="utf8")
             json.dump(json_output, out_file, indent=4)
             out_file.close()
-            
-
 
     def run(self):
         ranks_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "ranked_quads.json")
@@ -132,8 +130,3 @@ class Statistics():
         self.hypothesis_1(ranked_quads, embeddings)
         self.hypothesis_2(ranked_quads, embeddings)
         self.hypothesis_3(ranked_quads, embeddings)
-        
-            
-
-
-            
