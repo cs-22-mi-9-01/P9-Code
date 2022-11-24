@@ -76,4 +76,4 @@ class RankCalculator:
         scores = self.model.forward(facts)
         rank = self.get_rank(scores)
 
-        return rank
+        return int(rank)
