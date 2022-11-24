@@ -36,7 +36,7 @@ def hypothesis_1(filename):
     plt.ylabel('MRR')
     plt.title('Hypothesis 1')
     plt.legend()
-    fig.savefig("hypothesis_1.png")
+    fig.savefig("figure/icews14/hypothesis_1.png")
 
 
 def hypothesis_2(filename):
@@ -71,7 +71,7 @@ def time_distribution(filename, type):
         plt.ylabel('NUM')
         plt.legend()
         plt.show()
-        fig.savefig('time_num_distribution.png')
+        fig.savefig('figure/icews14/time_num_distribution.png')
     elif type == 'mrr':
         yAxis_DE_TransE = []
         yAxis_DE_SimplE = []
@@ -108,7 +108,7 @@ def time_distribution(filename, type):
         plt.ylabel('MRR')
         plt.legend()
         plt.show()
-        fig.savefig('time_mrr_distribution.png')
+        fig.savefig('figure/icews14/time_mrr_distribution.png')
 
 
 def entity_distribution(filename, type):
@@ -135,7 +135,7 @@ def entity_distribution(filename, type):
         plt.grid(axis='both', alpha=.3)
         plt.legend()
         plt.show()
-        fig.savefig('entity_num_distribution.png')
+        fig.savefig('figure/icews14/entity_num_distribution.png')
     elif type == 'mrr':
         yAxis_DE_TransE = []
         yAxis_DE_SimplE = []
@@ -172,7 +172,7 @@ def entity_distribution(filename, type):
         plt.grid(axis='both', alpha=.3)
         plt.legend()
         plt.show()
-        fig.savefig('entity_mrr_distribution.png')
+        fig.savefig('figure/icews14/entity_mrr_distribution.png')
 
 
 def relation_distribution(filename, type):
@@ -199,7 +199,7 @@ def relation_distribution(filename, type):
         plt.grid(axis='both', alpha=.3)
         plt.legend()
         plt.show()
-        fig.savefig('relation_num_distribution.png')
+        fig.savefig('figure/icews14/relation_num_distribution.png')
     elif type == 'mrr':
         yAxis_DE_TransE = []
         yAxis_DE_SimplE = []
@@ -236,7 +236,7 @@ def relation_distribution(filename, type):
         plt.grid(axis='both', alpha=.3)
         plt.legend()
         plt.show()
-        fig.savefig('relation_mrr_distribution.png')
+        fig.savefig('figure/icews14/relation_mrr_distribution.png')
 
 
 if __name__ == '__main__':
