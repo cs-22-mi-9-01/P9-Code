@@ -24,23 +24,28 @@ def hypothesis_1(filename):
                 yAxis_TAIL.append(value1['MRR'])
             elif key == 'TIME':
                 yAxis_TIME.append(value1['MRR'])
-                     
-    # LINE GRAPH
+    
+
+    # BAR GRAPH
     fig = plt.figure()
-    plt.plot(xAxis,yAxis_HEAD, marker='o', label='HEAD')
-    plt.plot(xAxis,yAxis_RELATION, marker='o', label='RELATION')
-    plt.plot(xAxis,yAxis_TAIL, marker='o', label='TAIL')
-    plt.plot(xAxis,yAxis_TIME, marker='o', label='TIME')
+    x = list(range(len(xAxis)))
+    width = 0.1
+    plt.bar(x, yAxis_HEAD, width=width, label='HEAD', tick_label=xAxis)
+    for i in range(len(xAxis)):
+        x[i] = x[i] + width
+    plt.bar(x, yAxis_RELATION, width=width, label='RELATION', tick_label=xAxis)
+    for i in range(len(xAxis)):
+        x[i] = x[i] + width
+    plt.bar(x, yAxis_TAIL, width=width, label='TAIL', tick_label=xAxis)
+    for i in range(len(xAxis)):
+        x[i] = x[i] + width
+    plt.bar(x, yAxis_TIME, width=width, label='TIME', tick_label=xAxis)
     
     plt.xlabel('MODEL')
     plt.ylabel('MRR')
     plt.title('Hypothesis 1')
     plt.legend()
     fig.savefig("figure/icews14/hypothesis_1.png")
-
-
-def hypothesis_2(filename):
-    pass
 
 
 #  Time Series Plot
@@ -240,8 +245,8 @@ def relation_distribution(filename, type):
 
 
 if __name__ == '__main__':
-    # hypothesis_1('result/icews14/hypothesis_1.json')
+    hypothesis_1('result/icews14/hypothesis_1.json')
     # time_distribution('result/icews14/hypothesis_2_time.json', 'mrr')
     # entity_distribution('result/icews14/hypothesis_2_entity.json', 'mrr')
-    relation_distribution('result/icews14/hypothesis_2_relation.json', 'num')
+    # relation_distribution('result/icews14/hypothesis_2_relation.json', 'num')
     
