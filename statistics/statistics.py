@@ -22,7 +22,7 @@ class Statistics():
 
                 ranks = {}
                 for embedding in embeddings:
-                    ranks[embedding] = int(quad["RANK"][embedding])
+                    ranks[embedding] = int(float(quad["RANK"][embedding]))
                 measure.update(ranks)
             
             measure.normalize()
@@ -56,7 +56,7 @@ class Statistics():
                     
                     ranks = {}
                     for embedding in embeddings:
-                        ranks[embedding] = int(quad["RANK"][embedding])
+                        ranks[embedding] = int(float(quad["RANK"][embedding]))
                     element_measures[quad[target_part]].update(ranks)
             
             for element_key in element_measures.keys():
@@ -91,7 +91,7 @@ class Statistics():
                 
                 ranks = {}
                 for embedding in embeddings:
-                    ranks[embedding] = int(quad["RANK"][embedding])
+                    ranks[embedding] = int(float(quad["RANK"][embedding]))
                 entity_measures[quad[element_type]].update(ranks)
             
             for entity in entity_measures.keys():
