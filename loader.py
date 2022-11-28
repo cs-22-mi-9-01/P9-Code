@@ -31,7 +31,7 @@ class Loader:
             sys.modules['de_distmult'] = de_distmult
             sys.modules['dataset'] = dataset
             sys.modules['params'] = params
-        elif self.embedding in ["TERO"]:
+        elif self.embedding in ["TERO", "ATISE"]:
             sys.modules['model'] = TERO_model
             sys.modules['Dataset'] = Dataset
 
