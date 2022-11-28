@@ -21,7 +21,7 @@ class Loader:
             sys.modules['de_distmult'] = de_distmult
             sys.modules['dataset'] = dataset
             sys.modules['params'] = params
-        elif self.embedding in ["TERO"]:
+        elif self.embedding in ["TERO", "ATISE"]:
             sys.modules['model'] = TERO_model
             sys.modules['Dataset'] = Dataset
         elif self.embedding in ["TFLEX"]:
@@ -40,7 +40,7 @@ class Loader:
         if self.embedding in ["DE_TransE", "DE_SimplE", "DE_DistMult"]:
             remove_unwanted_symbols(model.module.dataset.ent2id)
             remove_unwanted_symbols(model.module.dataset.rel2id)
-        elif self.embedding in ['TERO']:
+        elif self.embedding in ['TERO', 'ATISE']:
             remove_unwanted_symbols(model.kg.entity_dict)
             remove_unwanted_symbols(model.kg.relation_dict)
             model.gpu = False

@@ -15,7 +15,7 @@ class Ranker:
         
         if self.embedding_name in ["DE_TransE", "DE_SimplE", "DE_DistMult"]:
             rank_calculator = DE_Rank(self.params, self.model)
-        if self.embedding_name in ["TERO"]:
+        if self.embedding_name in ["TERO", "ATISE"]:
             rank_calculator = TERO_Rank(self.params, self.model)
         if self.embedding_name in ["TFLEX"]:
             rank_calculator = TFLEX_Rank(self.params, self.model)
