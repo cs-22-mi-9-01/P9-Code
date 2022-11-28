@@ -19,8 +19,7 @@ From: ubuntu:18.04
     apt-get install curl -y
     curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
 
-    # Install dependencies
-    python3.10 -m pip install -r requirements.txt
+
 
     # Test
     echo "PWD and contents:"
