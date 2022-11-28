@@ -1,6 +1,7 @@
 
 import torch
 import sys
+from scripts import remove_unwanted_symbols
 from de_simple import de_transe, de_simple, de_distmult, dataset, params
 from TERO import TERO_model, Dataset
 from TFLEX.tflex import FLEX
@@ -10,18 +11,6 @@ class Loader:
         self.params = params
         self.model_path = model_path
         self.embedding = embedding
-
-    def remove_unwanted_symbols(self, dict): 
-        while True:
-            target_key = None
-            for key in dict.keys():
-                if ' ' in key:
-                    target_key = key
-                    break
-            if target_key is not None:
-                dict[target_key.replace(' ', ' ')] = dict.pop(target_key)
-            else:
-                break
 
     def load(self):
         old_modules = sys.modules
@@ -38,7 +27,7 @@ class Loader:
         elif self.embedding in ["TFLEX"]:
             pass
 
-        if self.embedding in ["DE_TransE", "DE_SimplE", "DE_DistMult", "TERO"]:
+        if self.embedding in ["DE_TransE", "DE_SimplE", "DE_DistMult", "TERO", "ATISE"]:
             model = torch.load(self.model_path, map_location="cpu")
         elif self.embedding in ["TFLEX"]:
             state_dict = torch.load(self.model_path, map_location="cpu")
@@ -49,11 +38,11 @@ class Loader:
         sys.modules = old_modules
 
         if self.embedding in ["DE_TransE", "DE_SimplE", "DE_DistMult"]:
-            self.remove_unwanted_symbols(model.module.dataset.ent2id)
-            self.remove_unwanted_symbols(model.module.dataset.rel2id)
+            remove_unwanted_symbols(model.module.dataset.ent2id)
+            remove_unwanted_symbols(model.module.dataset.rel2id)
         elif self.embedding in ['TERO']:
-            self.remove_unwanted_symbols(model.kg.entity_dict)
-            self.remove_unwanted_symbols(model.kg.relation_dict)
+            remove_unwanted_symbols(model.kg.entity_dict)
+            remove_unwanted_symbols(model.kg.relation_dict)
             model.gpu = False
 
         return model
