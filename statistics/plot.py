@@ -1,19 +1,28 @@
 import matplotlib.pyplot as plt
 import json
-from statsmodels.tsa.seasonal import seasonal_decompose
-from dateutil.parser import parse
 import pandas as pd
 
 
-def hypothesis_1(filename):
-    # TODO: concatenate json file
-    xAxis = ['DE_TransE', 'DE_SimplE', 'DE_DistMult']
+def hypothesis_1(*args):
+    # Concatenate json file
+    files = []
+    keys = ['HEAD', 'RELATION', 'TAIL', 'TIME']
+    for i in range(len(args)):
+        with open(args[i]) as f:
+            files.append(dict(json.load(f).items()))
+                # 为什么加items才显示值？
+    dic = dict(zip(keys, files))
+    with open('result/icews14/hypothesis_1.json', 'w') as f:
+        json.dump(dic, f, indent=4)
+    print(dic)
+    
+    xAxis = ['DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE']
     yAxis_HEAD = []
     yAxis_RELATION = []
     yAxis_TAIL = []
     yAxis_TIME = []
-    
-    dictionary = json.load(open(filename, 'r'))
+
+    dictionary = json.load(open('result/icews14/hypothesis_1.json', 'r'))
     for key, value in dictionary.items():
         for key1, value1 in value.items():
             if key == 'HEAD':
@@ -245,7 +254,7 @@ def relation_distribution(filename, type):
 
 
 if __name__ == '__main__':
-    hypothesis_1('result/icews14/hypothesis_1.json')
+    hypothesis_1('result/icews14/hypothesis_1_head.json', 'result/icews14/hypothesis_1_relation.json', 'result/icews14/hypothesis_1_tail.json', 'result/icews14/hypothesis_1_time.json')
     # time_distribution('result/icews14/hypothesis_2_time.json', 'mrr')
     # entity_distribution('result/icews14/hypothesis_2_entity.json', 'mrr')
     # relation_distribution('result/icews14/hypothesis_2_relation.json', 'num')
