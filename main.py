@@ -13,8 +13,8 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('-dataset', type=str, default='icews14', choices=['icews14', 'icews05-15', 'gdelt'])
-    parser.add_argument('-embedding', type=str, default='TERO', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO'])
-    parser.add_argument('-add_to_result', type=bool, default=True)
+    parser.add_argument('-embedding', type=str, default='TFLEX', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'TFLEX'])
+    parser.add_argument('-add_to_result', type=bool, default=False)
 
     args = parser.parse_args()
     params = Parameters(args)
@@ -29,7 +29,7 @@ def main():
     in_file.close()
 
     if params.embedding == "all":
-        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO']
+        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'TFLEX']
     else:
         embeddings = [params.embedding]
 

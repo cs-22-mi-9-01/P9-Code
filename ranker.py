@@ -1,6 +1,7 @@
 
 from de_simple.rank_calculator import RankCalculator as DE_Rank
 from TERO.rank_calculator import RankCalculator as TERO_Rank
+from TFLEX.rank_calculator import RankCalculator as TFLEX_Rank
 
 class Ranker:
     def __init__(self, params, quads, model, embedding_name):
@@ -15,6 +16,10 @@ class Ranker:
             if i % 100 == 0:
                 print("Ranking fact " + str(i) + "-" + str(i + 99) + " (total number: " + str(len(self.quads)) + ") with embedding " + self.embedding_name)
 
+            if quad["TAIL"] != "0":
+                ranked_quads.append(quad)
+                continue
+
             ranked_quad = quad
             if "RANK" not in ranked_quad.keys():
                 ranked_quad["RANK"] = {}
@@ -23,6 +28,8 @@ class Ranker:
                 rank_calculator = DE_Rank(self.params, self.model)
             if self.embedding_name in ["TERO"]:
                 rank_calculator = TERO_Rank(self.params, self.model)
+            if self.embedding_name in ["TFLEX"]:
+                rank_calculator = TFLEX_Rank(self.params, self.model)
 
             ranked_quad["RANK"][self.embedding_name] = str(rank_calculator.get_rank_of(quad["HEAD"], quad["RELATION"],
                                                                                        quad["TAIL"], quad["TIME"],
