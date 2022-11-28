@@ -8,8 +8,6 @@ From: ubuntu:18.04
     # Set non-interactive workspace
     export DEBIAN_FRONTEND=noninteractive
 
-    # Set working dir
-    cd /app/
 
     # Install python 3.10.4
     apt-get -y update
