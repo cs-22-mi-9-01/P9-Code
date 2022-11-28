@@ -21,7 +21,7 @@ class Ranker:
 
             if self.embedding_name in ["DE_TransE", "DE_SimplE", "DE_DistMult"]:
                 rank_calculator = DE_Rank(self.params, self.model)
-            if self.embedding_name in ["TERO"]:
+            if self.embedding_name in ["TERO", "ATISE"]:
                 rank_calculator = TERO_Rank(self.params, self.model)
 
             ranked_quad["RANK"][self.embedding_name] = str(rank_calculator.get_rank_of(quad["HEAD"], quad["RELATION"],

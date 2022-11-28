@@ -41,7 +41,7 @@ class Loader:
         if self.embedding in ["DE_TransE", "DE_SimplE", "DE_DistMult"]:
             self.remove_unwanted_symbols(model.module.dataset.ent2id)
             self.remove_unwanted_symbols(model.module.dataset.rel2id)
-        if self.embedding in ['TERO']:
+        if self.embedding in ['TERO', 'ATISE']:
             self.remove_unwanted_symbols(model.kg.entity_dict)
             self.remove_unwanted_symbols(model.kg.relation_dict)
             model.gpu = False
