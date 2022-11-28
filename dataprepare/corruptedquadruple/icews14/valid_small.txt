@@ -1,0 +1,200 @@
+Lawyer/Attorney (Germany)	Arrest, detain, or charge with legal action	Citizen (Germany)	2014-02-12
+Abdullah Abdullah	Reduce or break diplomatic relations	Election Commission (Afghanistan)	2014-06-18
+Citizen (India)	Threaten	Company - Owner or Operator (India)	2014-06-20
+Central Intelligence Agency	Arrest, detain, or charge with legal action	Citizen (India)	2014-06-04
+Business (Russia)	Impose embargo, boycott, or sanctions	Iran	2014-02-05
+Police (South Sudan)	Return, release person(s)	Riek Machar	2014-08-04
+Gurbanguly Berdymukhammedov	Engage in symbolic act	Royal Administration (Saudi Arabia)	2014-12-11
+Armed Gang (Saudi Arabia)	fight with small arms and light weapons	Citizen (Saudi Arabia)	2014-11-05
+Militant (Boko Haram)	Use unconventional violence	Citizen (Nigeria)	2014-09-20
+Jean Qahwaji	Consult	Military (Lebanon)	2014-05-24
+Sidiki Kaba	Appeal for diplomatic cooperation (such as policy support)	Militant (Senegal)	2014-02-10
+Barack Obama	Make statement	Afghanistan	2014-01-29
+Court Judge (Namibia)	Reject	Citizen (Namibia)	2014-01-06
+John Kerry	Make statement	Leopoldo López	2014-02-19
+Police (Hong Kong)	Accuse	Student Dissident (Hong Kong)	2014-10-19
+Daniel Scioli	Make statement	Government (Argentina)	2014-12-02
+Japan	Express intent to cooperate	South Korea	2014-08-10
+Human Rights Watch	Make an appeal or request	Government (Syria)	2014-01-31
+Joseph Robinette Biden	Express intent to meet or negotiate	Arseniy Yatsenyuk	2014-11-19
+Police (Sudan)	Impose administrative sanctions	Citizen (Sudan)	2014-04-07
+Oluṣẹgun Ọbasanjọ	Praise or endorse	Chibuike Rotimi Amaechi	2014-02-18
+Benjamin Netanyahu	Consult	Cabinet / Council of Ministers / Advisors (United States)	2014-07-03
+Juan Carlos I	Make a visit	María Ángela Holguín	2014-08-05
+John Kerry	Deny responsibility	Middle East	2014-06-19
+Henri Konan Bedie	Appeal for diplomatic cooperation (such as policy support)	Activist (Cote d'Ivoire)	2014-09-23
+China	Host a visit	Head of Government (Egypt)	2014-12-25
+Bukola Saraki	Make an appeal or request	Citizen (Nigeria)	2014-12-22
+Eshaq Jahangiri	Make statement	Iraq	2014-05-12
+Smriti Irani	Make an appeal or request	Head of Government (India)	2014-09-11
+China	Express intent to engage in diplomatic cooperation (such as policy support)	Afghanistan	2014-11-24
+China	Consult	Japan	2014-12-05
+Citizen (India)	Sexually assault	Women (Denmark)	2014-01-23
+Salim Idris	Criticize or denounce	People Associated with the Opposition (National Coalition for Syrian Revolutionary and Opposition Forces)	2014-02-19
+Angela Merkel	Make a visit	China	2014-07-04
+United Arab Emirates	Host a visit	Cabinet / Council of Ministers / Advisors (United States)	2014-02-17
+Fumio Kishida	Make statement	Thailand	2014-09-26
+Militant (Bangladesh)	Use unconventional violence	Citizen (Bangladesh)	2014-01-28
+Military Personnel - Special (Afghanistan)	fight with small arms and light weapons	Insurgent (Afghanistan)	2014-03-25
+Citizen (India)	Protest violently, riot	Military Personnel (India)	2014-04-21
+China	Host a visit	Mamnoon Hussain	2014-02-20
+Fumio Kishida	Consult	John Kerry	2014-02-07
+Military (South Sudan)	Praise or endorse	Riek Machar	2014-04-19
+Philip Hammond	Express intent to meet or negotiate	Sierra Leone	2014-11-12
+Mob (Pakistan)	Use unconventional violence	Christian (Pakistan)	2014-11-05
+Thailand	Consult	Japan	2014-11-13
+Head of Government (Pakistan)	Make statement	Pakistan Tehreek-e-Insaf	2014-09-15
+Mohammad Javad Zarif	Make statement	Iran	2014-02-25
+Military Ruler (Thailand)	Demand	Citizen (Thailand)	2014-06-02
+Iraq	Consult	François Hollande	2014-09-15
+Business (Ghana)	Criticize or denounce	John Dramani Mahama	2014-01-09
+Conservative Party (United Kingdom)	Make an appeal or request	Citizen (United Kingdom)	2014-08-15
+Mohammad Javad Zarif	Make statement	Barack Obama	2014-01-23
+Congo	Host a visit	Abdelkader Messahel	2014-02-11
+Morocco	Host a visit	Roberto Azevedo	2014-11-06
+Jean-Yves Le Drian	Express intent to meet or negotiate	François Hollande	2014-02-11
+Police (Ukraine)	Use tactics of violent repression	Protester (Ukraine)	2014-02-06
+Mario Monti	Consult	Algirdas Butkevičius	2014-09-15
+Japan	Share intelligence or information	South Korea	2014-12-26
+Vietnam	Make optimistic comment	China	2014-08-22
+Japan	Demand intelligence cooperation	North Korea	2014-07-15
+Police (Philippines)	Use conventional military force	Men (Philippines)	2014-06-06
+Prayuth Chan-ocha	Make statement	National Council for Peace and Order of Thailand	2014-06-07
+South Korea	Sign formal agreement	China	2014-11-12
+Hamas	Make statement	Mohammed Deif	2014-08-21
+China	Engage in negotiation	South Korea	2014-10-31
+Mohammad Javad Zarif	Discuss by telephone	Mevlut Cavusoglu	2014-10-02
+Dmitry Olegovich Rogozin	Make a visit	Wang Yang	2014-04-19
+Foreign Affairs (Russia)	Express intent to meet or negotiate	Sergey Viktorovich Lavrov	2014-05-29
+Lien Chan	Consult	Xi Jinping	2014-03-04
+Fumio Kishida	Make statement	Japan	2014-06-10
+Military (South Sudan)	Praise or endorse	Riek Machar	2014-03-05
+Police (Australia)	Arrest, detain, or charge with legal action	Criminal (Australia)	2014-12-09
+Rights Activist (Indonesia)	Make pessimistic comment	Prabowo Subianto	2014-03-27
+Japan	Consult	South Korea	2014-06-25
+Court Judge (India)	Make statement	Newspaper (India)	2014-09-10
+United Arab Emirates	Praise or endorse	Iran	2014-10-20
+Legislature (Indonesia)	Praise or endorse	Prabowo Subianto	2014-06-19
+Barack Obama	Mobilize or increase armed forces	Iraq	2014-09-17
+North Korea	Criticize or denounce	South Korea	2014-03-27
+Foreign Affairs (Latvia)	Consult	Peter Greste	2014-05-07
+Police (Kenya)	Arrest, detain, or charge with legal action	Men (Kenya)	2014-10-28
+Barack Obama	Consult	François Hollande	2014-03-09
+Xi Jinping	Express intent to settle dispute	François Hollande	2014-07-14
+Tajikistan	Consult	Kazakhstan	2014-07-18
+Government (Nigeria)	Make statement	Boko Haram	2014-11-25
+Government (Nigeria)	Use conventional military force	Citizen (Nigeria)	2014-07-14
+Citizen (Sudan)	Abduct, hijack, or take hostage	Ali Abdullah Saleh	2014-05-14
+Oommen Chandy	Provide humanitarian aid	Citizen (India)	2014-12-27
+Barack Obama	Appeal for diplomatic cooperation (such as policy support)	Citizen (International)	2014-03-25
+Tajikistan	Host a visit	Milos Zeman	2014-11-13
+Citizen (India)	Accuse	Citizen (United Kingdom)	2014-05-29
+Xi Jinping	Make a visit	Military (China)	2014-05-04
+Military (Thailand)	Use conventional military force	Thailand	2014-10-26
+Justin Trudeau	Accuse	Canada	2014-05-07
+Medical Personnel (Turkey)	Express intent to meet or negotiate	Gambia	2014-05-16
+Citizen (Nigeria)	Make an appeal or request	Umar Manko	2014-01-22
+Ijaw Youth Council	Rally opposition against	Boko Haram	2014-04-17
+Uhuru Muigai Kenyatta	Accuse	Citizen (Kenya)	2014-06-19
+John Kerry	Make an appeal or request	Sergey Viktorovich Lavrov	2014-04-13
+John Kerry	Make statement	Sergey Viktorovich Lavrov	2014-11-19
+China	Make an appeal or request	Lawmaker (Hong Kong)	2014-08-15
+John Kerry	Consult	Tamar Beruchashvili	2014-12-05
+François Hollande	Make a visit	Armenia	2014-05-22
+Chibuike Rotimi Amaechi	Make statement	Congress (Nigeria)	2014-11-21
+South Korea	Sign formal agreement	China	2014-10-14
+Party Member (Iraq)	Make statement	National Alliance (Iraq)	2014-08-03
+Citizen (Thailand)	Express intent to meet or negotiate	Thailand	2014-07-31
+Political Parties (Cote d'Ivoire)	Share intelligence or information	Edmond Mulet	2014-02-19
+John Baird	Consult	Vesna Pusić	2014-08-28
+Militant (Boko Haram)	Abduct, hijack, or take hostage	Citizen (Nigeria)	2014-05-27
+France	Make an appeal or request	Other Authorities / Officials (United States)	2014-04-30
+High Commission for Refugees	Praise or endorse	Iran	2014-12-01
+Citizen (Germany)	Make an appeal or request	Government (Germany)	2014-04-02
+Armed Gang (Afghanistan)	Carry out suicide bombing	Afghanistan	2014-10-11
+Other Authorities / Officials (Mauritania)	Engage in diplomatic cooperation	People Associated with the Opposition (Mauritania)	2014-11-05
+Combatant (Taliban)	Use unconventional violence	Education (Pakistan)	2014-12-17
+Human Rights Commission (Nigeria)	Praise or endorse	Government (Nigeria)	2014-08-26
+Police (Greece)	Use conventional military force	Media Personnel (Greece)	2014-09-29
+Mohammad Javad Zarif	Consult	Catherine Ashton	2014-01-24
+Afghanistan	Consult	China	2014-10-21
+Guatemala	Arrest, detain, or charge with legal action	Criminal (Guatemala)	2014-09-24
+Police (Belgium)	Arrest, detain, or charge with legal action	Citizen (Belgium)	2014-03-01
+Canada	Engage in diplomatic cooperation	Health Ministry (Canada)	2014-10-20
+Media Personnel (Somalia)	Criticize or denounce	Al-Shabaab	2014-05-15
+China	Engage in diplomatic cooperation	Kazakhstan	2014-09-22
+Japan	Meet at a 'third' location	North Korea	2014-09-29
+Mohammad Javad Zarif	Make statement	Iran	2014-07-03
+Kim Jong-Un	Make a visit	North Korea	2014-04-02
+Iraq	Demand military aid	Barack Obama	2014-07-31
+Paul Kagame	Make a visit	Angola	2014-01-14
+China	Express intent to meet or negotiate	Myanmar	2014-08-04
+France	Express intent to provide military aid	Military (Lebanon)	2014-11-05
+Xi Jinping	Make statement	China	2014-05-24
+Member of the Judiciary (Nigeria)	Return, release person(s)	Citizen (Nigeria)	2014-12-08
+John Kerry	Praise or endorse	Lawmaker (Iraq)	2014-10-18
+Augustine Alegeh	Praise or endorse	Citizen (Nigeria)	2014-10-24
+Criminal (Argentina)	Use unconventional violence	Women (Argentina)	2014-02-02
+Police (Indonesia)	Confiscate property	Citizen (Indonesia)	2014-06-21
+Keiji Furuya	Make statement	Fumio Kishida	2014-03-18
+Sergey Viktorovich Lavrov	Engage in negotiation	France	2014-03-31
+China	Host a visit	Student (Hong Kong)	2014-11-14
+Fan Changlong	Make statement	China	2014-05-29
+Foreign Affairs (Liberia)	Make an appeal or request	Other Authorities / Officials (Turkey)	2014-04-22
+Madagascar	Engage in diplomatic cooperation	China	2014-12-14
+Head of Government (Ukraine)	Make statement	Lawmaker (Ukraine)	2014-07-28
+Police (Australia)	Make optimistic comment	Citizen (Australia)	2014-04-11
+France	Consult	China	2014-04-08
+Citizen (Malaysia)	Make empathetic comment	Malaysia	2014-05-12
+Horacio González	Make statement	Government (Argentina)	2014-09-13
+Defense / Security Ministry (United States)	Engage in negotiation	Defense / Security Ministry (Ukraine)	2014-03-15
+Raj Thackeray	Criticize or denounce	Aam Aadmi Party	2014-01-09
+Military (France)	Mobilize or increase armed forces	France	2014-09-25
+China	Express intent to cooperate	Vietnam	2014-10-19
+Citizen (Nigeria)	Accuse	Ministry (Nigeria)	2014-06-18
+Criminal (Australia)	Physically assault	Police (Australia)	2014-09-24
+Media Personnel (Colombia)	Make statement	Guerrilla (Colombia)	2014-08-19
+Citizen (United Kingdom)	Criticize or denounce	Tony Blair	2014-10-03
+Abdel Fattah Al-Sisi	Consult	Amr Mohammed Moussa	2014-02-12
+Michael Sata	Consult	Assemblies (Zambia)	2014-09-20
+Amnesty International	Criticize or denounce	Israeli Defense Forces	2014-11-06
+Citizen (South Korea)	Demonstrate or rally	South Korea	2014-09-24
+Ethiopia	Host a visit	Uhuru Muigai Kenyatta	2014-08-26
+Oman	Express intent to meet or negotiate	Iran	2014-03-13
+Thailand	Provide aid	Citizen (Thailand)	2014-07-20
+Willem-Alexander	Engage in symbolic act	Gurbanguly Berdymukhammedov	2014-12-01
+Military Advisor (Philippines)	Arrest, detain, or charge with legal action	Men (Philippines)	2014-03-25
+Government (Syria)	Express intent to meet or negotiate	Citizen (International)	2014-05-15
+Cristina Fernández de Kirchner	Consult	Xi Jinping	2014-07-19
+The Hague	Investigate	Israeli Defense Forces	2014-08-08
+Barack Obama	Demand	China	2014-10-01
+Gen Prayut Chan-o-cha	Make statement	Military (Thailand)	2014-05-22
+Taavi Rõivas	Consult	Hanno Pevkur	2014-09-25
+Benjamin Netanyahu	Make statement	Iran	2014-05-09
+UN Security Council	Consider policy option	North Korea	2014-03-28
+Lawyer/Attorney (Australia)	Arrest, detain, or charge with legal action	Citizen (Australia)	2014-06-30
+Taavi Rõivas	Express intent to meet or negotiate	Jyrki Katainen	2014-06-03
+Philippines	Host a visit	Edwin Lacierda	2014-09-23
+John Momis	Make statement	New Zealand	2014-06-07
+Defense / Security Ministry (Poland)	Make statement	Defense Industry (Poland)	2014-09-22
+Iran	Host a visit	Portugal	2014-02-03
+Foreign Affairs (Russia)	Make statement	Head of Government (Ukraine)	2014-05-01
+Lawyer/Attorney (Argentina)	Accuse	Women (Argentina)	2014-12-25
+Bala Abdulkadir Mohammed	Make empathetic comment	Citizen (Nigeria)	2014-04-15
+Ma Ying Jeou	Make statement	John Kerry	2014-07-02
+Foreign Affairs (Hungary)	Consult	Foreign Affairs (United States)	2014-12-05
+Head of Government (Croatia)	Consult	Indigenous People (Croatia)	2014-09-29
+Evangelos Venizelos	Express intent to meet or negotiate	Cabinet / Council of Ministers / Advisors (United States)	2014-01-18
+Labor Party (Mexico)	Praise or endorse	Labor Party	2014-05-06
+Head of Government (India)	Consult	Farooq Abdullah	2014-05-20
+Jyrki Katainen	Make a visit	Ethiopia	2014-01-27
+Cabinet / Council of Ministers / Advisors (United States)	Meet at a 'third' location	Sergey Viktorovich Lavrov	2014-04-17
+High Ranking Military Personnel (United Arab Emirates)	Consult	Government (United Arab Emirates)	2014-08-26
+Protester (Thailand)	Demonstrate or rally	Thailand	2014-02-20
+Cho Tai-young	Consult	Akitaka Saiki	2014-10-02
+Bishop (Nigeria)	Make an appeal or request	Government (Nigeria)	2014-11-10
+Media Personnel (Syria)	Make statement	Legislature (Syria)	2014-05-10
+Iran	Host a visit	Refugee (Afghanistan)	2014-07-30
+Ethiopia	Host a visit	Abdel Fattah Al-Sisi	2014-09-08
+Catherine Ashton	Express intent to meet or negotiate	Mohammad Javad Zarif	2014-08-28
+Haiti	Arrest, detain, or charge with legal action	Jean-Bertrand Aristide	2014-09-11
