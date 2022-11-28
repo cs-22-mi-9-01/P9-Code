@@ -5,7 +5,7 @@ From: ubuntu:18.04
     #mkdir /app/
 
 %files
-    ./TFLEX/* /app/
+%    ./TFLEX/* /app/
 
 %post
     # Set non-interactive workspace
