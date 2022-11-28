@@ -16,8 +16,7 @@ def main():
 
     parser.add_argument('-task', type=str, default='statistics', choices=['statistics', 'rank'])
     parser.add_argument('-dataset', type=str, default='icews14', choices=['icews14', 'icews05-15', 'gdelt'])
-
-    parser.add_argument('-embedding', type=str, default='all', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE'])
+    parser.add_argument('-embedding', type=str, default='all', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE', 'TFLEX'])
     parser.add_argument('-add_to_result', type=bool, default=True)
 
     args = parser.parse_args()
@@ -39,7 +38,7 @@ def main():
     in_file.close()
 
     if params.embedding == "all":
-        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'ATISE']
+        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'ATISE', 'TFLEX']
     else:
         embeddings = [params.embedding]
 
