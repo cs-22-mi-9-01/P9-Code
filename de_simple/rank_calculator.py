@@ -5,9 +5,9 @@ from datetime import date
 
 
 class RankCalculator:
-    def __init__(self, params, dataset, model):
+    def __init__(self, params, model):
         self.params = params
-        self.dataset = dataset
+        self.dataset = model.module.dataset
         self.model = model
 
         self.num_of_ent = self.dataset.numEnt()

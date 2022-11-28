@@ -1,0 +1,59 @@
+Bootstrap: docker
+From: ubuntu:18.04
+
+%setup
+    #mkdir /app/
+
+%post
+    # Set non-interactive workspace
+    export DEBIAN_FRONTEND=noninteractive
+
+
+    # Install python 3.10.4
+    apt-get -y update
+    apt install software-properties-common -y
+    add-apt-repository -y ppa:deadsnakes/ppa
+    apt install python3.10 -y
+
+    # Install pip
+    apt-get install curl -y
+    curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
+
+
+
+    # Test
+    echo "PWD and contents:"
+    pwd
+    ls
+
+%runscript
+    echo "--- Start run ---"
+    echo "executing $@"
+    exec "$@"
+
+%test
+    echo "Test script"
+
+%labels
+    Author jwli21@student.aau.dk
+    Version v0.0.2
+
+# ------- VAGRANT ------- 
+
+# TO CREATE THE IMAGE ON VAGRANT
+#sudo singularity build --sandbox tflex-image singularity.def
+
+# ------- CLOUD ------- 
+
+# TO CREATE THE IMAGE ON THE CLOUD:
+#srun singularity build --nv --fakeroot --sandbox tflex-image singularity.def
+
+# TO RUN SHELL:
+#srun --pty singularity shell --pwd /app/ --fakeroot --writable tflex-image
+
+# TO LEARN AND TEST THE MODEL ON THE CLOUD:
+# Fast version:
+#srun --gres=gpu singularity run --pwd /app/ --nv --writable tflex-image-1 python3.10 train_CQE_TFLEX.py --name="TFLEX" --dataset="ICEWS14" --max_steps=4 --every_test_step=2 --every_valid_step=2
+
+# Version used in paper: 
+#srun --gres=gpu singularity run --pwd /app/ --nv --writable tflex-image python3.10 train_CQE_TFLEX.py --name="TFLEX" --dataset="ICEWS14"
