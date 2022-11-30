@@ -10,7 +10,7 @@ class Statistics():
     def __init__(self, params) -> None:
         self.params = params
 
-    def hypothesis_1(self, ranked_quads, embeddings):
+    def hypothesis_1(self, ranked_quads, embeddings, overall_mrr):
         for element_type in ["HEAD", "RELATION", "TAIL", "TIME"]:
             print("Rank of question tuples when " + str(element_type) + " is the answer element:")
             
@@ -22,6 +22,10 @@ class Statistics():
 
                 ranks = {}
                 for embedding in embeddings:
+                    if embedding == "TFLEX":
+                        if element_type not in ["TAIL", "TIME"]:
+                            continue
+                    
                     ranks[embedding] = int(float(quad["RANK"][embedding]))
                 measure.update(ranks)
             
@@ -125,8 +129,9 @@ class Statistics():
         ranked_quads = json.load(in_file)
         in_file.close()
 
-        embeddings = ranked_quads[0]["RANK"].keys()
+        overall_mrr = {"DE_TransE": 0.321, "DE_SimplE": 0.523, "DE_DistMult": 0.500, "TERO": 0.559, "ATISE": 0.561, "TFLEX": 0.426}
+        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", "TERO", "ATISE", "TFLEX"]
 
-        self.hypothesis_1(ranked_quads, embeddings)
-        self.hypothesis_2(ranked_quads, embeddings)
-        self.hypothesis_3(ranked_quads, embeddings)
+        self.hypothesis_1(ranked_quads, embeddings, overall_mrr)
+        #self.hypothesis_2(ranked_quads, embeddings)
+        #self.hypothesis_3(ranked_quads, embeddings)
