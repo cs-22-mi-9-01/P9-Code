@@ -19,7 +19,7 @@ class Measure():
         if embedding not in self.mr.keys():
             self.mr[embedding] = 0
         if embedding not in self.num_facts.keys():
-            self.num_facts = 0
+            self.num_facts[embedding] = 0
 
     def update(self, ranks):
         for embedding in ranks.keys():
