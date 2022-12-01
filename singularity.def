@@ -1,12 +1,15 @@
 Bootstrap: docker
 From: ubuntu:18.04
 
-%setup
-    #mkdir /app/
+%files
+    ./* /app/
 
 %post
     # Set non-interactive workspace
     export DEBIAN_FRONTEND=noninteractive
+
+    # Set working dir
+    cd /app/
 
     # Install python 3.10.4
     apt-get -y update
@@ -17,6 +20,9 @@ From: ubuntu:18.04
     # Install pip
     apt-get install curl -y
     curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
+    
+    # Install dependencies
+    python3.10 -m pip install -r requirements.txt
 
     # Test
     echo "PWD and contents:"
