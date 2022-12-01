@@ -6,11 +6,57 @@ from pathlib import Path
 
 from statistics.measure import Measure
 
+overall_scores = {
+    "DE_TransE": {
+        "HIT1": 0.107,
+        "HIT3": 0.471,
+        "HIT10": 0.693,
+        "MR": 1.0,
+        "MRR": 0.321
+    },
+    "DE_SimplE": {
+        "HIT1": 0.412,
+        "HIT3": 0.591,
+        "HIT10": 0.732,
+        "MR": 1.0,
+        "MRR": 0.523
+    },
+    "DE_DistMult": {
+        "HIT1": 0.391,
+        "HIT3": 0.565,
+        "HIT10": 0.705,
+        "MR": 1.0,
+        "MRR": 0.500
+    },
+    "TERO": {
+        "HIT1": 0.467,
+        "HIT3": 0.616,
+        "HIT10": 0.731,
+        "MR": 1.0,
+        "MRR": 0.599
+    },
+    "ATISE": {
+        "HIT1": 0.448,
+        "HIT3": 0.644,
+        "HIT10": 0.757,
+        "MR": 1.0,
+        "MRR": 0.561
+    },
+    "TFLEX": {
+        "HIT1": 0.314,
+        "HIT3": 0.491,
+        "HIT10": 0.636,
+        "MR": 1.0,
+        "MRR": 0.426
+    }
+}
+
+
 class Statistics():
     def __init__(self, params) -> None:
         self.params = params
 
-    def hypothesis_1(self, ranked_quads, embeddings, overall_mrr):
+    def hypothesis_1(self, ranked_quads, embeddings, normalization_scores = None):
         for element_type in ["HEAD", "RELATION", "TAIL", "TIME"]:
             print("Rank of question tuples when " + str(element_type) + " is the answer element:")
             
@@ -30,9 +76,17 @@ class Statistics():
                 measure.update(ranks)
             
             measure.normalize()
+            if normalization_scores is not None:
+                for embedding in embeddings:
+                    measure.hit1 /= normalization_scores[embedding]["HIT1"]
+                    measure.hit3 /= normalization_scores[embedding]["HIT3"]
+                    measure.hit10 /= normalization_scores[embedding]["HIT10"]
+                    measure.mr /= normalization_scores[embedding]["MR"]
+                    measure.mrr /= normalization_scores[embedding]["MRR"]
+
             measure.print()
 
-            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_1_"+str(element_type).lower()+".json")
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_1", str(element_type).lower()+".json")
 
             Path(results_path).touch(exist_ok=True)
             out_file = open(results_path, "w", encoding="utf8")
@@ -128,10 +182,9 @@ class Statistics():
         in_file = open(ranks_path, "r", encoding="utf8")
         ranked_quads = json.load(in_file)
         in_file.close()
-
-        overall_mrr = {"DE_TransE": 0.321, "DE_SimplE": 0.523, "DE_DistMult": 0.500, "TERO": 0.559, "ATISE": 0.561, "TFLEX": 0.426}
+        
         embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", "TERO", "ATISE", "TFLEX"]
 
-        self.hypothesis_1(ranked_quads, embeddings, overall_mrr)
+        self.hypothesis_1(ranked_quads, embeddings, overall_scores)
         #self.hypothesis_2(ranked_quads, embeddings)
         #self.hypothesis_3(ranked_quads, embeddings)
