@@ -8,7 +8,6 @@ From: ubuntu:18.04
     # Set non-interactive workspace
     export DEBIAN_FRONTEND=noninteractive
 
-
     # Install python 3.10.4
     apt-get -y update
     apt install software-properties-common -y
@@ -18,8 +17,6 @@ From: ubuntu:18.04
     # Install pip
     apt-get install curl -y
     curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
-
-
 
     # Test
     echo "PWD and contents:"
