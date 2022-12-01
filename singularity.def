@@ -49,14 +49,10 @@ From: ubuntu:18.04
 # ------- CLOUD ------- 
 
 # TO CREATE THE IMAGE ON THE CLOUD:
-#srun singularity build --nv --fakeroot --sandbox tflex-image singularity.def
+#srun singularity build --nv --fakeroot --sandbox p9-image singularity.def
 
 # TO RUN SHELL:
-#srun --pty singularity shell --pwd /app/ --fakeroot --writable tflex-image
+#srun --pty singularity shell --pwd /app/ --fakeroot --writable p9-image
 
-# TO LEARN AND TEST THE MODEL ON THE CLOUD:
-# Fast version:
-#srun --gres=gpu singularity run --pwd /app/ --nv --writable tflex-image-1 python3.10 train_CQE_TFLEX.py --name="TFLEX" --dataset="ICEWS14" --max_steps=4 --every_test_step=2 --every_valid_step=2
-
-# Version used in paper: 
-#srun --gres=gpu singularity run --pwd /app/ --nv --writable tflex-image python3.10 train_CQE_TFLEX.py --name="TFLEX" --dataset="ICEWS14"
+# TO RUN THE CODE ON THE CLOUD:
+#srun --gres=gpu singularity run --pwd /app/ --nv --writable p9-image python3.10 main.py
