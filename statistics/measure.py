@@ -5,7 +5,7 @@ class Measure():
         self.hit10 = {}
         self.mrr = {}
         self.mr = {}
-        self.num_facts = 0
+        self.num_facts = {}
     
     def initialize_embedding(self, embedding):
         if embedding not in self.hit1.keys():
@@ -18,11 +18,14 @@ class Measure():
             self.mrr[embedding] = 0
         if embedding not in self.mr.keys():
             self.mr[embedding] = 0
+        if embedding not in self.num_facts.keys():
+            self.num_facts = 0
 
     def update(self, ranks):
-        self.num_facts += 1
         for embedding in ranks.keys():
             self.initialize_embedding(embedding)
+
+            self.num_facts[embedding] += 1
 
             if ranks[embedding] == 1:
                 self.hit1[embedding] += 1.0
@@ -36,11 +39,19 @@ class Measure():
 
     def normalize(self):
         for embedding in self.hit1:
-            self.hit1[embedding] /= self.num_facts
-            self.hit3[embedding] /= self.num_facts
-            self.hit10[embedding] /= self.num_facts
-            self.mr[embedding] /= self.num_facts
-            self.mrr[embedding] /= self.num_facts
+            self.hit1[embedding] /= self.num_facts[embedding]
+            self.hit3[embedding] /= self.num_facts[embedding]
+            self.hit10[embedding] /= self.num_facts[embedding]
+            self.mr[embedding] /= self.num_facts[embedding]
+            self.mrr[embedding] /= self.num_facts[embedding]
+    
+    def normalize_to(self, scores):
+        for embedding in self.hit1:            
+            self.hit1[embedding] /= scores[embedding]["HIT1"]
+            self.hit3[embedding] /= scores[embedding]["HIT3"]
+            self.hit10[embedding] /= scores[embedding]["HIT10"]
+            #self.mr[embedding] /= scores[embedding]["MR"]
+            self.mrr[embedding] /= scores[embedding]["MRR"]
 
     def print(self):
         for embedding in self.hit1:
