@@ -76,11 +76,12 @@ class Statistics():
                 results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_1", str(element_type).lower()+"_normalized.json")
                 self.write_json(results_path, measure.as_dict())
 
-    def hypothesis_2(self, ranked_quads, embeddings):
+    def hypothesis_2(self, ranked_quads, embeddings, normalization_scores = None):
         for element in ["ENTITY", "RELATION", "TIME"]:
             print("Testing hypothesis 2 on " + str(element) + "s:")
             element_measures = {}
             json_output = []
+            json_output_normalized = []
 
             if element is "ENTITY":
                 target_parts = ["HEAD", "TAIL"]
@@ -104,17 +105,21 @@ class Statistics():
                 element_measures[element_key].normalize()
 
                 json_output.append({element: element_key, "NUM_FACTS": element_measures[element_key].num_facts, "MEASURE": element_measures[element_key].as_dict()})
+                if normalization_scores is not None:
+                    element_measures[element_key].normalize_to(normalization_scores)
+                    json_output_normalized.append({element: element_key, "NUM_FACTS": element_measures[element_key].num_facts, "MEASURE": element_measures[element_key].as_dict()})
 
                 print(str(element) + ": "+str(element_key) + ":")
                 element_measures[element_key].print()
 
             json_output.sort(key=lambda val: val["NUM_FACTS"], reverse=True)
 
-            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2_"+str(element).lower()+".json")
-            Path(results_path).touch(exist_ok=True)
-            out_file = open(results_path, "w", encoding="utf8")
-            json.dump(json_output, out_file, indent=4)
-            out_file.close()
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+".json")
+            self.write_json(results_path, json_output.as_dict())
+            
+            if normalization_scores is not None:
+                results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+"_normalized.json")
+                self.write_json(results_path, json_output_normalized)
 
     def hypothesis_3(self, ranked_quads, embeddings):
         for element_type in ["HEAD", "TAIL"]:
