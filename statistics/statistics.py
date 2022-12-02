@@ -3,14 +3,50 @@ import os
 import json
 
 from pathlib import Path
-
 from statistics.measure import Measure
+
 
 class Statistics():
     def __init__(self, params) -> None:
         self.params = params
 
-    def hypothesis_1(self, ranked_quads, embeddings):
+    def write_json(self, path, dict):
+        Path(path).touch(exist_ok=True)
+        out_file = open(path, "w", encoding="utf8")
+        json.dump(dict, out_file, indent=4)
+        out_file.close()
+    
+    def read_json(self, path):
+        in_file = open(path, "r", encoding="utf8")
+        dict = json.load(in_file)
+        in_file.close()
+        return dict
+    
+    def calculate_overall_scores(self, ranked_quads, embeddings):
+        print("Rank of all question tuples:")
+        
+        measure = Measure()
+
+        for quad in ranked_quads:
+            # if not (quad["TAIL"] == "0" or quad["HEAD"] == "0"):
+            #     continue
+
+            ranks = {}
+            for embedding in embeddings:
+                if embedding == "TFLEX":
+                    if not (quad["TAIL"] == "0" or quad["TIME"] == "0"):
+                        continue
+                
+                ranks[embedding] = int(float(quad["RANK"][embedding]))
+            measure.update(ranks)
+        
+        measure.normalize()
+        measure.print()
+
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "overall_scores.json")
+        self.write_json(results_path, measure.as_dict())
+
+    def hypothesis_1(self, ranked_quads, embeddings, normalization_scores = None):
         for element_type in ["HEAD", "RELATION", "TAIL", "TIME"]:
             print("Rank of question tuples when " + str(element_type) + " is the answer element:")
             
@@ -22,18 +58,23 @@ class Statistics():
 
                 ranks = {}
                 for embedding in embeddings:
+                    if embedding == "TFLEX":
+                        if element_type not in ["TAIL", "TIME"]:
+                            continue
+                    
                     ranks[embedding] = int(float(quad["RANK"][embedding]))
                 measure.update(ranks)
             
-            measure.normalize()
             measure.print()
+            measure.normalize()
 
-            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_1_"+str(element_type).lower()+".json")
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_1", str(element_type).lower()+".json")
+            self.write_json(results_path, measure.as_dict())
 
-            Path(results_path).touch(exist_ok=True)
-            out_file = open(results_path, "w", encoding="utf8")
-            json.dump(measure.as_dict(), out_file, indent=4)
-            out_file.close()
+            if normalization_scores is not None:
+                measure.normalize_to(normalization_scores)
+                results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_1", str(element_type).lower()+"_normalized.json")
+                self.write_json(results_path, measure.as_dict())
 
     def hypothesis_2(self, ranked_quads, embeddings):
         for element in ["ENTITY", "RELATION", "TIME"]:
@@ -119,14 +160,16 @@ class Statistics():
             out_file.close()
 
     def run(self):
+        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", "TERO", "ATISE", "TFLEX"]
+
         ranks_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "ranked_quads.json")
-        
-        in_file = open(ranks_path, "r", encoding="utf8")
-        ranked_quads = json.load(in_file)
-        in_file.close()
+        ranked_quads = self.read_json(ranks_path)
 
-        embeddings = ranked_quads[0]["RANK"].keys()
+        self.calculate_overall_scores(ranked_quads, embeddings)
 
-        self.hypothesis_1(ranked_quads, embeddings)
-        self.hypothesis_2(ranked_quads, embeddings)
-        self.hypothesis_3(ranked_quads, embeddings)
+        overall_scores_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "overall_scores.json")        
+        overall_scores = self.read_json(overall_scores_path)
+
+        self.hypothesis_1(ranked_quads, embeddings, overall_scores)
+        #self.hypothesis_2(ranked_quads, embeddings)
+        #self.hypothesis_3(ranked_quads, embeddings)

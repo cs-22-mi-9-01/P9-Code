@@ -8,6 +8,7 @@ class Ranker:
         self.params = params
         self.quads = quads
         self.model = model
+        self.model.eval()
         self.embedding_name = embedding_name
 
     def rank(self):
