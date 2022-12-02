@@ -9,12 +9,13 @@ from ranker import Ranker
 from pathlib import Path
 
 from statistics.statistics import Statistics
+from formatlatex.formatlatex import FormatLatex
 
 
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-task', type=str, default='statistics', choices=['statistics', 'rank'])
+    parser.add_argument('-task', type=str, default='formatlatex', choices=['statistics', 'rank', 'formatlatex'])
     parser.add_argument('-dataset', type=str, default='icews14', choices=['icews14', 'icews05-15', 'gdelt'])
     parser.add_argument('-embedding', type=str, default='all', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE', 'TFLEX'])
     parser.add_argument('-add_to_result', type=bool, default=True)
@@ -26,6 +27,12 @@ def main():
         case "statistics":
             statistics = Statistics(params)
             statistics.run()
+            return 0
+        case "formatlatex":
+            input = os.path.join(params.base_directory, "result", params.dataset, "hypothesis_2", "time_normalized.json")
+            output = os.path.join(params.base_directory, "formatlatex", "result", "hypothesis_2_time_normalized.txt")
+            format_latex = FormatLatex(input, output)
+            format_latex.format()
             return 0
 
     if not params.add_to_result:

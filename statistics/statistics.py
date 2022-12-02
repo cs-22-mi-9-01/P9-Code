@@ -98,24 +98,30 @@ class Statistics():
                     
                     ranks = {}
                     for embedding in embeddings:
+                        if embedding == "TFLEX":
+                            if not (quad["TAIL"] == "0" or quad["TIME"] == "0"):
+                                continue
+
                         ranks[embedding] = int(float(quad["RANK"][embedding]))
                     element_measures[quad[target_part]].update(ranks)
             
             for element_key in element_measures.keys():
                 element_measures[element_key].normalize()
 
-                json_output.append({element: element_key, "NUM_FACTS": element_measures[element_key].num_facts, "MEASURE": element_measures[element_key].as_dict()})
+                json_output.append({element: element_key, "NUM_FACTS": max(element_measures[element_key].num_facts.values()), "MEASURE": element_measures[element_key].as_dict()})
                 if normalization_scores is not None:
                     element_measures[element_key].normalize_to(normalization_scores)
-                    json_output_normalized.append({element: element_key, "NUM_FACTS": element_measures[element_key].num_facts, "MEASURE": element_measures[element_key].as_dict()})
+                    json_output_normalized.append({element: element_key, "NUM_FACTS": max(element_measures[element_key].num_facts.values()), "MEASURE": element_measures[element_key].as_dict()})
 
                 print(str(element) + ": "+str(element_key) + ":")
                 element_measures[element_key].print()
 
             json_output.sort(key=lambda val: val["NUM_FACTS"], reverse=True)
+            if normalization_scores is not None:
+                json_output_normalized.sort(key=lambda val: val["NUM_FACTS"], reverse=True)
 
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+".json")
-            self.write_json(results_path, json_output.as_dict())
+            self.write_json(results_path, json_output)
             
             if normalization_scores is not None:
                 results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+"_normalized.json")
@@ -170,11 +176,11 @@ class Statistics():
         ranks_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "ranked_quads.json")
         ranked_quads = self.read_json(ranks_path)
 
-        self.calculate_overall_scores(ranked_quads, embeddings)
+        #self.calculate_overall_scores(ranked_quads, embeddings)
 
         overall_scores_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "overall_scores.json")        
         overall_scores = self.read_json(overall_scores_path)
 
-        self.hypothesis_1(ranked_quads, embeddings, overall_scores)
-        #self.hypothesis_2(ranked_quads, embeddings)
+        #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
+        self.hypothesis_2(ranked_quads, embeddings, overall_scores)
         #self.hypothesis_3(ranked_quads, embeddings)
