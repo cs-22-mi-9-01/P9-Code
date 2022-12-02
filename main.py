@@ -14,7 +14,7 @@ from statistics.statistics import Statistics
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-task', type=str, default='rank', choices=['statistics', 'rank'])
+    parser.add_argument('-task', type=str, default='statistics', choices=['statistics', 'rank'])
     parser.add_argument('-dataset', type=str, default='icews14', choices=['icews14', 'icews05-15', 'gdelt'])
     parser.add_argument('-embedding', type=str, default='all', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE', 'TFLEX'])
     parser.add_argument('-add_to_result', type=bool, default=True)

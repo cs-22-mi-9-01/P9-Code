@@ -55,4 +55,4 @@ From: ubuntu:18.04
 #srun --pty singularity shell --pwd /app/ --fakeroot --writable p9-image
 
 # TO RUN THE CODE ON THE CLOUD:
-#srun --gres=gpu singularity run --pwd /app/ --nv --writable p9-image python3.10 main.py
+#srun singularity run --pwd /app/ --nv --writable p9-image python3.10 main.py

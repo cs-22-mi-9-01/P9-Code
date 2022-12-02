@@ -28,6 +28,9 @@ class Statistics():
         measure = Measure()
 
         for quad in ranked_quads:
+            # if not (quad["TAIL"] == "0" or quad["HEAD"] == "0"):
+            #     continue
+
             ranks = {}
             for embedding in embeddings:
                 if embedding == "TFLEX":
