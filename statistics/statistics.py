@@ -130,7 +130,6 @@ class Statistics():
 
     def hypothesis_3(self, ranked_quads, embeddings, normalization_scores = None):        
         entity_measures = {}
-        json_output = {}
         print("Testing hypothesis 3.")
 
         for quad in ranked_quads:
@@ -166,9 +165,14 @@ class Statistics():
                     entity_measures[key]["DIFFERENCE"] = {}
                     for embedding in embeddings:
                         entity_measures[key]["DIFFERENCE"][embedding] = entity_measures[other_key]["RANK"].mrr[embedding] - entity_measures[key]["RANK"].mrr[embedding]
+                
+        json_output = []
+        for i, key in enumerate(entity_measures.keys()):
+            json_output.append(deepcopy(entity_measures[key]))
+            json_output[i]["RANK"] = json_output[i]["RANK"].as_dict()
 
+        json_output_normalized = []
         if normalization_scores is not None:
-            json_output_normalized = {}
             for i, key in enumerate(entity_measures.keys()):
                 entity_measures[key]["RANK"].normalize_to(normalization_scores)
                 
@@ -181,17 +185,15 @@ class Statistics():
                         for embedding in embeddings:
                             entity_measures[key]["DIFFERENCE"][embedding] = entity_measures[other_key]["RANK"].mrr[embedding] - entity_measures[key]["RANK"].mrr[embedding]                  
 
-                json_output_normalized[i] = deepcopy(entity_measures[key])
+                json_output_normalized.append(deepcopy(entity_measures[key]))
                 json_output_normalized[i]["RANK"] = json_output_normalized[i]["RANK"].as_dict()
-        
-        for i, key in enumerate(entity_measures.keys()):
-            json_output[i] = deepcopy(entity_measures[key])
-            json_output[i]["RANK"] = json_output[i]["RANK"].as_dict()
 
+        json_output.sort(key=lambda val: val["FACTS"], reverse=True)
         results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3", "hypothesis_3.json")
         self.write_json(results_path, json_output)
 
         if normalization_scores is not None:
+            json_output_normalized.sort(key=lambda val: val["FACTS"], reverse=True)
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3", "hypothesis_3_normalized.json")
             self.write_json(results_path, json_output_normalized)
 
