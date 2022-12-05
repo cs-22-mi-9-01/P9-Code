@@ -28,14 +28,10 @@ class FormatLatex():
             return measure["TIME"]
 
     def format_hypothesis_2(self):
-        for normalized in ["not_normalized", "normalized"]:
+        for normalized in ["", "_normalized"]:
             for element_type in ["entity", "relation", "time"]:
-                if normalized == "not_normalized":    
-                    input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", element_type + ".json")
-                    output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_"+element_type+".txt")
-                if normalized == "normalized":    
-                    input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", element_type+"_normalized.json")
-                    output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_"+element_type+"_normalized.txt")
+                input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", element_type +normalized + ".json")
+                output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_"+element_type+normalized+".tex")
                 
                 input = self.read_json(input_path)
 
