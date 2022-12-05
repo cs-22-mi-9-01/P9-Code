@@ -29,9 +29,7 @@ def main():
             statistics.run()
             return 0
         case "formatlatex":
-            input = os.path.join(params.base_directory, "result", params.dataset, "hypothesis_2", "time_normalized.json")
-            output = os.path.join(params.base_directory, "formatlatex", "result", "hypothesis_2_time_normalized.txt")
-            format_latex = FormatLatex(input, output)
+            format_latex = FormatLatex(params)
             format_latex.format()
             return 0
 

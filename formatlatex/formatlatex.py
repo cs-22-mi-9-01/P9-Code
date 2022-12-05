@@ -1,11 +1,11 @@
 
 import json
 from pathlib import Path
+import os
 
 class FormatLatex():
-    def __init__(self, input_path, output_path) -> None:
-        self.input = self.read_json(input_path)
-        self.output_path = output_path
+    def __init__(self, params) -> None:
+        self.params = params
 
     def write(self, path, text):
         Path(path).touch(exist_ok=True)
@@ -28,39 +28,48 @@ class FormatLatex():
             return measure["TIME"]
 
     def format_hypothesis_2(self):
-        min_val = 100.0
-        max_val = 0.0
+        for normalized in ["not_normalized", "normalized"]:
+            for element_type in ["entity", "relation", "time"]:
+                if normalized == "not_normalized":    
+                    input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", element_type + ".json")
+                    output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_"+element_type+".txt")
+                if normalized == "normalized":    
+                    input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", element_type+"_normalized.json")
+                    output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_"+element_type+"_normalized.txt")
+                
+                input = self.read_json(input_path)
 
-        result = \
-        "\n" + \
-        r"\begin{tabular}{ r R R R R R R}" + "\n" +\
-        r"\multicolumn{1}{c} {} &" + "\n" +\
-        r"\multicolumn{1}{c} {DE-T} &" + "\n" +\
-        r"\multicolumn{1}{c} {DE-D} &" + "\n" +\
-        r"\multicolumn{1}{c} {DE-S} &" + "\n" +\
-        r"\multicolumn{1}{c} {ATiSE} &" + "\n" +\
-        r"\multicolumn{1}{c} {TeRo} &" + "\n" +\
-        r"\multicolumn{1}{c} {TFLEX}\\" + "\n"
-        for i in range(0, 5):
-            result += self.get_entity(self.input[i])
-            for embedding in self.input[i]["MEASURE"].values():
-                val = round(embedding["MRR"], 2)
+                min_val = 100.0
+                max_val = 0.0
 
-                if val < min_val:
-                    min_val = val
-                if val > max_val:
-                    max_val = val
+                result = \
+                "\n" + \
+                r"\begin{tabular}{ r R R R R R R}" + "\n" +\
+                r"\multicolumn{1}{c} {} &" + "\n" +\
+                r"\multicolumn{1}{c} {DE-T} &" + "\n" +\
+                r"\multicolumn{1}{c} {DE-D} &" + "\n" +\
+                r"\multicolumn{1}{c} {DE-S} &" + "\n" +\
+                r"\multicolumn{1}{c} {ATiSE} &" + "\n" +\
+                r"\multicolumn{1}{c} {TeRo} &" + "\n" +\
+                r"\multicolumn{1}{c} {TFLEX}\\" + "\n"
+                for i in range(0, 5):
+                    result += self.get_entity(input[i])
+                    for embedding in input[i]["MEASURE"].values():
+                        val = round(embedding["MRR"], 2)
 
-                result += r" & " + str(val)
-            result += r"\\" + "\n"
-        result += \
-        r"\end{tabular}" + "\n" +\
-        "\n"
-        result = r"\renewcommand{\MinNumber}{" + str(0) + r"{%" + "\n" +\
-        r"\renewcommand{\MaxNumber}{" + str(max_val) + r"{%" + "\n" + result
+                        if val < min_val:
+                            min_val = val
+                        if val > max_val:
+                            max_val = val
 
-        return result
+                        result += r" & " + str(val)
+                    result += r"\\" + "\n"
+                result += \
+                r"\end{tabular}" + "\n"
+                result = "\n" + r"\renewcommand{\MinNumber}{" + str(min_val) + r"}%" + "\n" +\
+                r"\renewcommand{\MaxNumber}{" + str(max_val) + r"}%" + "\n" + result
+
+                self.write(output_path, result)
 
     def format(self):
-        text = self.format_hypothesis_2()
-        self.write(self.output_path, text)
+        self.format_hypothesis_2()
