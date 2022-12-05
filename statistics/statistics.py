@@ -4,6 +4,7 @@ import json
 
 from pathlib import Path
 from statistics.measure import Measure
+from copy import deepcopy
 
 
 class Statistics():
@@ -127,48 +128,72 @@ class Statistics():
                 results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+"_normalized.json")
                 self.write_json(results_path, json_output_normalized)
 
-    def hypothesis_3(self, ranked_quads, embeddings):
-        for element_type in ["HEAD", "TAIL"]:
-            json_output = []
+    def hypothesis_3(self, ranked_quads, embeddings, normalization_scores = None):        
+        entity_measures = {}
+        json_output = {}
+        print("Testing hypothesis 3.")
 
-            print("Testing hypothesis 3 on " + str(element_type) + " relations:")
+        for quad in ranked_quads:
+            if quad["HEAD"] is "0" or quad["TAIL"] is "0":
+                continue
 
-            entity_measures = {}
-            for quad in ranked_quads:
-                if quad[element_type] is "0":
-                    continue
+            entity_n = quad["HEAD"]
+            entity_m = quad["TAIL"]
+            key = entity_n+";"+entity_m
 
-                if quad[element_type] not in entity_measures.keys():
-                    entity_measures[quad[element_type]] = Measure()
+            if key not in entity_measures.keys():
+                entity_measures[key] = {"ENTITY_N": entity_n, "ENTITY_M": entity_m, "FACTS": 0, "RANK": Measure()}
+            
+            ranks = {}
+            for embedding in embeddings:
+                if embedding == "TFLEX":
+                    if not (quad["TAIL"] == "0" or quad["TIME"] == "0"):
+                        continue
                 
-                ranks = {}
-                for embedding in embeddings:
-                    ranks[embedding] = int(float(quad["RANK"][embedding]))
-                entity_measures[quad[element_type]].update(ranks)
-            
-            for entity in entity_measures.keys():
-                entity_measures[entity].normalize()
+                ranks[embedding] = int(float(quad["RANK"][embedding]))
+            entity_measures[key]["RANK"].update(ranks)
+            entity_measures[key]["FACTS"] += 1
+        
+        for key in entity_measures.keys():
+            entity_measures[key]["RANK"].normalize()
+        
+        for key in entity_measures.keys():
+            entity_n = entity_measures[key]["ENTITY_N"]
+            entity_m = entity_measures[key]["ENTITY_M"]
+            other_key = entity_m+";"+entity_n
+            if other_key in entity_measures.keys():
+                if entity_measures[key]["FACTS"] >= 5 and entity_measures[other_key]["FACTS"] >= 5:
+                    entity_measures[key]["DIFFERENCE"] = {}
+                    for embedding in embeddings:
+                        entity_measures[key]["DIFFERENCE"][embedding] = entity_measures[other_key]["RANK"].mrr[embedding] - entity_measures[key]["RANK"].mrr[embedding]
 
-                min_val = 1
-                max_val = 0
-                for embedding in embeddings:
-                    if entity_measures[entity].mrr[embedding] < min_val:
-                        min_val = entity_measures[entity].mrr[embedding]
-                    if entity_measures[entity].mrr[embedding] > max_val:
-                        max_val = entity_measures[entity].mrr[embedding]
+        if normalization_scores is not None:
+            json_output_normalized = {}
+            for i, key in enumerate(entity_measures.keys()):
+                entity_measures[key]["RANK"].normalize_to(normalization_scores)
+                
+                entity_n = entity_measures[key]["ENTITY_N"]
+                entity_m = entity_measures[key]["ENTITY_M"]
+                other_key = entity_m+";"+entity_n
+                if other_key in entity_measures.keys():
+                    if entity_measures[key]["FACTS"] >= 5 and entity_measures[other_key]["FACTS"] >= 5:
+                        entity_measures[key]["DIFFERENCE"] = {}
+                        for embedding in embeddings:
+                            entity_measures[key]["DIFFERENCE"][embedding] = entity_measures[other_key]["RANK"].mrr[embedding] - entity_measures[key]["RANK"].mrr[embedding]                  
 
-                json_output.append({"ENTITY": entity, "NUM_FACTS": entity_measures[entity].num_facts, "DIFFERENCE": {"MRR": max_val-min_val}, "MEASURE": entity_measures[entity].as_dict()})
-                print("Entity: "+str(entity)+": (Difference: " + str(max_val-min_val) + ")")
-                entity_measures[entity].print()
-            
-            json_output.sort(key=lambda val: val["NUM_FACTS"], reverse=True)
+                json_output_normalized[i] = deepcopy(entity_measures[key])
+                json_output_normalized[i]["RANK"] = json_output_normalized[i]["RANK"].as_dict()
+        
+        for i, key in enumerate(entity_measures.keys()):
+            json_output[i] = deepcopy(entity_measures[key])
+            json_output[i]["RANK"] = json_output[i]["RANK"].as_dict()
 
-            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3_"+str(element_type).lower()+".json")
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3", "hypothesis_3.json")
+        self.write_json(results_path, json_output)
 
-            Path(results_path).touch(exist_ok=True)
-            out_file = open(results_path, "w", encoding="utf8")
-            json.dump(json_output, out_file, indent=4)
-            out_file.close()
+        if normalization_scores is not None:
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3", "hypothesis_3_normalized.json")
+            self.write_json(results_path, json_output_normalized)
 
     def run(self):
         embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", "TERO", "ATISE", "TFLEX"]
@@ -182,5 +207,5 @@ class Statistics():
         overall_scores = self.read_json(overall_scores_path)
 
         #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
-        self.hypothesis_2(ranked_quads, embeddings, overall_scores)
-        #self.hypothesis_3(ranked_quads, embeddings)
+        #self.hypothesis_2(ranked_quads, embeddings, overall_scores)
+        self.hypothesis_3(ranked_quads, embeddings, overall_scores)
