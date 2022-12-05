@@ -40,14 +40,14 @@ class FormatLatex():
 
                 result = \
                 "\n" + \
-                r"\begin{tabular}{ r R R R R R R}" + "\n" +\
-                r"\multicolumn{1}{c} {} &" + "\n" +\
+                r"\begin{tabular}{r|RRRRRR}" + "\n" +\
+                r"\multicolumn{1}{c|} {} &" + "\n" +\
                 r"\multicolumn{1}{c} {DE-T} &" + "\n" +\
                 r"\multicolumn{1}{c} {DE-D} &" + "\n" +\
                 r"\multicolumn{1}{c} {DE-S} &" + "\n" +\
                 r"\multicolumn{1}{c} {ATiSE} &" + "\n" +\
                 r"\multicolumn{1}{c} {TeRo} &" + "\n" +\
-                r"\multicolumn{1}{c} {TFLEX}\\" + "\n"
+                r"\multicolumn{1}{c} {TFLEX}\\ \hline" + "\n"
                 for i in range(0, 5):
                     result += self.get_entity(input[i])
                     for embedding in input[i]["MEASURE"].values():
