@@ -1,12 +1,21 @@
 # P9-Code
 
-# Models
+# Information
+
+## Models
 - DE-TransE: transformation model
-- DE-SimplE: 
+- DE-SimplE: tensor decompositional model
 - DE-DistMult: transformation model
-- ATiSE
-- TERO
+- ATiSE: tensor decompositional model
+- TERO: transformation model
 - TFLEX: neural network model
+
+## Metrics
+- MRR
+- HITS@1
+- HITS@3
+- HITS@10
+
 
 # Data Prepare
 In this project, we use JSON as the file to transfer the data. 
