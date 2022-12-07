@@ -39,7 +39,7 @@ class FormatLatex():
                 input = self.read_json(input_path)
 
                 min_val = 100.0
-                max_val = 0.0
+                max_val = -100.0
 
                 result = \
                 "\n" + \
@@ -79,7 +79,7 @@ class FormatLatex():
     def format_hypothesis_3(self):
         for normalized in ["", "_normalized"]:
             input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3", "hypothesis_3" + normalized + ".json")
-            output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_3", "hypothesis_3" + normalized + ".json")
+            output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_3" + normalized + ".tex")
             
             input = self.read_json(input_path)
 
@@ -88,27 +88,38 @@ class FormatLatex():
 
             result = \
             "\n" + \
-            r"\begin{tabular}{r|l|RRRRRR}" + "\n" +\
-            r"entity 1 &" + "\n" +\
-            r"entity 2 &" + "\n" +\
+            r"\begin{tabular}{r|l|SSSSSS}" + "\n" +\
+            r"$e_n$ &" + "\n" +\
+            r"$e_m$ &" + "\n" +\
             r"\multicolumn{1}{c} {DE-T} &" + "\n" +\
             r"\multicolumn{1}{c} {DE-D} &" + "\n" +\
             r"\multicolumn{1}{c} {DE-S} &" + "\n" +\
             r"\multicolumn{1}{c} {ATiSE} &" + "\n" +\
             r"\multicolumn{1}{c} {TeRo} &" + "\n" +\
             r"\multicolumn{1}{c} {TFLEX}\\ \hline" + "\n"
-            for i in range(0, 5):
-                result += input[i]["ENTITY_N"] + r" & " + input[i]["ENTITY_M"]
-                for embedding in input[i]["DIFFERENCE"].keys():
-                    val = round(input[i]["DIFFERENCE"][embedding], 2)
+            i = 0
+            num_of_rows = 0
+            while num_of_rows < 5:
+                if "DIFFERENCE" in input[i].keys():
+                    result += input[i]["ENTITY_N"] + r" & " + input[i]["ENTITY_M"] +\
+                    r" & " + str(self.round(input[i]["DIFFERENCE"]["DE_TransE"])) +\
+                    r" & " + str(self.round(input[i]["DIFFERENCE"]["DE_DistMult"])) +\
+                    r" & " + str(self.round(input[i]["DIFFERENCE"]["DE_SimplE"]) ) +\
+                    r" & " + str(self.round(input[i]["DIFFERENCE"]["ATISE"])) +\
+                    r" & " + str(self.round(input[i]["DIFFERENCE"]["TERO"])) +\
+                    r" & " + str(self.round(input[i]["DIFFERENCE"]["TFLEX"])) + r"\\" + "\n"
 
-                    if val < min_val:
-                        min_val = val
-                    if val > max_val:
-                        max_val = val
+                    for embedding in input[i]["DIFFERENCE"].keys():
+                        val = round(input[i]["DIFFERENCE"][embedding], 2)
 
-                    result += r" & " + str(val)
-                result += r"\\" + "\n"
+                        if val < min_val:
+                            min_val = val
+                        if val > max_val:
+                            max_val = val
+                    
+                    num_of_rows += 1
+                i += 1
+            
             result += \
             r"\end{tabular}" + "\n"
             result = "\n" + r"\renewcommand{\MinNumber}{" + str(min_val) + r"}%" + "\n" +\
@@ -117,4 +128,5 @@ class FormatLatex():
             self.write(output_path, result)
 
     def format(self):
-        self.format_hypothesis_2()
+        #self.format_hypothesis_2()
+        self.format_hypothesis_3()
