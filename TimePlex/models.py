@@ -1,5 +1,5 @@
 import torch
-import utils
+import TimePlex.utils
 import os
 from functools import reduce
 
@@ -9,13 +9,14 @@ import torch.nn as nn
 
 import pickle
 
-from LSTMLinear import LSTMModel
+from TimePlex.LSTMLinear import LSTMModel
 
-from pairwise.gadgets import Recurrent, Pairs
+
+from TimePlex.pairwise.gadgets import Recurrent, Pairs
 
 import pdb
 
-from models_helper import *
+from TimePlex.models_helper import *
 
 
 time_index = {"t_s": 0, "t_s_orig": 1, "t_e": 2, "t_e_orig": 3, "t_str": 4, "t_i": 5}
