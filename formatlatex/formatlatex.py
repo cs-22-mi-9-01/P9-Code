@@ -110,7 +110,7 @@ class FormatLatex():
                     r" & " + str(self.round(input[i]["DIFFERENCE"]["TFLEX"])) + r"\\" + "\n"
 
                     for embedding in input[i]["DIFFERENCE"].keys():
-                        val = round(input[i]["DIFFERENCE"][embedding], 2)
+                        val = self.round(input[i]["DIFFERENCE"][embedding])
 
                         if val < min_val:
                             min_val = val

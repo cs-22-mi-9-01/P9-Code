@@ -176,7 +176,7 @@ class Statistics():
             for i, key in enumerate(entity_measures.keys()):
                 entity_measures[key]["RANK"].normalize_to(normalization_scores)
             
-            for i, key in enumerate(entity_measures.keys()):                
+            for i, key in enumerate(entity_measures.keys()):
                 entity_n = entity_measures[key]["ENTITY_N"]
                 entity_m = entity_measures[key]["ENTITY_M"]
                 other_key = entity_m+";"+entity_n
