@@ -5,6 +5,7 @@ from scripts import remove_unwanted_symbols
 from de_simple import de_transe, de_simple, de_distmult, dataset, params
 from TERO import TERO_model, Dataset
 from TFLEX.tflex import FLEX
+from TimePlex import models as Timeplex_model
 
 class Loader:
     def __init__(self, params, model_path, embedding):
@@ -26,8 +27,10 @@ class Loader:
             sys.modules['Dataset'] = Dataset
         elif self.embedding in ["TFLEX"]:
             pass
+        elif self.embedding in ["TimePlex"]:
+            sys.modules['model']=Timeplex_model
 
-        if self.embedding in ["DE_TransE", "DE_SimplE", "DE_DistMult", "TERO", "ATISE"]:
+        if self.embedding in ["DE_TransE", "DE_SimplE", "DE_DistMult", "TERO", "ATISE","TimePlex"]:
             model = torch.load(self.model_path, map_location="cpu")
         elif self.embedding in ["TFLEX"]:
             state_dict = torch.load(self.model_path, map_location="cpu")
