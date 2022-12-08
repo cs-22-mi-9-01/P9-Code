@@ -1,6 +1,7 @@
 
 import os
 import json
+import pandas
 
 from pathlib import Path
 from statistics.measure import Measure
@@ -22,6 +23,12 @@ class Statistics():
         dict = json.load(in_file)
         in_file.close()
         return dict
+    
+    def read_csv(self, path):
+        in_file = open(path, "r", encoding="utf8")
+        csv = pandas.read_csv(in_file, delimiter='\t')
+        in_file.close()
+        return csv
     
     def calculate_overall_scores(self, ranked_quads, embeddings):
         print("Rank of all question tuples:")
@@ -197,12 +204,59 @@ class Statistics():
             json_output_normalized.sort(key=lambda val: val["FACTS"], reverse=True)
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3", "hypothesis_3_normalized.json")
             self.write_json(results_path, json_output_normalized)
+    
+    def no_of_elements(self, dataset):
+        entities = {}
+        relations = {}
+        timestamps = {}
+
+        for line in dataset.values:
+            if line[0] not in entities.keys():
+                entities[line[0]] = 0
+            if line[1] not in relations.keys():
+                relations[line[1]] = 0
+            if line[2] not in entities.keys():
+                entities[line[2]] = 0
+            if line[3] not in timestamps.keys():
+                timestamps[line[3]] = 0
+
+            entities[line[0]] += 1
+            relations[line[1]] += 1
+            entities[line[2]] += 1
+            timestamps[line[3]] += 1
+        
+        entities_json = []
+        relations_json = []
+        timestamps_json = []
+
+        for key in entities.keys():
+            entities_json.append({"ENTITY": key, "COUNT": entities[key]})
+        for key in relations.keys():
+            relations_json.append({"RELATION": key, "COUNT": relations[key]})
+        for key in timestamps.keys():
+            timestamps_json.append({"TIMESTAMP": key, "COUNT": timestamps[key]})
+        
+        entities_json.sort(key=lambda val: val["COUNT"], reverse=True)
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "no_of_elements", "train_entities.json")
+        self.write_json(results_path, entities_json)
+
+        relations_json.sort(key=lambda val: val["COUNT"], reverse=True)
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "no_of_elements", "train_relations.json")
+        self.write_json(results_path, relations_json)
+
+        timestamps_json.sort(key=lambda val: val["COUNT"], reverse=True)
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "no_of_elements", "train_timestamps.json")
+        self.write_json(results_path, timestamps_json)
+                
 
     def run(self):
         embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", "TERO", "ATISE", "TFLEX"]
 
         ranks_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "ranked_quads.json")
         ranked_quads = self.read_json(ranks_path)
+        
+        learn_path = os.path.join(self.params.base_directory, "dataprepare", "corruptedquadruple", self.params.dataset, "train.txt")
+        dataset = self.read_csv(learn_path)
 
         #self.calculate_overall_scores(ranked_quads, embeddings)
 
@@ -211,4 +265,5 @@ class Statistics():
 
         #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
         #self.hypothesis_2(ranked_quads, embeddings, overall_scores)
-        self.hypothesis_3(ranked_quads, embeddings, overall_scores)
+        #self.hypothesis_3(ranked_quads, embeddings, overall_scores)
+        self.no_of_elements(dataset)

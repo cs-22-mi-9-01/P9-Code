@@ -127,6 +127,32 @@ class FormatLatex():
 
             self.write(output_path, result)
 
+    def format_no_of_entities(self):
+        for element in ["entities", "relations", "timestamps"]:
+            input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "no_of_elements", "train_" + element + ".json")
+            output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "no_of_elements_train_" + element + ".tex")
+            
+            input = self.read_json(input_path)
+
+            min_val = 999
+            max_val = 0
+
+            result = r"\addplot+ coordinates {" + "\n"
+            for i, e in enumerate(input):
+                val = e["COUNT"]
+                result += r"   (" + str(i) + r", " + str(val) + r")" + "\n"
+                
+                if val < min_val:
+                    min_val = val
+                if val > max_val:
+                    max_val = val
+            
+            result += r"} ;"
+            result = r"% MIN VAL: " + str(min_val) + "\n" + r"% MAX VAL: " + str(max_val) + "\n\n" + result
+
+            self.write(output_path, result)
+
     def format(self):
         #self.format_hypothesis_2()
-        self.format_hypothesis_3()
+        #self.format_hypothesis_3()
+        self.format_no_of_entities()
