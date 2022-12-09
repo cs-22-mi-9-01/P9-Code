@@ -90,8 +90,8 @@ class FormatLatex():
         if embedding == 'TFLEX':
             return 'TFLEX'
 
-    def get_overlap(self, overlap_json, emb_n, emb_m):
-        for o in overlap_json:
+    def get_overlap(self, overlaps, emb_n, emb_m):
+        for o in overlaps:
             if o["EMBEDDING_N"] == emb_n and o["EMBEDDING_M"] == emb_m:
                 return o["OVERLAP_TOP"]
 
@@ -103,7 +103,7 @@ class FormatLatex():
             input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "top_x_overlap", element_type + "_top_50_overlap.json")
             output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_" + element_type + "_top_50_overlap.tex")
             
-            overlap_json = self.read_json(input_path)
+            overlaps = self.read_json(input_path)
 
             min_val = 100.0
             max_val = -100.0
@@ -122,11 +122,17 @@ class FormatLatex():
             for embedding_n in ['DE_TransE', 'DE_DistMult', 'DE_SimplE', 'ATISE', 'TERO', 'TFLEX']:
                 result += self.format_embedding(embedding_n)
                 for embedding_m in ['DE_TransE', 'DE_DistMult', 'DE_SimplE', 'ATISE', 'TERO', 'TFLEX']:
-                    r" & " + self.to_str(self.round(self.get_overlap(overlap_json, embedding_n, embedding_m)))
+                    if embedding_n == embedding_m:
+                        result += r" & \multicolumn{1}{c} {1.00}"
+                    else:
+                        result += r" & " + self.to_str(self.round(self.get_overlap(overlaps, embedding_n, embedding_m)))
                 result += r"\\" + "\n"
 
-            for overlap in [o["OVERLAP_TOP"] for o in overlap_json]:
-                val = self.round(overlap)
+            for overlap in overlaps:
+                if overlap["EMBEDDING_N"] == overlap["EMBEDDING_M"]:
+                    continue
+
+                val = self.round(overlap["OVERLAP_TOP"])
 
                 if val < min_val:
                     min_val = val
