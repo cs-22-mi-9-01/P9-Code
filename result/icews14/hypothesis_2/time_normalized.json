@@ -1,6 +1,6 @@
 [
     {
-        "TIME": "2014-11-21",
+        "ELEMENT": "2014-11-21",
         "NUM_FACTS": 150,
         "MEASURE": {
             "DE_TransE": {
@@ -48,7 +48,7 @@
         }
     },
     {
-        "TIME": "2014-11-12",
+        "ELEMENT": "2014-11-12",
         "NUM_FACTS": 138,
         "MEASURE": {
             "DE_TransE": {
@@ -96,7 +96,7 @@
         }
     },
     {
-        "TIME": "2014-12-29",
+        "ELEMENT": "2014-12-29",
         "NUM_FACTS": 138,
         "MEASURE": {
             "DE_TransE": {
@@ -144,7 +144,7 @@
         }
     },
     {
-        "TIME": "2014-08-11",
+        "ELEMENT": "2014-08-11",
         "NUM_FACTS": 135,
         "MEASURE": {
             "DE_TransE": {
@@ -192,7 +192,7 @@
         }
     },
     {
-        "TIME": "2014-06-23",
+        "ELEMENT": "2014-06-23",
         "NUM_FACTS": 132,
         "MEASURE": {
             "DE_TransE": {
@@ -240,7 +240,7 @@
         }
     },
     {
-        "TIME": "2014-02-18",
+        "ELEMENT": "2014-02-18",
         "NUM_FACTS": 129,
         "MEASURE": {
             "DE_TransE": {
@@ -288,7 +288,7 @@
         }
     },
     {
-        "TIME": "2014-10-27",
+        "ELEMENT": "2014-10-27",
         "NUM_FACTS": 129,
         "MEASURE": {
             "DE_TransE": {
@@ -336,7 +336,7 @@
         }
     },
     {
-        "TIME": "2014-06-18",
+        "ELEMENT": "2014-06-18",
         "NUM_FACTS": 129,
         "MEASURE": {
             "DE_TransE": {
@@ -384,7 +384,7 @@
         }
     },
     {
-        "TIME": "2014-11-10",
+        "ELEMENT": "2014-11-10",
         "NUM_FACTS": 126,
         "MEASURE": {
             "DE_TransE": {
@@ -432,7 +432,7 @@
         }
     },
     {
-        "TIME": "2014-09-02",
+        "ELEMENT": "2014-09-02",
         "NUM_FACTS": 126,
         "MEASURE": {
             "DE_TransE": {
@@ -480,7 +480,7 @@
         }
     },
     {
-        "TIME": "2014-12-09",
+        "ELEMENT": "2014-12-09",
         "NUM_FACTS": 126,
         "MEASURE": {
             "DE_TransE": {
@@ -528,7 +528,7 @@
         }
     },
     {
-        "TIME": "2014-11-17",
+        "ELEMENT": "2014-11-17",
         "NUM_FACTS": 126,
         "MEASURE": {
             "DE_TransE": {
@@ -576,7 +576,7 @@
         }
     },
     {
-        "TIME": "2014-11-13",
+        "ELEMENT": "2014-11-13",
         "NUM_FACTS": 123,
         "MEASURE": {
             "DE_TransE": {
@@ -624,7 +624,7 @@
         }
     },
     {
-        "TIME": "2014-09-15",
+        "ELEMENT": "2014-09-15",
         "NUM_FACTS": 120,
         "MEASURE": {
             "DE_TransE": {
@@ -672,7 +672,7 @@
         }
     },
     {
-        "TIME": "2014-10-21",
+        "ELEMENT": "2014-10-21",
         "NUM_FACTS": 120,
         "MEASURE": {
             "DE_TransE": {
@@ -720,7 +720,7 @@
         }
     },
     {
-        "TIME": "2014-09-17",
+        "ELEMENT": "2014-09-17",
         "NUM_FACTS": 120,
         "MEASURE": {
             "DE_TransE": {
@@ -768,7 +768,7 @@
         }
     },
     {
-        "TIME": "2014-05-16",
+        "ELEMENT": "2014-05-16",
         "NUM_FACTS": 117,
         "MEASURE": {
             "DE_TransE": {
@@ -816,7 +816,7 @@
         }
     },
     {
-        "TIME": "2014-07-03",
+        "ELEMENT": "2014-07-03",
         "NUM_FACTS": 117,
         "MEASURE": {
             "DE_TransE": {
@@ -864,7 +864,7 @@
         }
     },
     {
-        "TIME": "2014-10-02",
+        "ELEMENT": "2014-10-02",
         "NUM_FACTS": 117,
         "MEASURE": {
             "DE_TransE": {
@@ -912,7 +912,7 @@
         }
     },
     {
-        "TIME": "2014-09-29",
+        "ELEMENT": "2014-09-29",
         "NUM_FACTS": 114,
         "MEASURE": {
             "DE_TransE": {
@@ -960,7 +960,7 @@
         }
     },
     {
-        "TIME": "2014-10-08",
+        "ELEMENT": "2014-10-08",
         "NUM_FACTS": 114,
         "MEASURE": {
             "DE_TransE": {
@@ -1008,7 +1008,7 @@
         }
     },
     {
-        "TIME": "2014-11-19",
+        "ELEMENT": "2014-11-19",
         "NUM_FACTS": 114,
         "MEASURE": {
             "DE_TransE": {
@@ -1056,7 +1056,7 @@
         }
     },
     {
-        "TIME": "2014-10-14",
+        "ELEMENT": "2014-10-14",
         "NUM_FACTS": 114,
         "MEASURE": {
             "DE_TransE": {
@@ -1104,7 +1104,7 @@
         }
     },
     {
-        "TIME": "2014-06-02",
+        "ELEMENT": "2014-06-02",
         "NUM_FACTS": 111,
         "MEASURE": {
             "DE_TransE": {
@@ -1152,7 +1152,7 @@
         }
     },
     {
-        "TIME": "2014-10-20",
+        "ELEMENT": "2014-10-20",
         "NUM_FACTS": 111,
         "MEASURE": {
             "DE_TransE": {
@@ -1200,7 +1200,7 @@
         }
     },
     {
-        "TIME": "2014-12-10",
+        "ELEMENT": "2014-12-10",
         "NUM_FACTS": 111,
         "MEASURE": {
             "DE_TransE": {
@@ -1248,7 +1248,7 @@
         }
     },
     {
-        "TIME": "2014-07-04",
+        "ELEMENT": "2014-07-04",
         "NUM_FACTS": 108,
         "MEASURE": {
             "DE_TransE": {
@@ -1296,7 +1296,7 @@
         }
     },
     {
-        "TIME": "2014-12-03",
+        "ELEMENT": "2014-12-03",
         "NUM_FACTS": 108,
         "MEASURE": {
             "DE_TransE": {
@@ -1344,7 +1344,7 @@
         }
     },
     {
-        "TIME": "2014-02-20",
+        "ELEMENT": "2014-02-20",
         "NUM_FACTS": 108,
         "MEASURE": {
             "DE_TransE": {
@@ -1392,7 +1392,7 @@
         }
     },
     {
-        "TIME": "2014-06-19",
+        "ELEMENT": "2014-06-19",
         "NUM_FACTS": 108,
         "MEASURE": {
             "DE_TransE": {
@@ -1440,7 +1440,7 @@
         }
     },
     {
-        "TIME": "2014-05-07",
+        "ELEMENT": "2014-05-07",
         "NUM_FACTS": 108,
         "MEASURE": {
             "DE_TransE": {
@@ -1488,7 +1488,7 @@
         }
     },
     {
-        "TIME": "2014-07-02",
+        "ELEMENT": "2014-07-02",
         "NUM_FACTS": 108,
         "MEASURE": {
             "DE_TransE": {
@@ -1536,7 +1536,7 @@
         }
     },
     {
-        "TIME": "2014-08-12",
+        "ELEMENT": "2014-08-12",
         "NUM_FACTS": 108,
         "MEASURE": {
             "DE_TransE": {
@@ -1584,7 +1584,7 @@
         }
     },
     {
-        "TIME": "2014-09-24",
+        "ELEMENT": "2014-09-24",
         "NUM_FACTS": 108,
         "MEASURE": {
             "DE_TransE": {
@@ -1632,7 +1632,7 @@
         }
     },
     {
-        "TIME": "2014-04-08",
+        "ELEMENT": "2014-04-08",
         "NUM_FACTS": 105,
         "MEASURE": {
             "DE_TransE": {
@@ -1680,7 +1680,7 @@
         }
     },
     {
-        "TIME": "2014-11-14",
+        "ELEMENT": "2014-11-14",
         "NUM_FACTS": 105,
         "MEASURE": {
             "DE_TransE": {
@@ -1728,7 +1728,7 @@
         }
     },
     {
-        "TIME": "2014-01-15",
+        "ELEMENT": "2014-01-15",
         "NUM_FACTS": 105,
         "MEASURE": {
             "DE_TransE": {
@@ -1776,7 +1776,7 @@
         }
     },
     {
-        "TIME": "2014-07-23",
+        "ELEMENT": "2014-07-23",
         "NUM_FACTS": 105,
         "MEASURE": {
             "DE_TransE": {
@@ -1824,7 +1824,7 @@
         }
     },
     {
-        "TIME": "2014-09-01",
+        "ELEMENT": "2014-09-01",
         "NUM_FACTS": 105,
         "MEASURE": {
             "DE_TransE": {
@@ -1872,7 +1872,7 @@
         }
     },
     {
-        "TIME": "2014-07-08",
+        "ELEMENT": "2014-07-08",
         "NUM_FACTS": 105,
         "MEASURE": {
             "DE_TransE": {
@@ -1920,7 +1920,7 @@
         }
     },
     {
-        "TIME": "2014-07-15",
+        "ELEMENT": "2014-07-15",
         "NUM_FACTS": 105,
         "MEASURE": {
             "DE_TransE": {
@@ -1968,7 +1968,7 @@
         }
     },
     {
-        "TIME": "2014-05-15",
+        "ELEMENT": "2014-05-15",
         "NUM_FACTS": 105,
         "MEASURE": {
             "DE_TransE": {
@@ -2016,7 +2016,7 @@
         }
     },
     {
-        "TIME": "2014-10-06",
+        "ELEMENT": "2014-10-06",
         "NUM_FACTS": 105,
         "MEASURE": {
             "DE_TransE": {
@@ -2064,7 +2064,7 @@
         }
     },
     {
-        "TIME": "2014-12-23",
+        "ELEMENT": "2014-12-23",
         "NUM_FACTS": 102,
         "MEASURE": {
             "DE_TransE": {
@@ -2112,7 +2112,7 @@
         }
     },
     {
-        "TIME": "2014-01-13",
+        "ELEMENT": "2014-01-13",
         "NUM_FACTS": 102,
         "MEASURE": {
             "DE_TransE": {
@@ -2160,7 +2160,7 @@
         }
     },
     {
-        "TIME": "2014-05-22",
+        "ELEMENT": "2014-05-22",
         "NUM_FACTS": 102,
         "MEASURE": {
             "DE_TransE": {
@@ -2208,7 +2208,7 @@
         }
     },
     {
-        "TIME": "2014-05-12",
+        "ELEMENT": "2014-05-12",
         "NUM_FACTS": 102,
         "MEASURE": {
             "DE_TransE": {
@@ -2256,7 +2256,7 @@
         }
     },
     {
-        "TIME": "2014-03-12",
+        "ELEMENT": "2014-03-12",
         "NUM_FACTS": 102,
         "MEASURE": {
             "DE_TransE": {
@@ -2304,7 +2304,7 @@
         }
     },
     {
-        "TIME": "2014-11-11",
+        "ELEMENT": "2014-11-11",
         "NUM_FACTS": 102,
         "MEASURE": {
             "DE_TransE": {
@@ -2352,7 +2352,7 @@
         }
     },
     {
-        "TIME": "2014-08-05",
+        "ELEMENT": "2014-08-05",
         "NUM_FACTS": 102,
         "MEASURE": {
             "DE_TransE": {
@@ -2400,7 +2400,7 @@
         }
     },
     {
-        "TIME": "2014-10-15",
+        "ELEMENT": "2014-10-15",
         "NUM_FACTS": 102,
         "MEASURE": {
             "DE_TransE": {
@@ -2448,7 +2448,7 @@
         }
     },
     {
-        "TIME": "2014-06-03",
+        "ELEMENT": "2014-06-03",
         "NUM_FACTS": 102,
         "MEASURE": {
             "DE_TransE": {
@@ -2496,7 +2496,7 @@
         }
     },
     {
-        "TIME": "2014-06-09",
+        "ELEMENT": "2014-06-09",
         "NUM_FACTS": 102,
         "MEASURE": {
             "DE_TransE": {
@@ -2544,7 +2544,7 @@
         }
     },
     {
-        "TIME": "2014-06-16",
+        "ELEMENT": "2014-06-16",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -2592,7 +2592,7 @@
         }
     },
     {
-        "TIME": "2014-06-20",
+        "ELEMENT": "2014-06-20",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -2640,7 +2640,7 @@
         }
     },
     {
-        "TIME": "2014-05-05",
+        "ELEMENT": "2014-05-05",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -2688,7 +2688,7 @@
         }
     },
     {
-        "TIME": "2014-08-25",
+        "ELEMENT": "2014-08-25",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -2736,7 +2736,7 @@
         }
     },
     {
-        "TIME": "2014-02-11",
+        "ELEMENT": "2014-02-11",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -2784,7 +2784,7 @@
         }
     },
     {
-        "TIME": "2014-03-28",
+        "ELEMENT": "2014-03-28",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -2832,7 +2832,7 @@
         }
     },
     {
-        "TIME": "2014-07-14",
+        "ELEMENT": "2014-07-14",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -2880,7 +2880,7 @@
         }
     },
     {
-        "TIME": "2014-10-17",
+        "ELEMENT": "2014-10-17",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -2928,7 +2928,7 @@
         }
     },
     {
-        "TIME": "2014-04-29",
+        "ELEMENT": "2014-04-29",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -2976,7 +2976,7 @@
         }
     },
     {
-        "TIME": "2014-10-29",
+        "ELEMENT": "2014-10-29",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -3024,7 +3024,7 @@
         }
     },
     {
-        "TIME": "2014-06-17",
+        "ELEMENT": "2014-06-17",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -3072,7 +3072,7 @@
         }
     },
     {
-        "TIME": "2014-11-03",
+        "ELEMENT": "2014-11-03",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -3120,7 +3120,7 @@
         }
     },
     {
-        "TIME": "2014-02-03",
+        "ELEMENT": "2014-02-03",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -3168,7 +3168,7 @@
         }
     },
     {
-        "TIME": "2014-03-19",
+        "ELEMENT": "2014-03-19",
         "NUM_FACTS": 99,
         "MEASURE": {
             "DE_TransE": {
@@ -3216,7 +3216,7 @@
         }
     },
     {
-        "TIME": "2014-04-24",
+        "ELEMENT": "2014-04-24",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3264,7 +3264,7 @@
         }
     },
     {
-        "TIME": "2014-09-04",
+        "ELEMENT": "2014-09-04",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3312,7 +3312,7 @@
         }
     },
     {
-        "TIME": "2014-04-07",
+        "ELEMENT": "2014-04-07",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3360,7 +3360,7 @@
         }
     },
     {
-        "TIME": "2014-08-13",
+        "ELEMENT": "2014-08-13",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3408,7 +3408,7 @@
         }
     },
     {
-        "TIME": "2014-10-13",
+        "ELEMENT": "2014-10-13",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3456,7 +3456,7 @@
         }
     },
     {
-        "TIME": "2014-11-26",
+        "ELEMENT": "2014-11-26",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3504,7 +3504,7 @@
         }
     },
     {
-        "TIME": "2014-05-21",
+        "ELEMENT": "2014-05-21",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3552,7 +3552,7 @@
         }
     },
     {
-        "TIME": "2014-07-09",
+        "ELEMENT": "2014-07-09",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3600,7 +3600,7 @@
         }
     },
     {
-        "TIME": "2014-11-25",
+        "ELEMENT": "2014-11-25",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3648,7 +3648,7 @@
         }
     },
     {
-        "TIME": "2014-02-21",
+        "ELEMENT": "2014-02-21",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3696,7 +3696,7 @@
         }
     },
     {
-        "TIME": "2014-11-20",
+        "ELEMENT": "2014-11-20",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3744,7 +3744,7 @@
         }
     },
     {
-        "TIME": "2014-12-08",
+        "ELEMENT": "2014-12-08",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3792,7 +3792,7 @@
         }
     },
     {
-        "TIME": "2014-09-25",
+        "ELEMENT": "2014-09-25",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3840,7 +3840,7 @@
         }
     },
     {
-        "TIME": "2014-05-20",
+        "ELEMENT": "2014-05-20",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3888,7 +3888,7 @@
         }
     },
     {
-        "TIME": "2014-05-29",
+        "ELEMENT": "2014-05-29",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3936,7 +3936,7 @@
         }
     },
     {
-        "TIME": "2014-02-06",
+        "ELEMENT": "2014-02-06",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -3984,7 +3984,7 @@
         }
     },
     {
-        "TIME": "2014-12-30",
+        "ELEMENT": "2014-12-30",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -4032,7 +4032,7 @@
         }
     },
     {
-        "TIME": "2014-10-03",
+        "ELEMENT": "2014-10-03",
         "NUM_FACTS": 96,
         "MEASURE": {
             "DE_TransE": {
@@ -4080,7 +4080,7 @@
         }
     },
     {
-        "TIME": "2014-09-30",
+        "ELEMENT": "2014-09-30",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4128,7 +4128,7 @@
         }
     },
     {
-        "TIME": "2014-10-22",
+        "ELEMENT": "2014-10-22",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4176,7 +4176,7 @@
         }
     },
     {
-        "TIME": "2014-03-25",
+        "ELEMENT": "2014-03-25",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4224,7 +4224,7 @@
         }
     },
     {
-        "TIME": "2014-10-01",
+        "ELEMENT": "2014-10-01",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4272,7 +4272,7 @@
         }
     },
     {
-        "TIME": "2014-02-04",
+        "ELEMENT": "2014-02-04",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4320,7 +4320,7 @@
         }
     },
     {
-        "TIME": "2014-06-13",
+        "ELEMENT": "2014-06-13",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4368,7 +4368,7 @@
         }
     },
     {
-        "TIME": "2014-09-12",
+        "ELEMENT": "2014-09-12",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4416,7 +4416,7 @@
         }
     },
     {
-        "TIME": "2014-07-18",
+        "ELEMENT": "2014-07-18",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4464,7 +4464,7 @@
         }
     },
     {
-        "TIME": "2014-05-09",
+        "ELEMENT": "2014-05-09",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4512,7 +4512,7 @@
         }
     },
     {
-        "TIME": "2014-04-15",
+        "ELEMENT": "2014-04-15",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4560,7 +4560,7 @@
         }
     },
     {
-        "TIME": "2014-03-17",
+        "ELEMENT": "2014-03-17",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4608,7 +4608,7 @@
         }
     },
     {
-        "TIME": "2014-06-27",
+        "ELEMENT": "2014-06-27",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4656,7 +4656,7 @@
         }
     },
     {
-        "TIME": "2014-08-28",
+        "ELEMENT": "2014-08-28",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4704,7 +4704,7 @@
         }
     },
     {
-        "TIME": "2014-08-14",
+        "ELEMENT": "2014-08-14",
         "NUM_FACTS": 93,
         "MEASURE": {
             "DE_TransE": {
@@ -4752,7 +4752,7 @@
         }
     },
     {
-        "TIME": "2014-03-24",
+        "ELEMENT": "2014-03-24",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -4800,7 +4800,7 @@
         }
     },
     {
-        "TIME": "2014-02-19",
+        "ELEMENT": "2014-02-19",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -4848,7 +4848,7 @@
         }
     },
     {
-        "TIME": "2014-01-20",
+        "ELEMENT": "2014-01-20",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -4896,7 +4896,7 @@
         }
     },
     {
-        "TIME": "2014-09-23",
+        "ELEMENT": "2014-09-23",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -4944,7 +4944,7 @@
         }
     },
     {
-        "TIME": "2014-11-27",
+        "ELEMENT": "2014-11-27",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -4992,7 +4992,7 @@
         }
     },
     {
-        "TIME": "2014-08-04",
+        "ELEMENT": "2014-08-04",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -5040,7 +5040,7 @@
         }
     },
     {
-        "TIME": "2014-03-20",
+        "ELEMENT": "2014-03-20",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -5088,7 +5088,7 @@
         }
     },
     {
-        "TIME": "2014-04-30",
+        "ELEMENT": "2014-04-30",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -5136,7 +5136,7 @@
         }
     },
     {
-        "TIME": "2014-09-19",
+        "ELEMENT": "2014-09-19",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -5184,7 +5184,7 @@
         }
     },
     {
-        "TIME": "2014-06-26",
+        "ELEMENT": "2014-06-26",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -5232,7 +5232,7 @@
         }
     },
     {
-        "TIME": "2014-09-16",
+        "ELEMENT": "2014-09-16",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -5280,7 +5280,7 @@
         }
     },
     {
-        "TIME": "2014-06-04",
+        "ELEMENT": "2014-06-04",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5328,7 +5328,7 @@
         }
     },
     {
-        "TIME": "2014-11-28",
+        "ELEMENT": "2014-11-28",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5376,7 +5376,7 @@
         }
     },
     {
-        "TIME": "2014-05-13",
+        "ELEMENT": "2014-05-13",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5424,7 +5424,7 @@
         }
     },
     {
-        "TIME": "2014-09-03",
+        "ELEMENT": "2014-09-03",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5472,7 +5472,7 @@
         }
     },
     {
-        "TIME": "2014-05-08",
+        "ELEMENT": "2014-05-08",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5520,7 +5520,7 @@
         }
     },
     {
-        "TIME": "2014-08-27",
+        "ELEMENT": "2014-08-27",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5568,7 +5568,7 @@
         }
     },
     {
-        "TIME": "2014-11-24",
+        "ELEMENT": "2014-11-24",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5616,7 +5616,7 @@
         }
     },
     {
-        "TIME": "2014-09-18",
+        "ELEMENT": "2014-09-18",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5664,7 +5664,7 @@
         }
     },
     {
-        "TIME": "2014-03-11",
+        "ELEMENT": "2014-03-11",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5712,7 +5712,7 @@
         }
     },
     {
-        "TIME": "2014-09-11",
+        "ELEMENT": "2014-09-11",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5760,7 +5760,7 @@
         }
     },
     {
-        "TIME": "2014-11-08",
+        "ELEMENT": "2014-11-08",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5808,7 +5808,7 @@
         }
     },
     {
-        "TIME": "2014-12-15",
+        "ELEMENT": "2014-12-15",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5856,7 +5856,7 @@
         }
     },
     {
-        "TIME": "2014-02-26",
+        "ELEMENT": "2014-02-26",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5904,7 +5904,7 @@
         }
     },
     {
-        "TIME": "2014-12-11",
+        "ELEMENT": "2014-12-11",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -5952,7 +5952,7 @@
         }
     },
     {
-        "TIME": "2014-02-12",
+        "ELEMENT": "2014-02-12",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -6000,7 +6000,7 @@
         }
     },
     {
-        "TIME": "2014-03-04",
+        "ELEMENT": "2014-03-04",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -6048,7 +6048,7 @@
         }
     },
     {
-        "TIME": "2014-11-18",
+        "ELEMENT": "2014-11-18",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -6096,7 +6096,7 @@
         }
     },
     {
-        "TIME": "2014-02-14",
+        "ELEMENT": "2014-02-14",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -6144,7 +6144,7 @@
         }
     },
     {
-        "TIME": "2014-08-22",
+        "ELEMENT": "2014-08-22",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -6192,7 +6192,7 @@
         }
     },
     {
-        "TIME": "2014-01-22",
+        "ELEMENT": "2014-01-22",
         "NUM_FACTS": 87,
         "MEASURE": {
             "DE_TransE": {
@@ -6240,7 +6240,7 @@
         }
     },
     {
-        "TIME": "2014-04-17",
+        "ELEMENT": "2014-04-17",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6288,7 +6288,7 @@
         }
     },
     {
-        "TIME": "2014-04-11",
+        "ELEMENT": "2014-04-11",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6336,7 +6336,7 @@
         }
     },
     {
-        "TIME": "2014-03-31",
+        "ELEMENT": "2014-03-31",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6384,7 +6384,7 @@
         }
     },
     {
-        "TIME": "2014-05-02",
+        "ELEMENT": "2014-05-02",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6432,7 +6432,7 @@
         }
     },
     {
-        "TIME": "2014-10-24",
+        "ELEMENT": "2014-10-24",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6480,7 +6480,7 @@
         }
     },
     {
-        "TIME": "2014-03-27",
+        "ELEMENT": "2014-03-27",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6528,7 +6528,7 @@
         }
     },
     {
-        "TIME": "2014-03-13",
+        "ELEMENT": "2014-03-13",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6576,7 +6576,7 @@
         }
     },
     {
-        "TIME": "2014-07-16",
+        "ELEMENT": "2014-07-16",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6624,7 +6624,7 @@
         }
     },
     {
-        "TIME": "2014-02-17",
+        "ELEMENT": "2014-02-17",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6672,7 +6672,7 @@
         }
     },
     {
-        "TIME": "2014-02-27",
+        "ELEMENT": "2014-02-27",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6720,7 +6720,7 @@
         }
     },
     {
-        "TIME": "2014-05-06",
+        "ELEMENT": "2014-05-06",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6768,7 +6768,7 @@
         }
     },
     {
-        "TIME": "2014-04-23",
+        "ELEMENT": "2014-04-23",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6816,7 +6816,7 @@
         }
     },
     {
-        "TIME": "2014-05-27",
+        "ELEMENT": "2014-05-27",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6864,7 +6864,7 @@
         }
     },
     {
-        "TIME": "2014-12-22",
+        "ELEMENT": "2014-12-22",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6912,7 +6912,7 @@
         }
     },
     {
-        "TIME": "2014-11-05",
+        "ELEMENT": "2014-11-05",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -6960,7 +6960,7 @@
         }
     },
     {
-        "TIME": "2014-08-18",
+        "ELEMENT": "2014-08-18",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -7008,7 +7008,7 @@
         }
     },
     {
-        "TIME": "2014-10-23",
+        "ELEMENT": "2014-10-23",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -7056,7 +7056,7 @@
         }
     },
     {
-        "TIME": "2014-04-14",
+        "ELEMENT": "2014-04-14",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -7104,7 +7104,7 @@
         }
     },
     {
-        "TIME": "2014-09-22",
+        "ELEMENT": "2014-09-22",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7152,7 +7152,7 @@
         }
     },
     {
-        "TIME": "2014-04-18",
+        "ELEMENT": "2014-04-18",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7200,7 +7200,7 @@
         }
     },
     {
-        "TIME": "2014-07-29",
+        "ELEMENT": "2014-07-29",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7248,7 +7248,7 @@
         }
     },
     {
-        "TIME": "2014-09-05",
+        "ELEMENT": "2014-09-05",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7296,7 +7296,7 @@
         }
     },
     {
-        "TIME": "2014-08-10",
+        "ELEMENT": "2014-08-10",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7344,7 +7344,7 @@
         }
     },
     {
-        "TIME": "2014-09-10",
+        "ELEMENT": "2014-09-10",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7392,7 +7392,7 @@
         }
     },
     {
-        "TIME": "2014-01-28",
+        "ELEMENT": "2014-01-28",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7440,7 +7440,7 @@
         }
     },
     {
-        "TIME": "2014-06-25",
+        "ELEMENT": "2014-06-25",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7488,7 +7488,7 @@
         }
     },
     {
-        "TIME": "2014-12-12",
+        "ELEMENT": "2014-12-12",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7536,7 +7536,7 @@
         }
     },
     {
-        "TIME": "2014-04-03",
+        "ELEMENT": "2014-04-03",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7584,7 +7584,7 @@
         }
     },
     {
-        "TIME": "2014-06-30",
+        "ELEMENT": "2014-06-30",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7632,7 +7632,7 @@
         }
     },
     {
-        "TIME": "2014-10-28",
+        "ELEMENT": "2014-10-28",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7680,7 +7680,7 @@
         }
     },
     {
-        "TIME": "2014-01-27",
+        "ELEMENT": "2014-01-27",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7728,7 +7728,7 @@
         }
     },
     {
-        "TIME": "2014-12-01",
+        "ELEMENT": "2014-12-01",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7776,7 +7776,7 @@
         }
     },
     {
-        "TIME": "2014-02-05",
+        "ELEMENT": "2014-02-05",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7824,7 +7824,7 @@
         }
     },
     {
-        "TIME": "2014-06-05",
+        "ELEMENT": "2014-06-05",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7872,7 +7872,7 @@
         }
     },
     {
-        "TIME": "2014-02-07",
+        "ELEMENT": "2014-02-07",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7920,7 +7920,7 @@
         }
     },
     {
-        "TIME": "2014-10-31",
+        "ELEMENT": "2014-10-31",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -7968,7 +7968,7 @@
         }
     },
     {
-        "TIME": "2014-10-18",
+        "ELEMENT": "2014-10-18",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -8016,7 +8016,7 @@
         }
     },
     {
-        "TIME": "2014-05-30",
+        "ELEMENT": "2014-05-30",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -8064,7 +8064,7 @@
         }
     },
     {
-        "TIME": "2014-05-28",
+        "ELEMENT": "2014-05-28",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -8112,7 +8112,7 @@
         }
     },
     {
-        "TIME": "2014-03-18",
+        "ELEMENT": "2014-03-18",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -8160,7 +8160,7 @@
         }
     },
     {
-        "TIME": "2014-08-19",
+        "ELEMENT": "2014-08-19",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8208,7 +8208,7 @@
         }
     },
     {
-        "TIME": "2014-11-16",
+        "ELEMENT": "2014-11-16",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8256,7 +8256,7 @@
         }
     },
     {
-        "TIME": "2014-10-07",
+        "ELEMENT": "2014-10-07",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8304,7 +8304,7 @@
         }
     },
     {
-        "TIME": "2014-06-11",
+        "ELEMENT": "2014-06-11",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8352,7 +8352,7 @@
         }
     },
     {
-        "TIME": "2014-06-10",
+        "ELEMENT": "2014-06-10",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8400,7 +8400,7 @@
         }
     },
     {
-        "TIME": "2014-12-16",
+        "ELEMENT": "2014-12-16",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8448,7 +8448,7 @@
         }
     },
     {
-        "TIME": "2014-08-20",
+        "ELEMENT": "2014-08-20",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8496,7 +8496,7 @@
         }
     },
     {
-        "TIME": "2014-12-17",
+        "ELEMENT": "2014-12-17",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8544,7 +8544,7 @@
         }
     },
     {
-        "TIME": "2014-06-24",
+        "ELEMENT": "2014-06-24",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8592,7 +8592,7 @@
         }
     },
     {
-        "TIME": "2014-02-10",
+        "ELEMENT": "2014-02-10",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8640,7 +8640,7 @@
         }
     },
     {
-        "TIME": "2014-03-05",
+        "ELEMENT": "2014-03-05",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8688,7 +8688,7 @@
         }
     },
     {
-        "TIME": "2014-01-08",
+        "ELEMENT": "2014-01-08",
         "NUM_FACTS": 78,
         "MEASURE": {
             "DE_TransE": {
@@ -8736,7 +8736,7 @@
         }
     },
     {
-        "TIME": "2014-05-23",
+        "ELEMENT": "2014-05-23",
         "NUM_FACTS": 75,
         "MEASURE": {
             "DE_TransE": {
@@ -8784,7 +8784,7 @@
         }
     },
     {
-        "TIME": "2014-10-10",
+        "ELEMENT": "2014-10-10",
         "NUM_FACTS": 75,
         "MEASURE": {
             "DE_TransE": {
@@ -8832,7 +8832,7 @@
         }
     },
     {
-        "TIME": "2014-05-26",
+        "ELEMENT": "2014-05-26",
         "NUM_FACTS": 75,
         "MEASURE": {
             "DE_TransE": {
@@ -8880,7 +8880,7 @@
         }
     },
     {
-        "TIME": "2014-07-24",
+        "ELEMENT": "2014-07-24",
         "NUM_FACTS": 75,
         "MEASURE": {
             "DE_TransE": {
@@ -8928,7 +8928,7 @@
         }
     },
     {
-        "TIME": "2014-01-23",
+        "ELEMENT": "2014-01-23",
         "NUM_FACTS": 75,
         "MEASURE": {
             "DE_TransE": {
@@ -8976,7 +8976,7 @@
         }
     },
     {
-        "TIME": "2014-01-10",
+        "ELEMENT": "2014-01-10",
         "NUM_FACTS": 75,
         "MEASURE": {
             "DE_TransE": {
@@ -9024,7 +9024,7 @@
         }
     },
     {
-        "TIME": "2014-02-25",
+        "ELEMENT": "2014-02-25",
         "NUM_FACTS": 75,
         "MEASURE": {
             "DE_TransE": {
@@ -9072,7 +9072,7 @@
         }
     },
     {
-        "TIME": "2014-11-06",
+        "ELEMENT": "2014-11-06",
         "NUM_FACTS": 75,
         "MEASURE": {
             "DE_TransE": {
@@ -9120,7 +9120,7 @@
         }
     },
     {
-        "TIME": "2014-04-28",
+        "ELEMENT": "2014-04-28",
         "NUM_FACTS": 75,
         "MEASURE": {
             "DE_TransE": {
@@ -9168,7 +9168,7 @@
         }
     },
     {
-        "TIME": "2014-09-09",
+        "ELEMENT": "2014-09-09",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9216,7 +9216,7 @@
         }
     },
     {
-        "TIME": "2014-03-26",
+        "ELEMENT": "2014-03-26",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9264,7 +9264,7 @@
         }
     },
     {
-        "TIME": "2014-12-05",
+        "ELEMENT": "2014-12-05",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9312,7 +9312,7 @@
         }
     },
     {
-        "TIME": "2014-01-24",
+        "ELEMENT": "2014-01-24",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9360,7 +9360,7 @@
         }
     },
     {
-        "TIME": "2014-06-12",
+        "ELEMENT": "2014-06-12",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9408,7 +9408,7 @@
         }
     },
     {
-        "TIME": "2014-08-07",
+        "ELEMENT": "2014-08-07",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9456,7 +9456,7 @@
         }
     },
     {
-        "TIME": "2014-04-22",
+        "ELEMENT": "2014-04-22",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9504,7 +9504,7 @@
         }
     },
     {
-        "TIME": "2014-07-10",
+        "ELEMENT": "2014-07-10",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9552,7 +9552,7 @@
         }
     },
     {
-        "TIME": "2014-08-26",
+        "ELEMENT": "2014-08-26",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9600,7 +9600,7 @@
         }
     },
     {
-        "TIME": "2014-12-04",
+        "ELEMENT": "2014-12-04",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9648,7 +9648,7 @@
         }
     },
     {
-        "TIME": "2014-01-21",
+        "ELEMENT": "2014-01-21",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9696,7 +9696,7 @@
         }
     },
     {
-        "TIME": "2014-10-09",
+        "ELEMENT": "2014-10-09",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9744,7 +9744,7 @@
         }
     },
     {
-        "TIME": "2014-01-29",
+        "ELEMENT": "2014-01-29",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9792,7 +9792,7 @@
         }
     },
     {
-        "TIME": "2014-11-07",
+        "ELEMENT": "2014-11-07",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9840,7 +9840,7 @@
         }
     },
     {
-        "TIME": "2014-12-07",
+        "ELEMENT": "2014-12-07",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -9888,7 +9888,7 @@
         }
     },
     {
-        "TIME": "2014-11-04",
+        "ELEMENT": "2014-11-04",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -9936,7 +9936,7 @@
         }
     },
     {
-        "TIME": "2014-07-25",
+        "ELEMENT": "2014-07-25",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -9984,7 +9984,7 @@
         }
     },
     {
-        "TIME": "2014-01-17",
+        "ELEMENT": "2014-01-17",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10032,7 +10032,7 @@
         }
     },
     {
-        "TIME": "2014-04-04",
+        "ELEMENT": "2014-04-04",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10080,7 +10080,7 @@
         }
     },
     {
-        "TIME": "2014-04-09",
+        "ELEMENT": "2014-04-09",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10128,7 +10128,7 @@
         }
     },
     {
-        "TIME": "2014-04-10",
+        "ELEMENT": "2014-04-10",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10176,7 +10176,7 @@
         }
     },
     {
-        "TIME": "2014-10-30",
+        "ELEMENT": "2014-10-30",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10224,7 +10224,7 @@
         }
     },
     {
-        "TIME": "2014-12-02",
+        "ELEMENT": "2014-12-02",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10272,7 +10272,7 @@
         }
     },
     {
-        "TIME": "2014-02-24",
+        "ELEMENT": "2014-02-24",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10320,7 +10320,7 @@
         }
     },
     {
-        "TIME": "2014-10-16",
+        "ELEMENT": "2014-10-16",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10368,7 +10368,7 @@
         }
     },
     {
-        "TIME": "2014-01-31",
+        "ELEMENT": "2014-01-31",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10416,7 +10416,7 @@
         }
     },
     {
-        "TIME": "2014-05-14",
+        "ELEMENT": "2014-05-14",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10464,7 +10464,7 @@
         }
     },
     {
-        "TIME": "2014-05-19",
+        "ELEMENT": "2014-05-19",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10512,7 +10512,7 @@
         }
     },
     {
-        "TIME": "2014-09-08",
+        "ELEMENT": "2014-09-08",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10560,7 +10560,7 @@
         }
     },
     {
-        "TIME": "2014-04-02",
+        "ELEMENT": "2014-04-02",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -10608,7 +10608,7 @@
         }
     },
     {
-        "TIME": "2014-07-22",
+        "ELEMENT": "2014-07-22",
         "NUM_FACTS": 66,
         "MEASURE": {
             "DE_TransE": {
@@ -10656,7 +10656,7 @@
         }
     },
     {
-        "TIME": "2014-04-21",
+        "ELEMENT": "2014-04-21",
         "NUM_FACTS": 66,
         "MEASURE": {
             "DE_TransE": {
@@ -10704,7 +10704,7 @@
         }
     },
     {
-        "TIME": "2014-03-07",
+        "ELEMENT": "2014-03-07",
         "NUM_FACTS": 66,
         "MEASURE": {
             "DE_TransE": {
@@ -10752,7 +10752,7 @@
         }
     },
     {
-        "TIME": "2014-07-31",
+        "ELEMENT": "2014-07-31",
         "NUM_FACTS": 66,
         "MEASURE": {
             "DE_TransE": {
@@ -10800,7 +10800,7 @@
         }
     },
     {
-        "TIME": "2014-04-01",
+        "ELEMENT": "2014-04-01",
         "NUM_FACTS": 66,
         "MEASURE": {
             "DE_TransE": {
@@ -10848,7 +10848,7 @@
         }
     },
     {
-        "TIME": "2014-01-16",
+        "ELEMENT": "2014-01-16",
         "NUM_FACTS": 66,
         "MEASURE": {
             "DE_TransE": {
@@ -10896,7 +10896,7 @@
         }
     },
     {
-        "TIME": "2014-06-06",
+        "ELEMENT": "2014-06-06",
         "NUM_FACTS": 66,
         "MEASURE": {
             "DE_TransE": {
@@ -10944,7 +10944,7 @@
         }
     },
     {
-        "TIME": "2014-02-13",
+        "ELEMENT": "2014-02-13",
         "NUM_FACTS": 66,
         "MEASURE": {
             "DE_TransE": {
@@ -10992,7 +10992,7 @@
         }
     },
     {
-        "TIME": "2014-03-06",
+        "ELEMENT": "2014-03-06",
         "NUM_FACTS": 63,
         "MEASURE": {
             "DE_TransE": {
@@ -11040,7 +11040,7 @@
         }
     },
     {
-        "TIME": "2014-05-25",
+        "ELEMENT": "2014-05-25",
         "NUM_FACTS": 63,
         "MEASURE": {
             "DE_TransE": {
@@ -11088,7 +11088,7 @@
         }
     },
     {
-        "TIME": "2014-04-16",
+        "ELEMENT": "2014-04-16",
         "NUM_FACTS": 63,
         "MEASURE": {
             "DE_TransE": {
@@ -11136,7 +11136,7 @@
         }
     },
     {
-        "TIME": "2014-07-07",
+        "ELEMENT": "2014-07-07",
         "NUM_FACTS": 63,
         "MEASURE": {
             "DE_TransE": {
@@ -11184,7 +11184,7 @@
         }
     },
     {
-        "TIME": "2014-07-21",
+        "ELEMENT": "2014-07-21",
         "NUM_FACTS": 63,
         "MEASURE": {
             "DE_TransE": {
@@ -11232,7 +11232,7 @@
         }
     },
     {
-        "TIME": "2014-08-01",
+        "ELEMENT": "2014-08-01",
         "NUM_FACTS": 63,
         "MEASURE": {
             "DE_TransE": {
@@ -11280,7 +11280,7 @@
         }
     },
     {
-        "TIME": "2014-07-01",
+        "ELEMENT": "2014-07-01",
         "NUM_FACTS": 63,
         "MEASURE": {
             "DE_TransE": {
@@ -11328,7 +11328,7 @@
         }
     },
     {
-        "TIME": "2014-01-30",
+        "ELEMENT": "2014-01-30",
         "NUM_FACTS": 63,
         "MEASURE": {
             "DE_TransE": {
@@ -11376,7 +11376,7 @@
         }
     },
     {
-        "TIME": "2014-07-17",
+        "ELEMENT": "2014-07-17",
         "NUM_FACTS": 63,
         "MEASURE": {
             "DE_TransE": {
@@ -11424,7 +11424,7 @@
         }
     },
     {
-        "TIME": "2014-03-01",
+        "ELEMENT": "2014-03-01",
         "NUM_FACTS": 63,
         "MEASURE": {
             "DE_TransE": {
@@ -11472,7 +11472,7 @@
         }
     },
     {
-        "TIME": "2014-11-15",
+        "ELEMENT": "2014-11-15",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -11520,7 +11520,7 @@
         }
     },
     {
-        "TIME": "2014-12-19",
+        "ELEMENT": "2014-12-19",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -11568,7 +11568,7 @@
         }
     },
     {
-        "TIME": "2014-09-26",
+        "ELEMENT": "2014-09-26",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -11616,7 +11616,7 @@
         }
     },
     {
-        "TIME": "2014-12-18",
+        "ELEMENT": "2014-12-18",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -11664,7 +11664,7 @@
         }
     },
     {
-        "TIME": "2014-10-19",
+        "ELEMENT": "2014-10-19",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -11712,7 +11712,7 @@
         }
     },
     {
-        "TIME": "2014-03-10",
+        "ELEMENT": "2014-03-10",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -11760,7 +11760,7 @@
         }
     },
     {
-        "TIME": "2014-11-22",
+        "ELEMENT": "2014-11-22",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -11808,7 +11808,7 @@
         }
     },
     {
-        "TIME": "2014-01-07",
+        "ELEMENT": "2014-01-07",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -11856,7 +11856,7 @@
         }
     },
     {
-        "TIME": "2014-06-28",
+        "ELEMENT": "2014-06-28",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -11904,7 +11904,7 @@
         }
     },
     {
-        "TIME": "2014-03-14",
+        "ELEMENT": "2014-03-14",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -11952,7 +11952,7 @@
         }
     },
     {
-        "TIME": "2014-05-11",
+        "ELEMENT": "2014-05-11",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -12000,7 +12000,7 @@
         }
     },
     {
-        "TIME": "2014-07-13",
+        "ELEMENT": "2014-07-13",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -12048,7 +12048,7 @@
         }
     },
     {
-        "TIME": "2014-04-26",
+        "ELEMENT": "2014-04-26",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12096,7 +12096,7 @@
         }
     },
     {
-        "TIME": "2014-02-15",
+        "ELEMENT": "2014-02-15",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12144,7 +12144,7 @@
         }
     },
     {
-        "TIME": "2014-08-29",
+        "ELEMENT": "2014-08-29",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12192,7 +12192,7 @@
         }
     },
     {
-        "TIME": "2014-07-30",
+        "ELEMENT": "2014-07-30",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12240,7 +12240,7 @@
         }
     },
     {
-        "TIME": "2014-05-01",
+        "ELEMENT": "2014-05-01",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12288,7 +12288,7 @@
         }
     },
     {
-        "TIME": "2014-03-29",
+        "ELEMENT": "2014-03-29",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12336,7 +12336,7 @@
         }
     },
     {
-        "TIME": "2014-03-15",
+        "ELEMENT": "2014-03-15",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12384,7 +12384,7 @@
         }
     },
     {
-        "TIME": "2014-03-21",
+        "ELEMENT": "2014-03-21",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12432,7 +12432,7 @@
         }
     },
     {
-        "TIME": "2014-02-28",
+        "ELEMENT": "2014-02-28",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12480,7 +12480,7 @@
         }
     },
     {
-        "TIME": "2014-03-03",
+        "ELEMENT": "2014-03-03",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12528,7 +12528,7 @@
         }
     },
     {
-        "TIME": "2014-09-20",
+        "ELEMENT": "2014-09-20",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12576,7 +12576,7 @@
         }
     },
     {
-        "TIME": "2014-01-26",
+        "ELEMENT": "2014-01-26",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12624,7 +12624,7 @@
         }
     },
     {
-        "TIME": "2014-01-18",
+        "ELEMENT": "2014-01-18",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12672,7 +12672,7 @@
         }
     },
     {
-        "TIME": "2014-07-05",
+        "ELEMENT": "2014-07-05",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12720,7 +12720,7 @@
         }
     },
     {
-        "TIME": "2014-01-06",
+        "ELEMENT": "2014-01-06",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12768,7 +12768,7 @@
         }
     },
     {
-        "TIME": "2014-11-01",
+        "ELEMENT": "2014-11-01",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12816,7 +12816,7 @@
         }
     },
     {
-        "TIME": "2014-07-27",
+        "ELEMENT": "2014-07-27",
         "NUM_FACTS": 57,
         "MEASURE": {
             "DE_TransE": {
@@ -12864,7 +12864,7 @@
         }
     },
     {
-        "TIME": "2014-02-01",
+        "ELEMENT": "2014-02-01",
         "NUM_FACTS": 54,
         "MEASURE": {
             "DE_TransE": {
@@ -12912,7 +12912,7 @@
         }
     },
     {
-        "TIME": "2014-06-22",
+        "ELEMENT": "2014-06-22",
         "NUM_FACTS": 54,
         "MEASURE": {
             "DE_TransE": {
@@ -12960,7 +12960,7 @@
         }
     },
     {
-        "TIME": "2014-11-30",
+        "ELEMENT": "2014-11-30",
         "NUM_FACTS": 54,
         "MEASURE": {
             "DE_TransE": {
@@ -13008,7 +13008,7 @@
         }
     },
     {
-        "TIME": "2014-09-13",
+        "ELEMENT": "2014-09-13",
         "NUM_FACTS": 54,
         "MEASURE": {
             "DE_TransE": {
@@ -13056,7 +13056,7 @@
         }
     },
     {
-        "TIME": "2014-09-06",
+        "ELEMENT": "2014-09-06",
         "NUM_FACTS": 54,
         "MEASURE": {
             "DE_TransE": {
@@ -13104,7 +13104,7 @@
         }
     },
     {
-        "TIME": "2014-08-08",
+        "ELEMENT": "2014-08-08",
         "NUM_FACTS": 54,
         "MEASURE": {
             "DE_TransE": {
@@ -13152,7 +13152,7 @@
         }
     },
     {
-        "TIME": "2014-01-09",
+        "ELEMENT": "2014-01-09",
         "NUM_FACTS": 54,
         "MEASURE": {
             "DE_TransE": {
@@ -13200,7 +13200,7 @@
         }
     },
     {
-        "TIME": "2014-07-11",
+        "ELEMENT": "2014-07-11",
         "NUM_FACTS": 54,
         "MEASURE": {
             "DE_TransE": {
@@ -13248,7 +13248,7 @@
         }
     },
     {
-        "TIME": "2014-03-16",
+        "ELEMENT": "2014-03-16",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -13296,7 +13296,7 @@
         }
     },
     {
-        "TIME": "2014-11-09",
+        "ELEMENT": "2014-11-09",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -13344,7 +13344,7 @@
         }
     },
     {
-        "TIME": "2014-07-28",
+        "ELEMENT": "2014-07-28",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -13392,7 +13392,7 @@
         }
     },
     {
-        "TIME": "2014-12-06",
+        "ELEMENT": "2014-12-06",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -13440,7 +13440,7 @@
         }
     },
     {
-        "TIME": "2014-04-25",
+        "ELEMENT": "2014-04-25",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -13488,7 +13488,7 @@
         }
     },
     {
-        "TIME": "2014-07-20",
+        "ELEMENT": "2014-07-20",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -13536,7 +13536,7 @@
         }
     },
     {
-        "TIME": "2014-09-21",
+        "ELEMENT": "2014-09-21",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -13584,7 +13584,7 @@
         }
     },
     {
-        "TIME": "2014-05-31",
+        "ELEMENT": "2014-05-31",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -13632,7 +13632,7 @@
         }
     },
     {
-        "TIME": "2014-08-15",
+        "ELEMENT": "2014-08-15",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -13680,7 +13680,7 @@
         }
     },
     {
-        "TIME": "2014-08-06",
+        "ELEMENT": "2014-08-06",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -13728,7 +13728,7 @@
         }
     },
     {
-        "TIME": "2014-12-26",
+        "ELEMENT": "2014-12-26",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -13776,7 +13776,7 @@
         }
     },
     {
-        "TIME": "2014-12-24",
+        "ELEMENT": "2014-12-24",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -13824,7 +13824,7 @@
         }
     },
     {
-        "TIME": "2014-08-30",
+        "ELEMENT": "2014-08-30",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -13872,7 +13872,7 @@
         }
     },
     {
-        "TIME": "2014-09-14",
+        "ELEMENT": "2014-09-14",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -13920,7 +13920,7 @@
         }
     },
     {
-        "TIME": "2014-06-07",
+        "ELEMENT": "2014-06-07",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -13968,7 +13968,7 @@
         }
     },
     {
-        "TIME": "2014-05-18",
+        "ELEMENT": "2014-05-18",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -14016,7 +14016,7 @@
         }
     },
     {
-        "TIME": "2014-08-21",
+        "ELEMENT": "2014-08-21",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -14064,7 +14064,7 @@
         }
     },
     {
-        "TIME": "2014-11-02",
+        "ELEMENT": "2014-11-02",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -14112,7 +14112,7 @@
         }
     },
     {
-        "TIME": "2014-03-02",
+        "ELEMENT": "2014-03-02",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -14160,7 +14160,7 @@
         }
     },
     {
-        "TIME": "2014-08-09",
+        "ELEMENT": "2014-08-09",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -14208,7 +14208,7 @@
         }
     },
     {
-        "TIME": "2014-04-27",
+        "ELEMENT": "2014-04-27",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -14256,7 +14256,7 @@
         }
     },
     {
-        "TIME": "2014-03-09",
+        "ELEMENT": "2014-03-09",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -14304,7 +14304,7 @@
         }
     },
     {
-        "TIME": "2014-10-11",
+        "ELEMENT": "2014-10-11",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -14352,7 +14352,7 @@
         }
     },
     {
-        "TIME": "2014-01-14",
+        "ELEMENT": "2014-01-14",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -14400,7 +14400,7 @@
         }
     },
     {
-        "TIME": "2014-08-02",
+        "ELEMENT": "2014-08-02",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -14448,7 +14448,7 @@
         }
     },
     {
-        "TIME": "2014-07-12",
+        "ELEMENT": "2014-07-12",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -14496,7 +14496,7 @@
         }
     },
     {
-        "TIME": "2014-12-14",
+        "ELEMENT": "2014-12-14",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -14544,7 +14544,7 @@
         }
     },
     {
-        "TIME": "2014-03-23",
+        "ELEMENT": "2014-03-23",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -14592,7 +14592,7 @@
         }
     },
     {
-        "TIME": "2014-12-13",
+        "ELEMENT": "2014-12-13",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -14640,7 +14640,7 @@
         }
     },
     {
-        "TIME": "2014-12-28",
+        "ELEMENT": "2014-12-28",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -14688,7 +14688,7 @@
         }
     },
     {
-        "TIME": "2014-05-24",
+        "ELEMENT": "2014-05-24",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -14736,7 +14736,7 @@
         }
     },
     {
-        "TIME": "2014-04-06",
+        "ELEMENT": "2014-04-06",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -14784,7 +14784,7 @@
         }
     },
     {
-        "TIME": "2014-07-26",
+        "ELEMENT": "2014-07-26",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -14832,7 +14832,7 @@
         }
     },
     {
-        "TIME": "2014-05-04",
+        "ELEMENT": "2014-05-04",
         "NUM_FACTS": 42,
         "MEASURE": {
             "DE_TransE": {
@@ -14880,7 +14880,7 @@
         }
     },
     {
-        "TIME": "2014-11-29",
+        "ELEMENT": "2014-11-29",
         "NUM_FACTS": 42,
         "MEASURE": {
             "DE_TransE": {
@@ -14928,7 +14928,7 @@
         }
     },
     {
-        "TIME": "2014-08-24",
+        "ELEMENT": "2014-08-24",
         "NUM_FACTS": 42,
         "MEASURE": {
             "DE_TransE": {
@@ -14976,7 +14976,7 @@
         }
     },
     {
-        "TIME": "2014-12-20",
+        "ELEMENT": "2014-12-20",
         "NUM_FACTS": 42,
         "MEASURE": {
             "DE_TransE": {
@@ -15024,7 +15024,7 @@
         }
     },
     {
-        "TIME": "2014-09-27",
+        "ELEMENT": "2014-09-27",
         "NUM_FACTS": 42,
         "MEASURE": {
             "DE_TransE": {
@@ -15072,7 +15072,7 @@
         }
     },
     {
-        "TIME": "2014-10-05",
+        "ELEMENT": "2014-10-05",
         "NUM_FACTS": 42,
         "MEASURE": {
             "DE_TransE": {
@@ -15120,7 +15120,7 @@
         }
     },
     {
-        "TIME": "2014-12-27",
+        "ELEMENT": "2014-12-27",
         "NUM_FACTS": 42,
         "MEASURE": {
             "DE_TransE": {
@@ -15168,7 +15168,7 @@
         }
     },
     {
-        "TIME": "2014-06-01",
+        "ELEMENT": "2014-06-01",
         "NUM_FACTS": 42,
         "MEASURE": {
             "DE_TransE": {
@@ -15216,7 +15216,7 @@
         }
     },
     {
-        "TIME": "2014-06-29",
+        "ELEMENT": "2014-06-29",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -15264,7 +15264,7 @@
         }
     },
     {
-        "TIME": "2014-02-22",
+        "ELEMENT": "2014-02-22",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -15312,7 +15312,7 @@
         }
     },
     {
-        "TIME": "2014-08-23",
+        "ELEMENT": "2014-08-23",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -15360,7 +15360,7 @@
         }
     },
     {
-        "TIME": "2014-10-25",
+        "ELEMENT": "2014-10-25",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -15408,7 +15408,7 @@
         }
     },
     {
-        "TIME": "2014-03-08",
+        "ELEMENT": "2014-03-08",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -15456,7 +15456,7 @@
         }
     },
     {
-        "TIME": "2014-01-25",
+        "ELEMENT": "2014-01-25",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -15504,7 +15504,7 @@
         }
     },
     {
-        "TIME": "2014-11-23",
+        "ELEMENT": "2014-11-23",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -15552,7 +15552,7 @@
         }
     },
     {
-        "TIME": "2014-05-17",
+        "ELEMENT": "2014-05-17",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -15600,7 +15600,7 @@
         }
     },
     {
-        "TIME": "2014-04-13",
+        "ELEMENT": "2014-04-13",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -15648,7 +15648,7 @@
         }
     },
     {
-        "TIME": "2014-08-16",
+        "ELEMENT": "2014-08-16",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -15696,7 +15696,7 @@
         }
     },
     {
-        "TIME": "2014-02-08",
+        "ELEMENT": "2014-02-08",
         "NUM_FACTS": 36,
         "MEASURE": {
             "DE_TransE": {
@@ -15744,7 +15744,7 @@
         }
     },
     {
-        "TIME": "2014-07-06",
+        "ELEMENT": "2014-07-06",
         "NUM_FACTS": 36,
         "MEASURE": {
             "DE_TransE": {
@@ -15792,7 +15792,7 @@
         }
     },
     {
-        "TIME": "2014-05-10",
+        "ELEMENT": "2014-05-10",
         "NUM_FACTS": 36,
         "MEASURE": {
             "DE_TransE": {
@@ -15840,7 +15840,7 @@
         }
     },
     {
-        "TIME": "2014-02-23",
+        "ELEMENT": "2014-02-23",
         "NUM_FACTS": 36,
         "MEASURE": {
             "DE_TransE": {
@@ -15888,7 +15888,7 @@
         }
     },
     {
-        "TIME": "2014-12-25",
+        "ELEMENT": "2014-12-25",
         "NUM_FACTS": 36,
         "MEASURE": {
             "DE_TransE": {
@@ -15936,7 +15936,7 @@
         }
     },
     {
-        "TIME": "2014-09-07",
+        "ELEMENT": "2014-09-07",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -15984,7 +15984,7 @@
         }
     },
     {
-        "TIME": "2014-08-17",
+        "ELEMENT": "2014-08-17",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -16032,7 +16032,7 @@
         }
     },
     {
-        "TIME": "2014-09-28",
+        "ELEMENT": "2014-09-28",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -16080,7 +16080,7 @@
         }
     },
     {
-        "TIME": "2014-04-20",
+        "ELEMENT": "2014-04-20",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -16128,7 +16128,7 @@
         }
     },
     {
-        "TIME": "2014-12-21",
+        "ELEMENT": "2014-12-21",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -16176,7 +16176,7 @@
         }
     },
     {
-        "TIME": "2014-01-04",
+        "ELEMENT": "2014-01-04",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -16224,7 +16224,7 @@
         }
     },
     {
-        "TIME": "2014-06-21",
+        "ELEMENT": "2014-06-21",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -16272,7 +16272,7 @@
         }
     },
     {
-        "TIME": "2014-08-31",
+        "ELEMENT": "2014-08-31",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -16320,7 +16320,7 @@
         }
     },
     {
-        "TIME": "2014-05-03",
+        "ELEMENT": "2014-05-03",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -16368,7 +16368,7 @@
         }
     },
     {
-        "TIME": "2014-01-02",
+        "ELEMENT": "2014-01-02",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -16416,7 +16416,7 @@
         }
     },
     {
-        "TIME": "2014-07-19",
+        "ELEMENT": "2014-07-19",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -16464,7 +16464,7 @@
         }
     },
     {
-        "TIME": "2014-01-05",
+        "ELEMENT": "2014-01-05",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -16512,7 +16512,7 @@
         }
     },
     {
-        "TIME": "2014-01-01",
+        "ELEMENT": "2014-01-01",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -16560,7 +16560,7 @@
         }
     },
     {
-        "TIME": "2014-02-16",
+        "ELEMENT": "2014-02-16",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -16608,7 +16608,7 @@
         }
     },
     {
-        "TIME": "2014-02-02",
+        "ELEMENT": "2014-02-02",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -16656,7 +16656,7 @@
         }
     },
     {
-        "TIME": "2014-01-12",
+        "ELEMENT": "2014-01-12",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -16704,7 +16704,7 @@
         }
     },
     {
-        "TIME": "2014-04-05",
+        "ELEMENT": "2014-04-05",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -16752,7 +16752,7 @@
         }
     },
     {
-        "TIME": "2014-04-19",
+        "ELEMENT": "2014-04-19",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -16800,7 +16800,7 @@
         }
     },
     {
-        "TIME": "2014-04-12",
+        "ELEMENT": "2014-04-12",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -16848,7 +16848,7 @@
         }
     },
     {
-        "TIME": "2014-06-15",
+        "ELEMENT": "2014-06-15",
         "NUM_FACTS": 27,
         "MEASURE": {
             "DE_TransE": {
@@ -16896,7 +16896,7 @@
         }
     },
     {
-        "TIME": "2014-08-03",
+        "ELEMENT": "2014-08-03",
         "NUM_FACTS": 27,
         "MEASURE": {
             "DE_TransE": {
@@ -16944,7 +16944,7 @@
         }
     },
     {
-        "TIME": "2014-01-03",
+        "ELEMENT": "2014-01-03",
         "NUM_FACTS": 27,
         "MEASURE": {
             "DE_TransE": {
@@ -16992,7 +16992,7 @@
         }
     },
     {
-        "TIME": "2014-12-31",
+        "ELEMENT": "2014-12-31",
         "NUM_FACTS": 27,
         "MEASURE": {
             "DE_TransE": {
@@ -17040,7 +17040,7 @@
         }
     },
     {
-        "TIME": "2014-10-04",
+        "ELEMENT": "2014-10-04",
         "NUM_FACTS": 27,
         "MEASURE": {
             "DE_TransE": {
@@ -17088,7 +17088,7 @@
         }
     },
     {
-        "TIME": "2014-06-14",
+        "ELEMENT": "2014-06-14",
         "NUM_FACTS": 24,
         "MEASURE": {
             "DE_TransE": {
@@ -17136,7 +17136,7 @@
         }
     },
     {
-        "TIME": "2014-01-11",
+        "ELEMENT": "2014-01-11",
         "NUM_FACTS": 24,
         "MEASURE": {
             "DE_TransE": {
@@ -17184,7 +17184,7 @@
         }
     },
     {
-        "TIME": "2014-03-30",
+        "ELEMENT": "2014-03-30",
         "NUM_FACTS": 24,
         "MEASURE": {
             "DE_TransE": {
@@ -17232,7 +17232,7 @@
         }
     },
     {
-        "TIME": "2014-03-22",
+        "ELEMENT": "2014-03-22",
         "NUM_FACTS": 21,
         "MEASURE": {
             "DE_TransE": {
@@ -17280,7 +17280,7 @@
         }
     },
     {
-        "TIME": "2014-01-19",
+        "ELEMENT": "2014-01-19",
         "NUM_FACTS": 21,
         "MEASURE": {
             "DE_TransE": {
@@ -17328,7 +17328,7 @@
         }
     },
     {
-        "TIME": "2014-10-26",
+        "ELEMENT": "2014-10-26",
         "NUM_FACTS": 18,
         "MEASURE": {
             "DE_TransE": {
@@ -17376,7 +17376,7 @@
         }
     },
     {
-        "TIME": "2014-10-12",
+        "ELEMENT": "2014-10-12",
         "NUM_FACTS": 18,
         "MEASURE": {
             "DE_TransE": {
@@ -17424,7 +17424,7 @@
         }
     },
     {
-        "TIME": "2014-02-09",
+        "ELEMENT": "2014-02-09",
         "NUM_FACTS": 18,
         "MEASURE": {
             "DE_TransE": {
@@ -17472,7 +17472,7 @@
         }
     },
     {
-        "TIME": "2014-06-08",
+        "ELEMENT": "2014-06-08",
         "NUM_FACTS": 15,
         "MEASURE": {
             "DE_TransE": {

@@ -1,0 +1,182 @@
+{
+    "DE_TransE-DE_TransE": {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 1.0
+    },
+    "DE_TransE-DE_SimplE": {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 0.7213114754098361
+    },
+    "DE_TransE-DE_DistMult": {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 0.7158469945355191
+    },
+    "DE_TransE-TERO": {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 0.7158469945355191
+    },
+    "DE_TransE-ATISE": {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 0.6721311475409836
+    },
+    "DE_TransE-TFLEX": {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 0.644808743169399
+    },
+    "DE_SimplE-DE_TransE": {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 0.7213114754098361
+    },
+    "DE_SimplE-DE_SimplE": {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 1.0
+    },
+    "DE_SimplE-DE_DistMult": {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 0.819672131147541
+    },
+    "DE_SimplE-TERO": {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 0.7704918032786885
+    },
+    "DE_SimplE-ATISE": {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 0.7595628415300546
+    },
+    "DE_SimplE-TFLEX": {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 0.6229508196721312
+    },
+    "DE_DistMult-DE_TransE": {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 0.7158469945355191
+    },
+    "DE_DistMult-DE_SimplE": {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 0.819672131147541
+    },
+    "DE_DistMult-DE_DistMult": {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 1.0
+    },
+    "DE_DistMult-TERO": {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 0.7595628415300546
+    },
+    "DE_DistMult-ATISE": {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 0.7595628415300546
+    },
+    "DE_DistMult-TFLEX": {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 0.6557377049180327
+    },
+    "TERO-DE_TransE": {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 0.7158469945355191
+    },
+    "TERO-DE_SimplE": {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 0.7704918032786885
+    },
+    "TERO-DE_DistMult": {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 0.7595628415300546
+    },
+    "TERO-TERO": {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 1.0
+    },
+    "TERO-ATISE": {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 0.7540983606557377
+    },
+    "TERO-TFLEX": {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 0.6721311475409836
+    },
+    "ATISE-DE_TransE": {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 0.6721311475409836
+    },
+    "ATISE-DE_SimplE": {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 0.7595628415300546
+    },
+    "ATISE-DE_DistMult": {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 0.7595628415300546
+    },
+    "ATISE-TERO": {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 0.7540983606557377
+    },
+    "ATISE-ATISE": {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 1.0
+    },
+    "ATISE-TFLEX": {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 0.6229508196721312
+    },
+    "TFLEX-DE_TransE": {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 0.644808743169399
+    },
+    "TFLEX-DE_SimplE": {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 0.6229508196721312
+    },
+    "TFLEX-DE_DistMult": {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 0.6557377049180327
+    },
+    "TFLEX-TERO": {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 0.6721311475409836
+    },
+    "TFLEX-ATISE": {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 0.6229508196721312
+    },
+    "TFLEX-TFLEX": {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 1.0
+    }
+}

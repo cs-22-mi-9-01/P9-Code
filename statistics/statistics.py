@@ -116,13 +116,13 @@ class Statistics():
             for element_key in element_measures.keys():
                 element_measures[element_key].normalize()
 
-                json_output.append({element: element_key, "NUM_FACTS": max(element_measures[element_key].num_facts.values()), "MEASURE": element_measures[element_key].as_dict()})
+                json_output.append({"ELEMENT": element_key, "NUM_FACTS": max(element_measures[element_key].num_facts.values()), "MEASURE": element_measures[element_key].as_dict()})
                 if normalization_scores is not None:
                     element_measures[element_key].normalize_to(normalization_scores)
-                    json_output_normalized.append({element: element_key, "NUM_FACTS": max(element_measures[element_key].num_facts.values()), "MEASURE": element_measures[element_key].as_dict()})
+                    json_output_normalized.append({"ELEMENT": element_key, "NUM_FACTS": max(element_measures[element_key].num_facts.values()), "MEASURE": element_measures[element_key].as_dict()})
 
-                print(str(element) + ": "+str(element_key) + ":")
-                element_measures[element_key].print()
+                #print(str(element) + ": "+str(element_key) + ":")
+                #element_measures[element_key].print()
 
             json_output.sort(key=lambda val: val["NUM_FACTS"], reverse=True)
             if normalization_scores is not None:
@@ -135,6 +135,58 @@ class Statistics():
                 results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+"_normalized.json")
                 self.write_json(results_path, json_output_normalized)
 
+    def calc_overlap(self, arr_x, arr_y):
+        shared_vals = 0.0
+        total_vals = 0.0
+
+        for val in arr_x:
+            if val in arr_y:
+                shared_vals += 1.0
+            total_vals += 1.0
+        
+        return shared_vals/total_vals
+
+    def hypothesis_2_top_x(self, embeddings):
+        for element in ["ENTITY", "RELATION", "TIME"]:
+            print("Testing hypothesis 2 top X percent on " + str(element) + "s:")
+
+            input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+".json")
+            json_input = self.read_json(input_path)
+
+            top_percentage = 0.5
+            no_of_elements = len(json_input)
+            element_split = int(no_of_elements * top_percentage)
+            json_percentage = {}
+
+            for embedding in embeddings:
+                if embedding not in json_percentage.keys():
+                    json_percentage[embedding] = {"TOP": [], "BOT": []}
+
+                json_input.sort(key=lambda val: val["MEASURE"][embedding]["MRR"], reverse=False)
+                for i in range(0, no_of_elements):
+                    if i < element_split:
+                        json_percentage[embedding]["BOT"].append(json_input[i]["ELEMENT"])
+                    else:
+                        json_percentage[embedding]["TOP"].append(json_input[i]["ELEMENT"])
+            
+            json_overlap = []
+
+            for embedding_n in embeddings:
+                for embedding_m in embeddings:
+                    json_overlap.append({
+                        "EMBEDDING_N": embedding_n,
+                        "EMBEDDING_M": embedding_m,
+                        "OVERLAP_TOP": self.calc_overlap(json_percentage[embedding_n]["TOP"], json_percentage[embedding_m]["TOP"])
+                    })
+
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", 
+                                        "top_x_overlap", str(element).lower()+"_top_"+str(int(top_percentage*100))+"_percentage.json")
+            self.write_json(results_path, json_percentage)
+            
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", 
+                                        "top_x_overlap", str(element).lower()+"_top_"+str(int(top_percentage*100))+"_overlap.json")
+            self.write_json(results_path, json_overlap)
+                
     def hypothesis_3(self, ranked_quads, embeddings, normalization_scores = None):        
         entity_measures = {}
         print("Testing hypothesis 3.")
@@ -263,7 +315,8 @@ class Statistics():
         overall_scores_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "overall_scores.json")        
         overall_scores = self.read_json(overall_scores_path)
 
+        #self.no_of_elements(dataset)
         #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
         #self.hypothesis_2(ranked_quads, embeddings, overall_scores)
+        self.hypothesis_2_top_x(embeddings)
         #self.hypothesis_3(ranked_quads, embeddings, overall_scores)
-        self.no_of_elements(dataset)

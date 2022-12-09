@@ -76,6 +76,70 @@ class FormatLatex():
 
                 self.write(output_path, result)
 
+    def format_embedding(self, embedding):
+        if embedding == 'DE_TransE':
+            return 'DE-T'
+        if embedding == 'DE_DistMult':
+            return 'DE-D'
+        if embedding == 'DE_SimplE':
+            return 'DE-S'
+        if embedding == 'TERO':
+            return 'TeRo'
+        if embedding == 'ATISE':
+            return 'ATiSE'
+        if embedding == 'TFLEX':
+            return 'TFLEX'
+
+    def get_overlap(self, overlap_json, emb_n, emb_m):
+        for o in overlap_json:
+            if o["EMBEDDING_N"] == emb_n and o["EMBEDDING_M"] == emb_m:
+                return o["OVERLAP_TOP"]
+
+    def to_str(self, value):
+        return "{:.2f}".format(value, 2)
+
+    def format_hypothesis_2_overlap(self):
+        for element_type in ["entity", "relation", "time"]:
+            input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "top_x_overlap", element_type + "_top_50_overlap.json")
+            output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_" + element_type + "_top_50_overlap.tex")
+            
+            overlap_json = self.read_json(input_path)
+
+            min_val = 100.0
+            max_val = -100.0
+
+            result = \
+            "\n" + \
+            r"\begin{tabular}{r|RRRRRR}" + "\n" +\
+            r"\multicolumn{1}{c|} {} &" + "\n" +\
+            r"\multicolumn{1}{c} {DE-T} &" + "\n" +\
+            r"\multicolumn{1}{c} {DE-D} &" + "\n" +\
+            r"\multicolumn{1}{c} {DE-S} &" + "\n" +\
+            r"\multicolumn{1}{c} {ATiSE} &" + "\n" +\
+            r"\multicolumn{1}{c} {TeRo} &" + "\n" +\
+            r"\multicolumn{1}{c} {TFLEX}\\ \hline" + "\n"
+                
+            for embedding_n in ['DE_TransE', 'DE_DistMult', 'DE_SimplE', 'ATISE', 'TERO', 'TFLEX']:
+                result += self.format_embedding(embedding_n)
+                for embedding_m in ['DE_TransE', 'DE_DistMult', 'DE_SimplE', 'ATISE', 'TERO', 'TFLEX']:
+                    r" & " + self.to_str(self.round(self.get_overlap(overlap_json, embedding_n, embedding_m)))
+                result += r"\\" + "\n"
+
+            for overlap in [o["OVERLAP_TOP"] for o in overlap_json]:
+                val = self.round(overlap)
+
+                if val < min_val:
+                    min_val = val
+                if val > max_val:
+                    max_val = val
+
+            result += \
+            r"\end{tabular}" + "\n"
+            result = "\n" + r"\renewcommand{\MinNumber}{" + str(min_val) + r"}%" + "\n" +\
+            r"\renewcommand{\MaxNumber}{" + str(max_val) + r"}%" + "\n" + result
+
+            self.write(output_path, result)    
+
     def format_hypothesis_3(self):
         for normalized in ["", "_normalized"]:
             input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3", "hypothesis_3" + normalized + ".json")
@@ -155,4 +219,5 @@ class FormatLatex():
     def format(self):
         #self.format_hypothesis_2()
         #self.format_hypothesis_3()
-        self.format_no_of_entities()
+        #self.format_no_of_entities()
+        self.format_hypothesis_2_overlap()
