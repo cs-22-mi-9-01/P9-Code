@@ -43,7 +43,7 @@ def main():
     in_file.close()
 
     if params.embedding == "all":
-        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'ATISE', 'TFLEX','TimePlex']
+        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'ATISE', 'TFLEX']
     else:
         embeddings = [params.embedding]
 
