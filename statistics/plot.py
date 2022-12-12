@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import json
 import pandas as pd
+from matplotlib.pyplot import MultipleLocator
 
 
 def hypothesis_1(*args):
@@ -55,6 +56,99 @@ def hypothesis_1(*args):
     plt.title('Hypothesis 1')
     plt.legend()
     fig.savefig("figure/icews14/hypothesis_1.png")
+
+def hypothesis_2(filename):
+    pd_data = pd.read_json(filename)
+    MRR_DE_TransE = []
+    MRR_DE_SimplE = []
+    MRR_DE_DistMult = []
+    MRR_TERO = []
+    MRR_ATISE = []
+    for key, value in pd_data['MEASURE'].items():
+        for key1, value1 in value.items():
+            if key1 == 'DE_TransE':
+                for key2, value2 in value1.items():
+                    if key2 == 'MRR':
+                        MRR_DE_TransE.append(round(value2, 2))
+            elif key1 == 'DE_SimplE':
+                for key2, value2 in value1.items():
+                    if key2 == 'MRR':
+                        MRR_DE_SimplE.append(round(value2, 2))
+            elif key1 == 'DE_DistMult':
+                for key2, value2 in value1.items():
+                    if key2 == 'MRR':
+                        MRR_DE_DistMult.append(round(value2, 2))
+            elif key1 == 'TERO':
+                for key2, value2 in value1.items():
+                    if key2 == 'MRR':
+                        MRR_TERO.append(round(value2, 2))
+            elif key1 == 'ATISE':
+                for key2, value2 in value1.items():
+                    if key2 == 'MRR':
+                        MRR_ATISE.append(round(value2, 2))
+    pd_data = pd_data.iloc[:,:-1]
+    pd_MRR = pd.DataFrame(list(zip(MRR_DE_TransE, MRR_DE_SimplE, MRR_DE_DistMult, MRR_TERO, MRR_ATISE)), columns=['DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE'])
+    
+    pd_MRR_DE_TransE = pd.concat([pd_MRR["DE_TransE"], pd_data], axis=1).set_index("DE_TransE")
+    pd_MRR_DE_TransE = pd_MRR_DE_TransE.sort_index()
+    pd_MRR_DE_TransE = pd_MRR_DE_TransE.groupby(by=["DE_TransE"]).sum().reset_index()
+
+    pd_MRR_DE_SimplE = pd.concat([pd_MRR["DE_SimplE"], pd_data], axis=1).set_index("DE_SimplE")
+    pd_MRR_DE_SimplE = pd_MRR_DE_SimplE.sort_index()
+    pd_MRR_DE_SimplE = pd_MRR_DE_SimplE.groupby(by=["DE_SimplE"]).sum().reset_index()
+    
+    pd_MRR_DE_DistMult = pd.concat([pd_MRR["DE_DistMult"], pd_data], axis=1).set_index("DE_DistMult")
+    pd_MRR_DE_DistMult = pd_MRR_DE_DistMult.sort_index()
+    pd_MRR_DE_DistMult = pd_MRR_DE_DistMult.groupby(by=["DE_DistMult"]).sum().reset_index()
+
+    pd_MRR_TERO = pd.concat([pd_MRR["TERO"], pd_data], axis=1).set_index("TERO")
+    pd_MRR_TERO = pd_MRR_TERO.sort_index()
+    pd_MRR_TERO = pd_MRR_TERO.groupby(by=["TERO"]).sum().reset_index()
+
+    pd_MRR_ATISE = pd.concat([pd_MRR["ATISE"], pd_data], axis=1).set_index("ATISE")
+    pd_MRR_ATISE = pd_MRR_ATISE.sort_index()
+    pd_MRR_ATISE = pd_MRR_ATISE.groupby(by=["ATISE"]).sum().reset_index()
+
+
+    # Draw plot
+    fig = plt.figure(figsize=(16, 10), dpi=80)
+    x_major_locator = MultipleLocator(0.1)
+    ax = plt.gca()
+    ax.xaxis.set_major_locator(x_major_locator)
+    plt.subplot(5, 1, 1)
+    plt.title("Hypothesis 2")
+    plt.plot("DE_TransE", "NUM_FACTS", data=pd_MRR_DE_TransE, color='red')
+    plt.ylabel("DE_TransE")
+    plt.legend()
+
+    plt.subplot(5, 1, 2)
+    plt.plot("DE_SimplE", "NUM_FACTS", data=pd_MRR_DE_SimplE, color='orange')
+    plt.xlabel("DE_SimplE")
+    plt.ylabel("DE_SimplE")
+    plt.legend()
+
+    plt.subplot(5, 1, 3)
+    plt.plot("DE_DistMult", "NUM_FACTS", data=pd_MRR_DE_DistMult, color='green')
+    plt.xlabel("DE_DistMult")
+    plt.ylabel("DE_DistMult")
+    plt.legend()
+
+    fig.set_label("ddd")
+
+    plt.subplot(5, 1, 4)
+    plt.plot("TERO", "NUM_FACTS", data=pd_MRR_TERO, color='blue')
+    plt.xlabel("TERO")
+    plt.ylabel("TERO")
+    plt.legend()
+
+    plt.subplot(5, 1, 5)
+    plt.plot("ATISE", "NUM_FACTS", data=pd_MRR_ATISE, color='purple')
+    plt.xlabel("MRR")
+    plt.ylabel("ATISE")
+    plt.grid(axis='both', alpha=0.3)
+    plt.legend()
+    plt.show()
+    fig.savefig("figure/icews14/hypothesis2.png")
 
 
 #  Time Series Plot
@@ -254,8 +348,9 @@ def relation_distribution(filename, type):
 
 
 if __name__ == '__main__':
-    hypothesis_1('result/icews14/hypothesis_1_head.json', 'result/icews14/hypothesis_1_relation.json', 'result/icews14/hypothesis_1_tail.json', 'result/icews14/hypothesis_1_time.json')
+    # hypothesis_1('result/icews14/hypothesis_1_head.json', 'result/icews14/hypothesis_1_relation.json', 'result/icews14/hypothesis_1_tail.json', 'result/icews14/hypothesis_1_time.json')
     # time_distribution('result/icews14/hypothesis_2_time.json', 'mrr')
     # entity_distribution('result/icews14/hypothesis_2_entity.json', 'mrr')
     # relation_distribution('result/icews14/hypothesis_2_relation.json', 'num')
-    
+    # entity_distribution_group('result/icews14/hypothesis_2_entity.json')
+    hypothesis_2('result/icews14/hypothesis_2_entity.json')
