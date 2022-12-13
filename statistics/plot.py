@@ -111,26 +111,33 @@ def hypothesis_2(filename):
 
 
     # Draw plot
-    fig = plt.figure(figsize=(16, 10), dpi=80)
+    fig = plt.figure(figsize=(16, 15), dpi=80)
     x_major_locator = MultipleLocator(0.1)
     ax = plt.gca()
     ax.xaxis.set_major_locator(x_major_locator)
     plt.subplot(5, 1, 1)
+
     plt.title("Hypothesis 2")
     plt.plot("DE_TransE", "NUM_FACTS", data=pd_MRR_DE_TransE, color='red')
     plt.ylabel("DE_TransE")
+    plt.ylim(0, 8000)
+    plt.xlim(0, 1.0)
     plt.legend()
 
     plt.subplot(5, 1, 2)
     plt.plot("DE_SimplE", "NUM_FACTS", data=pd_MRR_DE_SimplE, color='orange')
     plt.xlabel("DE_SimplE")
     plt.ylabel("DE_SimplE")
+    plt.ylim(0, 8000)
+    plt.xlim(0, 1.0)
     plt.legend()
 
     plt.subplot(5, 1, 3)
     plt.plot("DE_DistMult", "NUM_FACTS", data=pd_MRR_DE_DistMult, color='green')
     plt.xlabel("DE_DistMult")
     plt.ylabel("DE_DistMult")
+    plt.ylim(0, 8000)
+    plt.xlim(0, 1.0)
     plt.legend()
 
     fig.set_label("ddd")
@@ -139,16 +146,20 @@ def hypothesis_2(filename):
     plt.plot("TERO", "NUM_FACTS", data=pd_MRR_TERO, color='blue')
     plt.xlabel("TERO")
     plt.ylabel("TERO")
+    plt.ylim(0, 8000)
+    plt.xlim(0, 1.0)
     plt.legend()
 
     plt.subplot(5, 1, 5)
     plt.plot("ATISE", "NUM_FACTS", data=pd_MRR_ATISE, color='purple')
     plt.xlabel("MRR")
     plt.ylabel("ATISE")
+    plt.ylim(0, 8000)
+    plt.xlim(0, 1.0)
     plt.grid(axis='both', alpha=0.3)
     plt.legend()
     plt.show()
-    fig.savefig("figure/icews14/hypothesis2.png")
+    fig.savefig("figure/icews14/hypothesis_2_relation.png")
 
 
 #  Time Series Plot
@@ -353,4 +364,4 @@ if __name__ == '__main__':
     # entity_distribution('result/icews14/hypothesis_2_entity.json', 'mrr')
     # relation_distribution('result/icews14/hypothesis_2_relation.json', 'num')
     # entity_distribution_group('result/icews14/hypothesis_2_entity.json')
-    hypothesis_2('result/icews14/hypothesis_2_entity.json')
+    hypothesis_2('result/icews14/hypothesis_2_relation.json')
