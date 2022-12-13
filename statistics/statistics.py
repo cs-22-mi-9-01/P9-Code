@@ -11,6 +11,7 @@ from copy import deepcopy
 class Statistics():
     def __init__(self, params) -> None:
         self.params = params
+        self.gamma = 15
 
     def write_json(self, path, dict):
         Path(path).touch(exist_ok=True)
@@ -121,8 +122,15 @@ class Statistics():
                     element_measures[element_key].normalize_to(normalization_scores)
                     json_output_normalized.append({"ELEMENT": element_key, "NUM_FACTS": max(element_measures[element_key].num_facts.values()), "MEASURE": element_measures[element_key].as_dict()})
 
-                #print(str(element) + ": "+str(element_key) + ":")
-                #element_measures[element_key].print()
+            pop_indexes = []
+            for i, dict in enumerate(json_output):
+                if dict["NUM_FACTS"] < self.gamma:
+                    pop_indexes.append(i)
+                
+            for i in range(len(pop_indexes) -1, -1, -1):
+                json_output.pop(pop_indexes[i])
+                if normalization_scores is not None:
+                    json_output_normalized.pop(pop_indexes[i])
 
             json_output.sort(key=lambda val: val["NUM_FACTS"], reverse=True)
             if normalization_scores is not None:
@@ -153,7 +161,7 @@ class Statistics():
             input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+".json")
             json_input = self.read_json(input_path)
 
-            top_percentage = 0.3
+            top_percentage = 0.5
             no_of_elements = len(json_input)
             element_split = int(no_of_elements * top_percentage)
             json_percentage = {}
@@ -317,6 +325,6 @@ class Statistics():
 
         #self.no_of_elements(dataset)
         #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
-        #self.hypothesis_2(ranked_quads, embeddings, overall_scores)
+        self.hypothesis_2(ranked_quads, embeddings, overall_scores)
         self.hypothesis_2_top_x(embeddings)
         #self.hypothesis_3(ranked_quads, embeddings, overall_scores)
