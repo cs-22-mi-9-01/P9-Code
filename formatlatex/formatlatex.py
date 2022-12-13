@@ -28,7 +28,7 @@ class FormatLatex():
             return measure["TIME"]
     
     def round(self, val):
-        return round(val, 2)
+        return round(val, 1)
 
     def format_hypothesis_2(self):
         for normalized in ["", "_normalized"]:
@@ -96,7 +96,7 @@ class FormatLatex():
                 return o["OVERLAP_TOP"]
 
     def to_str(self, value):
-        return "{:.2f}".format(value, 2)
+        return "{:.1f}".format(value, 1)
 
     def format_hypothesis_2_overlap(self):
         for element_type in ["entity", "relation", "time"]:
@@ -123,16 +123,16 @@ class FormatLatex():
                 result += self.format_embedding(embedding_n)
                 for embedding_m in ['DE_TransE', 'DE_DistMult', 'DE_SimplE', 'ATISE', 'TERO', 'TFLEX']:
                     if embedding_n == embedding_m:
-                        result += r" & \multicolumn{1}{c} {1.00}"
+                        result += r" & \multicolumn{1}{c} {100.0}"
                     else:
-                        result += r" & " + self.to_str(self.round(self.get_overlap(overlaps, embedding_n, embedding_m)))
+                        result += r" & " + self.to_str(self.round(self.get_overlap(overlaps, embedding_n, embedding_m)*100.0))
                 result += r"\\" + "\n"
 
             for overlap in overlaps:
                 if overlap["EMBEDDING_N"] == overlap["EMBEDDING_M"]:
                     continue
 
-                val = self.round(overlap["OVERLAP_TOP"])
+                val = self.round(overlap["OVERLAP_TOP"]*100.0)
 
                 if val < min_val:
                     min_val = val
