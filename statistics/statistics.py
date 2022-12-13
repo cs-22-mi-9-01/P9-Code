@@ -263,12 +263,12 @@ class Statistics():
         sortedList = sorted(entity_scores, key=lambda d: d['MEASURE'][method_name]['MRR'], reverse=True)
         return sortedList
 
-    def get_Top_5_Elements(self, entity_scores):
+    def get_Top_N_Elements(self, entity_scores, n=5):
         Top5_Dict = {}
         for method_name in ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'ATISE', 'TFLEX']:
             sortedList= self.entity_MRR_Sort(entity_scores, method_name)
             Top5_Dict[method_name] = {}
-            for i in range(0,5):
+            for i in range(0,n):
                 dict_Name = "Number {}".format(i+1)
 
                 Top5_Dict[method_name][dict_Name] = sortedList[i]
