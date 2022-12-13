@@ -259,16 +259,30 @@ class Statistics():
     
     def entity_MRR_Sort(self, entity_scores, method_name):
         
-        #print(entity_scores[1]['MEASURE']['DE_TransE'])
-        sortedlist = sorted(entity_scores, key=lambda d: d['MEASURE']['DE_TransE']['MRR'], reverse=True)
-        #for i in range(0,30):
-        #    print(sortedlist[i]['MEASURE'][method_name])
-        return sortedlist
+        entity_scores = [x for x in entity_scores if x['NUM_FACTS'] > 12]
+        sortedList = sorted(entity_scores, key=lambda d: d['MEASURE'][method_name]['MRR'], reverse=True)
+        return sortedList
 
-    def get_Top_5_Elements(self):
+    def get_Top_5_Elements(self, entity_scores):
+        Top5_Dict = {}
+        for method_name in ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'ATISE', 'TFLEX']:
+            sortedList= self.entity_MRR_Sort(entity_scores, method_name)
+            print(method_name)
+            Top5_Dict[method_name] = {}
+            for i in range(0,5):
+                dict_Name = "Number {}".format(i+1)
+
+                Top5_Dict[method_name][dict_Name] = sortedList[i]
+        
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "top_5_entities.json")
+        self.write_json(results_path, Top5_Dict)
+                
+
 
         
         return
+
+
     def no_of_elements(self, dataset):
         entities = {}
         relations = {}
@@ -333,5 +347,6 @@ class Statistics():
         #self.no_of_elements(dataset)
         #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
         #self.hypothesis_2(ranked_quads, embeddings, overall_scores)
-        self.hypothesis_2_top_x(embeddings)
+        #self.hypothesis_2_top_x(embeddings)
         #self.hypothesis_3(ranked_quads, embeddings, overall_scores)
+        self.get_Top_5_Elements(entity_scores)
