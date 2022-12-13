@@ -28,7 +28,7 @@ class FormatLatex():
             return measure["TIME"]
     
     def round(self, val):
-        return round(val, 2)
+        return round(val, 1)
 
     def format_hypothesis_2(self):
         for normalized in ["", "_normalized"]:
@@ -75,6 +75,76 @@ class FormatLatex():
                 r"\renewcommand{\MaxNumber}{" + str(max_val) + r"}%" + "\n" + result
 
                 self.write(output_path, result)
+
+    def format_embedding(self, embedding):
+        if embedding == 'DE_TransE':
+            return 'DE-T'
+        if embedding == 'DE_DistMult':
+            return 'DE-D'
+        if embedding == 'DE_SimplE':
+            return 'DE-S'
+        if embedding == 'TERO':
+            return 'TeRo'
+        if embedding == 'ATISE':
+            return 'ATiSE'
+        if embedding == 'TFLEX':
+            return 'TFLEX'
+
+    def get_overlap(self, overlaps, emb_n, emb_m):
+        for o in overlaps:
+            if o["EMBEDDING_N"] == emb_n and o["EMBEDDING_M"] == emb_m:
+                return o["OVERLAP_TOP"]
+
+    def to_str(self, value):
+        return "{:.1f}".format(value, 1)
+
+    def format_hypothesis_2_overlap(self):
+        for element_type in ["entity", "relation", "time"]:
+            input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "top_x_overlap", element_type + "_top_50_overlap.json")
+            output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_" + element_type + "_top_50_overlap.tex")
+            
+            overlaps = self.read_json(input_path)
+
+            min_val = 100.0
+            max_val = -100.0
+
+            result = \
+            "\n" + \
+            r"\begin{tabular}{r|RRRRRR}" + "\n" +\
+            r"\multicolumn{1}{c|} {} &" + "\n" +\
+            r"\multicolumn{1}{c} {DE-T} &" + "\n" +\
+            r"\multicolumn{1}{c} {DE-D} &" + "\n" +\
+            r"\multicolumn{1}{c} {DE-S} &" + "\n" +\
+            r"\multicolumn{1}{c} {ATiSE} &" + "\n" +\
+            r"\multicolumn{1}{c} {TeRo} &" + "\n" +\
+            r"\multicolumn{1}{c} {TFLEX}\\ \hline" + "\n"
+                
+            for embedding_n in ['DE_TransE', 'DE_DistMult', 'DE_SimplE', 'ATISE', 'TERO', 'TFLEX']:
+                result += self.format_embedding(embedding_n)
+                for embedding_m in ['DE_TransE', 'DE_DistMult', 'DE_SimplE', 'ATISE', 'TERO', 'TFLEX']:
+                    if embedding_n == embedding_m:
+                        result += r" & \multicolumn{1}{c} {100.0}"
+                    else:
+                        result += r" & " + self.to_str(self.round(self.get_overlap(overlaps, embedding_n, embedding_m)*100.0))
+                result += r"\\" + "\n"
+
+            for overlap in overlaps:
+                if overlap["EMBEDDING_N"] == overlap["EMBEDDING_M"]:
+                    continue
+
+                val = self.round(overlap["OVERLAP_TOP"]*100.0)
+
+                if val < min_val:
+                    min_val = val
+                if val > max_val:
+                    max_val = val
+
+            result += \
+            r"\end{tabular}" + "\n"
+            result = "\n" + r"\renewcommand{\MinNumber}{" + str(min_val) + r"}%" + "\n" +\
+            r"\renewcommand{\MaxNumber}{" + str(max_val) + r"}%" + "\n" + result
+
+            self.write(output_path, result)    
 
     def format_hypothesis_3(self):
         for normalized in ["", "_normalized"]:
@@ -127,6 +197,33 @@ class FormatLatex():
 
             self.write(output_path, result)
 
+    def format_no_of_entities(self):
+        for element in ["entities", "relations", "timestamps"]:
+            input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "no_of_elements", "train_" + element + ".json")
+            output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "no_of_elements_train_" + element + ".tex")
+            
+            input = self.read_json(input_path)
+
+            min_val = 999
+            max_val = 0
+
+            result = r"\addplot+ coordinates {" + "\n"
+            for i, e in enumerate(input):
+                val = e["COUNT"]
+                result += r"   (" + str(i) + r", " + str(val) + r")" + "\n"
+                
+                if val < min_val:
+                    min_val = val
+                if val > max_val:
+                    max_val = val
+            
+            result += r"} ;"
+            result = r"% MIN VAL: " + str(min_val) + "\n" + r"% MAX VAL: " + str(max_val) + "\n\n" + result
+
+            self.write(output_path, result)
+
     def format(self):
         #self.format_hypothesis_2()
-        self.format_hypothesis_3()
+        #self.format_hypothesis_3()
+        #self.format_no_of_entities()
+        self.format_hypothesis_2_overlap()
