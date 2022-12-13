@@ -348,4 +348,4 @@ class Statistics():
         #self.hypothesis_2(ranked_quads, embeddings, overall_scores)
         #self.hypothesis_2_top_x(embeddings)
         #self.hypothesis_3(ranked_quads, embeddings, overall_scores)
-        self.get_Top_5_Elements(entity_scores)
+        #self.get_Top_5_Elements(entity_scores)
