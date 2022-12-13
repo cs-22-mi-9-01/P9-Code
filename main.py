@@ -15,14 +15,14 @@ from formatlatex.formatlatex import FormatLatex
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-task', type=str, default='rank', choices=['statistics', 'rank', 'formatlatex'])
+    parser.add_argument('-task', type=str, default='formatlatex', choices=['statistics', 'rank', 'formatlatex'])
     parser.add_argument('-dataset', type=str, default='icews14', choices=['icews14', 'icews05-15', 'gdelt'])
-    parser.add_argument('-embedding', type=str, default='TimePlex', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE', 'TFLEX','TimePlex'])
+    parser.add_argument('-embedding', type=str, default='all', choices=['all', 'DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE', 'TFLEX','TimePlex'])
     parser.add_argument('-add_to_result', type=bool, default=True)
 
     args = parser.parse_args()
     params = Parameters(args)
-
+    
     match params.task:
         case "statistics":
             statistics = Statistics(params)
@@ -43,7 +43,7 @@ def main():
     in_file.close()
 
     if params.embedding == "all":
-        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'ATISE', 'TFLEX','TimePlex']
+        embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'ATISE', 'TFLEX']
     else:
         embeddings = [params.embedding]
 

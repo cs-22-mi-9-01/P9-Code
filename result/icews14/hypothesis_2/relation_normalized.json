@@ -1,6 +1,6 @@
 [
     {
-        "ENTITY": "Make statement",
+        "ELEMENT": "Make statement",
         "NUM_FACTS": 4500,
         "MEASURE": {
             "DE_TransE": {
@@ -48,7 +48,7 @@
         }
     },
     {
-        "ENTITY": "Consult",
+        "ELEMENT": "Consult",
         "NUM_FACTS": 2931,
         "MEASURE": {
             "DE_TransE": {
@@ -96,7 +96,7 @@
         }
     },
     {
-        "ENTITY": "Make an appeal or request",
+        "ELEMENT": "Make an appeal or request",
         "NUM_FACTS": 1887,
         "MEASURE": {
             "DE_TransE": {
@@ -144,7 +144,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to meet or negotiate",
+        "ELEMENT": "Express intent to meet or negotiate",
         "NUM_FACTS": 1485,
         "MEASURE": {
             "DE_TransE": {
@@ -192,7 +192,7 @@
         }
     },
     {
-        "ENTITY": "Make a visit",
+        "ELEMENT": "Make a visit",
         "NUM_FACTS": 1296,
         "MEASURE": {
             "DE_TransE": {
@@ -240,7 +240,7 @@
         }
     },
     {
-        "ENTITY": "Host a visit",
+        "ELEMENT": "Host a visit",
         "NUM_FACTS": 1296,
         "MEASURE": {
             "DE_TransE": {
@@ -288,7 +288,7 @@
         }
     },
     {
-        "ENTITY": "Arrest, detain, or charge with legal action",
+        "ELEMENT": "Arrest, detain, or charge with legal action",
         "NUM_FACTS": 1206,
         "MEASURE": {
             "DE_TransE": {
@@ -336,7 +336,7 @@
         }
     },
     {
-        "ENTITY": "Praise or endorse",
+        "ELEMENT": "Praise or endorse",
         "NUM_FACTS": 1029,
         "MEASURE": {
             "DE_TransE": {
@@ -384,7 +384,7 @@
         }
     },
     {
-        "ENTITY": "Criticize or denounce",
+        "ELEMENT": "Criticize or denounce",
         "NUM_FACTS": 927,
         "MEASURE": {
             "DE_TransE": {
@@ -432,7 +432,7 @@
         }
     },
     {
-        "ENTITY": "Accuse",
+        "ELEMENT": "Accuse",
         "NUM_FACTS": 804,
         "MEASURE": {
             "DE_TransE": {
@@ -480,7 +480,7 @@
         }
     },
     {
-        "ENTITY": "Use unconventional violence",
+        "ELEMENT": "Use unconventional violence",
         "NUM_FACTS": 657,
         "MEASURE": {
             "DE_TransE": {
@@ -528,7 +528,7 @@
         }
     },
     {
-        "ENTITY": "Engage in negotiation",
+        "ELEMENT": "Engage in negotiation",
         "NUM_FACTS": 582,
         "MEASURE": {
             "DE_TransE": {
@@ -576,7 +576,7 @@
         }
     },
     {
-        "ENTITY": "Use conventional military force",
+        "ELEMENT": "Use conventional military force",
         "NUM_FACTS": 573,
         "MEASURE": {
             "DE_TransE": {
@@ -624,7 +624,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to cooperate",
+        "ELEMENT": "Express intent to cooperate",
         "NUM_FACTS": 534,
         "MEASURE": {
             "DE_TransE": {
@@ -672,7 +672,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to engage in diplomatic cooperation (such as policy support)",
+        "ELEMENT": "Express intent to engage in diplomatic cooperation (such as policy support)",
         "NUM_FACTS": 489,
         "MEASURE": {
             "DE_TransE": {
@@ -720,7 +720,7 @@
         }
     },
     {
-        "ENTITY": "Engage in diplomatic cooperation",
+        "ELEMENT": "Engage in diplomatic cooperation",
         "NUM_FACTS": 426,
         "MEASURE": {
             "DE_TransE": {
@@ -768,7 +768,7 @@
         }
     },
     {
-        "ENTITY": "Demand",
+        "ELEMENT": "Demand",
         "NUM_FACTS": 408,
         "MEASURE": {
             "DE_TransE": {
@@ -816,7 +816,7 @@
         }
     },
     {
-        "ENTITY": "Sign formal agreement",
+        "ELEMENT": "Sign formal agreement",
         "NUM_FACTS": 387,
         "MEASURE": {
             "DE_TransE": {
@@ -864,7 +864,7 @@
         }
     },
     {
-        "ENTITY": "Investigate",
+        "ELEMENT": "Investigate",
         "NUM_FACTS": 270,
         "MEASURE": {
             "DE_TransE": {
@@ -912,7 +912,7 @@
         }
     },
     {
-        "ENTITY": "Discuss by telephone",
+        "ELEMENT": "Discuss by telephone",
         "NUM_FACTS": 264,
         "MEASURE": {
             "DE_TransE": {
@@ -960,7 +960,7 @@
         }
     },
     {
-        "ENTITY": "Reject",
+        "ELEMENT": "Reject",
         "NUM_FACTS": 261,
         "MEASURE": {
             "DE_TransE": {
@@ -1008,7 +1008,7 @@
         }
     },
     {
-        "ENTITY": "fight with small arms and light weapons",
+        "ELEMENT": "fight with small arms and light weapons",
         "NUM_FACTS": 234,
         "MEASURE": {
             "DE_TransE": {
@@ -1056,7 +1056,7 @@
         }
     },
     {
-        "ENTITY": "Threaten",
+        "ELEMENT": "Threaten",
         "NUM_FACTS": 216,
         "MEASURE": {
             "DE_TransE": {
@@ -1104,7 +1104,7 @@
         }
     },
     {
-        "ENTITY": "Meet at a 'third' location",
+        "ELEMENT": "Meet at a 'third' location",
         "NUM_FACTS": 210,
         "MEASURE": {
             "DE_TransE": {
@@ -1152,7 +1152,7 @@
         }
     },
     {
-        "ENTITY": "Make optimistic comment",
+        "ELEMENT": "Make optimistic comment",
         "NUM_FACTS": 183,
         "MEASURE": {
             "DE_TransE": {
@@ -1200,7 +1200,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for diplomatic cooperation (such as policy support)",
+        "ELEMENT": "Appeal for diplomatic cooperation (such as policy support)",
         "NUM_FACTS": 168,
         "MEASURE": {
             "DE_TransE": {
@@ -1248,7 +1248,7 @@
         }
     },
     {
-        "ENTITY": "Abduct, hijack, or take hostage",
+        "ELEMENT": "Abduct, hijack, or take hostage",
         "NUM_FACTS": 168,
         "MEASURE": {
             "DE_TransE": {
@@ -1296,7 +1296,7 @@
         }
     },
     {
-        "ENTITY": "Demonstrate or rally",
+        "ELEMENT": "Demonstrate or rally",
         "NUM_FACTS": 165,
         "MEASURE": {
             "DE_TransE": {
@@ -1344,7 +1344,7 @@
         }
     },
     {
-        "ENTITY": "Make pessimistic comment",
+        "ELEMENT": "Make pessimistic comment",
         "NUM_FACTS": 156,
         "MEASURE": {
             "DE_TransE": {
@@ -1392,7 +1392,7 @@
         }
     },
     {
-        "ENTITY": "Protest violently, riot",
+        "ELEMENT": "Protest violently, riot",
         "NUM_FACTS": 138,
         "MEASURE": {
             "DE_TransE": {
@@ -1440,7 +1440,7 @@
         }
     },
     {
-        "ENTITY": "Engage in symbolic act",
+        "ELEMENT": "Engage in symbolic act",
         "NUM_FACTS": 129,
         "MEASURE": {
             "DE_TransE": {
@@ -1488,7 +1488,7 @@
         }
     },
     {
-        "ENTITY": "Return, release person(s)",
+        "ELEMENT": "Return, release person(s)",
         "NUM_FACTS": 120,
         "MEASURE": {
             "DE_TransE": {
@@ -1536,7 +1536,7 @@
         }
     },
     {
-        "ENTITY": "Physically assault",
+        "ELEMENT": "Physically assault",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -1584,7 +1584,7 @@
         }
     },
     {
-        "ENTITY": "Make empathetic comment",
+        "ELEMENT": "Make empathetic comment",
         "NUM_FACTS": 90,
         "MEASURE": {
             "DE_TransE": {
@@ -1632,7 +1632,7 @@
         }
     },
     {
-        "ENTITY": "Occupy territory",
+        "ELEMENT": "Occupy territory",
         "NUM_FACTS": 84,
         "MEASURE": {
             "DE_TransE": {
@@ -1680,7 +1680,7 @@
         }
     },
     {
-        "ENTITY": "Deny responsibility",
+        "ELEMENT": "Deny responsibility",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -1728,7 +1728,7 @@
         }
     },
     {
-        "ENTITY": "Use tactics of violent repression",
+        "ELEMENT": "Use tactics of violent repression",
         "NUM_FACTS": 81,
         "MEASURE": {
             "DE_TransE": {
@@ -1776,7 +1776,7 @@
         }
     },
     {
-        "ENTITY": "Reduce ENTITYs",
+        "ELEMENT": "Reduce relations",
         "NUM_FACTS": 72,
         "MEASURE": {
             "DE_TransE": {
@@ -1824,7 +1824,7 @@
         }
     },
     {
-        "ENTITY": "Provide aid",
+        "ELEMENT": "Provide aid",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -1872,7 +1872,7 @@
         }
     },
     {
-        "ENTITY": "Mobilize or increase armed forces",
+        "ELEMENT": "Mobilize or increase armed forces",
         "NUM_FACTS": 69,
         "MEASURE": {
             "DE_TransE": {
@@ -1920,7 +1920,7 @@
         }
     },
     {
-        "ENTITY": "Provide humanitarian aid",
+        "ELEMENT": "Provide humanitarian aid",
         "NUM_FACTS": 66,
         "MEASURE": {
             "DE_TransE": {
@@ -1968,7 +1968,7 @@
         }
     },
     {
-        "ENTITY": "Impose administrative sanctions",
+        "ELEMENT": "Impose administrative sanctions",
         "NUM_FACTS": 63,
         "MEASURE": {
             "DE_TransE": {
@@ -2016,7 +2016,7 @@
         }
     },
     {
-        "ENTITY": "Confiscate property",
+        "ELEMENT": "Confiscate property",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -2064,7 +2064,7 @@
         }
     },
     {
-        "ENTITY": "Bring lawsuit against",
+        "ELEMENT": "Bring lawsuit against",
         "NUM_FACTS": 60,
         "MEASURE": {
             "DE_TransE": {
@@ -2112,7 +2112,7 @@
         }
     },
     {
-        "ENTITY": "Cooperate militarily",
+        "ELEMENT": "Cooperate militarily",
         "NUM_FACTS": 54,
         "MEASURE": {
             "DE_TransE": {
@@ -2160,7 +2160,7 @@
         }
     },
     {
-        "ENTITY": "Cooperate economically",
+        "ELEMENT": "Cooperate economically",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -2208,7 +2208,7 @@
         }
     },
     {
-        "ENTITY": "Yield",
+        "ELEMENT": "Yield",
         "NUM_FACTS": 51,
         "MEASURE": {
             "DE_TransE": {
@@ -2256,7 +2256,7 @@
         }
     },
     {
-        "ENTITY": "Complain officially",
+        "ELEMENT": "Complain officially",
         "NUM_FACTS": 48,
         "MEASURE": {
             "DE_TransE": {
@@ -2304,7 +2304,7 @@
         }
     },
     {
-        "ENTITY": "Conduct suicide, car, or other non-military bombing",
+        "ELEMENT": "Conduct suicide, car, or other non-military bombing",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -2352,7 +2352,7 @@
         }
     },
     {
-        "ENTITY": "Reduce or break diplomatic ENTITYs",
+        "ELEMENT": "Reduce or break diplomatic relations",
         "NUM_FACTS": 45,
         "MEASURE": {
             "DE_TransE": {
@@ -2400,7 +2400,7 @@
         }
     },
     {
-        "ENTITY": "Threaten with military force",
+        "ELEMENT": "Threaten with military force",
         "NUM_FACTS": 42,
         "MEASURE": {
             "DE_TransE": {
@@ -2448,7 +2448,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to provide military aid",
+        "ELEMENT": "Express intent to provide military aid",
         "NUM_FACTS": 42,
         "MEASURE": {
             "DE_TransE": {
@@ -2496,7 +2496,7 @@
         }
     },
     {
-        "ENTITY": "Provide economic aid",
+        "ELEMENT": "Provide economic aid",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -2544,7 +2544,7 @@
         }
     },
     {
-        "ENTITY": "Impose embargo, boycott, or sanctions",
+        "ELEMENT": "Impose embargo, boycott, or sanctions",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -2592,7 +2592,7 @@
         }
     },
     {
-        "ENTITY": "Ease administrative sanctions",
+        "ELEMENT": "Ease administrative sanctions",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -2640,7 +2640,7 @@
         }
     },
     {
-        "ENTITY": "Rally support on behalf of",
+        "ELEMENT": "Rally support on behalf of",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -2688,7 +2688,7 @@
         }
     },
     {
-        "ENTITY": "Sexually assault",
+        "ELEMENT": "Sexually assault",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -2736,7 +2736,7 @@
         }
     },
     {
-        "ENTITY": "Expel or deport individuals",
+        "ELEMENT": "Expel or deport individuals",
         "NUM_FACTS": 39,
         "MEASURE": {
             "DE_TransE": {
@@ -2784,7 +2784,7 @@
         }
     },
     {
-        "ENTITY": "Demand change in leadership",
+        "ELEMENT": "Demand change in leadership",
         "NUM_FACTS": 36,
         "MEASURE": {
             "DE_TransE": {
@@ -2832,7 +2832,7 @@
         }
     },
     {
-        "ENTITY": "Assassinate",
+        "ELEMENT": "Assassinate",
         "NUM_FACTS": 36,
         "MEASURE": {
             "DE_TransE": {
@@ -2880,7 +2880,7 @@
         }
     },
     {
-        "ENTITY": "Coerce",
+        "ELEMENT": "Coerce",
         "NUM_FACTS": 36,
         "MEASURE": {
             "DE_TransE": {
@@ -2928,7 +2928,7 @@
         }
     },
     {
-        "ENTITY": "Engage in material cooperation",
+        "ELEMENT": "Engage in material cooperation",
         "NUM_FACTS": 36,
         "MEASURE": {
             "DE_TransE": {
@@ -2976,7 +2976,7 @@
         }
     },
     {
-        "ENTITY": "Rally opposition against",
+        "ELEMENT": "Rally opposition against",
         "NUM_FACTS": 36,
         "MEASURE": {
             "DE_TransE": {
@@ -3024,7 +3024,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to release persons or property",
+        "ELEMENT": "Express intent to release persons or property",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -3072,7 +3072,7 @@
         }
     },
     {
-        "ENTITY": "Consider policy option",
+        "ELEMENT": "Consider policy option",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -3120,7 +3120,7 @@
         }
     },
     {
-        "ENTITY": "Provide military aid",
+        "ELEMENT": "Provide military aid",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -3168,7 +3168,7 @@
         }
     },
     {
-        "ENTITY": "Impose restrictions on political freedoms",
+        "ELEMENT": "Impose restrictions on political freedoms",
         "NUM_FACTS": 33,
         "MEASURE": {
             "DE_TransE": {
@@ -3216,7 +3216,7 @@
         }
     },
     {
-        "ENTITY": "Employ aerial weapons",
+        "ELEMENT": "Employ aerial weapons",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -3264,7 +3264,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to provide material aid",
+        "ELEMENT": "Express intent to provide material aid",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -3312,7 +3312,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to provide humanitarian aid",
+        "ELEMENT": "Express intent to provide humanitarian aid",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -3360,7 +3360,7 @@
         }
     },
     {
-        "ENTITY": "Grant diplomatic recognition",
+        "ELEMENT": "Grant diplomatic recognition",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -3408,7 +3408,7 @@
         }
     },
     {
-        "ENTITY": "Accuse of crime, corruption",
+        "ELEMENT": "Accuse of crime, corruption",
         "NUM_FACTS": 30,
         "MEASURE": {
             "DE_TransE": {
@@ -3456,7 +3456,7 @@
         }
     },
     {
-        "ENTITY": "Carry out suicide bombing",
+        "ELEMENT": "Carry out suicide bombing",
         "NUM_FACTS": 27,
         "MEASURE": {
             "DE_TransE": {
@@ -3504,7 +3504,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for intelligence",
+        "ELEMENT": "Appeal for intelligence",
         "NUM_FACTS": 27,
         "MEASURE": {
             "DE_TransE": {
@@ -3552,7 +3552,7 @@
         }
     },
     {
-        "ENTITY": "Express accord",
+        "ELEMENT": "Express accord",
         "NUM_FACTS": 27,
         "MEASURE": {
             "DE_TransE": {
@@ -3600,7 +3600,7 @@
         }
     },
     {
-        "ENTITY": "Halt negotiations",
+        "ELEMENT": "Halt negotiations",
         "NUM_FACTS": 24,
         "MEASURE": {
             "DE_TransE": {
@@ -3648,7 +3648,7 @@
         }
     },
     {
-        "ENTITY": "Acknowledge or claim responsibility",
+        "ELEMENT": "Acknowledge or claim responsibility",
         "NUM_FACTS": 24,
         "MEASURE": {
             "DE_TransE": {
@@ -3696,7 +3696,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to cooperate economically",
+        "ELEMENT": "Express intent to cooperate economically",
         "NUM_FACTS": 21,
         "MEASURE": {
             "DE_TransE": {
@@ -3744,7 +3744,7 @@
         }
     },
     {
-        "ENTITY": "Kill by physical assault",
+        "ELEMENT": "Kill by physical assault",
         "NUM_FACTS": 21,
         "MEASURE": {
             "DE_TransE": {
@@ -3792,7 +3792,7 @@
         }
     },
     {
-        "ENTITY": "Increase military alert status",
+        "ELEMENT": "Increase military alert status",
         "NUM_FACTS": 21,
         "MEASURE": {
             "DE_TransE": {
@@ -3840,7 +3840,7 @@
         }
     },
     {
-        "ENTITY": "Demand diplomatic cooperation (such as policy support)",
+        "ELEMENT": "Demand diplomatic cooperation (such as policy support)",
         "NUM_FACTS": 21,
         "MEASURE": {
             "DE_TransE": {
@@ -3888,7 +3888,7 @@
         }
     },
     {
-        "ENTITY": "Defy norms, law",
+        "ELEMENT": "Defy norms, law",
         "NUM_FACTS": 21,
         "MEASURE": {
             "DE_TransE": {
@@ -3936,7 +3936,7 @@
         }
     },
     {
-        "ENTITY": "Demonstrate military or police power",
+        "ELEMENT": "Demonstrate military or police power",
         "NUM_FACTS": 21,
         "MEASURE": {
             "DE_TransE": {
@@ -3984,7 +3984,7 @@
         }
     },
     {
-        "ENTITY": "Investigate crime, corruption",
+        "ELEMENT": "Investigate crime, corruption",
         "NUM_FACTS": 21,
         "MEASURE": {
             "DE_TransE": {
@@ -4032,7 +4032,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for change in leadership",
+        "ELEMENT": "Appeal for change in leadership",
         "NUM_FACTS": 21,
         "MEASURE": {
             "DE_TransE": {
@@ -4080,7 +4080,7 @@
         }
     },
     {
-        "ENTITY": "Refuse to yield",
+        "ELEMENT": "Refuse to yield",
         "NUM_FACTS": 18,
         "MEASURE": {
             "DE_TransE": {
@@ -4128,7 +4128,7 @@
         }
     },
     {
-        "ENTITY": "Reject proposal to meet, discuss, or negotiate",
+        "ELEMENT": "Reject proposal to meet, discuss, or negotiate",
         "NUM_FACTS": 18,
         "MEASURE": {
             "DE_TransE": {
@@ -4176,7 +4176,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for judicial cooperation",
+        "ELEMENT": "Appeal for judicial cooperation",
         "NUM_FACTS": 18,
         "MEASURE": {
             "DE_TransE": {
@@ -4224,7 +4224,7 @@
         }
     },
     {
-        "ENTITY": "Appeal to engage in or accept mediation",
+        "ELEMENT": "Appeal to engage in or accept mediation",
         "NUM_FACTS": 18,
         "MEASURE": {
             "DE_TransE": {
@@ -4272,7 +4272,7 @@
         }
     },
     {
-        "ENTITY": "Reject plan, agreement to settle dispute",
+        "ELEMENT": "Reject plan, agreement to settle dispute",
         "NUM_FACTS": 18,
         "MEASURE": {
             "DE_TransE": {
@@ -4320,7 +4320,7 @@
         }
     },
     {
-        "ENTITY": "Decline comment",
+        "ELEMENT": "Decline comment",
         "NUM_FACTS": 15,
         "MEASURE": {
             "DE_TransE": {
@@ -4368,7 +4368,7 @@
         }
     },
     {
-        "ENTITY": "Accuse of human rights abuses",
+        "ELEMENT": "Accuse of human rights abuses",
         "NUM_FACTS": 15,
         "MEASURE": {
             "DE_TransE": {
@@ -4416,7 +4416,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for release of persons or property",
+        "ELEMENT": "Appeal for release of persons or property",
         "NUM_FACTS": 15,
         "MEASURE": {
             "DE_TransE": {
@@ -4464,7 +4464,7 @@
         }
     },
     {
-        "ENTITY": "Mobilize or increase police power",
+        "ELEMENT": "Mobilize or increase police power",
         "NUM_FACTS": 15,
         "MEASURE": {
             "DE_TransE": {
@@ -4512,7 +4512,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to settle dispute",
+        "ELEMENT": "Express intent to settle dispute",
         "NUM_FACTS": 15,
         "MEASURE": {
             "DE_TransE": {
@@ -4560,7 +4560,7 @@
         }
     },
     {
-        "ENTITY": "Declare truce, ceasefire",
+        "ELEMENT": "Declare truce, ceasefire",
         "NUM_FACTS": 15,
         "MEASURE": {
             "DE_TransE": {
@@ -4608,7 +4608,7 @@
         }
     },
     {
-        "ENTITY": "Refuse to release persons or property",
+        "ELEMENT": "Refuse to release persons or property",
         "NUM_FACTS": 12,
         "MEASURE": {
             "DE_TransE": {
@@ -4656,7 +4656,7 @@
         }
     },
     {
-        "ENTITY": "Demonstrate for leadership change",
+        "ELEMENT": "Demonstrate for leadership change",
         "NUM_FACTS": 12,
         "MEASURE": {
             "DE_TransE": {
@@ -4704,7 +4704,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to provide economic aid",
+        "ELEMENT": "Express intent to provide economic aid",
         "NUM_FACTS": 12,
         "MEASURE": {
             "DE_TransE": {
@@ -4752,7 +4752,7 @@
         }
     },
     {
-        "ENTITY": "Mediate",
+        "ELEMENT": "Mediate",
         "NUM_FACTS": 12,
         "MEASURE": {
             "DE_TransE": {
@@ -4800,7 +4800,7 @@
         }
     },
     {
-        "ENTITY": "Accede to demands for change in leadership",
+        "ELEMENT": "Accede to demands for change in leadership",
         "NUM_FACTS": 12,
         "MEASURE": {
             "DE_TransE": {
@@ -4848,7 +4848,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to ease administrative sanctions",
+        "ELEMENT": "Express intent to ease administrative sanctions",
         "NUM_FACTS": 12,
         "MEASURE": {
             "DE_TransE": {
@@ -4896,7 +4896,7 @@
         }
     },
     {
-        "ENTITY": "Attempt to assassinate",
+        "ELEMENT": "Attempt to assassinate",
         "NUM_FACTS": 9,
         "MEASURE": {
             "DE_TransE": {
@@ -4944,7 +4944,7 @@
         }
     },
     {
-        "ENTITY": "Demand material cooperation",
+        "ELEMENT": "Demand material cooperation",
         "NUM_FACTS": 9,
         "MEASURE": {
             "DE_TransE": {
@@ -4992,7 +4992,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for de-escalation of military engagement",
+        "ELEMENT": "Appeal for de-escalation of military engagement",
         "NUM_FACTS": 9,
         "MEASURE": {
             "DE_TransE": {
@@ -5040,7 +5040,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to ease economic sanctions, boycott, or embargo",
+        "ELEMENT": "Express intent to ease economic sanctions, boycott, or embargo",
         "NUM_FACTS": 9,
         "MEASURE": {
             "DE_TransE": {
@@ -5088,7 +5088,7 @@
         }
     },
     {
-        "ENTITY": "Apologize",
+        "ELEMENT": "Apologize",
         "NUM_FACTS": 9,
         "MEASURE": {
             "DE_TransE": {
@@ -5136,7 +5136,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for military aid",
+        "ELEMENT": "Appeal for military aid",
         "NUM_FACTS": 9,
         "MEASURE": {
             "DE_TransE": {
@@ -5184,7 +5184,7 @@
         }
     },
     {
-        "ENTITY": "Accede to demands for rights",
+        "ELEMENT": "Accede to demands for rights",
         "NUM_FACTS": 9,
         "MEASURE": {
             "DE_TransE": {
@@ -5232,7 +5232,7 @@
         }
     },
     {
-        "ENTITY": "fight with artillery and tanks",
+        "ELEMENT": "fight with artillery and tanks",
         "NUM_FACTS": 9,
         "MEASURE": {
             "DE_TransE": {
@@ -5280,7 +5280,7 @@
         }
     },
     {
-        "ENTITY": "Provide military protection or peacekeeping",
+        "ELEMENT": "Provide military protection or peacekeeping",
         "NUM_FACTS": 9,
         "MEASURE": {
             "DE_TransE": {
@@ -5328,7 +5328,7 @@
         }
     },
     {
-        "ENTITY": "Conduct strike or boycott",
+        "ELEMENT": "Conduct strike or boycott",
         "NUM_FACTS": 9,
         "MEASURE": {
             "DE_TransE": {
@@ -5376,7 +5376,7 @@
         }
     },
     {
-        "ENTITY": "Receive deployment of peacekeepers",
+        "ELEMENT": "Receive deployment of peacekeepers",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5424,7 +5424,7 @@
         }
     },
     {
-        "ENTITY": "Retreat or surrender militarily",
+        "ELEMENT": "Retreat or surrender militarily",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5472,7 +5472,7 @@
         }
     },
     {
-        "ENTITY": "Grant asylum",
+        "ELEMENT": "Grant asylum",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5520,7 +5520,7 @@
         }
     },
     {
-        "ENTITY": "Accuse of aggression",
+        "ELEMENT": "Accuse of aggression",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5568,7 +5568,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for rights",
+        "ELEMENT": "Appeal for rights",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5616,7 +5616,7 @@
         }
     },
     {
-        "ENTITY": "Accuse of espionage, treason",
+        "ELEMENT": "Accuse of espionage, treason",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5664,7 +5664,7 @@
         }
     },
     {
-        "ENTITY": "Give ultimatum",
+        "ELEMENT": "Give ultimatum",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5712,7 +5712,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for easing of administrative sanctions",
+        "ELEMENT": "Appeal for easing of administrative sanctions",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5760,7 +5760,7 @@
         }
     },
     {
-        "ENTITY": "Appeal to others to meet or negotiate",
+        "ELEMENT": "Appeal to others to meet or negotiate",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5808,7 +5808,7 @@
         }
     },
     {
-        "ENTITY": "Engage in judicial cooperation",
+        "ELEMENT": "Engage in judicial cooperation",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5856,7 +5856,7 @@
         }
     },
     {
-        "ENTITY": "Increase police alert status",
+        "ELEMENT": "Increase police alert status",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5904,7 +5904,7 @@
         }
     },
     {
-        "ENTITY": "Defend verbally",
+        "ELEMENT": "Defend verbally",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -5952,7 +5952,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for economic cooperation",
+        "ELEMENT": "Appeal for economic cooperation",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -6000,7 +6000,7 @@
         }
     },
     {
-        "ENTITY": "Appeal to yield",
+        "ELEMENT": "Appeal to yield",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -6048,7 +6048,7 @@
         }
     },
     {
-        "ENTITY": "Return, release property",
+        "ELEMENT": "Return, release property",
         "NUM_FACTS": 6,
         "MEASURE": {
             "DE_TransE": {
@@ -6096,7 +6096,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to cooperate on judicial matters",
+        "ELEMENT": "Express intent to cooperate on judicial matters",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6144,7 +6144,7 @@
         }
     },
     {
-        "ENTITY": "Impose blockade, restrict movement",
+        "ELEMENT": "Impose blockade, restrict movement",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6192,7 +6192,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to accept mediation",
+        "ELEMENT": "Express intent to accept mediation",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6240,7 +6240,7 @@
         }
     },
     {
-        "ENTITY": "Demand de-escalation of military engagement",
+        "ELEMENT": "Demand de-escalation of military engagement",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6288,7 +6288,7 @@
         }
     },
     {
-        "ENTITY": "Veto",
+        "ELEMENT": "Veto",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6336,7 +6336,7 @@
         }
     },
     {
-        "ENTITY": "Threaten with political dissent, protest",
+        "ELEMENT": "Threaten with political dissent, protest",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6384,7 +6384,7 @@
         }
     },
     {
-        "ENTITY": "Violate ceasefire",
+        "ELEMENT": "Violate ceasefire",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6432,7 +6432,7 @@
         }
     },
     {
-        "ENTITY": "Halt mediation",
+        "ELEMENT": "Halt mediation",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6480,7 +6480,7 @@
         }
     },
     {
-        "ENTITY": "Demand political reform",
+        "ELEMENT": "Demand political reform",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6528,7 +6528,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for aid",
+        "ELEMENT": "Appeal for aid",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6576,7 +6576,7 @@
         }
     },
     {
-        "ENTITY": "Use as human shield",
+        "ELEMENT": "Use as human shield",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6624,7 +6624,7 @@
         }
     },
     {
-        "ENTITY": "Destroy property",
+        "ELEMENT": "Destroy property",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6672,7 +6672,7 @@
         }
     },
     {
-        "ENTITY": "Obstruct passage, block",
+        "ELEMENT": "Obstruct passage, block",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6720,7 +6720,7 @@
         }
     },
     {
-        "ENTITY": "Engage in mass killings",
+        "ELEMENT": "Engage in mass killings",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6768,7 +6768,7 @@
         }
     },
     {
-        "ENTITY": "Impose state of emergency or martial law",
+        "ELEMENT": "Impose state of emergency or martial law",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6816,7 +6816,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to de-escalate military engagement",
+        "ELEMENT": "Express intent to de-escalate military engagement",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6864,7 +6864,7 @@
         }
     },
     {
-        "ENTITY": "Refuse to ease administrative sanctions",
+        "ELEMENT": "Refuse to ease administrative sanctions",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6912,7 +6912,7 @@
         }
     },
     {
-        "ENTITY": "Demand settling of dispute",
+        "ELEMENT": "Demand settling of dispute",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -6960,7 +6960,7 @@
         }
     },
     {
-        "ENTITY": "Reduce or stop material aid",
+        "ELEMENT": "Reduce or stop material aid",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7008,7 +7008,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to mediate",
+        "ELEMENT": "Express intent to mediate",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7056,7 +7056,7 @@
         }
     },
     {
-        "ENTITY": "Threaten non-force",
+        "ELEMENT": "Threaten non-force",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7104,7 +7104,7 @@
         }
     },
     {
-        "ENTITY": "Demand meeting, negotiation",
+        "ELEMENT": "Demand meeting, negotiation",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7152,7 +7152,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to engage in material cooperation",
+        "ELEMENT": "Express intent to engage in material cooperation",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7200,7 +7200,7 @@
         }
     },
     {
-        "ENTITY": "Accede to demands for change in institutions, regime",
+        "ELEMENT": "Accede to demands for change in institutions, regime",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7248,7 +7248,7 @@
         }
     },
     {
-        "ENTITY": "Accuse of war crimes",
+        "ELEMENT": "Accuse of war crimes",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7296,7 +7296,7 @@
         }
     },
     {
-        "ENTITY": "Reduce or stop military assistance",
+        "ELEMENT": "Reduce or stop military assistance",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7344,7 +7344,7 @@
         }
     },
     {
-        "ENTITY": "Demand mediation",
+        "ELEMENT": "Demand mediation",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7392,7 +7392,7 @@
         }
     },
     {
-        "ENTITY": "Seize or damage property",
+        "ELEMENT": "Seize or damage property",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7440,7 +7440,7 @@
         }
     },
     {
-        "ENTITY": "Reduce or stop economic assistance",
+        "ELEMENT": "Reduce or stop economic assistance",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7488,7 +7488,7 @@
         }
     },
     {
-        "ENTITY": "Appeal for humanitarian aid",
+        "ELEMENT": "Appeal for humanitarian aid",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7536,7 +7536,7 @@
         }
     },
     {
-        "ENTITY": "Refuse to de-escalate military engagement",
+        "ELEMENT": "Refuse to de-escalate military engagement",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7584,7 +7584,7 @@
         }
     },
     {
-        "ENTITY": "Threaten with repression",
+        "ELEMENT": "Threaten with repression",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7632,7 +7632,7 @@
         }
     },
     {
-        "ENTITY": "Express intent to yield",
+        "ELEMENT": "Express intent to yield",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {
@@ -7680,7 +7680,7 @@
         }
     },
     {
-        "ENTITY": "Demand release of persons or property",
+        "ELEMENT": "Demand release of persons or property",
         "NUM_FACTS": 3,
         "MEASURE": {
             "DE_TransE": {

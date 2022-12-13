@@ -1,0 +1,922 @@
+[
+    {
+        "RELATION": "Make statement",
+        "COUNT": 12622
+    },
+    {
+        "RELATION": "Consult",
+        "COUNT": 8052
+    },
+    {
+        "RELATION": "Make an appeal or request",
+        "COUNT": 5019
+    },
+    {
+        "RELATION": "Express intent to meet or negotiate",
+        "COUNT": 4077
+    },
+    {
+        "RELATION": "Host a visit",
+        "COUNT": 3424
+    },
+    {
+        "RELATION": "Make a visit",
+        "COUNT": 3394
+    },
+    {
+        "RELATION": "Arrest, detain, or charge with legal action",
+        "COUNT": 3203
+    },
+    {
+        "RELATION": "Praise or endorse",
+        "COUNT": 2912
+    },
+    {
+        "RELATION": "Criticize or denounce",
+        "COUNT": 2405
+    },
+    {
+        "RELATION": "Accuse",
+        "COUNT": 2107
+    },
+    {
+        "RELATION": "Use unconventional violence",
+        "COUNT": 1929
+    },
+    {
+        "RELATION": "Use conventional military force",
+        "COUNT": 1644
+    },
+    {
+        "RELATION": "Engage in negotiation",
+        "COUNT": 1592
+    },
+    {
+        "RELATION": "Express intent to cooperate",
+        "COUNT": 1265
+    },
+    {
+        "RELATION": "Demand",
+        "COUNT": 1152
+    },
+    {
+        "RELATION": "Express intent to engage in diplomatic cooperation (such as policy support)",
+        "COUNT": 1116
+    },
+    {
+        "RELATION": "Engage in diplomatic cooperation",
+        "COUNT": 1096
+    },
+    {
+        "RELATION": "Sign formal agreement",
+        "COUNT": 1068
+    },
+    {
+        "RELATION": "Investigate",
+        "COUNT": 824
+    },
+    {
+        "RELATION": "Discuss by telephone",
+        "COUNT": 783
+    },
+    {
+        "RELATION": "Reject",
+        "COUNT": 764
+    },
+    {
+        "RELATION": "fight with small arms and light weapons",
+        "COUNT": 696
+    },
+    {
+        "RELATION": "Make optimistic comment",
+        "COUNT": 634
+    },
+    {
+        "RELATION": "Threaten",
+        "COUNT": 545
+    },
+    {
+        "RELATION": "Demonstrate or rally",
+        "COUNT": 503
+    },
+    {
+        "RELATION": "Abduct, hijack, or take hostage",
+        "COUNT": 483
+    },
+    {
+        "RELATION": "Make pessimistic comment",
+        "COUNT": 448
+    },
+    {
+        "RELATION": "Meet at a 'third' location",
+        "COUNT": 434
+    },
+    {
+        "RELATION": "Engage in symbolic act",
+        "COUNT": 426
+    },
+    {
+        "RELATION": "Appeal for diplomatic cooperation (such as policy support)",
+        "COUNT": 380
+    },
+    {
+        "RELATION": "Return, release person(s)",
+        "COUNT": 357
+    },
+    {
+        "RELATION": "Protest violently, riot",
+        "COUNT": 276
+    },
+    {
+        "RELATION": "Provide humanitarian aid",
+        "COUNT": 252
+    },
+    {
+        "RELATION": "Make empathetic comment",
+        "COUNT": 232
+    },
+    {
+        "RELATION": "Use tactics of violent repression",
+        "COUNT": 217
+    },
+    {
+        "RELATION": "Occupy territory",
+        "COUNT": 208
+    },
+    {
+        "RELATION": "Physically assault",
+        "COUNT": 191
+    },
+    {
+        "RELATION": "Reduce relations",
+        "COUNT": 188
+    },
+    {
+        "RELATION": "Mobilize or increase armed forces",
+        "COUNT": 169
+    },
+    {
+        "RELATION": "Deny responsibility",
+        "COUNT": 168
+    },
+    {
+        "RELATION": "Provide aid",
+        "COUNT": 158
+    },
+    {
+        "RELATION": "Ease administrative sanctions",
+        "COUNT": 146
+    },
+    {
+        "RELATION": "Bring lawsuit against",
+        "COUNT": 142
+    },
+    {
+        "RELATION": "Expel or deport individuals",
+        "COUNT": 138
+    },
+    {
+        "RELATION": "Confiscate property",
+        "COUNT": 138
+    },
+    {
+        "RELATION": "Impose administrative sanctions",
+        "COUNT": 133
+    },
+    {
+        "RELATION": "Reduce or break diplomatic relations",
+        "COUNT": 132
+    },
+    {
+        "RELATION": "Cooperate economically",
+        "COUNT": 117
+    },
+    {
+        "RELATION": "Sexually assault",
+        "COUNT": 112
+    },
+    {
+        "RELATION": "Complain officially",
+        "COUNT": 109
+    },
+    {
+        "RELATION": "Impose embargo, boycott, or sanctions",
+        "COUNT": 98
+    },
+    {
+        "RELATION": "Cooperate militarily",
+        "COUNT": 96
+    },
+    {
+        "RELATION": "Rally support on behalf of",
+        "COUNT": 96
+    },
+    {
+        "RELATION": "Coerce",
+        "COUNT": 95
+    },
+    {
+        "RELATION": "Express intent to cooperate economically",
+        "COUNT": 93
+    },
+    {
+        "RELATION": "Yield",
+        "COUNT": 93
+    },
+    {
+        "RELATION": "Reject proposal to meet, discuss, or negotiate",
+        "COUNT": 92
+    },
+    {
+        "RELATION": "Express intent to provide military aid",
+        "COUNT": 92
+    },
+    {
+        "RELATION": "Threaten with military force",
+        "COUNT": 91
+    },
+    {
+        "RELATION": "Consider policy option",
+        "COUNT": 90
+    },
+    {
+        "RELATION": "Provide military aid",
+        "COUNT": 88
+    },
+    {
+        "RELATION": "Employ aerial weapons",
+        "COUNT": 86
+    },
+    {
+        "RELATION": "Engage in material cooperation",
+        "COUNT": 83
+    },
+    {
+        "RELATION": "Kill by physical assault",
+        "COUNT": 80
+    },
+    {
+        "RELATION": "Express accord",
+        "COUNT": 79
+    },
+    {
+        "RELATION": "Express intent to provide material aid",
+        "COUNT": 77
+    },
+    {
+        "RELATION": "Carry out suicide bombing",
+        "COUNT": 76
+    },
+    {
+        "RELATION": "Appeal for intelligence",
+        "COUNT": 75
+    },
+    {
+        "RELATION": "Provide economic aid",
+        "COUNT": 71
+    },
+    {
+        "RELATION": "Express intent to provide economic aid",
+        "COUNT": 70
+    },
+    {
+        "RELATION": "Conduct suicide, car, or other non-military bombing",
+        "COUNT": 69
+    },
+    {
+        "RELATION": "Rally opposition against",
+        "COUNT": 68
+    },
+    {
+        "RELATION": "Demand diplomatic cooperation (such as policy support)",
+        "COUNT": 66
+    },
+    {
+        "RELATION": "Demand change in leadership",
+        "COUNT": 64
+    },
+    {
+        "RELATION": "Accuse of crime, corruption",
+        "COUNT": 64
+    },
+    {
+        "RELATION": "Acknowledge or claim responsibility",
+        "COUNT": 62
+    },
+    {
+        "RELATION": "Express intent to release persons or property",
+        "COUNT": 61
+    },
+    {
+        "RELATION": "Obstruct passage, block",
+        "COUNT": 58
+    },
+    {
+        "RELATION": "Defy norms, law",
+        "COUNT": 57
+    },
+    {
+        "RELATION": "Retreat or surrender militarily",
+        "COUNT": 55
+    },
+    {
+        "RELATION": "Reject plan, agreement to settle dispute",
+        "COUNT": 55
+    },
+    {
+        "RELATION": "Impose restrictions on political freedoms",
+        "COUNT": 54
+    },
+    {
+        "RELATION": "Express intent to settle dispute",
+        "COUNT": 54
+    },
+    {
+        "RELATION": "Grant diplomatic recognition",
+        "COUNT": 53
+    },
+    {
+        "RELATION": "Give ultimatum",
+        "COUNT": 52
+    },
+    {
+        "RELATION": "Appeal for change in leadership",
+        "COUNT": 49
+    },
+    {
+        "RELATION": "Express intent to provide humanitarian aid",
+        "COUNT": 48
+    },
+    {
+        "RELATION": "Assassinate",
+        "COUNT": 44
+    },
+    {
+        "RELATION": "Accuse of human rights abuses",
+        "COUNT": 39
+    },
+    {
+        "RELATION": "Share intelligence or information",
+        "COUNT": 38
+    },
+    {
+        "RELATION": "Refuse to yield",
+        "COUNT": 37
+    },
+    {
+        "RELATION": "Appeal for de-escalation of military engagement",
+        "COUNT": 34
+    },
+    {
+        "RELATION": "Apologize",
+        "COUNT": 33
+    },
+    {
+        "RELATION": "Appeal to engage in or accept mediation",
+        "COUNT": 33
+    },
+    {
+        "RELATION": "Conduct strike or boycott",
+        "COUNT": 32
+    },
+    {
+        "RELATION": "fight with artillery and tanks",
+        "COUNT": 32
+    },
+    {
+        "RELATION": "Express intent to de-escalate military engagement",
+        "COUNT": 31
+    },
+    {
+        "RELATION": "Torture",
+        "COUNT": 30
+    },
+    {
+        "RELATION": "Appeal for release of persons or property",
+        "COUNT": 30
+    },
+    {
+        "RELATION": "Demonstrate military or police power",
+        "COUNT": 30
+    },
+    {
+        "RELATION": "Accede to demands for change in leadership",
+        "COUNT": 29
+    },
+    {
+        "RELATION": "Investigate crime, corruption",
+        "COUNT": 28
+    },
+    {
+        "RELATION": "Appeal to others to meet or negotiate",
+        "COUNT": 28
+    },
+    {
+        "RELATION": "Receive deployment of peacekeepers",
+        "COUNT": 28
+    },
+    {
+        "RELATION": "Increase military alert status",
+        "COUNT": 27
+    },
+    {
+        "RELATION": "Demonstrate for leadership change",
+        "COUNT": 27
+    },
+    {
+        "RELATION": "Halt negotiations",
+        "COUNT": 27
+    },
+    {
+        "RELATION": "Appeal for military aid",
+        "COUNT": 26
+    },
+    {
+        "RELATION": "Mobilize or increase police power",
+        "COUNT": 25
+    },
+    {
+        "RELATION": "Increase police alert status",
+        "COUNT": 25
+    },
+    {
+        "RELATION": "Defend verbally",
+        "COUNT": 25
+    },
+    {
+        "RELATION": "Appeal for judicial cooperation",
+        "COUNT": 23
+    },
+    {
+        "RELATION": "Declare truce, ceasefire",
+        "COUNT": 23
+    },
+    {
+        "RELATION": "Appeal for economic aid",
+        "COUNT": 23
+    },
+    {
+        "RELATION": "Provide military protection or peacekeeping",
+        "COUNT": 23
+    },
+    {
+        "RELATION": "Decline comment",
+        "COUNT": 22
+    },
+    {
+        "RELATION": "Appeal for aid",
+        "COUNT": 22
+    },
+    {
+        "RELATION": "Ease economic sanctions, boycott, embargo",
+        "COUNT": 21
+    },
+    {
+        "RELATION": "Appeal for change in institutions, regime",
+        "COUNT": 20
+    },
+    {
+        "RELATION": "Refuse to release persons or property",
+        "COUNT": 19
+    },
+    {
+        "RELATION": "Impose blockade, restrict movement",
+        "COUNT": 18
+    },
+    {
+        "RELATION": "Express intent to ease economic sanctions, boycott, or embargo",
+        "COUNT": 18
+    },
+    {
+        "RELATION": "Demand meeting, negotiation",
+        "COUNT": 15
+    },
+    {
+        "RELATION": "Mediate",
+        "COUNT": 15
+    },
+    {
+        "RELATION": "Appeal for economic cooperation",
+        "COUNT": 15
+    },
+    {
+        "RELATION": "Demand intelligence cooperation",
+        "COUNT": 15
+    },
+    {
+        "RELATION": "Express intent to cooperate militarily",
+        "COUNT": 14
+    },
+    {
+        "RELATION": "Accuse of espionage, treason",
+        "COUNT": 14
+    },
+    {
+        "RELATION": "Express intent to mediate",
+        "COUNT": 14
+    },
+    {
+        "RELATION": "Appeal for easing of administrative sanctions",
+        "COUNT": 13
+    },
+    {
+        "RELATION": "Appeal for policy change",
+        "COUNT": 12
+    },
+    {
+        "RELATION": "Impose state of emergency or martial law",
+        "COUNT": 12
+    },
+    {
+        "RELATION": "Demand de-escalation of military engagement",
+        "COUNT": 12
+    },
+    {
+        "RELATION": "Appeal to others to settle dispute",
+        "COUNT": 12
+    },
+    {
+        "RELATION": "Engage in mass killings",
+        "COUNT": 12
+    },
+    {
+        "RELATION": "Attempt to assassinate",
+        "COUNT": 11
+    },
+    {
+        "RELATION": "Threaten non-force",
+        "COUNT": 10
+    },
+    {
+        "RELATION": "Demand economic aid",
+        "COUNT": 10
+    },
+    {
+        "RELATION": "Return, release property",
+        "COUNT": 10
+    },
+    {
+        "RELATION": "Appeal for material cooperation",
+        "COUNT": 10
+    },
+    {
+        "RELATION": "Engage in judicial cooperation",
+        "COUNT": 10
+    },
+    {
+        "RELATION": "Express intent to engage in material cooperation",
+        "COUNT": 10
+    },
+    {
+        "RELATION": "Appeal for rights",
+        "COUNT": 9
+    },
+    {
+        "RELATION": "Demand material cooperation",
+        "COUNT": 9
+    },
+    {
+        "RELATION": "Express intent to cooperate on intelligence",
+        "COUNT": 8
+    },
+    {
+        "RELATION": "Demand that target yields",
+        "COUNT": 8
+    },
+    {
+        "RELATION": "Seize or damage property",
+        "COUNT": 8
+    },
+    {
+        "RELATION": "Refuse to ease administrative sanctions",
+        "COUNT": 8
+    },
+    {
+        "RELATION": "Demand change in institutions, regime",
+        "COUNT": 8
+    },
+    {
+        "RELATION": "Reduce or stop economic assistance",
+        "COUNT": 8
+    },
+    {
+        "RELATION": "Express intent to accept mediation",
+        "COUNT": 8
+    },
+    {
+        "RELATION": "Express intent to yield",
+        "COUNT": 8
+    },
+    {
+        "RELATION": "Reduce or stop military assistance",
+        "COUNT": 8
+    },
+    {
+        "RELATION": "Grant asylum",
+        "COUNT": 7
+    },
+    {
+        "RELATION": "Accuse of aggression",
+        "COUNT": 7
+    },
+    {
+        "RELATION": "Appeal to yield",
+        "COUNT": 7
+    },
+    {
+        "RELATION": "Appeal for humanitarian aid",
+        "COUNT": 7
+    },
+    {
+        "RELATION": "Accuse of war crimes",
+        "COUNT": 7
+    },
+    {
+        "RELATION": "Ban political parties or politicians",
+        "COUNT": 7
+    },
+    {
+        "RELATION": "Express intent to ease administrative sanctions",
+        "COUNT": 7
+    },
+    {
+        "RELATION": "Veto",
+        "COUNT": 6
+    },
+    {
+        "RELATION": "Accede to demands for rights",
+        "COUNT": 6
+    },
+    {
+        "RELATION": "Express intent to provide military protection or peacekeeping",
+        "COUNT": 6
+    },
+    {
+        "RELATION": "Threaten with sanctions, boycott, embargo",
+        "COUNT": 6
+    },
+    {
+        "RELATION": "Express intent to change leadership",
+        "COUNT": 6
+    },
+    {
+        "RELATION": "Threaten with political dissent, protest",
+        "COUNT": 5
+    },
+    {
+        "RELATION": "Demand settling of dispute",
+        "COUNT": 5
+    },
+    {
+        "RELATION": "Demand release of persons or property",
+        "COUNT": 5
+    },
+    {
+        "RELATION": "Threaten with repression",
+        "COUNT": 5
+    },
+    {
+        "RELATION": "Ease curfew",
+        "COUNT": 5
+    },
+    {
+        "RELATION": "Reduce or stop humanitarian assistance",
+        "COUNT": 4
+    },
+    {
+        "RELATION": "Refuse to de-escalate military engagement",
+        "COUNT": 4
+    },
+    {
+        "RELATION": "Threaten to reduce or stop aid",
+        "COUNT": 4
+    },
+    {
+        "RELATION": "Demonstrate for policy change",
+        "COUNT": 4
+    },
+    {
+        "RELATION": "Expel or withdraw peacekeepers",
+        "COUNT": 4
+    },
+    {
+        "RELATION": "Demand easing of administrative sanctions",
+        "COUNT": 4
+    },
+    {
+        "RELATION": "Demand judicial cooperation",
+        "COUNT": 4
+    },
+    {
+        "RELATION": "Violate ceasefire",
+        "COUNT": 4
+    },
+    {
+        "RELATION": "Refuse to ease economic sanctions, boycott, or embargo",
+        "COUNT": 4
+    },
+    {
+        "RELATION": "Threaten to reduce or break relations",
+        "COUNT": 4
+    },
+    {
+        "RELATION": "Appeal for political reform",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Forgive",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Ease military blockade",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Reject military cooperation",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Demand mediation",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Conduct hunger strike",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Demobilize armed forces",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Accede to demands for change in institutions, regime",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Reject material cooperation",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Reduce or stop material aid",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Destroy property",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Investigate human rights abuses",
+        "COUNT": 3
+    },
+    {
+        "RELATION": "Accede to requests or demands for political reform",
+        "COUNT": 2
+    },
+    {
+        "RELATION": "Demand military aid",
+        "COUNT": 2
+    },
+    {
+        "RELATION": "Receive inspectors",
+        "COUNT": 2
+    },
+    {
+        "RELATION": "Demand rights",
+        "COUNT": 2
+    },
+    {
+        "RELATION": "Demand political reform",
+        "COUNT": 2
+    },
+    {
+        "RELATION": "Engage in political dissent",
+        "COUNT": 2
+    },
+    {
+        "RELATION": "Obstruct passage to demand leadership change",
+        "COUNT": 2
+    },
+    {
+        "RELATION": "Demand policy change",
+        "COUNT": 2
+    },
+    {
+        "RELATION": "Reject economic cooperation",
+        "COUNT": 2
+    },
+    {
+        "RELATION": "Accede to demands for change in policy",
+        "COUNT": 2
+    },
+    {
+        "RELATION": "Express intent to change policy",
+        "COUNT": 2
+    },
+    {
+        "RELATION": "Demand humanitarian aid",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Express intent to change institutions, regime",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Reject request for military aid",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Express intent to cooperate on judicial matters",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Appeal for easing of economic sanctions, boycott, or embargo",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Engage in violent protest for rights",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Appeal for military protection or peacekeeping",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Threaten to halt negotiations",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Express intent to institute political reform",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Detonate nuclear weapons",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Threaten to halt mediation",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Reject judicial cooperation",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Ease political dissent",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Use as human shield",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Halt mediation",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Investigate war crimes",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Threaten with administrative sanctions",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Use chemical, biological, or radiological weapons",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Reject request for military protection or peacekeeping",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Demand material aid",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Engage in mass expulsion",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Carry out car bombing",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Expel or withdraw",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Ease state of emergency or martial law",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Carry out roadside bombing",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Appeal for target to allow international involvement (non-mediation)",
+        "COUNT": 1
+    },
+    {
+        "RELATION": "Reject request for change in leadership",
+        "COUNT": 1
+    }
+]

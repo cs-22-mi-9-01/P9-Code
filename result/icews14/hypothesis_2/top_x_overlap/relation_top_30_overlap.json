@@ -1,0 +1,182 @@
+[
+    {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 1.0
+    },
+    {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 0.8938053097345132
+    },
+    {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 0.8849557522123894
+    },
+    {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 0.8584070796460177
+    },
+    {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 0.8584070796460177
+    },
+    {
+        "EMBEDDING_N": "DE_TransE",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 0.8141592920353983
+    },
+    {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 0.8938053097345132
+    },
+    {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 1.0
+    },
+    {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 0.9469026548672567
+    },
+    {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 0.8407079646017699
+    },
+    {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 0.8672566371681416
+    },
+    {
+        "EMBEDDING_N": "DE_SimplE",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 0.8495575221238938
+    },
+    {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 0.8849557522123894
+    },
+    {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 0.9469026548672567
+    },
+    {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 1.0
+    },
+    {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 0.8584070796460177
+    },
+    {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 0.8761061946902655
+    },
+    {
+        "EMBEDDING_N": "DE_DistMult",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 0.8495575221238938
+    },
+    {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 0.8584070796460177
+    },
+    {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 0.8407079646017699
+    },
+    {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 0.8584070796460177
+    },
+    {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 1.0
+    },
+    {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 0.8584070796460177
+    },
+    {
+        "EMBEDDING_N": "TERO",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 0.8230088495575221
+    },
+    {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 0.8584070796460177
+    },
+    {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 0.8672566371681416
+    },
+    {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 0.8761061946902655
+    },
+    {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 0.8584070796460177
+    },
+    {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 1.0
+    },
+    {
+        "EMBEDDING_N": "ATISE",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 0.8761061946902655
+    },
+    {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "DE_TransE",
+        "OVERLAP_TOP": 0.8141592920353983
+    },
+    {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "DE_SimplE",
+        "OVERLAP_TOP": 0.8495575221238938
+    },
+    {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "DE_DistMult",
+        "OVERLAP_TOP": 0.8495575221238938
+    },
+    {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "TERO",
+        "OVERLAP_TOP": 0.8230088495575221
+    },
+    {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "ATISE",
+        "OVERLAP_TOP": 0.8761061946902655
+    },
+    {
+        "EMBEDDING_N": "TFLEX",
+        "EMBEDDING_M": "TFLEX",
+        "OVERLAP_TOP": 1.0
+    }
+]
