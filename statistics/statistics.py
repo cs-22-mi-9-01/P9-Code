@@ -267,7 +267,6 @@ class Statistics():
         Top5_Dict = {}
         for method_name in ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'ATISE', 'TFLEX']:
             sortedList= self.entity_MRR_Sort(entity_scores, method_name)
-            print(method_name)
             Top5_Dict[method_name] = {}
             for i in range(0,5):
                 dict_Name = "Number {}".format(i+1)
