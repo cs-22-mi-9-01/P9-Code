@@ -197,6 +197,19 @@ class Statistics():
             json_output_normalized.sort(key=lambda val: val["FACTS"], reverse=True)
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3", "hypothesis_3_normalized.json")
             self.write_json(results_path, json_output_normalized)
+    
+    def entity_MRR_Sort(self, entity_scores, method_name):
+        
+        #print(entity_scores[1]['MEASURE']['DE_TransE'])
+        sortedlist = sorted(entity_scores, key=lambda d: d['MEASURE']['DE_TransE']['MRR'], reverse=True)
+        #for i in range(0,30):
+        #    print(sortedlist[i]['MEASURE'][method_name])
+        return sortedlist
+
+    def get_Top_5_Elements(self):
+
+        
+        return
 
     def run(self):
         embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", "TERO", "ATISE", "TFLEX"]
@@ -209,6 +222,12 @@ class Statistics():
         overall_scores_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "overall_scores.json")        
         overall_scores = self.read_json(overall_scores_path)
 
+        entities_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "entity.json")        
+        entity_scores = self.read_json(entities_path)
+
+        
+        
         #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
         #self.hypothesis_2(ranked_quads, embeddings, overall_scores)
-        self.hypothesis_3(ranked_quads, embeddings, overall_scores)
+        #self.hypothesis_3(ranked_quads, embeddings, overall_scores)
+        self.entity_mrr_sort(entity_scores, 'DE_TransE')
