@@ -172,12 +172,12 @@ class Statistics():
                 if embedding not in json_percentage.keys():
                     json_percentage[embedding] = {"TOP": [], "BOT": []}
 
-                json_input.sort(key=lambda val: val["MEASURE"][embedding]["MRR"], reverse=False)
+                json_input.sort(key=lambda val: val["MEASURE"][embedding]["MRR"], reverse=True)
                 for i in range(0, no_of_elements):
                     if i < element_split:
-                        json_percentage[embedding]["BOT"].append(json_input[i]["ELEMENT"])
-                    else:
                         json_percentage[embedding]["TOP"].append(json_input[i]["ELEMENT"])
+                    else:
+                        json_percentage[embedding]["BOT"].append(json_input[i]["ELEMENT"])
             
             json_overlap = []
 
