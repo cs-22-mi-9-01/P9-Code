@@ -152,6 +152,8 @@ class Statistics():
                 shared_vals += 1.0
             total_vals += 1.0
         
+        if total_vals == 0:
+            return 0
         return shared_vals/total_vals
 
     def hypothesis_2_top_x(self, embeddings):
@@ -163,7 +165,7 @@ class Statistics():
 
             top_percentage = 0.5
             no_of_elements = len(json_input)
-            element_split = int(no_of_elements * top_percentage)
+            element_split = 100
             json_percentage = {}
 
             for embedding in embeddings:
@@ -353,7 +355,7 @@ class Statistics():
 
         #self.no_of_elements(dataset)
         #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
-        self.hypothesis_2(ranked_quads, embeddings, overall_scores)
+        #self.hypothesis_2(ranked_quads, embeddings, overall_scores)
         self.hypothesis_2_top_x(embeddings)
         #self.hypothesis_3(ranked_quads, embeddings, overall_scores)
         #self.get_Top_5_Elements(entity_scores)
