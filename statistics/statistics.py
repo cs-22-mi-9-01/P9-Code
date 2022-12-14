@@ -163,8 +163,9 @@ class Statistics():
             input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+".json")
             json_input = self.read_json(input_path)
 
-            top_percentage = 0.5
+            top_percentage = 1
             no_of_elements = len(json_input)
+            #element_split = int(no_of_elements * top_percentage)
             element_split = 100
             json_top = {}
 
@@ -188,11 +189,11 @@ class Statistics():
                     })
 
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", 
-                                        "top_x_overlap", str(element).lower()+"_top_"+str(int(top_percentage*100))+".json")
+                                        "top_x_overlap", str(element).lower()+"_top_"+str(element_split)+".json")
             self.write_json(results_path, json_top)
             
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", 
-                                        "top_x_overlap", str(element).lower()+"_top_"+str(int(top_percentage*100))+"_overlap.json")
+                                        "top_x_overlap", str(element).lower()+"_top_"+str(element_split)+"_overlap.json")
             self.write_json(results_path, json_overlap)
                 
     def hypothesis_3(self, ranked_quads, embeddings, normalization_scores = None):        
