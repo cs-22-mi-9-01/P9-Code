@@ -64,6 +64,7 @@ def hypothesis_2(filename):
     MRR_DE_DistMult = []
     MRR_TERO = []
     MRR_ATISE = []
+    MRR_TFLEX = []
     for key, value in pd_data['MEASURE'].items():
         for key1, value1 in value.items():
             if key1 == 'DE_TransE':
@@ -86,8 +87,13 @@ def hypothesis_2(filename):
                 for key2, value2 in value1.items():
                     if key2 == 'MRR':
                         MRR_ATISE.append(round(value2, 2))
+            elif key1 == 'TFLEX':
+                for key2, value2 in value1.items():
+                    if key2 == 'MRR':
+                        MRR_TFLEX.append(round(value2, 2))
+
     pd_data = pd_data.iloc[:,:-1]
-    pd_MRR = pd.DataFrame(list(zip(MRR_DE_TransE, MRR_DE_SimplE, MRR_DE_DistMult, MRR_TERO, MRR_ATISE)), columns=['DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE'])
+    pd_MRR = pd.DataFrame(list(zip(MRR_DE_TransE, MRR_DE_SimplE, MRR_DE_DistMult, MRR_TERO, MRR_ATISE, MRR_TFLEX)), columns=['DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE', 'TFLEX'])
     
     pd_MRR_DE_TransE = pd.concat([pd_MRR["DE_TransE"], pd_data], axis=1).set_index("DE_TransE")
     pd_MRR_DE_TransE = pd_MRR_DE_TransE.sort_index()
@@ -109,22 +115,26 @@ def hypothesis_2(filename):
     pd_MRR_ATISE = pd_MRR_ATISE.sort_index()
     pd_MRR_ATISE = pd_MRR_ATISE.groupby(by=["ATISE"]).sum().reset_index()
 
+    pd_MRR_TFLEX = pd.concat([pd_MRR["TFLEX"], pd_data], axis=1).set_index("TFLEX")
+    pd_MRR_TFLEX = pd_MRR_TFLEX.sort_index()
+    pd_MRR_TFLEX = pd_MRR_TFLEX.groupby(by=["TFLEX"]).sum().reset_index()
+
 
     # Draw plot
     fig = plt.figure(figsize=(16, 15), dpi=80)
     x_major_locator = MultipleLocator(0.1)
     ax = plt.gca()
     ax.xaxis.set_major_locator(x_major_locator)
-    plt.subplot(5, 1, 1)
+    plt.subplot(6, 1, 1)
 
-    plt.title("Hypothesis 2")
+    plt.title("RELATION")
     plt.plot("DE_TransE", "NUM_FACTS", data=pd_MRR_DE_TransE, color='red')
     plt.ylabel("DE_TransE")
     plt.ylim(0, 8000)
     plt.xlim(0, 1.0)
     plt.legend()
 
-    plt.subplot(5, 1, 2)
+    plt.subplot(6, 1, 2)
     plt.plot("DE_SimplE", "NUM_FACTS", data=pd_MRR_DE_SimplE, color='orange')
     plt.xlabel("DE_SimplE")
     plt.ylabel("DE_SimplE")
@@ -132,7 +142,7 @@ def hypothesis_2(filename):
     plt.xlim(0, 1.0)
     plt.legend()
 
-    plt.subplot(5, 1, 3)
+    plt.subplot(6, 1, 3)
     plt.plot("DE_DistMult", "NUM_FACTS", data=pd_MRR_DE_DistMult, color='green')
     plt.xlabel("DE_DistMult")
     plt.ylabel("DE_DistMult")
@@ -142,7 +152,7 @@ def hypothesis_2(filename):
 
     fig.set_label("ddd")
 
-    plt.subplot(5, 1, 4)
+    plt.subplot(6, 1, 4)
     plt.plot("TERO", "NUM_FACTS", data=pd_MRR_TERO, color='blue')
     plt.xlabel("TERO")
     plt.ylabel("TERO")
@@ -150,7 +160,7 @@ def hypothesis_2(filename):
     plt.xlim(0, 1.0)
     plt.legend()
 
-    plt.subplot(5, 1, 5)
+    plt.subplot(6, 1, 5)
     plt.plot("ATISE", "NUM_FACTS", data=pd_MRR_ATISE, color='purple')
     plt.xlabel("MRR")
     plt.ylabel("ATISE")
@@ -158,6 +168,16 @@ def hypothesis_2(filename):
     plt.xlim(0, 1.0)
     plt.grid(axis='both', alpha=0.3)
     plt.legend()
+
+    plt.subplot(6, 1, 6)
+    plt.plot("TFLEX", "NUM_FACTS", data=pd_MRR_TFLEX, color='purple')
+    plt.xlabel("MRR")
+    plt.ylabel("TFLEX")
+    plt.ylim(0, 8000)
+    plt.xlim(0, 1.0)
+    plt.grid(axis='both', alpha=0.3)
+    plt.legend()
+
     plt.show()
     fig.savefig("figure/icews14/hypothesis_2_relation.png")
 
