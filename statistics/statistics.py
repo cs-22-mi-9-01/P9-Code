@@ -166,18 +166,16 @@ class Statistics():
             top_percentage = 0.5
             no_of_elements = len(json_input)
             element_split = 100
-            json_percentage = {}
+            json_top = {}
 
             for embedding in embeddings:
-                if embedding not in json_percentage.keys():
-                    json_percentage[embedding] = {"TOP": [], "BOT": []}
+                if embedding not in json_top.keys():
+                    json_top[embedding] = {"TOP": []}
 
                 json_input.sort(key=lambda val: val["MEASURE"][embedding]["MRR"], reverse=True)
                 for i in range(0, no_of_elements):
                     if i < element_split:
-                        json_percentage[embedding]["TOP"].append(json_input[i]["ELEMENT"])
-                    else:
-                        json_percentage[embedding]["BOT"].append(json_input[i]["ELEMENT"])
+                        json_top[embedding]["TOP"].append(json_input[i]["ELEMENT"])
             
             json_overlap = []
 
@@ -186,12 +184,12 @@ class Statistics():
                     json_overlap.append({
                         "EMBEDDING_N": embedding_n,
                         "EMBEDDING_M": embedding_m,
-                        "OVERLAP_TOP": self.calc_overlap(json_percentage[embedding_n]["TOP"], json_percentage[embedding_m]["TOP"])
+                        "OVERLAP_TOP": self.calc_overlap(json_top[embedding_n]["TOP"], json_top[embedding_m]["TOP"])
                     })
 
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", 
-                                        "top_x_overlap", str(element).lower()+"_top_"+str(int(top_percentage*100))+"_percentage.json")
-            self.write_json(results_path, json_percentage)
+                                        "top_x_overlap", str(element).lower()+"_top_"+str(int(top_percentage*100))+".json")
+            self.write_json(results_path, json_top)
             
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", 
                                         "top_x_overlap", str(element).lower()+"_top_"+str(int(top_percentage*100))+"_overlap.json")
