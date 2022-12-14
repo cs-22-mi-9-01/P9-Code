@@ -265,6 +265,31 @@ class Statistics():
             results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3", "hypothesis_3_normalized.json")
             self.write_json(results_path, json_output_normalized)
     
+    def entity_MRR_Sort(self, entity_scores, method_name):
+        
+        entity_scores = [x for x in entity_scores if x['NUM_FACTS'] > 12]
+        sortedList = sorted(entity_scores, key=lambda d: d['MEASURE'][method_name]['MRR'], reverse=True)
+        return sortedList
+
+    def get_Top_N_Elements(self, entity_scores, n=5):
+        Top5_Dict = {}
+        for method_name in ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'ATISE', 'TFLEX']:
+            sortedList= self.entity_MRR_Sort(entity_scores, method_name)
+            Top5_Dict[method_name] = {}
+            for i in range(0,n):
+                dict_Name = "Number {}".format(i+1)
+
+                Top5_Dict[method_name][dict_Name] = sortedList[i]
+        
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "top_5_entities.json")
+        self.write_json(results_path, Top5_Dict)
+                
+
+
+        
+        return
+
+
     def no_of_elements(self, dataset):
         entities = {}
         relations = {}
@@ -323,8 +348,12 @@ class Statistics():
         overall_scores_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "overall_scores.json")        
         overall_scores = self.read_json(overall_scores_path)
 
+        entities_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "entity.json")        
+        entity_scores = self.read_json(entities_path)
+
         #self.no_of_elements(dataset)
         #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
         self.hypothesis_2(ranked_quads, embeddings, overall_scores)
         self.hypothesis_2_top_x(embeddings)
         #self.hypothesis_3(ranked_quads, embeddings, overall_scores)
+        #self.get_Top_5_Elements(entity_scores)
