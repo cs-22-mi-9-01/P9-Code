@@ -100,8 +100,8 @@ class FormatLatex():
 
     def format_hypothesis_2_overlap(self):
         for element_type in ["entity", "relation", "time"]:
-            input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "top_x_overlap", element_type + "_top_10_overlap.json")
-            output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_" + element_type + "_top_10_overlap.tex")
+            input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "top_x_overlap", element_type + "_top_20_overlap.json")
+            output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_" + element_type + "_top_20_overlap.tex")
             
             overlaps = self.read_json(input_path)
 
