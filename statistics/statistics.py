@@ -333,6 +333,18 @@ class Statistics():
         timestamps_json.sort(key=lambda val: val["COUNT"], reverse=True)
         results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "no_of_elements", "train_timestamps.json")
         self.write_json(results_path, timestamps_json)
+
+    def find_common_elements(self, entity_top_100):
+        methods =['DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE', 'TFLEX']
+        common_elements =entity_top_100['DE_TransE']['TOP']
+        for method in methods:
+            common_elements = set(common_elements).intersection(entity_top_100[method]['TOP'])
+        #print(common_elements)
+        print(len(common_elements))
+        #print(len(entity_top_100['DE_DistMult']['TOP']))
+        percentage =  len(common_elements) / len(entity_top_100['DE_TransE']['TOP'])
+        print (percentage* 100)
+        return
                 
 
     def run(self):
@@ -352,9 +364,20 @@ class Statistics():
         entities_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "entity.json")        
         entity_scores = self.read_json(entities_path)
 
+        entities_top100_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "entity_top_100_.json")      
+        entities_top50_percentage_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "entity_top_50_percentage.json")     
+        relation_top_50_percentage_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "relation_top_50_percentage.json") 
+        relation_top100_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "relation_top_10.json")    
+        time_top_50_percentage_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "time_top_50_percentage.json") 
+        time_top100_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "time_top_10.json")   
+        top = self.read_json(time_top100_path)
+        top_percentage = self.read_json(time_top_50_percentage_path)
+
         #self.no_of_elements(dataset)
         #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
         #self.hypothesis_2(ranked_quads, embeddings, overall_scores)
-        self.hypothesis_2_top_x(embeddings)
+        #self.hypothesis_2_top_x(embeddings)
+        self.find_common_elements(top)
+        self.find_common_elements(top_percentage)
         #self.hypothesis_3(ranked_quads, embeddings, overall_scores)
         #self.get_Top_5_Elements(entity_scores)
