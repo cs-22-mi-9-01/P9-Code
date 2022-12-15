@@ -100,8 +100,8 @@ class FormatLatex():
 
     def format_hypothesis_2_overlap(self):
         for element_type in ["entity", "relation", "time"]:
-            input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "top_x_overlap", element_type + "_top_50_overlap.json")
-            output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_" + element_type + "_top_50_overlap.tex")
+            input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "top_x_overlap", element_type + "_top_10_overlap.json")
+            output_path = os.path.join(self.params.base_directory, "formatlatex", "result", "hypothesis_2_" + element_type + "_top_10_overlap.tex")
             
             overlaps = self.read_json(input_path)
 
@@ -123,7 +123,7 @@ class FormatLatex():
                 result += self.format_embedding(embedding_n)
                 for embedding_m in ['DE_TransE', 'DE_DistMult', 'DE_SimplE', 'ATISE', 'TERO', 'TFLEX']:
                     if embedding_n == embedding_m:
-                        result += r" & \multicolumn{1}{c} {100.0}"
+                        result += r" & \multicolumn{1}{c}{100.0}"
                     else:
                         result += r" & " + self.to_str(self.round(self.get_overlap(overlaps, embedding_n, embedding_m)*100.0))
                 result += r"\\" + "\n"

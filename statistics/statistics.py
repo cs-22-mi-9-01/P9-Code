@@ -163,10 +163,10 @@ class Statistics():
             input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+".json")
             json_input = self.read_json(input_path)
 
-            top_percentage = 1
+            top_percentage = 0.5
             no_of_elements = len(json_input)
             #element_split = int(no_of_elements * top_percentage)
-            element_split = 100
+            element_split = 10
             json_top = {}
 
             for embedding in embeddings:
