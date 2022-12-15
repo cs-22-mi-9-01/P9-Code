@@ -166,7 +166,7 @@ class Statistics():
             top_percentage = 0.5
             no_of_elements = len(json_input)
             #element_split = int(no_of_elements * top_percentage)
-            element_split = 10
+            element_split = 20
             json_top = {}
 
             for embedding in embeddings:
