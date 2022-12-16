@@ -5,7 +5,7 @@
 ## Models
 - DE-TransE: transformation model
 - DE-SimplE: tensor decompositional model
-- DE-DistMult: transformation model
+- DE-DistMult: tensor decompositional model
 - ATiSE: tensor decompositional model
 - TERO: transformation model
 - TFLEX: neural network model
