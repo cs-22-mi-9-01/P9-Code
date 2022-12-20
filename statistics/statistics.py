@@ -12,6 +12,7 @@ class Statistics():
     def __init__(self, params) -> None:
         self.params = params
         self.gamma = 15
+        self.zeta = 5
 
     def write_json(self, path, dict):
         Path(path).touch(exist_ok=True)
@@ -229,7 +230,7 @@ class Statistics():
             entity_m = entity_measures[key]["ENTITY_M"]
             other_key = entity_m+";"+entity_n
             if other_key in entity_measures.keys():
-                if entity_measures[key]["FACTS"] >= 5 and entity_measures[other_key]["FACTS"] >= 5:
+                if entity_measures[key]["FACTS"] >= self.zeta and entity_measures[other_key]["FACTS"] >= self.zeta:
                     entity_measures[key]["DIFFERENCE"] = {}
                     for embedding in embeddings:
                         entity_measures[key]["DIFFERENCE"][embedding] = entity_measures[other_key]["RANK"].mrr[embedding] - entity_measures[key]["RANK"].mrr[embedding]
@@ -249,7 +250,7 @@ class Statistics():
                 entity_m = entity_measures[key]["ENTITY_M"]
                 other_key = entity_m+";"+entity_n
                 if other_key in entity_measures.keys():
-                    if entity_measures[key]["FACTS"] >= 5 and entity_measures[other_key]["FACTS"] >= 5:
+                    if entity_measures[key]["FACTS"] >= self.zeta and entity_measures[other_key]["FACTS"] >= self.zeta:
                         entity_measures[key]["DIFFERENCE"] = {}
                         for embedding in embeddings:
                             entity_measures[key]["DIFFERENCE"][embedding] = entity_measures[other_key]["RANK"].mrr[embedding] - entity_measures[key]["RANK"].mrr[embedding]                  
