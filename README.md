@@ -1,5 +1,20 @@
 # P9-Code
 
+# Information
+
+## Models
+- DE-TransE: transformation model
+- DE-SimplE: tensor decompositional model
+- DE-DistMult: transformation model
+- ATiSE: tensor decompositional model
+- TERO: transformation model
+- TFLEX: neural network model
+
+## Metrics
+- MRR
+- HITS@1
+- HITS@3
+- HITS@10
 
 
 # Data Prepare
