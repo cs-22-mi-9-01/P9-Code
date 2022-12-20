@@ -1,14 +1,18 @@
 
 import os
 import json
+import pandas
 
 from pathlib import Path
 from statistics.measure import Measure
+from copy import deepcopy
 
 
 class Statistics():
     def __init__(self, params) -> None:
         self.params = params
+        self.gamma = 15
+        self.zeta = 5
 
     def write_json(self, path, dict):
         Path(path).touch(exist_ok=True)
@@ -21,6 +25,12 @@ class Statistics():
         dict = json.load(in_file)
         in_file.close()
         return dict
+    
+    def read_csv(self, path):
+        in_file = open(path, "r", encoding="utf8")
+        csv = pandas.read_csv(in_file, delimiter='\t')
+        in_file.close()
+        return csv
     
     def calculate_overall_scores(self, ranked_quads, embeddings):
         print("Rank of all question tuples:")
@@ -76,11 +86,12 @@ class Statistics():
                 results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_1", str(element_type).lower()+"_normalized.json")
                 self.write_json(results_path, measure.as_dict())
 
-    def hypothesis_2(self, ranked_quads, embeddings):
+    def hypothesis_2(self, ranked_quads, embeddings, normalization_scores = None):
         for element in ["ENTITY", "RELATION", "TIME"]:
             print("Testing hypothesis 2 on " + str(element) + "s:")
             element_measures = {}
             json_output = []
+            json_output_normalized = []
 
             if element is "ENTITY":
                 target_parts = ["HEAD", "TAIL"]
@@ -97,79 +108,274 @@ class Statistics():
                     
                     ranks = {}
                     for embedding in embeddings:
+                        if embedding == "TFLEX":
+                            if not (quad["TAIL"] == "0" or quad["TIME"] == "0"):
+                                continue
+
                         ranks[embedding] = int(float(quad["RANK"][embedding]))
                     element_measures[quad[target_part]].update(ranks)
             
             for element_key in element_measures.keys():
                 element_measures[element_key].normalize()
 
-                json_output.append({element: element_key, "NUM_FACTS": element_measures[element_key].num_facts, "MEASURE": element_measures[element_key].as_dict()})
+                json_output.append({"ELEMENT": element_key, "NUM_FACTS": max(element_measures[element_key].num_facts.values()), "MEASURE": element_measures[element_key].as_dict()})
+                if normalization_scores is not None:
+                    element_measures[element_key].normalize_to(normalization_scores)
+                    json_output_normalized.append({"ELEMENT": element_key, "NUM_FACTS": max(element_measures[element_key].num_facts.values()), "MEASURE": element_measures[element_key].as_dict()})
 
-                print(str(element) + ": "+str(element_key) + ":")
-                element_measures[element_key].print()
-
-            json_output.sort(key=lambda val: val["NUM_FACTS"], reverse=True)
-
-            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2_"+str(element).lower()+".json")
-            Path(results_path).touch(exist_ok=True)
-            out_file = open(results_path, "w", encoding="utf8")
-            json.dump(json_output, out_file, indent=4)
-            out_file.close()
-
-    def hypothesis_3(self, ranked_quads, embeddings):
-        for element_type in ["HEAD", "TAIL"]:
-            json_output = []
-
-            print("Testing hypothesis 3 on " + str(element_type) + " relations:")
-
-            entity_measures = {}
-            for quad in ranked_quads:
-                if quad[element_type] is "0":
-                    continue
-
-                if quad[element_type] not in entity_measures.keys():
-                    entity_measures[quad[element_type]] = Measure()
+            pop_indexes = []
+            for i, dict in enumerate(json_output):
+                if dict["NUM_FACTS"] < self.gamma:
+                    pop_indexes.append(i)
                 
-                ranks = {}
-                for embedding in embeddings:
-                    ranks[embedding] = int(float(quad["RANK"][embedding]))
-                entity_measures[quad[element_type]].update(ranks)
-            
-            for entity in entity_measures.keys():
-                entity_measures[entity].normalize()
+            for i in range(len(pop_indexes) -1, -1, -1):
+                json_output.pop(pop_indexes[i])
+                if normalization_scores is not None:
+                    json_output_normalized.pop(pop_indexes[i])
 
-                min_val = 1
-                max_val = 0
-                for embedding in embeddings:
-                    if entity_measures[entity].mrr[embedding] < min_val:
-                        min_val = entity_measures[entity].mrr[embedding]
-                    if entity_measures[entity].mrr[embedding] > max_val:
-                        max_val = entity_measures[entity].mrr[embedding]
-
-                json_output.append({"ENTITY": entity, "NUM_FACTS": entity_measures[entity].num_facts, "DIFFERENCE": {"MRR": max_val-min_val}, "MEASURE": entity_measures[entity].as_dict()})
-                print("Entity: "+str(entity)+": (Difference: " + str(max_val-min_val) + ")")
-                entity_measures[entity].print()
-            
             json_output.sort(key=lambda val: val["NUM_FACTS"], reverse=True)
+            if normalization_scores is not None:
+                json_output_normalized.sort(key=lambda val: val["NUM_FACTS"], reverse=True)
 
-            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3_"+str(element_type).lower()+".json")
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+".json")
+            self.write_json(results_path, json_output)
+            
+            if normalization_scores is not None:
+                results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+"_normalized.json")
+                self.write_json(results_path, json_output_normalized)
 
-            Path(results_path).touch(exist_ok=True)
-            out_file = open(results_path, "w", encoding="utf8")
-            json.dump(json_output, out_file, indent=4)
-            out_file.close()
+    def calc_overlap(self, arr_x, arr_y):
+        shared_vals = 0.0
+        total_vals = 0.0
+
+        for val in arr_x:
+            if val in arr_y:
+                shared_vals += 1.0
+            total_vals += 1.0
+        
+        if total_vals == 0:
+            return 0
+        return shared_vals/total_vals
+
+    def hypothesis_2_top_x(self, embeddings):
+        for element in ["ENTITY", "RELATION", "TIME"]:
+            print("Testing hypothesis 2 top X percent on " + str(element) + "s:")
+
+            input_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", str(element).lower()+".json")
+            json_input = self.read_json(input_path)
+
+            top_percentage = 0.5
+            no_of_elements = len(json_input)
+            #element_split = int(no_of_elements * top_percentage)
+            element_split = 20
+            json_top = {}
+
+            for embedding in embeddings:
+                if embedding not in json_top.keys():
+                    json_top[embedding] = {"TOP": []}
+
+                json_input.sort(key=lambda val: val["MEASURE"][embedding]["MRR"], reverse=True)
+                for i in range(0, no_of_elements):
+                    if i < element_split:
+                        json_top[embedding]["TOP"].append(json_input[i]["ELEMENT"])
+            
+            json_overlap = []
+
+            for embedding_n in embeddings:
+                for embedding_m in embeddings:
+                    json_overlap.append({
+                        "EMBEDDING_N": embedding_n,
+                        "EMBEDDING_M": embedding_m,
+                        "OVERLAP_TOP": self.calc_overlap(json_top[embedding_n]["TOP"], json_top[embedding_m]["TOP"])
+                    })
+
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", 
+                                        "top_x_overlap", str(element).lower()+"_top_"+str(element_split)+".json")
+            self.write_json(results_path, json_top)
+            
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", 
+                                        "top_x_overlap", str(element).lower()+"_top_"+str(element_split)+"_overlap.json")
+            self.write_json(results_path, json_overlap)
+                
+    def hypothesis_3(self, ranked_quads, embeddings, normalization_scores = None):        
+        entity_measures = {}
+        print("Testing hypothesis 3.")
+
+        for quad in ranked_quads:
+            if quad["HEAD"] is "0" or quad["TAIL"] is "0":
+                continue
+
+            entity_n = quad["HEAD"]
+            entity_m = quad["TAIL"]
+            key = entity_n+";"+entity_m
+
+            if key not in entity_measures.keys():
+                entity_measures[key] = {"ENTITY_N": entity_n, "ENTITY_M": entity_m, "FACTS": 0, "RANK": Measure()}
+            
+            ranks = {}
+            for embedding in embeddings:
+                if embedding == "TFLEX":
+                    if not (quad["TAIL"] == "0" or quad["TIME"] == "0"):
+                        continue
+                
+                ranks[embedding] = int(float(quad["RANK"][embedding]))
+            entity_measures[key]["RANK"].update(ranks)
+            entity_measures[key]["FACTS"] += 1
+        
+        for key in entity_measures.keys():
+            entity_measures[key]["RANK"].normalize()
+        
+        for key in entity_measures.keys():
+            entity_n = entity_measures[key]["ENTITY_N"]
+            entity_m = entity_measures[key]["ENTITY_M"]
+            other_key = entity_m+";"+entity_n
+            if other_key in entity_measures.keys():
+                if entity_measures[key]["FACTS"] >= self.zeta and entity_measures[other_key]["FACTS"] >= self.zeta:
+                    entity_measures[key]["DIFFERENCE"] = {}
+                    for embedding in embeddings:
+                        entity_measures[key]["DIFFERENCE"][embedding] = entity_measures[other_key]["RANK"].mrr[embedding] - entity_measures[key]["RANK"].mrr[embedding]
+                
+        json_output = []
+        for i, key in enumerate(entity_measures.keys()):
+            json_output.append(deepcopy(entity_measures[key]))
+            json_output[i]["RANK"] = json_output[i]["RANK"].as_dict()
+
+        json_output_normalized = []
+        if normalization_scores is not None:
+            for i, key in enumerate(entity_measures.keys()):
+                entity_measures[key]["RANK"].normalize_to(normalization_scores)
+            
+            for i, key in enumerate(entity_measures.keys()):
+                entity_n = entity_measures[key]["ENTITY_N"]
+                entity_m = entity_measures[key]["ENTITY_M"]
+                other_key = entity_m+";"+entity_n
+                if other_key in entity_measures.keys():
+                    if entity_measures[key]["FACTS"] >= self.zeta and entity_measures[other_key]["FACTS"] >= self.zeta:
+                        entity_measures[key]["DIFFERENCE"] = {}
+                        for embedding in embeddings:
+                            entity_measures[key]["DIFFERENCE"][embedding] = entity_measures[other_key]["RANK"].mrr[embedding] - entity_measures[key]["RANK"].mrr[embedding]                  
+
+                json_output_normalized.append(deepcopy(entity_measures[key]))
+                json_output_normalized[i]["RANK"] = json_output_normalized[i]["RANK"].as_dict()
+
+        json_output.sort(key=lambda val: val["FACTS"], reverse=True)
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3", "hypothesis_3.json")
+        self.write_json(results_path, json_output)
+
+        if normalization_scores is not None:
+            json_output_normalized.sort(key=lambda val: val["FACTS"], reverse=True)
+            results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_3", "hypothesis_3_normalized.json")
+            self.write_json(results_path, json_output_normalized)
+    
+    def entity_MRR_Sort(self, entity_scores, method_name):
+        
+        entity_scores = [x for x in entity_scores if x['NUM_FACTS'] > 12]
+        sortedList = sorted(entity_scores, key=lambda d: d['MEASURE'][method_name]['MRR'], reverse=True)
+        return sortedList
+
+    def get_Top_N_Elements(self, entity_scores, n=5):
+        Top5_Dict = {}
+        for method_name in ["DE_TransE", "DE_SimplE", "DE_DistMult", 'TERO', 'ATISE', 'TFLEX']:
+            sortedList= self.entity_MRR_Sort(entity_scores, method_name)
+            Top5_Dict[method_name] = {}
+            for i in range(0,n):
+                dict_Name = "Number {}".format(i+1)
+
+                Top5_Dict[method_name][dict_Name] = sortedList[i]
+        
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "top_5_entities.json")
+        self.write_json(results_path, Top5_Dict)
+                
+
+
+        
+        return
+
+
+    def no_of_elements(self, dataset):
+        entities = {}
+        relations = {}
+        timestamps = {}
+
+        for line in dataset.values:
+            if line[0] not in entities.keys():
+                entities[line[0]] = 0
+            if line[1] not in relations.keys():
+                relations[line[1]] = 0
+            if line[2] not in entities.keys():
+                entities[line[2]] = 0
+            if line[3] not in timestamps.keys():
+                timestamps[line[3]] = 0
+
+            entities[line[0]] += 1
+            relations[line[1]] += 1
+            entities[line[2]] += 1
+            timestamps[line[3]] += 1
+        
+        entities_json = []
+        relations_json = []
+        timestamps_json = []
+
+        for key in entities.keys():
+            entities_json.append({"ENTITY": key, "COUNT": entities[key]})
+        for key in relations.keys():
+            relations_json.append({"RELATION": key, "COUNT": relations[key]})
+        for key in timestamps.keys():
+            timestamps_json.append({"TIMESTAMP": key, "COUNT": timestamps[key]})
+        
+        entities_json.sort(key=lambda val: val["COUNT"], reverse=True)
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "no_of_elements", "train_entities.json")
+        self.write_json(results_path, entities_json)
+
+        relations_json.sort(key=lambda val: val["COUNT"], reverse=True)
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "no_of_elements", "train_relations.json")
+        self.write_json(results_path, relations_json)
+
+        timestamps_json.sort(key=lambda val: val["COUNT"], reverse=True)
+        results_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "no_of_elements", "train_timestamps.json")
+        self.write_json(results_path, timestamps_json)
+
+    def find_common_elements(self, entity_top_100):
+        methods =['DE_TransE', 'DE_SimplE', 'DE_DistMult', 'TERO', 'ATISE', 'TFLEX']
+        common_elements =entity_top_100['DE_TransE']['TOP']
+        for method in methods:
+            common_elements = set(common_elements).intersection(entity_top_100[method]['TOP'])
+        #print(common_elements)
+        print(len(common_elements))
+        #print(len(entity_top_100['DE_DistMult']['TOP']))
+        percentage =  len(common_elements) / len(entity_top_100['DE_TransE']['TOP'])
+        print (percentage* 100)
+        return
+                
 
     def run(self):
         embeddings = ["DE_TransE", "DE_SimplE", "DE_DistMult", "TERO", "ATISE", "TFLEX"]
 
         ranks_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "ranked_quads.json")
         ranked_quads = self.read_json(ranks_path)
+        
+        learn_path = os.path.join(self.params.base_directory, "dataprepare", "corruptedquadruple", self.params.dataset, "train.txt")
+        dataset = self.read_csv(learn_path)
 
-        self.calculate_overall_scores(ranked_quads, embeddings)
+        #self.calculate_overall_scores(ranked_quads, embeddings)
 
         overall_scores_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "overall_scores.json")        
         overall_scores = self.read_json(overall_scores_path)
 
-        self.hypothesis_1(ranked_quads, embeddings, overall_scores)
-        #self.hypothesis_2(ranked_quads, embeddings)
-        #self.hypothesis_3(ranked_quads, embeddings)
+        entities_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2", "entity.json")        
+        entity_scores = self.read_json(entities_path)
+
+        entities_top100_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "entity_top_100_.json")      
+        entities_top50_percentage_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "entity_top_50_percentage.json")     
+        
+        top = self.read_json(entities_top100_path)
+        top_percentage = self.read_json(entities_top50_percentage_path)
+
+        #self.no_of_elements(dataset)
+        #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
+        #self.hypothesis_2(ranked_quads, embeddings, overall_scores)
+        #self.hypothesis_2_top_x(embeddings)
+        #self.find_common_elements(top)
+        #self.find_common_elements(top_percentage)
+        #self.hypothesis_3(ranked_quads, embeddings, overall_scores)
+        #self.get_Top_5_Elements(entity_scores)
