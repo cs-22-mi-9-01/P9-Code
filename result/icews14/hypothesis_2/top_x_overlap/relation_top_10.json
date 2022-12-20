@@ -1,0 +1,86 @@
+{
+    "DE_TransE": {
+        "TOP": [
+            "Use tactics of violent repression",
+            "Protest violently, riot",
+            "Increase military alert status",
+            "Coerce",
+            "Ease administrative sanctions",
+            "Demonstrate or rally",
+            "Conduct suicide, car, or other non-military bombing",
+            "Confiscate property",
+            "Reduce or break diplomatic relations",
+            "Defy norms, law"
+        ]
+    },
+    "DE_SimplE": {
+        "TOP": [
+            "Use tactics of violent repression",
+            "Ease administrative sanctions",
+            "Express intent to release persons or property",
+            "Appeal for release of persons or property",
+            "Sexually assault",
+            "Protest violently, riot",
+            "Discuss by telephone",
+            "Conduct suicide, car, or other non-military bombing",
+            "Coerce",
+            "Engage in negotiation"
+        ]
+    },
+    "DE_DistMult": {
+        "TOP": [
+            "Use tactics of violent repression",
+            "Protest violently, riot",
+            "Sexually assault",
+            "Ease administrative sanctions",
+            "Discuss by telephone",
+            "Appeal for release of persons or property",
+            "Express intent to release persons or property",
+            "Engage in negotiation",
+            "Confiscate property",
+            "Reduce or break diplomatic relations"
+        ]
+    },
+    "TERO": {
+        "TOP": [
+            "Use tactics of violent repression",
+            "Host a visit",
+            "Make a visit",
+            "Discuss by telephone",
+            "Consult",
+            "Engage in negotiation",
+            "Meet at a 'third' location",
+            "Sign formal agreement",
+            "Protest violently, riot",
+            "Mobilize or increase police power"
+        ]
+    },
+    "ATISE": {
+        "TOP": [
+            "Use tactics of violent repression",
+            "Appeal for release of persons or property",
+            "Discuss by telephone",
+            "Coerce",
+            "Engage in negotiation",
+            "Sexually assault",
+            "Make a visit",
+            "Consult",
+            "Protest violently, riot",
+            "Host a visit"
+        ]
+    },
+    "TFLEX": {
+        "TOP": [
+            "Use tactics of violent repression",
+            "Appeal for release of persons or property",
+            "Occupy territory",
+            "Mobilize or increase police power",
+            "Reject plan, agreement to settle dispute",
+            "Mobilize or increase armed forces",
+            "Protest violently, riot",
+            "Sexually assault",
+            "Express intent to release persons or property",
+            "Kill by physical assault"
+        ]
+    }
+}

@@ -2,6 +2,7 @@
 from de_simple.rank_calculator import RankCalculator as DE_Rank
 from TERO.rank_calculator import RankCalculator as TERO_Rank
 from TFLEX.rank_calculator import RankCalculator as TFLEX_Rank
+from TimePlex.rank_calculator import RankCalculator as TimePlex_Rank
 
 class Ranker:
     def __init__(self, params, quads, model, embedding_name):
@@ -20,6 +21,8 @@ class Ranker:
             rank_calculator = TERO_Rank(self.params, self.model)
         if self.embedding_name in ["TFLEX"]:
             rank_calculator = TFLEX_Rank(self.params, self.model)
+        if self.embedding_name in ["TimePlex"]:
+            rank_calculator = TimePlex_Rank(self.params, self.model)
 
         for i, quad in zip(range(0, len(self.quads)), self.quads):
             if i % 100 == 0:

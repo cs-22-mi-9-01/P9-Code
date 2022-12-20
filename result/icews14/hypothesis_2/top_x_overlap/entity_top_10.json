@@ -1,0 +1,86 @@
+{
+    "DE_TransE": {
+        "TOP": [
+            "Victoria Nuland",
+            "Mainland Affairs Council",
+            "Naval (Sri Lanka)",
+            "Curacao",
+            "Men (Indonesia)",
+            "Elizabeth II",
+            "Armed Gang (Egypt)",
+            "Protester (Egypt)",
+            "Armed Rebel (Mali)",
+            "Criminal (Somalia)"
+        ]
+    },
+    "DE_SimplE": {
+        "TOP": [
+            "Ri Su Yong",
+            "Head of Government (Tajikistan)",
+            "Victoria Nuland",
+            "Elizabeth II",
+            "Lawmaker (Hong Kong)",
+            "Defense / Security Ministry (United States)",
+            "Jacob J. Lew",
+            "Akitaka Saiki",
+            "Foreign Affairs (Czech Republic)",
+            "Detainee (South Sudan)"
+        ]
+    },
+    "DE_DistMult": {
+        "TOP": [
+            "Victoria Nuland",
+            "Akitaka Saiki",
+            "Sauli Niinist\u00f6",
+            "Jacob J. Lew",
+            "Foreign Affairs (Czech Republic)",
+            "Naval (Sri Lanka)",
+            "Daniel Mitov",
+            "Ri Su Yong",
+            "Lawmaker (Hong Kong)",
+            "Islam Karimov"
+        ]
+    },
+    "TERO": {
+        "TOP": [
+            "Victoria Nuland",
+            "Ri Su Yong",
+            "Daniel Mitov",
+            "Naval (Sri Lanka)",
+            "Elizabeth II",
+            "Mauritania",
+            "Shura Council",
+            "Foreign Affairs (Czech Republic)",
+            "Representatives (Iraq)",
+            "Ukrinform"
+        ]
+    },
+    "ATISE": {
+        "TOP": [
+            "Sauli Niinist\u00f6",
+            "Criminal (Somalia)",
+            "Representatives (Iraq)",
+            "Head of Government (Tajikistan)",
+            "Curacao",
+            "Victoria Nuland",
+            "Business (Bulgaria)",
+            "Foreign Affairs (Ethiopia)",
+            "Radoslaw Sikorski",
+            "Daniel Mitov"
+        ]
+    },
+    "TFLEX": {
+        "TOP": [
+            "Armed Gang (Egypt)",
+            "William Kabogo",
+            "Naval (Sri Lanka)",
+            "Court Judge (Namibia)",
+            "Militant (Nigeria)",
+            "Veterans (Croatia)",
+            "Akitaka Saiki",
+            "Jackson Mandago",
+            "Aladdin Boroujerdi",
+            "Special Court (Pakistan)"
+        ]
+    }
+}
