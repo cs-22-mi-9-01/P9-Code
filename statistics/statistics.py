@@ -366,18 +366,15 @@ class Statistics():
 
         entities_top100_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "entity_top_100_.json")      
         entities_top50_percentage_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "entity_top_50_percentage.json")     
-        relation_top_50_percentage_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "relation_top_50_percentage.json") 
-        relation_top100_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "relation_top_10.json")    
-        time_top_50_percentage_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "time_top_50_percentage.json") 
-        time_top100_path = os.path.join(self.params.base_directory, "result", self.params.dataset, "hypothesis_2","top_x_overlap", "time_top_10.json")   
-        top = self.read_json(time_top100_path)
-        top_percentage = self.read_json(time_top_50_percentage_path)
+        
+        top = self.read_json(entities_top100_path)
+        top_percentage = self.read_json(entities_top50_percentage_path)
 
         #self.no_of_elements(dataset)
         #self.hypothesis_1(ranked_quads, embeddings, overall_scores)
         #self.hypothesis_2(ranked_quads, embeddings, overall_scores)
         #self.hypothesis_2_top_x(embeddings)
-        self.find_common_elements(top)
-        self.find_common_elements(top_percentage)
+        #self.find_common_elements(top)
+        #self.find_common_elements(top_percentage)
         #self.hypothesis_3(ranked_quads, embeddings, overall_scores)
         #self.get_Top_5_Elements(entity_scores)
